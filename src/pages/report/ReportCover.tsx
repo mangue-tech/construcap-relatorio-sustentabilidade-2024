@@ -144,21 +144,25 @@ const iconicWorks = [{
 const companies = [{
   name: "Urbia",
   logo: urbiaLogo,
+  logoClass: "h-16 max-w-[140px]",
   description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
   highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"]
 }, {
   name: "Minas Arena",
   logo: minasArenaLogo,
+  logoClass: "h-16 max-w-[140px]",
   description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
   highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"]
 }, {
   name: "Inova Saúde",
   logo: inovaSaudeLogo,
+  logoClass: "h-16 max-w-[140px]",
   description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
   highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"]
 }, {
   name: "Ambicap",
   logo: ambicapLogo,
+  logoClass: "h-10 max-w-[100px]",
   description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
   highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"]
 }];
@@ -488,7 +492,7 @@ const ReportCover = () => {
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
                 <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
                   <div className="w-full h-16 flex items-center justify-center mb-4">
-                    <img src={company.logo} alt={company.name} className="h-12 w-auto max-w-[120px] object-contain" />
+                    <img src={company.logo} alt={company.name} className={`${company.logoClass} w-auto object-contain`} />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>

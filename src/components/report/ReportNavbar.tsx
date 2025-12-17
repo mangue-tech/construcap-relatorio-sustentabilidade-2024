@@ -29,17 +29,19 @@ const ReportNavbar = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border"
-          : "bg-transparent"
+        isScrolled ? "bg-background/95 backdrop-blur-md shadow-lg border-b border-border" : "bg-transparent"
       }`}
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <img src={construcapLogo} alt="Construcap" className={`w-10 h-10 transition-all ${isScrolled ? '' : 'shadow-lg rounded-xl'}`} />
-            <div className={`transition-colors ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
+            <img
+              src={construcapLogo}
+              alt="Construcap"
+              className={`w-15 h-10 transition-all ${isScrolled ? "" : "shadow-lg rounded-xl"}`}
+            />
+            <div className={`transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               <p className="font-semibold text-sm">Relatório ESG</p>
               <p className="text-xs opacity-70">2024</p>
             </div>
@@ -53,8 +55,8 @@ const ReportNavbar = () => {
                 location.pathname === "/"
                   ? "bg-primary text-primary-foreground"
                   : isScrolled
-                  ? "text-foreground hover:bg-secondary"
-                  : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                    ? "text-foreground hover:bg-secondary"
+                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
               }`}
             >
               <Home className="w-4 h-4" />
@@ -68,8 +70,8 @@ const ReportNavbar = () => {
                   location.pathname === page.path
                     ? "bg-primary text-primary-foreground"
                     : isScrolled
-                    ? "text-foreground hover:bg-secondary"
-                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                      ? "text-foreground hover:bg-secondary"
+                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
                 }`}
               >
                 {page.label}
@@ -81,7 +83,9 @@ const ReportNavbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`lg:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-primary-foreground/10"
+              isScrolled
+                ? "text-foreground hover:bg-secondary"
+                : "text-primary-foreground hover:bg-primary-foreground/10"
             }`}
           >
             {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -91,10 +95,10 @@ const ReportNavbar = () => {
         {/* Progress Bar */}
         {isScrolled && (
           <div className="h-0.5 bg-secondary -mx-6">
-            <div 
+            <div
               className="h-full bg-primary transition-all duration-150"
               style={{
-                width: `${Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100)}%`
+                width: `${Math.min((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100, 100)}%`,
               }}
             />
           </div>
@@ -109,9 +113,7 @@ const ReportNavbar = () => {
               to="/"
               onClick={() => setIsMobileMenuOpen(false)}
               className={`flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                location.pathname === "/"
-                  ? "bg-primary text-primary-foreground"
-                  : "text-foreground hover:bg-secondary"
+                location.pathname === "/" ? "bg-primary text-primary-foreground" : "text-foreground hover:bg-secondary"
               }`}
             >
               <Home className="w-4 h-4" />

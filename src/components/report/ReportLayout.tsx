@@ -45,6 +45,7 @@ const menuItems = [
     icon: Heart,
     children: [
       { path: "/desempenho-social", label: "Desempenho Social" },
+      { path: "/cadeia-fornecimento", label: "Cadeia de Fornecimento" },
       { path: "/comunidades", label: "Relacionamento com Comunidades" },
     ]
   },

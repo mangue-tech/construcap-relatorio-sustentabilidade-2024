@@ -15,6 +15,7 @@ import CommunityPage from "./pages/report/CommunityPage";
 import EconomicPage from "./pages/report/EconomicPage";
 import EnvironmentalPage from "./pages/report/EnvironmentalPage";
 import SocialPage from "./pages/report/SocialPage";
+import SupplyChainPage from "./pages/report/SupplyChainPage";
 import GRIIndexPage from "./pages/report/GRIIndexPage";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
           <Route path="/desempenho-economico" element={<EconomicPage />} />
           <Route path="/desempenho-ambiental" element={<EnvironmentalPage />} />
           <Route path="/desempenho-social" element={<SocialPage />} />
+          <Route path="/cadeia-fornecimento" element={<SupplyChainPage />} />
           <Route path="/gri-index" element={<GRIIndexPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

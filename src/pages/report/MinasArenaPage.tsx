@@ -12,13 +12,15 @@ import {
   Star
 } from "lucide-react";
 import minasArenaLogo from "@/assets/companies/minas-arena.png";
+import minasArenaHero from "@/assets/operations/minas-arena-stadium.jpg";
 
 const MinasArenaPage = () => {
   return (
     <ReportLayout>
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden bg-gradient-to-r from-amber-600 to-amber-800">
-        <div className="absolute inset-0 flex items-center">
+      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
+        <img src={minasArenaHero} alt="Minas Arena Stadium" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 to-amber-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
             <img src={minasArenaLogo} alt="Minas Arena" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />
             <div>

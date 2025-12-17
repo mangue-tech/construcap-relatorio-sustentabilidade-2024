@@ -1,9 +1,10 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  Leaf, 
   Building2,
-  Recycle
+  Shield,
+  Leaf,
+  Users
 } from "lucide-react";
 import ambicapLogo from "@/assets/companies/ambicap.png";
 import ambicapHero from "@/assets/operations/ambicap-environmental.jpg";
@@ -13,7 +14,7 @@ const AmbicapPage = () => {
     <ReportLayout>
       {/* Hero Section */}
       <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
-        <img src={ambicapHero} alt="Ambicap Environmental" className="w-full h-full object-cover" />
+        <img src={ambicapHero} alt="Ambicap" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
             <img src={ambicapLogo} alt="Ambicap" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />
@@ -23,7 +24,7 @@ const AmbicapPage = () => {
                 Ambicap
               </h1>
               <p className="text-white/90 text-lg max-w-2xl">
-                Soluções ambientais integradas com foco em economia circular e sustentabilidade
+                Gestão integrada de ativos urbanos
               </p>
             </div>
           </div>
@@ -38,131 +39,82 @@ const AmbicapPage = () => {
             Sobre a Ambicap
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            A Ambicap é a empresa do Grupo Construcap especializada em soluções ambientais, 
-            oferecendo serviços de gestão de resíduos, tratamento de efluentes, remediação de 
-            áreas contaminadas e consultoria ambiental. A empresa atua com tecnologias inovadoras 
-            e processos que promovem a economia circular e a regeneração ambiental.
+            A Ambicap é a empresa do Grupo Construcap dedicada à gestão integrada de ativos urbanos, 
+            como estacionamentos, áreas públicas, equipamentos de mobilidade e espaços de uso coletivo. 
+            Sua atuação envolve serviços de operação, manutenção, zeladoria, atendimento ao público, 
+            controle de acessos e implementação de soluções que visam ampliar a segurança, a organização 
+            do espaço urbano e a experiência dos usuários.
           </p>
         </section>
 
-        {/* Serviços */}
+        {/* Sistema Integrado de Gestão */}
         <section>
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Leaf className="w-5 h-5 text-green-600" />
-                Soluções Ambientais
+                <Shield className="w-5 h-5 text-blue-600" />
+                Sistema Integrado de Gestão
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Gestão de Resíduos</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 shrink-0" />
-                      <span>Coleta e transporte especializado</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 shrink-0" />
-                      <span>Centrais de triagem e valorização</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 shrink-0" />
-                      <span>Coprocessamento e destinação final</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-teal-500 rounded-full mt-2 shrink-0" />
-                      <span>Logística reversa integrada</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Tratamento de Efluentes</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Estações de tratamento customizadas</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Sistemas de reuso de água</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Tratamento de efluentes industriais</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Monitoramento e controle automatizado</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Remediação Ambiental</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Investigação e diagnóstico de áreas contaminadas</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Planos de intervenção e remediação</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Biorremediação e fitorremediação</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Monitoramento ambiental contínuo</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Consultoria Ambiental</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Licenciamento ambiental</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Estudos de impacto ambiental (EIA/RIMA)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Auditorias e due diligence ambiental</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Inventários de GEE e carbono</span>
-                    </li>
-                  </ul>
-                </div>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                As operações da Ambicap são estruturadas sob as diretrizes do Sistema Integrado de Gestão 
+                do Grupo, certificadas pelas normas ISO 9001, ISO 14001 e ISO 45001. Isso significa que a 
+                gestão de atividades como iluminação, sinalização, limpeza, manutenção de pavimentos, 
+                mobiliário urbano e equipamentos de cobrança é realizada com base em procedimentos 
+                padronizados, controles de qualidade, requisitos de saúde e segurança ocupacional e 
+                critérios ambientais, buscando a redução de impactos e o uso eficiente de recursos.
+              </p>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-medium">ISO 9001</span>
+                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-medium">ISO 14001</span>
+                <span className="px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-sm font-medium">ISO 45001</span>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Economia Circular */}
+        {/* Gestão Ambiental */}
         <section>
-          <Card className="bg-gradient-to-br from-teal-500/5 to-transparent border-teal-500/20">
+          <Card className="bg-gradient-to-br from-green-500/5 to-transparent border-green-500/20">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Recycle className="w-5 h-5 text-teal-600" />
-                Economia Circular
+                <Leaf className="w-5 h-5 text-green-600" />
+                Gestão Ambiental
               </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                A Ambicap aplica os princípios da economia circular em todas as suas operações, 
-                transformando resíduos em recursos e promovendo o fechamento de ciclos produtivos. 
-                A empresa trabalha com valorização de resíduos, recuperação de materiais, 
-                reuso de água e práticas sustentáveis certificadas.
+                No período de referência, a Ambicap avançou na consolidação de sua gestão ambiental, 
+                com destaque para a elaboração de seu primeiro inventário de emissões de gases de efeito 
+                estufa, alinhado ao Protocolo GHG, que constitui a base para o planejamento sistemático 
+                de ações de eficiência energética, gestão de resíduos, mobilidade de equipes e eventual 
+                descarbonização de suas operações. A partir dessa linha de base, a empresa passa a contar 
+                com indicadores comparáveis para monitorar a evolução de emissões, priorizar iniciativas 
+                de mitigação e estabelecer metas internas de desempenho climático.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Impacto Social */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-purple-600" />
+                Impacto Social e Urbano
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Sob a perspectiva social, a Ambicap contribui diretamente para a organização do espaço 
+                urbano, a segurança de usuários e a vitalidade econômica de áreas onde opera. Ao estruturar 
+                e manter áreas de estacionamento e circulação de forma ordenada, a empresa favorece o acesso 
+                a serviços essenciais, comércios locais e equipamentos públicos, impactando positivamente 
+                rotinas de milhares de pessoas. A padronização de procedimentos de atendimento, o treinamento 
+                de equipes em temas de segurança, atendimento ao público e uso responsável do espaço coletivo 
+                reforçam o compromisso com a qualidade da experiência urbana.
               </p>
             </CardContent>
           </Card>

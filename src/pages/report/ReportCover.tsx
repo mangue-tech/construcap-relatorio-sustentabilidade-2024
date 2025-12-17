@@ -488,7 +488,7 @@ const ReportCover = () => {
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
                 <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
                   <div className="w-full h-16 flex items-center justify-center mb-4">
-                    <img src={company.logo} alt={company.name} className="max-h-16 max-w-full object-contain" />
+                    <img src={company.logo} alt={company.name} className="h-12 w-auto max-w-[120px] object-contain" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>

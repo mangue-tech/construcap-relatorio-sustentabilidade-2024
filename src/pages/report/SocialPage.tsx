@@ -12,63 +12,16 @@ import {
   HardHat,
   Flame,
   ShieldCheck,
-  BookOpen,
   Scale,
-  HandHeart
+  HandHeart,
+  RefreshCw,
+  FileText,
+  Stethoscope,
+  AlertTriangle,
+  Phone
 } from "lucide-react";
 import socialHero from "@/assets/report/social-hero.jpg";
-
-// GRI 401-2 - Benefícios
-const benefits = [
-  { benefit: "Plano de Saúde", description: "Cobertura para colaboradores e dependentes" },
-  { benefit: "Plano Odontológico", description: "Assistência odontológica completa" },
-  { benefit: "Seguro de Vida", description: "Cobertura em caso de acidentes ou morte" },
-  { benefit: "Vale-Alimentação/Refeição", description: "Auxílio para alimentação" },
-  { benefit: "Vale-Transporte", description: "Auxílio para deslocamento" },
-  { benefit: "Previdência Privada", description: "Plano de aposentadoria complementar" },
-  { benefit: "PLR", description: "Participação nos Lucros e Resultados" },
-  { benefit: "Auxílio-Creche", description: "Suporte para colaboradores com filhos" },
-  { benefit: "Gympass", description: "Acesso a academias e bem-estar" },
-  { benefit: "Licença Maternidade Estendida", description: "180 dias de licença" },
-];
-
-const safetyPrograms = [
-  { program: "DDS (Diálogo Diário de Segurança)", description: "Reuniões diárias sobre riscos e prevenção antes do início das atividades" },
-  { program: "SIPAT", description: "Semana Interna de Prevenção de Acidentes do Trabalho com palestras e atividades" },
-  { program: "Brigada de Emergência", description: "Equipes treinadas para atendimento a emergências em todas as unidades" },
-  { program: "Programa de Saúde Mental", description: "Apoio psicológico e ações de prevenção ao estresse ocupacional" },
-  { program: "Campanhas de Saúde", description: "Ações de prevenção (Outubro Rosa, Novembro Azul, vacinação)" },
-  { program: "Ginástica Laboral", description: "Exercícios preventivos realizados diariamente" },
-];
-
-// Programas de Desenvolvimento
-const developmentPrograms = [
-  {
-    name: "Programa de Trainee",
-    description: "Formação de jovens talentos para posições de liderança",
-    duration: "18 meses"
-  },
-  {
-    name: "Escola de Líderes",
-    description: "Desenvolvimento de competências gerenciais e liderança",
-    duration: "12 meses"
-  },
-  {
-    name: "Academia Técnica",
-    description: "Capacitação técnica especializada para áreas operacionais",
-    duration: "Contínuo"
-  },
-  {
-    name: "Mentoria Executiva",
-    description: "Acompanhamento de executivos por mentores experientes",
-    duration: "6 meses"
-  },
-  {
-    name: "Bolsas de Estudo",
-    description: "Apoio financeiro para graduação e pós-graduação",
-    duration: "Conforme curso"
-  },
-];
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const SocialPage = () => {
   return (
@@ -87,12 +40,12 @@ const SocialPage = () => {
               <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
                 <span>Capítulo 9</span>
                 <span>•</span>
-                <span>GRI 2-7, 401, 403, 404, 405</span>
+                <span>GRI 401, 402, 403, 404, 405, 406, 410, 414, 413</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Desempenho Social</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                O capital humano é fundamental para o Grupo Construcap. Investimos continuamente 
-                no desenvolvimento, segurança, diversidade e bem-estar de nossos colaboradores.
+                O capital humano é pilar estruturante da atuação do Grupo Construcap em um setor 
+                intensivo em obra e com elevada exposição a riscos ocupacionais.
               </p>
             </AnimatedSection>
           </div>
@@ -103,56 +56,126 @@ const SocialPage = () => {
       <section className="py-12">
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
-            <h2 className="text-2xl font-bold mb-4">Gestão de Pessoas</h2>
+            <h2 className="text-2xl font-bold mb-4">Compromisso com Pessoas</h2>
             <p className="text-muted-foreground mb-4">
-              O Grupo Construcap reconhece que seu principal ativo são as pessoas que fazem parte 
-              de sua história. A empresa investe em práticas de gestão que promovem desenvolvimento 
-              profissional, segurança, diversidade e qualidade de vida.
+              O desempenho social do Grupo Construcap é um dos pilares mais estruturantes da sua atuação. 
+              Em um setor intensivo em obra, operado em ambientes complexos e com elevada exposição a riscos 
+              ocupacionais, o compromisso com pessoas – segurança, desenvolvimento, diversidade, bem-estar e 
+              relações de trabalho – deixa de ser um componente de apoio e passa a integrar a própria lógica 
+              de continuidade e competitividade empresarial.
             </p>
             <p className="text-muted-foreground">
-              A estratégia de gestão de pessoas está alinhada aos valores corporativos e 
-              aos compromissos ESG, buscando criar um ambiente de trabalho seguro, inclusivo 
-              e propício ao desenvolvimento de todos os profissionais.
+              Este capítulo consolida o panorama mais amplo do capital humano, apresentando não apenas dados, 
+              mas o raciocínio institucional por trás das práticas, reforçando como políticas, sistemas, 
+              treinamentos e processos moldam diariamente a atuação do Grupo.
             </p>
           </div>
         </AnimatedSection>
       </section>
 
-      {/* Workforce Overview - GRI 2-7 */}
+      {/* 9.1 Estrutura e Perfil da Força de Trabalho */}
       <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-8">
             <Users className="w-8 h-8 text-primary" />
             <div>
-              <h2 className="text-2xl font-bold">Perfil da Força de Trabalho</h2>
-              <p className="text-muted-foreground">GRI 2-7 | Colaboradores por unidade e categoria</p>
+              <h2 className="text-2xl font-bold">9.1 Estrutura e Perfil da Força de Trabalho</h2>
+              <p className="text-muted-foreground">GRI 2-7; 405-1</p>
             </div>
           </div>
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="bg-card rounded-2xl border border-border p-8">
-            <p className="text-muted-foreground mb-4">
-              O Grupo Construcap conta com colaboradores distribuídos em cinco unidades de 
-              negócio: Construcap Engenharia, Inova Saúde, Urbia, Minas Arena e Ambicap.
+          <div className="bg-card rounded-2xl border border-border p-8 mb-8">
+            <p className="text-muted-foreground mb-6">
+              Ao final do período, <strong>4.345 colaboradores</strong> compunham o quadro da Construcap, todos 
+              atuando no Brasil, majoritariamente na região Sudeste. Trata-se de uma força de trabalho que combina 
+              escala operacional, essencial a grandes obras e contratos de infraestrutura, com uma estrutura 
+              administrativa e técnica altamente especializada, indispensável para garantir conformidade legal, 
+              engenharia de precisão, planejamento e governança.
             </p>
             <p className="text-muted-foreground">
-              A força de trabalho é composta por profissionais de diversas áreas, incluindo 
-              engenheiros, técnicos, operadores, administrativos e gestores, todos comprometidos 
-              com a excelência operacional e os valores da empresa.
+              A composição de gênero (4.019 homens e 326 mulheres) reflete a realidade do setor de construção pesada, 
+              mas também evidencia onde estão as oportunidades de avanço: promover a presença feminina especialmente 
+              em áreas técnicas e de liderança.
             </p>
+          </div>
+        </AnimatedSection>
+
+        {/* Tabela 9.1 - Colaboradores por gênero */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4">Tabela 9.1 – Colaboradores por gênero (GRI 2-7)</h3>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Gênero</TableHead>
+                  <TableHead className="text-right">Total</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Homens</TableCell>
+                  <TableCell className="text-right font-medium">4.019</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Mulheres</TableCell>
+                  <TableCell className="text-right font-medium">326</TableCell>
+                </TableRow>
+                <TableRow className="bg-muted/50">
+                  <TableCell className="font-semibold">Total</TableCell>
+                  <TableCell className="text-right font-bold">4.345</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+        </AnimatedSection>
+
+        {/* Tabela 9.2 - Colaboradores por faixa etária */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4">Tabela 9.2 – Colaboradores por faixa etária</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              A distribuição por faixa etária demonstra balanceamento importante entre vitalidade e experiência. 
+              A presença expressiva de colaboradores abaixo de 30 anos traduz a capacidade do Grupo de atrair novos 
+              talentos. O contingente entre 30 e 50 anos corresponde ao núcleo técnico e de liderança de campo. 
+              A presença de colaboradores acima de 50 anos garante a transferência de conhecimento e continuidade 
+              de práticas consolidadas.
+            </p>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Faixa etária</TableHead>
+                  <TableHead className="text-right">Total</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Até 30 anos</TableCell>
+                  <TableCell className="text-right font-medium">991</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>31 a 50 anos</TableCell>
+                  <TableCell className="text-right font-medium">2.210</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Acima de 50 anos</TableCell>
+                  <TableCell className="text-right font-medium">906</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
           </div>
         </AnimatedSection>
       </section>
 
-      {/* Diversity - GRI 405 */}
+      {/* 9.2 Estrutura Hierárquica */}
       <section className="py-12">
         <AnimatedSection>
-          <div className="flex items-center gap-3 mb-4">
-            <Scale className="w-8 h-8 text-primary" />
+          <div className="flex items-center gap-3 mb-8">
+            <HardHat className="w-8 h-8 text-primary" />
             <div>
-              <h2 className="text-2xl font-bold">Diversidade e Inclusão</h2>
-              <p className="text-muted-foreground">GRI 405-1 | Composição por gênero, idade e hierarquia</p>
+              <h2 className="text-2xl font-bold">9.2 Estrutura Hierárquica e Distribuição de Funções</h2>
+              <p className="text-muted-foreground">GRI 2-7</p>
             </div>
           </div>
         </AnimatedSection>
@@ -160,202 +183,550 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-4">
-              O Grupo Construcap está comprometido com a promoção da diversidade e inclusão 
-              em todas as suas operações. A empresa trabalha para aumentar a representatividade 
-              de grupos diversos em todos os níveis hierárquicos.
+              A distribuição funcional reforça o caráter operacional da empresa: <strong>3.873 colaboradores</strong> desempenham 
+              funções diretamente ligadas à execução de obras, operação de equipamentos, manutenção e frentes de campo. 
+              Esse volume exige uma estrutura padronizada de formação, treinamentos obrigatórios, integração contínua 
+              e monitoramento frequente das condições de trabalho.
             </p>
-            <div className="grid sm:grid-cols-2 gap-4 mt-6">
-              <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Accessibility className="w-5 h-5 text-primary" />
-                </div>
+            <p className="text-muted-foreground">
+              Por outro lado, os 312 profissionais administrativos e as equipes de gerência, supervisão e coordenação 
+              formam o eixo de governança operacional – essencial para manter disciplina de processos, cumprimento de 
+              normas, gestão de contratos e aderência ao Sistema Integrado de Gestão.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        {/* Tabela 9.3 - Colaboradores por categoria funcional */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6">
+            <h3 className="font-semibold mb-4">Tabela 9.3 – Colaboradores por categoria funcional</h3>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Categoria</TableHead>
+                  <TableHead className="text-right">Total</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Diretoria</TableCell>
+                  <TableCell className="text-right font-medium">8</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Gerência</TableCell>
+                  <TableCell className="text-right font-medium">76</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Coordenação</TableCell>
+                  <TableCell className="text-right font-medium">35</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Supervisão</TableCell>
+                  <TableCell className="text-right font-medium">41</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Administrativo</TableCell>
+                  <TableCell className="text-right font-medium">312</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Operacional</TableCell>
+                  <TableCell className="text-right font-medium">3.873</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+            <p className="text-sm text-muted-foreground mt-4">
+              Essa estrutura comprova o desafio social da construção pesada: garantir consistência organizacional 
+              em ambientes pulverizados, com equipes frequentemente distribuídas em diversos municípios.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 9.3 Diversidade e Inclusão */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Scale className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">9.3 Diversidade e Inclusão</h2>
+              <p className="text-muted-foreground">GRI 405-1; 406-1</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8 mb-8">
+            <p className="text-muted-foreground mb-6">
+              A Construcap evolui na consolidação de práticas de diversidade e inclusão, especialmente considerando 
+              o contexto de um setor que historicamente apresenta baixa representatividade feminina e de PCDs. 
+              O registro de <strong>7 colaboradores com deficiência</strong> (5 homens e 2 mulheres) aponta para um ponto 
+              de atenção e aprimoramento contínuo, especialmente no que diz respeito a programas de acessibilidade 
+              em obras e estaleiros.
+            </p>
+          </div>
+        </AnimatedSection>
+
+        {/* Tabela 9.4 - PCDs */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4">Tabela 9.4 – Colaboradores com deficiência</h3>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Total</TableHead>
+                  <TableHead className="text-right">Homens</TableHead>
+                  <TableHead className="text-right">Mulheres</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-medium">7</TableCell>
+                  <TableCell className="text-right">5</TableCell>
+                  <TableCell className="text-right">2</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+        </AnimatedSection>
+
+        {/* Tabela 9.5 - Diversidade na liderança */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6">
+            <h3 className="font-semibold mb-4">Tabela 9.5 – Diversidade na liderança (GRI 405-1)</h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              A distribuição por gênero nas posições de liderança demonstra avanços graduais. Embora ainda minoritária 
+              em campo, a presença feminina é relevante em áreas administrativas e coordenação técnica, sinalizando 
+              tendência de ascensão.
+            </p>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Categoria</TableHead>
+                  <TableHead className="text-right">Homens</TableHead>
+                  <TableHead className="text-right">Mulheres</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>Diretoria</TableCell>
+                  <TableCell className="text-right">5</TableCell>
+                  <TableCell className="text-right">3</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Gerência</TableCell>
+                  <TableCell className="text-right">69</TableCell>
+                  <TableCell className="text-right">7</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Coordenação</TableCell>
+                  <TableCell className="text-right">28</TableCell>
+                  <TableCell className="text-right">7</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Supervisão</TableCell>
+                  <TableCell className="text-right">40</TableCell>
+                  <TableCell className="text-right">1</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Administrativo</TableCell>
+                  <TableCell className="text-right">197</TableCell>
+                  <TableCell className="text-right">115</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 9.4 Rotatividade */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-8">
+            <RefreshCw className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">9.4 Rotatividade, Retenção e Engajamento</h2>
+              <p className="text-muted-foreground">GRI 401-1</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8 mb-8">
+            <p className="text-muted-foreground mb-4">
+              A rotatividade de <strong>12%</strong> reflete, acima de tudo, características estruturais do setor: 
+              obras com fases definidas, contratos com início e fim e alta mobilização de mão de obra.
+            </p>
+            <div className="p-4 bg-green-50 dark:bg-green-950/30 rounded-lg mt-6">
+              <div className="flex items-center gap-3">
+                <CheckCircle2 className="w-6 h-6 text-green-600" />
                 <div>
-                  <p className="font-semibold">Pessoas com Deficiência</p>
-                  <p className="text-xs text-muted-foreground">Programa de inclusão e acessibilidade</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <GraduationCap className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold">Jovens Aprendizes</p>
-                  <p className="text-xs text-muted-foreground">Programa de formação profissional</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <BookOpen className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold">Estagiários</p>
-                  <p className="text-xs text-muted-foreground">Programa de estágio estruturado</p>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-secondary/50 rounded-xl">
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <Users className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="font-semibold">Diversidade Racial</p>
-                  <p className="text-xs text-muted-foreground">Compromisso com equidade racial</p>
+                  <p className="font-semibold text-green-700 dark:text-green-400">100% de retenção pós-licença</p>
+                  <p className="text-sm text-muted-foreground">
+                    Retorno e permanência de colaboradores que usufruíram licença maternidade/paternidade, 
+                    indicando ambiente acolhedor e práticas alinhadas ao bem-estar e estabilidade laboral.
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </AnimatedSection>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* Tabela 9.6 - Desligamentos por gênero */}
+          <AnimatedSection>
+            <div className="bg-card rounded-2xl border border-border p-6 h-full">
+              <h3 className="font-semibold mb-4 text-sm">Tabela 9.6 – Desligamentos por gênero</h3>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Gênero</TableHead>
+                    <TableHead className="text-right">Número</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Homens</TableCell>
+                    <TableCell className="text-right">526</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Mulheres</TableCell>
+                    <TableCell className="text-right">58</TableCell>
+                  </TableRow>
+                  <TableRow className="bg-muted/50">
+                    <TableCell className="font-semibold">Total</TableCell>
+                    <TableCell className="text-right font-bold">584</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </AnimatedSection>
+
+          {/* Tabela 9.7 - Desligamentos por faixa etária */}
+          <AnimatedSection delay={100}>
+            <div className="bg-card rounded-2xl border border-border p-6 h-full">
+              <h3 className="font-semibold mb-4 text-sm">Tabela 9.7 – Desligamentos por faixa etária</h3>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Faixa</TableHead>
+                    <TableHead className="text-right">Número</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Até 30 anos</TableCell>
+                    <TableCell className="text-right">240</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>31 a 50 anos</TableCell>
+                    <TableCell className="text-right">285</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Acima de 50 anos</TableCell>
+                    <TableCell className="text-right">59</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </AnimatedSection>
+
+          {/* Tabela 9.8 - Desligamentos por categoria funcional */}
+          <AnimatedSection delay={200}>
+            <div className="bg-card rounded-2xl border border-border p-6 h-full">
+              <h3 className="font-semibold mb-4 text-sm">Tabela 9.8 – Desligamentos por categoria</h3>
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Categoria</TableHead>
+                    <TableHead className="text-right">Número</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  <TableRow>
+                    <TableCell>Operacional</TableCell>
+                    <TableCell className="text-right">522</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Administrativo</TableCell>
+                    <TableCell className="text-right">40</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Supervisão</TableCell>
+                    <TableCell className="text-right">10</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Coordenação</TableCell>
+                    <TableCell className="text-right">5</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Gerência</TableCell>
+                    <TableCell className="text-right">6</TableCell>
+                  </TableRow>
+                  <TableRow>
+                    <TableCell>Alta gerência</TableCell>
+                    <TableCell className="text-right">1</TableCell>
+                  </TableRow>
+                </TableBody>
+              </Table>
+            </div>
+          </AnimatedSection>
+        </div>
       </section>
 
-      {/* Benefits - GRI 401-2 */}
+      {/* 9.5 Benefícios */}
       <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-4">
             <Heart className="w-8 h-8 text-primary" />
             <div>
-              <h2 className="text-2xl font-bold">Benefícios aos Colaboradores</h2>
-              <p className="text-muted-foreground">GRI 401-2 | Pacote de benefícios oferecidos</p>
+              <h2 className="text-2xl font-bold">9.5 Benefícios, Condições de Trabalho e Relações Sindicais</h2>
+              <p className="text-muted-foreground">GRI 401-2; 402-1; 401-3</p>
             </div>
           </div>
-          <p className="text-muted-foreground mb-8">
-            O Grupo oferece um pacote abrangente de benefícios que visa proporcionar 
-            qualidade de vida, segurança e bem-estar aos colaboradores e suas famílias.
-          </p>
-        </AnimatedSection>
-
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {benefits.map((item, index) => (
-            <AnimatedSection key={item.benefit} delay={index * 50}>
-              <div className="bg-card rounded-xl border border-border p-4 hover:border-primary/30 transition-colors">
-                <div className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-emerald-500 mt-0.5 flex-shrink-0" />
-                  <div>
-                    <p className="font-medium">{item.benefit}</p>
-                    <p className="text-xs text-muted-foreground">{item.description}</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
-      {/* Health & Safety - GRI 403 */}
-      <section className="py-12">
-        <AnimatedSection>
-          <div className="flex items-center gap-3 mb-4">
-            <Shield className="w-8 h-8 text-primary" />
-            <div>
-              <h2 className="text-2xl font-bold">Saúde e Segurança do Trabalho</h2>
-              <p className="text-muted-foreground">GRI 403 | Sistema de gestão de SST</p>
-            </div>
-          </div>
-          <p className="text-muted-foreground mb-8">
-            A segurança é valor inegociável no Grupo Construcap. O Sistema de Gestão de 
-            Saúde e Segurança do Trabalho integra políticas, procedimentos e programas que 
-            visam prevenir acidentes, doenças ocupacionais e promover a saúde integral.
-          </p>
         </AnimatedSection>
 
         <AnimatedSection>
-          <div className="bg-card rounded-2xl border border-border p-6 mb-8">
-            <h4 className="font-bold mb-6 flex items-center gap-2">
-              <Flame className="w-5 h-5 text-orange-500" />
-              Compromisso com Zero Acidentes
-            </h4>
+          <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground mb-4">
-              O Grupo Construcap mantém o compromisso com a meta de Zero Acidentes, 
-              investindo continuamente em treinamentos, equipamentos de proteção, 
-              procedimentos seguros e cultura de segurança em todas as operações.
+              Todos os colaboradores de tempo integral recebem benefícios essenciais, o que reforça a relação de 
+              longo prazo estabelecida pela Construcap com seu capital humano.
             </p>
-            <div className="grid sm:grid-cols-3 gap-4">
-              <div className="p-4 bg-secondary/50 rounded-xl text-center">
-                <HardHat className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-sm font-medium">Cultura de Segurança</p>
-              </div>
-              <div className="p-4 bg-secondary/50 rounded-xl text-center">
-                <ShieldCheck className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-sm font-medium">Prevenção de Riscos</p>
-              </div>
-              <div className="p-4 bg-secondary/50 rounded-xl text-center">
-                <HeartHandshake className="w-6 h-6 text-primary mx-auto mb-2" />
-                <p className="text-sm font-medium">Saúde Integral</p>
-              </div>
-            </div>
+            <p className="text-muted-foreground">
+              A gestão de mudanças organizacionais, especialmente em obras, segue fluxo claro: comunicação prévia 
+              formal, alinhamento com lideranças e observância de normas coletivas. Isso é crítico em empreendimentos 
+              de grande porte, onde mudanças de fase, transição de turnos, início ou encerramento de frentes de 
+              trabalho podem impactar centenas de profissionais.
+            </p>
           </div>
         </AnimatedSection>
-
-        {/* Safety Programs */}
-        <AnimatedSection>
-          <h3 className="text-xl font-bold mb-6">Programas de Segurança e Saúde</h3>
-        </AnimatedSection>
-        <div className="grid sm:grid-cols-2 gap-4">
-          {safetyPrograms.map((item, index) => (
-            <AnimatedSection key={item.program} delay={index * 50}>
-              <div className="bg-card rounded-xl border border-border p-4 h-full">
-                <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-orange-500/10 flex items-center justify-center flex-shrink-0">
-                    <Shield className="w-4 h-4 text-orange-500" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-sm">{item.program}</p>
-                    <p className="text-xs text-muted-foreground mt-1">{item.description}</p>
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
       </section>
 
-      {/* Training - GRI 404 */}
-      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+      {/* 9.6 Desenvolvimento e Capacitação */}
+      <section className="py-12">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-4">
             <GraduationCap className="w-8 h-8 text-primary" />
             <div>
-              <h2 className="text-2xl font-bold">Treinamento e Desenvolvimento</h2>
-              <p className="text-muted-foreground">GRI 404 | Capacitação e educação corporativa</p>
+              <h2 className="text-2xl font-bold">9.6 Desenvolvimento e Capacitação</h2>
+              <p className="text-muted-foreground">GRI 404-1; 404-2; 404-3</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8 mb-8">
+            <p className="text-muted-foreground mb-4">
+              Em um setor onde o risco é inerente, <strong>capacitação não é diferencial – é necessidade vital</strong>.
+            </p>
+            <p className="text-muted-foreground mb-6">
+              O procedimento <strong>CCT – Capacitação, Conscientização e Treinamento</strong> organiza toda a lógica 
+              formativa da empresa. Sob ele, são ofertados:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Treinamentos obrigatórios (todas as NRs aplicáveis)",
+                "Formações técnicas para operação de equipamentos",
+                "Treinamentos de integração",
+                "Reciclagens periódicas",
+                "Emergências e resposta a incidentes",
+                "Campanhas temáticas (segurança, qualidade, integridade)"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground mt-6">
+              A ausência de um processo formal de avaliação anual para 100% dos colaboradores é reconhecida, mas mitigada 
+              por práticas constantes de feedback, supervisão direta em obra e orientação operacional, características 
+              que sustentam a cultura técnica do setor.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 9.7 Saúde e Segurança */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Shield className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">9.7 Saúde e Segurança como Valor Inegociável</h2>
+              <p className="text-muted-foreground">GRI 403-1 a 403-10</p>
             </div>
           </div>
           <p className="text-muted-foreground mb-8">
-            O desenvolvimento contínuo dos colaboradores é prioridade estratégica. 
-            O Grupo investe em programas de capacitação técnica, desenvolvimento de 
-            lideranças e formação complementar para todas as áreas.
+            Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde e Segurança. 
+            A empresa opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001</strong>, sustentado 
+            por ferramentas, protocolos e mecanismos que permitem controle sistemático em ambientes de risco.
           </p>
         </AnimatedSection>
 
-        {/* Development Programs */}
+        {/* 9.7.1 Conformidade */}
         <AnimatedSection>
-          <h3 className="text-xl font-bold mb-6">Programas de Desenvolvimento</h3>
-        </AnimatedSection>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {developmentPrograms.map((program, index) => (
-            <AnimatedSection key={program.name} delay={index * 75}>
-              <div className="bg-card rounded-xl border border-border p-5 h-full hover:border-primary/30 transition-colors">
-                <div className="flex items-center gap-2 mb-3">
-                  <Award className="w-5 h-5 text-primary" />
-                  <h4 className="font-semibold">{program.name}</h4>
-                </div>
-                <p className="text-sm text-muted-foreground mb-3">{program.description}</p>
-                <p className="text-xs text-primary font-medium">Duração: {program.duration}</p>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <FileText className="w-5 h-5 text-primary" />
+              9.7.1 Conformidade e estrutura normativa
+            </h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
+                <p className="font-medium text-blue-700 dark:text-blue-400 mb-1">Sistema ECCOSAFETY</p>
+                <p className="text-sm text-muted-foreground">
+                  Centraliza requisitos legais, NR por NR, de todas as esferas (municipal, estadual e federal)
+                </p>
               </div>
-            </AnimatedSection>
-          ))}
-        </div>
+              <div className="p-4 bg-green-50 dark:bg-green-950/30 rounded-lg">
+                <p className="font-medium text-green-700 dark:text-green-400 mb-1">Atualizações Semestrais</p>
+                <p className="text-sm text-muted-foreground">
+                  Garantem aderência permanente às normas vigentes
+                </p>
+              </div>
+              <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg md:col-span-2">
+                <p className="font-medium text-amber-700 dark:text-amber-400 mb-1">PGR em 100% das obras</p>
+                <p className="text-sm text-muted-foreground">
+                  Programas de Gerenciamento de Riscos implementados em todas as operações
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 9.7.2 Cultura preventiva */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <HeartHandshake className="w-5 h-5 text-primary" />
+              9.7.2 Cultura preventiva e participação ativa
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              A cultura de prevenção é materializada em práticas que traduzem um princípio basilar: 
+              <strong> todos são responsáveis pela segurança</strong>.
+            </p>
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+                "Diálogos diários de segurança (DDS)",
+                "Investigação participativa de incidentes",
+                "Inspeções sistemáticas de campo",
+                "Campanhas de registro de desvios",
+                "Comitês formais como CIPA",
+                "Canal Alô Construcap para denúncias e desvios",
+                "Avaliações comportamentais regulares"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+                  <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 9.7.3 Capacitação e formação */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6 mb-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <GraduationCap className="w-5 h-5 text-primary" />
+              9.7.3 Capacitação e formação obrigatória
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              O procedimento CCT define periodicidade e conteúdo de capacitação:
+            </p>
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+                "NRs aplicáveis por função (altura, eletricidade, confinamento, máquinas)",
+                "Treinamentos específicos para riscos críticos",
+                "Protocolos operacionais padronizados (OSMAs)",
+                "Capacitação obrigatória de contratadas"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-2 p-3 bg-orange-50 dark:bg-orange-950/20 rounded-lg">
+                  <AlertTriangle className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
+
+        {/* 9.7.4 Saúde ocupacional */}
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-6">
+            <h3 className="font-semibold mb-4 flex items-center gap-2">
+              <Stethoscope className="w-5 h-5 text-primary" />
+              9.7.4 Saúde ocupacional
+            </h3>
+            <p className="text-sm text-muted-foreground mb-4">
+              Sob o <strong>PCMSO (NR-07)</strong>, a empresa realiza:
+            </p>
+            <div className="grid md:grid-cols-2 gap-3">
+              {[
+                "Exames clínicos obrigatórios",
+                "Monitoramento epidemiológico",
+                "Rastreamento de riscos crônicos",
+                "Registro sigiloso de informações médicas",
+                "Atendimento técnico especializado"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+                  <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </AnimatedSection>
       </section>
 
-      {/* Final Section */}
+      {/* 9.8 Relacionamento com Comunidades */}
       <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Users className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">9.8 Relacionamento com Comunidades e Responsabilidade Social</h2>
+              <p className="text-muted-foreground">GRI 413-1; 413-2</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-6">
+              A Construcap adota práticas sistemáticas de relacionamento com comunidades em obras e operações:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {[
+                "Canais formais de comunicação",
+                "Interface com lideranças locais",
+                "Mitigação de impactos previstos em obra",
+                "Procedimentos estruturados para registro e tratamento de demandas",
+                "Participação em iniciativas sociais das unidades do Grupo"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
+                  <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground">
+              A atuação social das controladas reforça o papel do Grupo no território, especialmente em mobilização 
+              cultural (Mineirão), zeladoria urbana (Ambicap), educação ambiental (Urbia) e serviços de saúde (Inova).
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* Conclusão */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
         <AnimatedSection>
           <div className="text-center max-w-3xl mx-auto">
             <HandHeart className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-4">Compromisso com as Pessoas</h2>
             <p className="text-muted-foreground">
-              O Grupo Construcap acredita que o sucesso sustentável depende do desenvolvimento 
-              e bem-estar de seus colaboradores. Por isso, investe continuamente em práticas 
-              de gestão de pessoas que promovem segurança, diversidade, capacitação e qualidade 
-              de vida, construindo um ambiente de trabalho onde todos possam crescer e contribuir 
-              para os resultados da empresa.
+              O desempenho social da Construcap demonstra um equilíbrio entre escala operacional, rigor técnico, 
+              governança e respeito às pessoas. Os dados quantitativos reforçam um quadro robusto, enquanto as 
+              práticas qualitativas – especialmente em segurança, integridade e desenvolvimento – revelam a 
+              profundidade com que o Grupo incorpora responsabilidade social como eixo estratégico de sua atuação.
             </p>
           </div>
         </AnimatedSection>

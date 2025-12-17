@@ -1,13 +1,26 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home } from "lucide-react";
+import { Menu, X, Home, ChevronDown } from "lucide-react";
 import construcapLogo from "@/assets/construcap-logo.png";
-const reportPages = [
+
+interface ReportPage {
+  path: string;
+  label: string;
+  subPages?: { path: string; label: string }[];
+}
+
+const reportPages: ReportPage[] = [
   { path: "/quem-somos", label: "Quem Somos" },
   { path: "/governanca", label: "Governança" },
   { path: "/desempenho-economico", label: "Econômico" },
   { path: "/desempenho-ambiental", label: "Ambiental" },
-  { path: "/desempenho-social", label: "Social" },
+  { 
+    path: "/desempenho-social", 
+    label: "Social",
+    subPages: [
+      { path: "/comunidades", label: "Comunidades" }
+    ]
+  },
   { path: "/gri-index", label: "Índice GRI" },
 ];
 
@@ -63,19 +76,38 @@ const ReportNavbar = () => {
               Capa
             </Link>
             {reportPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
-                  location.pathname === page.path
-                    ? "bg-primary text-primary-foreground"
-                    : isScrolled
-                      ? "text-foreground hover:bg-secondary"
-                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
-                }`}
-              >
-                {page.label}
-              </Link>
+              <div key={page.path} className="relative group">
+                <Link
+                  to={page.path}
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                    location.pathname === page.path || page.subPages?.some(sub => location.pathname === sub.path)
+                      ? "bg-primary text-primary-foreground"
+                      : isScrolled
+                        ? "text-foreground hover:bg-secondary"
+                        : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                  }`}
+                >
+                  {page.label}
+                  {page.subPages && <ChevronDown className="w-3 h-3 ml-1" />}
+                </Link>
+                {page.subPages && (
+                  <div className="absolute top-full left-0 mt-1 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all min-w-[160px]">
+                    {page.subPages.map((subPage) => (
+                      <Link
+                        key={subPage.path}
+                        to={subPage.path}
+                        className={`block px-4 py-2 text-sm transition-colors first:rounded-t-lg last:rounded-b-lg ${
+                          location.pathname === subPage.path
+                            ? "bg-primary text-primary-foreground"
+                            : "text-foreground hover:bg-secondary"
+                        }`}
+                      >
+                        {subPage.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 
@@ -120,18 +152,33 @@ const ReportNavbar = () => {
               Capa
             </Link>
             {reportPages.map((page) => (
-              <Link
-                key={page.path}
-                to={page.path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  location.pathname === page.path
-                    ? "bg-primary text-primary-foreground"
-                    : "text-foreground hover:bg-secondary"
-                }`}
-              >
-                {page.label}
-              </Link>
+              <div key={page.path}>
+                <Link
+                  to={page.path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                    location.pathname === page.path
+                      ? "bg-primary text-primary-foreground"
+                      : "text-foreground hover:bg-secondary"
+                  }`}
+                >
+                  {page.label}
+                </Link>
+                {page.subPages?.map((subPage) => (
+                  <Link
+                    key={subPage.path}
+                    to={subPage.path}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className={`block w-full text-left px-4 py-3 pl-8 rounded-lg text-sm transition-colors ${
+                      location.pathname === subPage.path
+                        ? "bg-primary text-primary-foreground"
+                        : "text-muted-foreground hover:bg-secondary hover:text-foreground"
+                    }`}
+                  >
+                    └ {subPage.label}
+                  </Link>
+                ))}
+              </div>
             ))}
           </div>
         </div>

@@ -1,17 +1,10 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
-
-const navSections = [
-  { id: "highlights", label: "Destaques" },
-  { id: "environmental", label: "Ambiental" },
-  { id: "certifications", label: "Certificações" },
-  { id: "sections", label: "Capítulos" },
-];
+import { Menu, X, Home } from "lucide-react";
 
 const reportPages = [
-  { path: "/relatorio", label: "Capa" },
-  { path: "/relatorio/carta-ceo", label: "Carta do CEO" },
+  { path: "/relatorio/quem-somos", label: "Quem Somos" },
+  { path: "/relatorio/estrategia-governanca", label: "Governança" },
   { path: "/relatorio/desempenho-economico", label: "Econômico" },
   { path: "/relatorio/desempenho-ambiental", label: "Ambiental" },
   { path: "/relatorio/desempenho-social", label: "Social" },
@@ -20,47 +13,18 @@ const reportPages = [
 
 const ReportNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
-
-      // Check which section is currently in view
-      const sections = navSections.map(s => document.getElementById(s.id));
-      const scrollPosition = window.scrollY + 150;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(navSections[i].id);
-          break;
-        }
-      }
     };
 
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      const offset = 80;
-      const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-      window.scrollTo({
-        top: elementPosition - offset,
-        behavior: "smooth"
-      });
-    }
-    setIsMobileMenuOpen(false);
-  };
-
-  const isOnCoverPage = location.pathname === "/relatorio";
 
   return (
     <nav
@@ -83,61 +47,42 @@ const ReportNavbar = () => {
             </div>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {isOnCoverPage && navSections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
-                  activeSection === section.id
+          {/* Desktop Navigation - Report Pages */}
+          <div className="hidden lg:flex items-center gap-1">
+            <Link
+              to="/relatorio"
+              className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
+                location.pathname === "/relatorio"
+                  ? "bg-primary text-primary-foreground"
+                  : isScrolled
+                  ? "text-foreground hover:bg-secondary"
+                  : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+              }`}
+            >
+              <Home className="w-4 h-4" />
+              Capa
+            </Link>
+            {reportPages.map((page) => (
+              <Link
+                key={page.path}
+                to={page.path}
+                className={`px-3 py-2 rounded-lg text-sm font-medium transition-all ${
+                  location.pathname === page.path
                     ? "bg-primary text-primary-foreground"
                     : isScrolled
                     ? "text-foreground hover:bg-secondary"
                     : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
                 }`}
               >
-                {section.label}
-              </button>
+                {page.label}
+              </Link>
             ))}
-
-            {/* Pages Dropdown */}
-            <div className="relative ml-2">
-              <button
-                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                onBlur={() => setTimeout(() => setIsDropdownOpen(false), 150)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
-                  isScrolled
-                    ? "text-foreground hover:bg-secondary border border-border"
-                    : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10 border border-primary-foreground/20"
-                }`}
-              >
-                Capítulos
-                <ChevronDown className={`w-4 h-4 transition-transform ${isDropdownOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {isDropdownOpen && (
-                <div className="absolute top-full right-0 mt-2 w-48 bg-card rounded-xl border border-border shadow-xl overflow-hidden animate-fade-in">
-                  {reportPages.map((page) => (
-                    <Link
-                      key={page.path}
-                      to={page.path}
-                      className={`block px-4 py-3 text-sm hover:bg-secondary transition-colors ${
-                        location.pathname === page.path ? 'bg-primary/10 text-primary font-medium' : 'text-foreground'
-                      }`}
-                    >
-                      {page.label}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
           </div>
 
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
+            className={`lg:hidden p-2 rounded-lg transition-colors ${
               isScrolled ? "text-foreground hover:bg-secondary" : "text-primary-foreground hover:bg-primary-foreground/10"
             }`}
           >
@@ -146,7 +91,7 @@ const ReportNavbar = () => {
         </div>
 
         {/* Progress Bar */}
-        {isOnCoverPage && isScrolled && (
+        {isScrolled && (
           <div className="h-0.5 bg-secondary -mx-6">
             <div 
               className="h-full bg-primary transition-all duration-150"
@@ -160,36 +105,34 @@ const ReportNavbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-card border-t border-border animate-fade-in">
+        <div className="lg:hidden bg-card border-t border-border animate-fade-in">
           <div className="container mx-auto px-6 py-4 space-y-2">
-            {isOnCoverPage && navSections.map((section) => (
-              <button
-                key={section.id}
-                onClick={() => scrollToSection(section.id)}
+            <Link
+              to="/relatorio"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
+                location.pathname === "/relatorio"
+                  ? "bg-primary text-primary-foreground"
+                  : "text-foreground hover:bg-secondary"
+              }`}
+            >
+              <Home className="w-4 h-4" />
+              Capa
+            </Link>
+            {reportPages.map((page) => (
+              <Link
+                key={page.path}
+                to={page.path}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={`block w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                  activeSection === section.id
+                  location.pathname === page.path
                     ? "bg-primary text-primary-foreground"
                     : "text-foreground hover:bg-secondary"
                 }`}
               >
-                {section.label}
-              </button>
+                {page.label}
+              </Link>
             ))}
-            <div className="border-t border-border pt-2 mt-2">
-              <p className="px-4 py-2 text-xs text-muted-foreground uppercase tracking-wider">Capítulos</p>
-              {reportPages.map((page) => (
-                <Link
-                  key={page.path}
-                  to={page.path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm transition-colors ${
-                    location.pathname === page.path ? 'bg-primary/10 text-primary font-medium' : 'text-foreground hover:bg-secondary'
-                  }`}
-                >
-                  {page.label}
-                </Link>
-              ))}
-            </div>
           </div>
         </div>
       )}

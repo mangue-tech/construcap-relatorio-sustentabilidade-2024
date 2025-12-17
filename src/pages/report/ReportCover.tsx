@@ -277,7 +277,11 @@ const ReportCover = () => {
             <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
             animationDelay: "400ms"
           }}>
-              {iconicWorks.map(work => {})}
+              {iconicWorks.map((work, index) => (
+                <span key={index} className="px-3 py-1 bg-primary-foreground/10 text-primary-foreground text-sm rounded-full border border-primary-foreground/20">
+                  {work.name}
+                </span>
+              ))}
             </div>
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
@@ -407,7 +411,7 @@ const ReportCover = () => {
           </div>
 
           {/* Charts Section */}
-          <div className="grid lg:grid-cols-2 gap-8">
+          <div className="space-y-8">
             {/* Pie Chart - Emissions by Scope */}
             <AnimatedSection delay={200}>
               <div className="bg-card rounded-2xl border border-border p-6">

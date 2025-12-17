@@ -35,9 +35,9 @@ const menuItems = [
       { path: "/governanca", label: "Estratégia e Governança" },
       { path: "/compliance", label: "Integridade e Compliance" },
       { path: "/gestao-riscos", label: "Gestão de Riscos" },
+      { path: "/materialidade", label: "Materialidade e Stakeholders" },
     ]
   },
-  { path: "/materialidade", label: "Materialidade e Stakeholders", icon: Users },
   { path: "/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
   { path: "/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
   { path: "/desempenho-social", label: "Desempenho Social", icon: Heart },

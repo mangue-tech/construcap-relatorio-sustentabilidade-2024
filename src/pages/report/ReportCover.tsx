@@ -475,16 +475,16 @@ const ReportCover = () => {
 
       {/* Copyright Footer */}
       <footer className="bg-background py-8 px-6">
-        <div className="container mx-auto">
+        <div className="container mx-auto flex items-center justify-between">
           <p className="text-left text-sm text-muted-foreground">
             Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
           </p>
+          <MangueBadge />
         </div>
       </footer>
 
       {/* Floating Elements */}
       <ScrollToTop />
-      <MangueBadge />
     </div>
   );
 };

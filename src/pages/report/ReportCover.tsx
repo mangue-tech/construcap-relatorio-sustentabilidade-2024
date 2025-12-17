@@ -277,11 +277,7 @@ const ReportCover = () => {
             <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
             animationDelay: "400ms"
           }}>
-              {iconicWorks.map((work, index) => (
-                <span key={index} className="px-3 py-1 bg-primary-foreground/10 text-primary-foreground text-sm rounded-full border border-primary-foreground/20">
-                  {work.name}
-                </span>
-              ))}
+              {iconicWorks.map(work => {})}
             </div>
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
@@ -411,8 +407,8 @@ const ReportCover = () => {
           </div>
 
           {/* Charts Section */}
-          <div className="space-y-8">
-            {/* Pie Chart - Emissions by Scope - Full Width */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            {/* Pie Chart - Emissions by Scope */}
             <AnimatedSection delay={200}>
               <div className="bg-card rounded-2xl border border-border p-6">
                 <h3 className="font-semibold text-lg mb-2">Emissões por Escopo</h3>
@@ -536,7 +532,7 @@ const ReportCover = () => {
       <section id="sections" className="py-20 bg-secondary/30">
         <div className="container mx-auto px-6">
           <AnimatedSection>
-            <h2 className="text-3xl font-bold text-center mb-4">Navegue pelo Relatório</h2>
+            
             <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">
               Explore os diferentes capítulos do nosso Relatório de Sustentabilidade 2024
             </p>

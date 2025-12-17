@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, TreePine, Stethoscope, Recycle, Landmark } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-construction.jpg";
+import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { AnimatedCounter } from "@/hooks/useCountUp";
 import ReportNavbar from "@/components/report/ReportNavbar";
@@ -277,7 +278,11 @@ const ReportCover = () => {
             <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
             animationDelay: "400ms"
           }}>
-              {iconicWorks.map(work => {})}
+              {iconicWorks.map((work, index) => (
+                <span key={index} className="px-3 py-1.5 bg-primary-foreground/10 text-primary-foreground rounded-full text-sm border border-primary-foreground/20">
+                  {work.name}
+                </span>
+              ))}
             </div>
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
@@ -407,13 +412,13 @@ const ReportCover = () => {
           </div>
 
           {/* Charts Section */}
-          <div className="grid lg:grid-cols-2 gap-8">
-            {/* Pie Chart - Emissions by Scope */}
+          <div className="grid gap-8">
+            {/* Pie Chart - Emissions by Scope - Full Width */}
             <AnimatedSection delay={200}>
               <div className="bg-card rounded-2xl border border-border p-6">
                 <h3 className="font-semibold text-lg mb-2">Emissões por Escopo</h3>
                 <p className="text-sm text-muted-foreground mb-6">Distribuição de emissões GEE (tCO₂e)</p>
-                <div className="h-[300px]">
+                <div className="h-[400px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie data={emissionsData} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={1500}>
@@ -556,10 +561,13 @@ const ReportCover = () => {
 
       {/* Copyright Footer */}
       <footer className="bg-background py-8 px-6">
-        <div className="container mx-auto">
-          <p className="text-left text-sm text-muted-foreground">
+        <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-sm text-muted-foreground">
             Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
           </p>
+          <a href="https://mangue.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <img src={mangueTechBadge2} alt="Desenvolvido por Mangue Tech" className="h-10" />
+          </a>
         </div>
       </footer>
 

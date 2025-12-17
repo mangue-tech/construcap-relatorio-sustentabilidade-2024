@@ -1,375 +1,570 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { 
   Truck, 
   Users, 
-  MapPin, 
   Shield, 
   FileCheck, 
   AlertTriangle,
   CheckCircle,
   Building2,
   Target,
-  Handshake
+  Handshake,
+  Scale,
+  Phone,
+  Leaf,
+  HardHat,
+  ClipboardCheck,
+  Ban
 } from "lucide-react";
 import supplyChainHero from "@/assets/report/social-hero.jpg";
+
+const supplyCategories = [
+  {
+    title: "Fornecedores de materiais e insumos críticos",
+    items: [
+      "Cimento, agregados, aço, pré-moldados, aditivos",
+      "Materiais elétricos e hidráulicos",
+      "Itens de acabamento conforme escopo contratual",
+      "Insumos aplicados em obras civis, urbanas, industriais e hospitalares"
+    ]
+  },
+  {
+    title: "Serviços especializados de engenharia",
+    items: [
+      "Sondagem, topografia, projetos complementares",
+      "Geotecnia, estruturas, fundações",
+      "Sistemas prediais, comissionamento e startups"
+    ]
+  },
+  {
+    title: "Equipamentos e logística",
+    items: [
+      "Locação, operação e manutenção de máquinas pesadas",
+      "Transporte de materiais, resíduos e suprimentos",
+      "Operadores especializados para atividades críticas"
+    ]
+  },
+  {
+    title: "Serviços gerais e facilities",
+    items: [
+      "Alimentação, limpeza, apoio administrativo",
+      "Segurança patrimonial, controle de acessos",
+      "Alojamentos e transporte de equipes"
+    ]
+  }
+];
+
+const homologationSteps = [
+  {
+    icon: Scale,
+    title: "1. Avaliação jurídica e trabalhista",
+    items: [
+      "Certidões negativas",
+      "Regularidade fiscal e previdenciária",
+      "Ausência de impedimentos legais",
+      "Comprovação de vínculo formal das equipes"
+    ]
+  },
+  {
+    icon: Shield,
+    title: "2. Conformidade em saúde e segurança",
+    items: [
+      "NRs aplicáveis",
+      "Registros de treinamentos",
+      "Comprovação de capacitação técnica",
+      "Análise de riscos operacionais inerentes"
+    ]
+  },
+  {
+    icon: Handshake,
+    title: "3. Aderência ao Código de Conduta e Integridade",
+    items: [
+      "Assinatura de termo de compromisso",
+      "Concordância com diretrizes anticorrupção",
+      "Proibição de práticas ilícitas e fraudes",
+      "Normas de relacionamento com agentes públicos e privados"
+    ],
+    gri: "GRI 2-23; 2-24"
+  },
+  {
+    icon: Leaf,
+    title: "4. Requisitos ambientais (SIG / GRI 308)",
+    items: [
+      "Licenças ambientais necessárias",
+      "Regularidade para transporte e destinação de resíduos",
+      "Procedimentos de controle de emissões",
+      "Aderência às normas aplicáveis em atividades de maior impacto"
+    ]
+  }
+];
+
+const dueDiligenceRisks = [
+  {
+    type: "Risco reputacional",
+    description: "Identificação de histórico de irregularidades, sanções, litígios e violações trabalhistas"
+  },
+  {
+    type: "Risco ambiental",
+    description: "Relevante para fornecedores de transporte de resíduos, terraplenagem, combustíveis, insumos químicos"
+  },
+  {
+    type: "Risco de integridade",
+    description: "Avaliação de vulnerabilidades para corrupção, fraudes, conflito de interesses ou pagamentos indevidos"
+  },
+  {
+    type: "Risco operacional",
+    description: "Consideração da criticidade da atividade e possíveis impactos à saúde e segurança"
+  }
+];
+
+const humanRightsRequirements = [
+  "Inexistência de trabalho infantil",
+  "Inexistência de trabalho análogo ao escravo",
+  "Condições dignas de alojamento, transporte e alimentação",
+  "Fornecimento de EPIs adequados",
+  "Cumprimento integral da CLT",
+  "Respeito à diversidade e não discriminação"
+];
 
 const SupplyChainPage = () => {
   return (
     <ReportLayout>
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
-        <img 
-          src={supplyChainHero} 
-          alt="Cadeia de Fornecimento" 
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/90 to-primary/50 flex items-center">
-          <div className="px-6 lg:px-12">
-            <p className="text-primary-foreground/80 text-sm font-medium mb-2">GRI 204, 308, 414</p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
-              Cadeia de Fornecimento
-            </h1>
-            <p className="text-primary-foreground/90 text-lg max-w-2xl">
-              Gestão responsável da cadeia de suprimentos com foco em práticas sustentáveis e desenvolvimento local
-            </p>
+      <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
+        <div className="relative h-[400px] overflow-hidden">
+          <img 
+            src={supplyChainHero} 
+            alt="Cadeia de Fornecimento" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute bottom-0 left-0 right-0 p-8">
+            <AnimatedSection>
+              <div className="flex items-center gap-2 text-sm text-muted-foreground mb-4">
+                <span>Capítulo 11</span>
+                <span>•</span>
+                <span>GRI 2-6; 2-23; 2-24; 2-25; 3-3; 308; 414</span>
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Cadeia de Fornecimento</h1>
+              <p className="text-xl text-muted-foreground max-w-3xl">
+                Gestão estruturada de fornecedores com rigor técnico, disciplina de processos e 
+                mecanismos preventivos para garantir segurança, integridade e conformidade.
+              </p>
+            </AnimatedSection>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="space-y-12">
-        {/* Introdução */}
-        <section>
-          <p className="text-lg text-muted-foreground leading-relaxed">
-            A gestão responsável da cadeia de fornecimento é um pilar fundamental da estratégia de sustentabilidade 
-            do Grupo Construcap. Priorizamos o desenvolvimento de fornecedores locais, a avaliação de práticas 
-            socioambientais e a garantia de conformidade com nossos padrões éticos e de qualidade.
-          </p>
-        </section>
-
-        {/* KPIs Principais */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Target className="w-6 h-6 text-primary" />
-            Indicadores da Cadeia de Fornecimento
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
-              <CardContent className="p-6 text-center">
-                <p className="text-3xl font-bold text-primary">2.847</p>
-                <p className="text-sm text-muted-foreground mt-1">Fornecedores Ativos</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20">
-              <CardContent className="p-6 text-center">
-                <p className="text-3xl font-bold text-green-600">78%</p>
-                <p className="text-sm text-muted-foreground mt-1">Fornecedores Locais</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20">
-              <CardContent className="p-6 text-center">
-                <p className="text-3xl font-bold text-blue-600">100%</p>
-                <p className="text-sm text-muted-foreground mt-1">Avaliados em Critérios ESG</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border-amber-500/20">
-              <CardContent className="p-6 text-center">
-                <p className="text-3xl font-bold text-amber-600">R$ 1,8 bi</p>
-                <p className="text-sm text-muted-foreground mt-1">Volume de Compras</p>
-              </CardContent>
-            </Card>
+      {/* Introdução */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-4">
+              A cadeia de fornecimento da Construcap é um componente crítico da estratégia corporativa e da capacidade 
+              de execução do Grupo. Em um setor que opera com alta complexidade logística, insumos de engenharia, 
+              equipamentos de grande porte e serviços especializados de alto risco, a gestão estruturada de fornecedores 
+              é indispensável para garantir segurança, integridade, qualidade construtiva e conformidade legal em todas 
+              as etapas dos projetos.
+            </p>
+            <p className="text-muted-foreground">
+              O sistema de suprimentos da Construcap incorpora rigor técnico, disciplina de processos e mecanismos 
+              preventivos, assegurando que cada fornecedor esteja alinhado aos valores essenciais da companhia, ao 
+              Sistema Integrado de Gestão (SIG) e às expectativas de desempenho socioambiental estabelecidas pelos 
+              compromissos públicos do Grupo.
+            </p>
           </div>
-        </section>
+        </AnimatedSection>
+      </section>
 
-        {/* Fornecedores Locais - GRI 204-1 */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <MapPin className="w-5 h-5 text-primary" />
-                Proporção de Gastos com Fornecedores Locais (GRI 204-1)
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-muted-foreground">
-                Priorizamos a contratação de fornecedores locais para fortalecer as economias regionais 
-                e reduzir impactos ambientais associados ao transporte de materiais e equipamentos.
-              </p>
-              
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Distribuição por Região</h4>
-                  <div className="space-y-3">
-                    {[
-                      { regiao: "Sudeste", percentual: 62, valor: "R$ 1.116 mi" },
-                      { regiao: "Nordeste", percentual: 18, valor: "R$ 324 mi" },
-                      { regiao: "Sul", percentual: 12, valor: "R$ 216 mi" },
-                      { regiao: "Centro-Oeste", percentual: 5, valor: "R$ 90 mi" },
-                      { regiao: "Norte", percentual: 3, valor: "R$ 54 mi" },
-                    ].map((item) => (
-                      <div key={item.regiao} className="space-y-1">
-                        <div className="flex justify-between text-sm">
-                          <span>{item.regiao}</span>
-                          <span className="font-medium">{item.percentual}% ({item.valor})</span>
-                        </div>
-                        <div className="h-2 bg-muted rounded-full overflow-hidden">
-                          <div 
-                            className="h-full bg-primary rounded-full transition-all duration-500"
-                            style={{ width: `${item.percentual}%` }}
-                          />
-                        </div>
-                      </div>
-                    ))}
+      {/* 11.1 Abrangência e Estrutura */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Truck className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.1 Abrangência e Estrutura Operacional da Cadeia</h2>
+              <p className="text-muted-foreground">GRI 2-6</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            A Construcap funciona por meio de uma cadeia complexa e diversificada, composta por fornecedores de 
+            materiais, equipamentos, logística e serviços técnicos. Sua estrutura demonstra amplitude e maturidade 
+            operacional.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {supplyCategories.map((category, index) => (
+            <AnimatedSection key={category.title} delay={index * 100}>
+              <div className="bg-card rounded-2xl border border-border p-6 h-full">
+                <h3 className="font-semibold mb-4">{category.title}</h3>
+                <ul className="space-y-2">
+                  {category.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                      <CheckCircle className="w-4 h-4 text-primary mt-0.5 shrink-0" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+
+        <AnimatedSection>
+          <p className="text-sm text-muted-foreground mt-8 text-center max-w-2xl mx-auto">
+            Essa estrutura reflete a capacidade da Construcap de coordenar múltiplos elos simultâneos, com complexidade 
+            operacional que exige alto grau de organização, rastreabilidade e rigidez contratual.
+          </p>
+        </AnimatedSection>
+      </section>
+
+      {/* 11.2 Seleção e Homologação */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <FileCheck className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.2 Seleção e Homologação de Fornecedores</h2>
+              <p className="text-muted-foreground">GRI 3-3; 2-23; 2-24; 414</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            O processo de homologação é um dos mais robustos do SIG. A entrada de um fornecedor na cadeia não depende 
+            apenas de preço ou capacidade operacional; exige comprovação documental, análise de riscos, aderência às 
+            normas legais e alinhamento explícito com a política de integridade do Grupo.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {homologationSteps.map((step, index) => (
+            <AnimatedSection key={step.title} delay={index * 100}>
+              <div className="bg-card rounded-2xl border border-border p-6 h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                    <step.icon className="w-5 h-5 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold">{step.title}</h3>
+                    {step.gri && <p className="text-xs text-muted-foreground">{step.gri}</p>}
                   </div>
                 </div>
-                
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Critérios de Definição "Local"</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
+                <ul className="space-y-2">
+                  {step.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                       <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                      <span>Fornecedores sediados no mesmo estado da obra</span>
+                      <span>{item}</span>
                     </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                      <span>Raio máximo de 200km do canteiro de obras</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                      <span>Preferência para MPEs locais em licitações</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 shrink-0" />
-                      <span>Programas de desenvolvimento de fornecedores regionais</span>
-                    </li>
-                  </ul>
-                  
-                  <div className="p-4 bg-primary/5 rounded-lg border border-primary/20">
-                    <p className="text-sm font-medium text-primary">Meta 2025</p>
-                    <p className="text-2xl font-bold">80%</p>
-                    <p className="text-xs text-muted-foreground">de gastos com fornecedores locais</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Avaliação Ambiental - GRI 308 */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Shield className="w-5 h-5 text-green-600" />
-                Avaliação Ambiental de Fornecedores (GRI 308)
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-3 gap-4">
-                <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
-                  <CardContent className="p-4 text-center">
-                    <FileCheck className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-green-700 dark:text-green-400">100%</p>
-                    <p className="text-xs text-green-600 dark:text-green-500">Novos fornecedores avaliados com critérios ambientais (GRI 308-1)</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
-                  <CardContent className="p-4 text-center">
-                    <AlertTriangle className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-amber-700 dark:text-amber-400">23</p>
-                    <p className="text-xs text-amber-600 dark:text-amber-500">Fornecedores com impactos ambientais identificados (GRI 308-2)</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
-                  <CardContent className="p-4 text-center">
-                    <Handshake className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-blue-700 dark:text-blue-400">19</p>
-                    <p className="text-xs text-blue-600 dark:text-blue-500">Planos de melhoria acordados e em andamento</p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="font-semibold">Critérios de Avaliação Ambiental</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { criterio: "Licenças ambientais válidas", peso: "Eliminatório" },
-                    { criterio: "Gestão de resíduos sólidos", peso: "Alta relevância" },
-                    { criterio: "Controle de emissões atmosféricas", peso: "Alta relevância" },
-                    { criterio: "Gestão de efluentes", peso: "Média relevância" },
-                    { criterio: "Certificações ambientais (ISO 14001)", peso: "Diferencial" },
-                    { criterio: "Política de sustentabilidade", peso: "Diferencial" },
-                  ].map((item, index) => (
-                    <div key={index} className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
-                      <span className="text-sm">{item.criterio}</span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        item.peso === "Eliminatório" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400" :
-                        item.peso === "Alta relevância" ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400" :
-                        item.peso === "Média relevância" ? "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400" :
-                        "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                      }`}>
-                        {item.peso}
-                      </span>
-                    </div>
                   ))}
-                </div>
+                </ul>
               </div>
-            </CardContent>
-          </Card>
-        </section>
+            </AnimatedSection>
+          ))}
+        </div>
 
-        {/* Avaliação Social - GRI 414 */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-blue-600" />
-                Avaliação Social de Fornecedores (GRI 414)
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <div className="grid md:grid-cols-3 gap-4">
-                <Card className="bg-blue-50 dark:bg-blue-950/20 border-blue-200 dark:border-blue-800">
-                  <CardContent className="p-4 text-center">
-                    <FileCheck className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-blue-700 dark:text-blue-400">100%</p>
-                    <p className="text-xs text-blue-600 dark:text-blue-500">Novos fornecedores avaliados com critérios sociais (GRI 414-1)</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-amber-50 dark:bg-amber-950/20 border-amber-200 dark:border-amber-800">
-                  <CardContent className="p-4 text-center">
-                    <AlertTriangle className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-amber-700 dark:text-amber-400">15</p>
-                    <p className="text-xs text-amber-600 dark:text-amber-500">Fornecedores com impactos sociais identificados (GRI 414-2)</p>
-                  </CardContent>
-                </Card>
-                <Card className="bg-green-50 dark:bg-green-950/20 border-green-200 dark:border-green-800">
-                  <CardContent className="p-4 text-center">
-                    <CheckCircle className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                    <p className="text-2xl font-bold text-green-700 dark:text-green-400">0</p>
-                    <p className="text-xs text-green-600 dark:text-green-500">Contratos encerrados por violações graves</p>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div className="space-y-4">
-                <h4 className="font-semibold">Critérios de Avaliação Social</h4>
-                <div className="grid md:grid-cols-2 gap-4">
-                  {[
-                    { criterio: "Regularidade trabalhista (FGTS, INSS)", peso: "Eliminatório" },
-                    { criterio: "Ausência de trabalho infantil", peso: "Eliminatório" },
-                    { criterio: "Ausência de trabalho análogo à escravidão", peso: "Eliminatório" },
-                    { criterio: "Práticas de saúde e segurança", peso: "Alta relevância" },
-                    { criterio: "Políticas de diversidade e inclusão", peso: "Diferencial" },
-                    { criterio: "Programas de desenvolvimento profissional", peso: "Diferencial" },
-                  ].map((item, index) => (
-                    <div key={index} className="flex justify-between items-center p-3 bg-muted/50 rounded-lg">
-                      <span className="text-sm">{item.criterio}</span>
-                      <span className={`text-xs px-2 py-1 rounded-full ${
-                        item.peso === "Eliminatório" ? "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400" :
-                        item.peso === "Alta relevância" ? "bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400" :
-                        "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400"
-                      }`}>
-                        {item.peso}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Programa de Desenvolvimento */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Building2 className="w-5 h-5 text-primary" />
-                Programa de Desenvolvimento de Fornecedores
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-muted-foreground">
-                O Programa de Desenvolvimento de Fornecedores visa capacitar e fortalecer nossa cadeia 
-                de suprimentos, promovendo melhores práticas em gestão, qualidade, meio ambiente e 
-                responsabilidade social.
+        <AnimatedSection>
+          <div className="mt-8 p-4 bg-red-50 dark:bg-red-950/20 rounded-lg border border-red-200 dark:border-red-800">
+            <div className="flex items-center gap-2 text-red-700 dark:text-red-400">
+              <Ban className="w-5 h-5" />
+              <p className="font-medium">
+                Fornecedores que não atendem aos requisitos mínimos não são homologados, reforçando a responsabilidade 
+                compartilhada e reduzindo riscos já no início da relação contratual.
               </p>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {/* 11.3 Due Diligence */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <AlertTriangle className="w-8 h-8 text-amber-500" />
+            <div>
+              <h2 className="text-2xl font-bold">11.3 Due Diligence Socioambiental e de Integridade</h2>
+              <p className="text-muted-foreground">GRI 2-25; 414-1; 308-1</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            A Construcap realiza diligências estruturadas que vão além do simples checklist documental. Quando 
+            identificado risco relevante, o fornecedor só é liberado após ações corretivas formais ou revisão 
+            completa da documentação.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {dueDiligenceRisks.map((risk, index) => (
+            <AnimatedSection key={risk.type} delay={index * 100}>
+              <div className="bg-card rounded-2xl border border-border p-6">
+                <h3 className="font-semibold mb-2 text-amber-600 dark:text-amber-400">{risk.type}</h3>
+                <p className="text-sm text-muted-foreground">{risk.description}</p>
+              </div>
+            </AnimatedSection>
+          ))}
+        </div>
+      </section>
+
+      {/* 11.4 Gestão Operacional */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <HardHat className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.4 Gestão Operacional da Cadeia nas Obras</h2>
+            </div>
+          </div>
+          <p className="text-muted-foreground mb-8 max-w-3xl">
+            A atuação da Construcap em obras urbanas, industriais, hospitalares e de infraestrutura exige supervisão 
+            intensa sobre fornecedores. A gestão em campo é estruturada por obrigações claras.
+          </p>
+        </AnimatedSection>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <AnimatedSection>
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-base">1. Mobilização responsável</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                Fornecedores só iniciam atividades após apresentação de documentação trabalhista, integração de 
+                segurança obrigatória e entrega de laudos, certificados e ARTs.
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          <AnimatedSection delay={100}>
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-base">2. Acompanhamento contínuo</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                A equipe de QSMA realiza verificações periódicas, inspeções de conformidade, fiscalização de EPIs 
+                e observações de atos inseguros.
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          <AnimatedSection delay={200}>
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-base">3. Planos de ação corretivos</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                Quando desvios são identificados, é aberto registro formal com descrição, análise de risco, prazo, 
+                responsabilidade e verificação de eficácia.
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+
+          <AnimatedSection delay={300}>
+            <Card className="h-full">
+              <CardHeader>
+                <CardTitle className="text-base">4. Descredenciamento</CardTitle>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                O SIG prevê suspensão ou desligamento do fornecedor quando houver repetição de irregularidades ou 
+                descumprimento de medidas corretivas.
+              </CardContent>
+            </Card>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* 11.5 Gestão Ambiental */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Leaf className="w-8 h-8 text-green-600" />
+            <div>
+              <h2 className="text-2xl font-bold">11.5 Gestão Ambiental e de Resíduos da Cadeia</h2>
+              <p className="text-muted-foreground">GRI 308-1; 308-2; 414</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-6">
+              Os contratos exigem que fornecedores adotem práticas ambientais compatíveis com os padrões da Construcap:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "Controle de resíduos gerados por suas atividades",
+                "Destinação adequada conforme legislação vigente",
+                "Comprovantes de transporte (MTR ou equivalente)",
+                "Cumprimento de normas de armazenamento e manuseio",
+                "Medidas de redução de emissões, poeira e ruído",
+                "Conformidade com exigências de licenciamento ambiental"
+              ].map((item, index) => (
+                <div key={index} className="flex items-start gap-2 p-3 bg-green-50 dark:bg-green-950/20 rounded-lg">
+                  <CheckCircle className="w-4 h-4 text-green-600 mt-0.5 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-muted-foreground mt-6">
+              A responsabilidade ambiental é compartilhada: o fornecedor responde pela sua operação e a Construcap 
+              responde pela governança.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 11.6 Direitos Humanos */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Users className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.6 Direitos Humanos e Condições de Trabalho na Cadeia</h2>
+              <p className="text-muted-foreground">GRI 410-1; 414</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-6">
+              Todos os fornecedores devem comprovar:
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 mb-6">
+              {humanRightsRequirements.map((item, index) => (
+                <div key={index} className="flex items-start gap-2 p-3 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                  <CheckCircle className="w-4 h-4 text-blue-600 mt-0.5 shrink-0" />
+                  <span className="text-sm">{item}</span>
+                </div>
+              ))}
+            </div>
+            <p className="text-muted-foreground">
+              Há destaque para a exigência de <strong>treinamento em direitos humanos para as equipes de segurança</strong>, 
+              incluindo terceirizados. Essa premissa reforça o compromisso do Grupo com conduta adequada, especialmente em 
+              interação com comunidades, usuários, colaboradores e visitantes de áreas administradas pelo Grupo (Urbia, 
+              Minas Arena, Inova, Ambicap).
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
+
+      {/* 11.7 Integridade e Canal de Denúncias */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <Phone className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.7 Integridade e Canal de Denúncias</h2>
+              <p className="text-muted-foreground">GRI 2-23; 2-24; 2-25</p>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-6">
+              O programa de integridade da Construcap se estende a toda a cadeia. Fornecedores devem conhecer e aceitar 
+              o Código de Conduta, seguir padrões de integridade corporativa e evitar qualquer tipo de favorecimento, 
+              vantagem indevida ou prática irregular.
+            </p>
+            <div className="p-6 bg-primary/5 rounded-xl border border-primary/20">
+              <div className="flex items-center gap-3 mb-4">
+                <Phone className="w-8 h-8 text-primary" />
+                <div>
+                  <h3 className="font-semibold">Alô Construcap</h3>
+                  <p className="text-sm text-muted-foreground">Canal independente disponível para toda a cadeia</p>
+                </div>
+              </div>
+              <p className="text-sm text-muted-foreground mb-4">
+                Colaboradores, comunidades e fornecedores podem relatar:
+              </p>
+              <div className="grid md:grid-cols-2 gap-2">
                 {[
-                  { titulo: "Fornecedores Capacitados", valor: "312", icon: Users },
-                  { titulo: "Horas de Treinamento", valor: "4.680", icon: FileCheck },
-                  { titulo: "Workshops Realizados", valor: "24", icon: Building2 },
-                  { titulo: "Investimento", valor: "R$ 890 mil", icon: Truck },
+                  "Infrações éticas",
+                  "Riscos identificados",
+                  "Condições inadequadas",
+                  "Suspeitas de corrupção ou fraude",
+                  "Situações de assédio ou discriminação"
                 ].map((item, index) => (
-                  <Card key={index} className="bg-muted/30">
-                    <CardContent className="p-4 text-center">
-                      <item.icon className="w-6 h-6 text-primary mx-auto mb-2" />
-                      <p className="text-xl font-bold">{item.valor}</p>
-                      <p className="text-xs text-muted-foreground">{item.titulo}</p>
-                    </CardContent>
-                  </Card>
+                  <div key={index} className="flex items-center gap-2 text-sm">
+                    <AlertTriangle className="w-4 h-4 text-amber-500 shrink-0" />
+                    <span>{item}</span>
+                  </div>
                 ))}
               </div>
+              <p className="text-xs text-muted-foreground mt-4">
+                As denúncias são analisadas com confidencialidade, rastreabilidade e mecanismos formais de investigação.
+              </p>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
 
-              <div className="space-y-3">
-                <h4 className="font-semibold">Temas dos Programas de Capacitação</h4>
-                <div className="grid md:grid-cols-3 gap-3">
-                  {[
-                    "Gestão da Qualidade",
-                    "Saúde e Segurança do Trabalho",
-                    "Gestão Ambiental",
-                    "Compliance e Ética",
-                    "Gestão Financeira",
-                    "Tecnologia e Inovação",
-                  ].map((tema, index) => (
-                    <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
-                      <CheckCircle className="w-4 h-4 text-green-500" />
-                      <span className="text-sm">{tema}</span>
-                    </div>
-                  ))}
+      {/* 11.8 Integração com SIG */}
+      <section className="py-12">
+        <AnimatedSection>
+          <div className="flex items-center gap-3 mb-4">
+            <ClipboardCheck className="w-8 h-8 text-primary" />
+            <div>
+              <h2 className="text-2xl font-bold">11.8 Integração com o Sistema Integrado de Gestão (SIG)</h2>
+            </div>
+          </div>
+        </AnimatedSection>
+
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <p className="text-muted-foreground mb-6">
+              O SIG é a espinha dorsal do controle da cadeia de fornecimento. Ele assegura:
+            </p>
+            <div className="grid md:grid-cols-3 gap-4 mb-6">
+              {[
+                "Padronização de processos",
+                "Auditoria interna e externa",
+                "Melhoria contínua",
+                "Registro e rastreabilidade",
+                "Conformidade ISO 9001, 14001, 45001"
+              ].map((item, index) => (
+                <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+                  <CheckCircle className="w-4 h-4 text-primary shrink-0" />
+                  <span className="text-sm">{item}</span>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
+              ))}
+            </div>
+            <p className="text-muted-foreground">
+              A integração ao SIG garante que requisitos de segurança, meio ambiente, qualidade e integridade sejam 
+              aplicados com a mesma rigidez a fornecedores e colaboradores próprios, reduzindo riscos e fortalecendo 
+              a consistência operacional das obras.
+            </p>
+          </div>
+        </AnimatedSection>
+      </section>
 
-        {/* Compromissos e Metas */}
-        <section>
-          <Card className="bg-gradient-to-br from-primary/5 to-transparent border-primary/20">
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Target className="w-5 h-5 text-primary" />
-                Compromissos e Metas 2025
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
-                {[
-                  { meta: "80% de gastos com fornecedores locais", progresso: 78 },
-                  { meta: "100% dos fornecedores críticos auditados", progresso: 85 },
-                  { meta: "Zero fornecedores com violações graves", progresso: 100 },
-                  { meta: "500 fornecedores capacitados no programa", progresso: 62 },
-                ].map((item, index) => (
-                  <div key={index} className="space-y-2">
-                    <div className="flex justify-between text-sm">
-                      <span>{item.meta}</span>
-                      <span className="font-medium text-primary">{item.progresso}%</span>
-                    </div>
-                    <div className="h-2 bg-muted rounded-full overflow-hidden">
-                      <div 
-                        className="h-full bg-primary rounded-full transition-all duration-500"
-                        style={{ width: `${item.progresso}%` }}
-                      />
-                    </div>
-                  </div>
-                ))}
+      {/* Conclusão */}
+      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
+        <AnimatedSection>
+          <div className="bg-card rounded-2xl border border-border p-8">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center shrink-0">
+                <Target className="w-6 h-6 text-primary" />
               </div>
-            </CardContent>
-          </Card>
-        </section>
-      </div>
+              <div>
+                <h2 className="text-xl font-bold mb-4">Referência em Gestão de Cadeia de Fornecimento</h2>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  A cadeia de fornecimento da Construcap é gerida com elevado grau de profissionalismo, formalização 
+                  e disciplina corporativa. Em um contexto de alta complexidade operacional, o Grupo adota procedimentos 
+                  que asseguram desempenho técnico, integridade, conformidade e responsabilidade socioambiental – 
+                  requisitos fundamentais para a execução segura e eficiente de obras e operações.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  A robustez dos protocolos de homologação, a diligência socioambiental e a supervisão constante em 
+                  campo reforçam a posição do Grupo como referência no setor de infraestrutura, garantindo que 
+                  fornecedores ajam como extensão legítima dos valores, compromissos e práticas do Sistema Integrado 
+                  de Gestão.
+                </p>
+              </div>
+            </div>
+          </div>
+        </AnimatedSection>
+      </section>
     </ReportLayout>
   );
 };

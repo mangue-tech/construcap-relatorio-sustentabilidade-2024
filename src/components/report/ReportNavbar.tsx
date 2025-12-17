@@ -4,7 +4,7 @@ import { Menu, X, Home } from "lucide-react";
 
 const reportPages = [
   { path: "/relatorio/quem-somos", label: "Quem Somos" },
-  { path: "/relatorio/estrategia-governanca", label: "Governança" },
+  { path: "/relatorio/governanca", label: "Governança" },
   { path: "/relatorio/desempenho-economico", label: "Econômico" },
   { path: "/relatorio/desempenho-ambiental", label: "Ambiental" },
   { path: "/relatorio/desempenho-social", label: "Social" },

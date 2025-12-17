@@ -4,7 +4,11 @@ import {
   Building2,
   Award,
   Stethoscope,
-  Shield
+  Shield,
+  Users,
+  Heart,
+  Server,
+  GraduationCap
 } from "lucide-react";
 import inovaSaudeLogo from "@/assets/companies/inova-saude.png";
 import inovaSaudeHero from "@/assets/operations/inova-saude-hospital.jpg";
@@ -24,7 +28,7 @@ const InovaSaudePage = () => {
                 Inova Saúde
               </h1>
               <p className="text-white/90 text-lg max-w-2xl">
-                Gestão de infraestrutura hospitalar com excelência operacional e humanização
+                Gestão de hospitais públicos de alta complexidade no Estado de São Paulo
               </p>
             </div>
           </div>
@@ -39,102 +43,215 @@ const InovaSaudePage = () => {
             Sobre a Inova Saúde
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            A Inova Saúde atua na gestão de infraestrutura e facilities de unidades hospitalares, 
-            garantindo ambientes seguros, eficientes e humanizados para pacientes e profissionais 
-            de saúde. A empresa é referência em gestão hospitalar integrada, com foco em 
-            qualidade, segurança e sustentabilidade.
+            A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são 
+            sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade 
+            no Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o 
+            <strong> Hospital Estadual da Mulher (HEM)</strong> e o <strong>Hospital Regional de Sorocaba (HRS)</strong>, 
+            em Sorocaba, além do <strong>Hospital Estadual de São José dos Campos (HESJC)</strong> (GRI 203-1, 416-1).
           </p>
         </section>
 
-        {/* Qualidade e Certificações */}
+        {/* Hospitais */}
         <section>
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-amber-600" />
-                Qualidade e Certificações
+                <Stethoscope className="w-5 h-5 text-blue-600" />
+                Unidades Hospitalares
               </CardTitle>
             </CardHeader>
-            <CardContent className="space-y-6">
-              <p className="text-muted-foreground">
-                A Inova Saúde mantém certificações de qualidade reconhecidas nacionalmente, 
-                assegurando padrões de excelência na gestão hospitalar.
-              </p>
+            <CardContent>
               <div className="grid md:grid-cols-3 gap-4">
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
-                  <Shield className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <p className="font-bold text-amber-700 dark:text-amber-400">ONA</p>
-                  <p className="text-xs text-muted-foreground">Acreditação Hospitalar</p>
+                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
+                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                  <p className="font-bold text-blue-700 dark:text-blue-400">HEM</p>
+                  <p className="text-xs text-muted-foreground">Hospital Estadual da Mulher – Sorocaba</p>
                 </div>
                 <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-bold text-blue-700 dark:text-blue-400">ISO 9001</p>
-                  <p className="text-xs text-muted-foreground">Gestão da Qualidade</p>
+                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                  <p className="font-bold text-blue-700 dark:text-blue-400">HRS</p>
+                  <p className="text-xs text-muted-foreground">Hospital Regional de Sorocaba</p>
                 </div>
-                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="font-bold text-green-700 dark:text-green-400">ISO 14001</p>
-                  <p className="text-xs text-muted-foreground">Gestão Ambiental</p>
+                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
+                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                  <p className="font-bold text-blue-700 dark:text-blue-400">HESJC</p>
+                  <p className="text-xs text-muted-foreground">Hospital Estadual de São José dos Campos</p>
                 </div>
               </div>
             </CardContent>
           </Card>
         </section>
 
-        {/* Serviços */}
+        {/* Serviços Não Assistenciais */}
         <section>
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Stethoscope className="w-5 h-5 text-blue-600" />
-                Serviços de Gestão Hospitalar
+                <Shield className="w-5 h-5 text-green-600" />
+                Serviços Não Assistenciais
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Infraestrutura</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Manutenção predial preventiva e corretiva</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Gestão de equipamentos médico-hospitalares</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Sistemas críticos (gases medicinais, ar condicionado)</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Gestão energética e eficiência</span>
-                    </li>
-                  </ul>
-                </div>
-                <div className="space-y-4">
-                  <h4 className="font-semibold">Facilities</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Higienização hospitalar especializada</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Gestão de resíduos de serviços de saúde</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Controle de pragas e vetores</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Segurança patrimonial integrada</span>
-                    </li>
-                  </ul>
-                </div>
+              <p className="text-muted-foreground">
+                A Inova Saúde oferece infraestrutura hospitalar moderna e serviços não assistenciais essenciais 
+                à qualidade do atendimento SUS:
+              </p>
+              <div className="grid md:grid-cols-3 gap-3">
+                {[
+                  "Gestão de instalações",
+                  "Manutenção predial",
+                  "Apoio logístico",
+                  "Hotelaria hospitalar",
+                  "Nutrição",
+                  "Limpeza especializada",
+                  "Segurança patrimonial",
+                  "Tecnologia da informação",
+                  "Engenharia clínica"
+                ].map((servico, index) => (
+                  <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm">{servico}</span>
+                  </div>
+                ))}
               </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Proposta de Valor */}
+        <section>
+          <Card className="bg-gradient-to-br from-blue-500/5 to-transparent border-blue-500/20">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Server className="w-5 h-5 text-blue-600" />
+                Infraestrutura e Tecnologia
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                A proposta de valor da Inova Saúde diferencia-se por integrar infraestrutura física de última 
+                geração com gestão profissionalizada de serviços de apoio, garantindo disponibilidade operacional 
+                elevada, menores tempos de indisponibilidade de equipamentos e maior conforto para pacientes, 
+                familiares e equipes de saúde (GRI 416-1, 416-2).
+              </p>
+              <p className="text-muted-foreground">
+                Os hospitais contam com:
+              </p>
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  "Sistemas automatizados de climatização",
+                  "Redes estruturadas de dados",
+                  "Centrais modernas de utilidades",
+                  "Gestão de manutenção preventiva e corretiva",
+                  "Equipamentos médico-hospitalares de última geração",
+                  "Mobiliário técnico especializado",
+                  "Prontuários eletrônicos",
+                  "Monitoramento e suporte à operação hospitalar"
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center gap-2 p-3 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                    <span className="w-2 h-2 bg-blue-500 rounded-full" />
+                    <span className="text-sm">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Recursos Humanos */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Users className="w-5 h-5 text-purple-600" />
+                Recursos Humanos e Desenvolvimento Local
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                No campo social e de recursos humanos, as unidades da Inova Saúde empregam centenas de profissionais 
+                e contratam fornecedores locais, contribuindo para o desenvolvimento econômico das regiões onde atuam. 
+                Em conjunto, as operações reúnem centenas de colaboradores diretos e terceirizados distribuídos entre 
+                funções administrativas, de apoio e técnicas, com políticas de capacitação contínua e foco em saúde e 
+                segurança ocupacional (GRI 401-1, 403-1, 404-1).
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Treinamento */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <GraduationCap className="w-5 h-5 text-amber-600" />
+                Programas de Treinamento
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">
+                A empresa mantém programas estruturados de treinamento em temas essenciais:
+              </p>
+              <div className="grid md:grid-cols-2 gap-3">
+                {[
+                  "Segurança do paciente",
+                  "Prevenção de infecções",
+                  "Uso seguro de equipamentos",
+                  "Gestão de resíduos de serviços de saúde",
+                  "Atendimento humanizado"
+                ].map((tema, index) => (
+                  <div key={index} className="flex items-center gap-2 p-3 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
+                    <span className="w-2 h-2 bg-amber-500 rounded-full" />
+                    <span className="text-sm">{tema}</span>
+                  </div>
+                ))}
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Certificações */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-amber-600" />
+                Certificações e Reconhecimento
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                Em termos de reconhecimento institucional, as unidades da Inova Saúde contam com certificações 
+                relevantes em qualidade e segurança assistencial, bem como selos específicos em gestão ambiental 
+                e alimentação hospitalar, o que reforça a aderência a padrões rigorosos de conformidade, segurança 
+                sanitária e governança (GRI 416-1, 416-2).
+              </p>
+              <p className="text-muted-foreground mt-4">
+                A combinação entre infraestrutura moderna, serviços de suporte altamente estruturados e compromisso 
+                com a qualidade dos ambientes hospitalares diferencia a Inova Saúde de parte significativa da rede SUS, 
+                contribuindo para ampliar a capacidade do sistema público de ofertar serviços de saúde em instalações 
+                mais modernas, seguras e eficientes.
+              </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Impacto Socioeconômico */}
+        <section>
+          <Card className="bg-gradient-to-br from-green-500/5 to-transparent border-green-500/20">
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Heart className="w-5 h-5 text-red-500" />
+                Impacto Socioeconômico
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground">
+                A atuação da Inova Saúde gera impactos socioeconômicos relevantes nas cidades de Sorocaba e São José 
+                dos Campos, ao fortalecer a rede pública de saúde, ampliar a oferta de leitos e serviços de alta 
+                complexidade e promover ambientes hospitalares mais adequados à recuperação de pacientes, ao trabalho 
+                das equipes multidisciplinares e à experiência de familiares e acompanhantes (GRI 203-1, 203-2).
+              </p>
             </CardContent>
           </Card>
         </section>

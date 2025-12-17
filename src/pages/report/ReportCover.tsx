@@ -8,122 +8,227 @@ import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/report/ScrollToTop";
 import MangueBadge from "@/components/report/MangueBadge";
-
-const sections = [
-  { icon: Building2, label: "Quem Somos", path: "/quem-somos", color: "bg-blue-500" },
-  { icon: Shield, label: "Governança", path: "/governanca", color: "bg-purple-500" },
-  { icon: TrendingUp, label: "Econômico", path: "/desempenho-economico", color: "bg-green-500" },
-  { icon: Leaf, label: "Ambiental", path: "/desempenho-ambiental", color: "bg-emerald-500" },
-  { icon: Heart, label: "Social", path: "/desempenho-social", color: "bg-rose-500" },
-  { icon: FileText, label: "Índice GRI", path: "/gri-index", color: "bg-orange-500" },
-];
-
-const highlights2024 = [
-  { value: 16, label: "Valor Econômico Gerado", icon: TrendingUp, color: "text-primary", prefix: "R$ ", suffix: " bi", decimals: 1 },
-  { value: 4345, label: "Colaboradores", icon: Users, color: "text-blue-500", prefix: "", suffix: "", decimals: 0 },
-  { value: 80, label: "Anos de História", icon: Award, color: "text-amber-500", prefix: "", suffix: "+", decimals: 0 },
-  { value: 27, label: "Estados Atendidos", icon: Building2, color: "text-purple-500", prefix: "", suffix: "", decimals: 0 },
-];
-
-const esgHighlights = [
-  {
-    category: "Ambiental",
-    color: "bg-emerald-500",
-    icon: Leaf,
-    items: [
-      { label: "Emissões GEE", value: "33.550 tCO₂e", detail: "Inventário completo Escopo 1, 2 e 3" },
-      { label: "Energia Solar", value: "1.317.600 kWh", detail: "Geração no Mineirão" },
-      { label: "Água Reutilizada", value: "51%", detail: "Captação de água pluvial" },
-    ]
-  },
-  {
-    category: "Social",
-    color: "bg-rose-500",
-    icon: Heart,
-    items: [
-      { label: "Segurança", value: "Zero óbitos", detail: "Compromisso com vida" },
-      { label: "Treinamentos", value: "7.920h", detail: "Horas de capacitação" },
-      { label: "Inclusão", value: "7,5%", detail: "Mulheres na força de trabalho" },
-    ]
-  },
-  {
-    category: "Governança",
-    color: "bg-purple-500",
-    icon: Shield,
-    items: [
-      { label: "Canal de Denúncias", value: "100%", detail: "Casos investigados" },
-      { label: "Código de Conduta", value: "4.345", detail: "Colaboradores capacitados" },
-      { label: "Compliance", value: "ISO 37001", detail: "Sistema antissuborno" },
-    ]
-  },
-];
-
-const iconicWorks = [
-  { name: "Templo de Salomão", detail: "55.000m² construídos" },
-  { name: "Arena Corinthians", detail: "Copa do Mundo 2014" },
-  { name: "Hospital Einstein", detail: "Referência em saúde" },
-  { name: "Mineirão", detail: "PPP pioneira no Brasil" },
-];
-
-const companies = [
-  {
-    name: "Urbia",
-    icon: TreePine,
-    color: "bg-green-500",
-    description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
-    highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"],
-  },
-  {
-    name: "Minas Arena",
-    icon: Landmark,
-    color: "bg-amber-500",
-    description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
-    highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"],
-  },
-  {
-    name: "Inova Saúde",
-    icon: Stethoscope,
-    color: "bg-blue-500",
-    description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
-    highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"],
-  },
-  {
-    name: "Ambicap",
-    icon: Recycle,
-    color: "bg-emerald-500",
-    description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
-    highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"],
-  },
-];
-
-const certifications = [
-  { name: "ISO 9001", description: "Sistema de Gestão da Qualidade - Padrão internacional que especifica requisitos para um sistema de gestão da qualidade, garantindo produtos e serviços consistentes." },
-  { name: "ISO 14001", description: "Sistema de Gestão Ambiental - Framework para organizações melhorarem seu desempenho ambiental através de uso eficiente de recursos e redução de resíduos." },
-  { name: "ISO 45001", description: "Sistema de Gestão de Saúde e Segurança Ocupacional - Padrão global para prevenir lesões e doenças ocupacionais, proporcionando ambientes de trabalho seguros." },
-  { name: "ISO 37001", description: "Sistema de Gestão Antissuborno - Especifica requisitos para estabelecer, implementar e manter um sistema de gestão antissuborno." },
-  { name: "LEED", description: "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental." },
-  { name: "GHG Protocol", description: "Protocolo de Gases de Efeito Estufa - Metodologia internacional para quantificação e gestão de emissões de gases de efeito estufa." },
-];
+const sections = [{
+  icon: Building2,
+  label: "Quem Somos",
+  path: "/quem-somos",
+  color: "bg-blue-500"
+}, {
+  icon: Shield,
+  label: "Governança",
+  path: "/governanca",
+  color: "bg-purple-500"
+}, {
+  icon: TrendingUp,
+  label: "Econômico",
+  path: "/desempenho-economico",
+  color: "bg-green-500"
+}, {
+  icon: Leaf,
+  label: "Ambiental",
+  path: "/desempenho-ambiental",
+  color: "bg-emerald-500"
+}, {
+  icon: Heart,
+  label: "Social",
+  path: "/desempenho-social",
+  color: "bg-rose-500"
+}, {
+  icon: FileText,
+  label: "Índice GRI",
+  path: "/gri-index",
+  color: "bg-orange-500"
+}];
+const highlights2024 = [{
+  value: 16,
+  label: "Valor Econômico Gerado",
+  icon: TrendingUp,
+  color: "text-primary",
+  prefix: "R$ ",
+  suffix: " bi",
+  decimals: 1
+}, {
+  value: 4345,
+  label: "Colaboradores",
+  icon: Users,
+  color: "text-blue-500",
+  prefix: "",
+  suffix: "",
+  decimals: 0
+}, {
+  value: 80,
+  label: "Anos de História",
+  icon: Award,
+  color: "text-amber-500",
+  prefix: "",
+  suffix: "+",
+  decimals: 0
+}, {
+  value: 27,
+  label: "Estados Atendidos",
+  icon: Building2,
+  color: "text-purple-500",
+  prefix: "",
+  suffix: "",
+  decimals: 0
+}];
+const esgHighlights = [{
+  category: "Ambiental",
+  color: "bg-emerald-500",
+  icon: Leaf,
+  items: [{
+    label: "Emissões GEE",
+    value: "33.550 tCO₂e",
+    detail: "Inventário completo Escopo 1, 2 e 3"
+  }, {
+    label: "Energia Solar",
+    value: "1.317.600 kWh",
+    detail: "Geração no Mineirão"
+  }, {
+    label: "Água Reutilizada",
+    value: "51%",
+    detail: "Captação de água pluvial"
+  }]
+}, {
+  category: "Social",
+  color: "bg-rose-500",
+  icon: Heart,
+  items: [{
+    label: "Segurança",
+    value: "Zero óbitos",
+    detail: "Compromisso com vida"
+  }, {
+    label: "Treinamentos",
+    value: "7.920h",
+    detail: "Horas de capacitação"
+  }, {
+    label: "Inclusão",
+    value: "7,5%",
+    detail: "Mulheres na força de trabalho"
+  }]
+}, {
+  category: "Governança",
+  color: "bg-purple-500",
+  icon: Shield,
+  items: [{
+    label: "Canal de Denúncias",
+    value: "100%",
+    detail: "Casos investigados"
+  }, {
+    label: "Código de Conduta",
+    value: "4.345",
+    detail: "Colaboradores capacitados"
+  }, {
+    label: "Compliance",
+    value: "ISO 37001",
+    detail: "Sistema antissuborno"
+  }]
+}];
+const iconicWorks = [{
+  name: "Templo de Salomão",
+  detail: "55.000m² construídos"
+}, {
+  name: "Arena Corinthians",
+  detail: "Copa do Mundo 2014"
+}, {
+  name: "Hospital Einstein",
+  detail: "Referência em saúde"
+}, {
+  name: "Mineirão",
+  detail: "PPP pioneira no Brasil"
+}];
+const companies = [{
+  name: "Urbia",
+  icon: TreePine,
+  color: "bg-green-500",
+  description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
+  highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"]
+}, {
+  name: "Minas Arena",
+  icon: Landmark,
+  color: "bg-amber-500",
+  description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
+  highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"]
+}, {
+  name: "Inova Saúde",
+  icon: Stethoscope,
+  color: "bg-blue-500",
+  description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
+  highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"]
+}, {
+  name: "Ambicap",
+  icon: Recycle,
+  color: "bg-emerald-500",
+  description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
+  highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"]
+}];
+const certifications = [{
+  name: "ISO 9001",
+  description: "Sistema de Gestão da Qualidade - Padrão internacional que especifica requisitos para um sistema de gestão da qualidade, garantindo produtos e serviços consistentes."
+}, {
+  name: "ISO 14001",
+  description: "Sistema de Gestão Ambiental - Framework para organizações melhorarem seu desempenho ambiental através de uso eficiente de recursos e redução de resíduos."
+}, {
+  name: "ISO 45001",
+  description: "Sistema de Gestão de Saúde e Segurança Ocupacional - Padrão global para prevenir lesões e doenças ocupacionais, proporcionando ambientes de trabalho seguros."
+}, {
+  name: "ISO 37001",
+  description: "Sistema de Gestão Antissuborno - Especifica requisitos para estabelecer, implementar e manter um sistema de gestão antissuborno."
+}, {
+  name: "LEED",
+  description: "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental."
+}, {
+  name: "GHG Protocol",
+  description: "Protocolo de Gases de Efeito Estufa - Metodologia internacional para quantificação e gestão de emissões de gases de efeito estufa."
+}];
 
 // Emissions data by scope
-const emissionsData = [
-  { name: "Escopo 1", value: 15116.357, color: "#10b981" },
-  { name: "Escopo 2", value: 1617.679, color: "#3b82f6" },
-  { name: "Escopo 3", value: 16816.781, color: "#f59e0b" },
-];
-
-const emissionsBarData = [
-  { category: "Combustão Estacionária", escopo1: 2847, escopo2: 0, escopo3: 0 },
-  { category: "Combustão Móvel", escopo1: 11892, escopo2: 0, escopo3: 0 },
-  { category: "Emissões Fugitivas", escopo1: 377, escopo2: 0, escopo3: 0 },
-  { category: "Energia Elétrica", escopo1: 0, escopo2: 1618, escopo3: 0 },
-  { category: "Viagens", escopo1: 0, escopo2: 0, escopo3: 1254 },
-  { category: "Deslocamento", escopo1: 0, escopo2: 0, escopo3: 15563 },
-];
-
+const emissionsData = [{
+  name: "Escopo 1",
+  value: 15116.357,
+  color: "#10b981"
+}, {
+  name: "Escopo 2",
+  value: 1617.679,
+  color: "#3b82f6"
+}, {
+  name: "Escopo 3",
+  value: 16816.781,
+  color: "#f59e0b"
+}];
+const emissionsBarData = [{
+  category: "Combustão Estacionária",
+  escopo1: 2847,
+  escopo2: 0,
+  escopo3: 0
+}, {
+  category: "Combustão Móvel",
+  escopo1: 11892,
+  escopo2: 0,
+  escopo3: 0
+}, {
+  category: "Emissões Fugitivas",
+  escopo1: 377,
+  escopo2: 0,
+  escopo3: 0
+}, {
+  category: "Energia Elétrica",
+  escopo1: 0,
+  escopo2: 1618,
+  escopo3: 0
+}, {
+  category: "Viagens",
+  escopo1: 0,
+  escopo2: 0,
+  escopo3: 1254
+}, {
+  category: "Deslocamento",
+  escopo1: 0,
+  escopo2: 0,
+  escopo3: 15563
+}];
 const ReportCover = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <ReportNavbar />
       
       {/* Hero Section */}
@@ -141,50 +246,48 @@ const ReportCover = () => {
                 <Award className="w-4 h-4 text-primary" />
                 <span className="text-sm font-medium text-primary-foreground">80 Anos de Excelência</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-foreground/10 border border-primary-foreground/20">
-                <span className="text-sm font-medium text-primary-foreground">GRI Standards 2021</span>
-              </div>
+              
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-500/20 border border-emerald-500/30">
                 <Leaf className="w-4 h-4 text-emerald-400" />
                 <span className="text-sm font-medium text-primary-foreground">Top 10 Construtoras do Brasil</span>
               </div>
             </div>
             
-            <p className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-2 animate-fade-in" style={{ animationDelay: "150ms" }}>
+            <p className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-2 animate-fade-in" style={{
+            animationDelay: "150ms"
+          }}>
               Grupo Construcap
             </p>
             
-            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-foreground/90 mb-4 animate-fade-in" style={{ animationDelay: "100ms" }}>
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-foreground/90 mb-4 animate-fade-in" style={{
+            animationDelay: "100ms"
+          }}>
               Relatório de<br />
               <span className="text-primary">Sustentabilidade</span> 2024
             </h1>
             
-            <p className="text-primary-foreground/70 mb-8 max-w-lg animate-fade-in" style={{ animationDelay: "300ms" }}>
+            <p className="text-primary-foreground/70 mb-8 max-w-lg animate-fade-in" style={{
+            animationDelay: "300ms"
+          }}>
               80 anos construindo o Brasil com responsabilidade, transparência e compromisso 
               com o desenvolvimento sustentável.
             </p>
 
             {/* Iconic Works Tags */}
-            <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{ animationDelay: "400ms" }}>
-              {iconicWorks.map((work) => (
-                <span key={work.name} className="px-3 py-1 rounded-full bg-primary-foreground/5 border border-primary-foreground/10 text-sm text-primary-foreground/80 hover:bg-primary-foreground/10 transition-colors cursor-default">
-                  {work.name}
-                </span>
-              ))}
+            <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
+            animationDelay: "400ms"
+          }}>
+              {iconicWorks.map(work => {})}
             </div>
             
-            <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "500ms" }}>
-              <Link
-                to="/carta-ceo"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105"
-              >
+            <div className="flex flex-wrap gap-4 animate-fade-in" style={{
+            animationDelay: "500ms"
+          }}>
+              <Link to="/carta-ceo" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105">
                 Carta do CEO
                 <ArrowRight className="w-5 h-5" />
               </Link>
-              <a
-                href="#highlights"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20 hover:scale-105"
-              >
+              <a href="#highlights" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20 hover:scale-105">
                 Destaques 2024
               </a>
             </div>
@@ -208,8 +311,7 @@ const ReportCover = () => {
 
           {/* Main Stats Grid with Animated Counters */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {highlights2024.map((stat, index) => (
-              <AnimatedSection key={stat.label} delay={index * 100}>
+            {highlights2024.map((stat, index) => <AnimatedSection key={stat.label} delay={index * 100}>
                 <div className="group p-6 bg-card rounded-2xl border border-border hover:border-primary/50 hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center group-hover:scale-110 transition-transform">
@@ -217,42 +319,32 @@ const ReportCover = () => {
                     </div>
                   </div>
                   <p className={`text-3xl font-bold ${stat.color} mb-1`}>
-                    <AnimatedCounter 
-                      value={stat.value * (stat.decimals > 0 ? Math.pow(10, stat.decimals) : 1)} 
-                      prefix={stat.prefix} 
-                      suffix={stat.suffix}
-                      decimals={stat.decimals}
-                    />
+                    <AnimatedCounter value={stat.value * (stat.decimals > 0 ? Math.pow(10, stat.decimals) : 1)} prefix={stat.prefix} suffix={stat.suffix} decimals={stat.decimals} />
                   </p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
 
           {/* ESG Highlights Cards */}
           <div className="grid lg:grid-cols-3 gap-8">
-            {esgHighlights.map((pillar, index) => (
-              <AnimatedSection key={pillar.category} delay={index * 150}>
+            {esgHighlights.map((pillar, index) => <AnimatedSection key={pillar.category} delay={index * 150}>
                 <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className={`${pillar.color} p-4 flex items-center gap-3`}>
                     <pillar.icon className="w-6 h-6 text-white" />
                     <h3 className="font-semibold text-white text-lg">{pillar.category}</h3>
                   </div>
                   <div className="p-6 space-y-4">
-                    {pillar.items.map((item) => (
-                      <div key={item.label} className="border-b border-border pb-4 last:border-0 last:pb-0">
+                    {pillar.items.map(item => <div key={item.label} className="border-b border-border pb-4 last:border-0 last:pb-0">
                         <div className="flex justify-between items-start mb-1">
                           <span className="text-sm text-muted-foreground">{item.label}</span>
                           <span className="font-bold text-foreground">{item.value}</span>
                         </div>
                         <p className="text-xs text-muted-foreground">{item.detail}</p>
-                      </div>
-                    ))}
+                      </div>)}
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -274,13 +366,35 @@ const ReportCover = () => {
 
           {/* Stats Cards */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {[
-              { icon: Factory, value: "33.550", unit: "tCO₂e", label: "Emissões Totais", color: "text-emerald-500", bg: "bg-emerald-500/10" },
-              { icon: Zap, value: "32,7", unit: "GWh", label: "Consumo de Energia", color: "text-amber-500", bg: "bg-amber-500/10" },
-              { icon: Droplets, value: "15.337", unit: "ML", label: "Água Pluvial Captada", color: "text-blue-500", bg: "bg-blue-500/10" },
-              { icon: Sun, value: "1,3", unit: "GWh", label: "Energia Solar Gerada", color: "text-orange-500", bg: "bg-orange-500/10" },
-            ].map((item, index) => (
-              <AnimatedSection key={item.label} delay={index * 100}>
+            {[{
+            icon: Factory,
+            value: "33.550",
+            unit: "tCO₂e",
+            label: "Emissões Totais",
+            color: "text-emerald-500",
+            bg: "bg-emerald-500/10"
+          }, {
+            icon: Zap,
+            value: "32,7",
+            unit: "GWh",
+            label: "Consumo de Energia",
+            color: "text-amber-500",
+            bg: "bg-amber-500/10"
+          }, {
+            icon: Droplets,
+            value: "15.337",
+            unit: "ML",
+            label: "Água Pluvial Captada",
+            color: "text-blue-500",
+            bg: "bg-blue-500/10"
+          }, {
+            icon: Sun,
+            value: "1,3",
+            unit: "GWh",
+            label: "Energia Solar Gerada",
+            color: "text-orange-500",
+            bg: "bg-orange-500/10"
+          }].map((item, index) => <AnimatedSection key={item.label} delay={index * 100}>
                 <div className="p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
                   <item.icon className={`w-8 h-8 ${item.color} mb-3`} />
                   <div className="flex items-baseline gap-1 mb-1">
@@ -289,8 +403,7 @@ const ReportCover = () => {
                   </div>
                   <p className="text-sm text-muted-foreground">{item.label}</p>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
 
           {/* Charts Section */}
@@ -303,45 +416,26 @@ const ReportCover = () => {
                 <div className="h-[300px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
-                      <Pie
-                        data={emissionsData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={60}
-                        outerRadius={100}
-                        paddingAngle={5}
-                        dataKey="value"
-                        animationBegin={0}
-                        animationDuration={1500}
-                      >
-                        {emissionsData.map((entry, index) => (
-                          <Cell key={`cell-${index}`} fill={entry.color} />
-                        ))}
+                      <Pie data={emissionsData} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={1500}>
+                        {emissionsData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.color} />)}
                       </Pie>
-                      <RechartsTooltip 
-                        formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']}
-                        contentStyle={{ 
-                          backgroundColor: 'hsl(var(--card))', 
-                          border: '1px solid hsl(var(--border))',
-                          borderRadius: '8px'
-                        }}
-                      />
-                      <Legend 
-                        verticalAlign="bottom" 
-                        height={36}
-                        formatter={(value) => <span className="text-sm text-foreground">{value}</span>}
-                      />
+                      <RechartsTooltip formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']} contentStyle={{
+                      backgroundColor: 'hsl(var(--card))',
+                      border: '1px solid hsl(var(--border))',
+                      borderRadius: '8px'
+                    }} />
+                      <Legend verticalAlign="bottom" height={36} formatter={value => <span className="text-sm text-foreground">{value}</span>} />
                     </PieChart>
                   </ResponsiveContainer>
                 </div>
                 <div className="grid grid-cols-3 gap-4 mt-4">
-                  {emissionsData.map((item) => (
-                    <div key={item.name} className="text-center">
-                      <div className="w-3 h-3 rounded-full mx-auto mb-1" style={{ backgroundColor: item.color }} />
+                  {emissionsData.map(item => <div key={item.name} className="text-center">
+                      <div className="w-3 h-3 rounded-full mx-auto mb-1" style={{
+                    backgroundColor: item.color
+                  }} />
                       <p className="text-xs text-muted-foreground">{item.name}</p>
                       <p className="font-semibold text-sm">{item.value.toLocaleString('pt-BR')}</p>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
               </div>
             </AnimatedSection>
@@ -354,16 +448,15 @@ const ReportCover = () => {
                 <div className="h-[300px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <BarChart data={emissionsBarData} layout="vertical">
-                      <XAxis type="number" tickFormatter={(value) => value.toLocaleString('pt-BR')} />
-                      <YAxis dataKey="category" type="category" width={100} tick={{ fontSize: 11 }} />
-                      <RechartsTooltip 
-                        formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']}
-                        contentStyle={{ 
-                          backgroundColor: 'hsl(var(--card))', 
-                          border: '1px solid hsl(var(--border))',
-                          borderRadius: '8px'
-                        }}
-                      />
+                      <XAxis type="number" tickFormatter={value => value.toLocaleString('pt-BR')} />
+                      <YAxis dataKey="category" type="category" width={100} tick={{
+                      fontSize: 11
+                    }} />
+                      <RechartsTooltip formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']} contentStyle={{
+                      backgroundColor: 'hsl(var(--card))',
+                      border: '1px solid hsl(var(--border))',
+                      borderRadius: '8px'
+                    }} />
                       <Legend />
                       <Bar dataKey="escopo1" name="Escopo 1" fill="#10b981" radius={[0, 4, 4, 0]} animationDuration={1500} />
                       <Bar dataKey="escopo2" name="Escopo 2" fill="#3b82f6" radius={[0, 4, 4, 0]} animationDuration={1500} />
@@ -388,8 +481,7 @@ const ReportCover = () => {
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {companies.map((company, index) => (
-              <AnimatedSection key={company.name} delay={index * 100}>
+            {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
                 <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
                   <div className={`w-12 h-12 rounded-xl ${company.color} flex items-center justify-center mb-4`}>
                     <company.icon className="w-6 h-6 text-white" />
@@ -397,15 +489,12 @@ const ReportCover = () => {
                   <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>
                   <div className="flex flex-wrap gap-2">
-                    {company.highlights.map((highlight) => (
-                      <span key={highlight} className="px-2 py-1 rounded-full bg-secondary text-xs text-muted-foreground">
+                    {company.highlights.map(highlight => <span key={highlight} className="px-2 py-1 rounded-full bg-secondary text-xs text-muted-foreground">
                         {highlight}
-                      </span>
-                    ))}
+                      </span>)}
                   </div>
                 </div>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
@@ -420,13 +509,11 @@ const ReportCover = () => {
 
           <AnimatedSection delay={100}>
             <div className="flex flex-wrap justify-center gap-4">
-              {certifications.map((cert, index) => (
-                <Tooltip key={cert.name}>
+              {certifications.map((cert, index) => <Tooltip key={cert.name}>
                   <TooltipTrigger asChild>
-                    <div 
-                      className="px-6 py-3 bg-card rounded-xl border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer"
-                      style={{ animationDelay: `${index * 50}ms` }}
-                    >
+                    <div className="px-6 py-3 bg-card rounded-xl border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer" style={{
+                  animationDelay: `${index * 50}ms`
+                }}>
                       <Award className="w-5 h-5 text-primary" />
                       <span className="font-medium">{cert.name}</span>
                     </div>
@@ -435,8 +522,7 @@ const ReportCover = () => {
                     <p className="font-semibold mb-1">{cert.name}</p>
                     <p className="text-sm text-muted-foreground">{cert.description}</p>
                   </TooltipContent>
-                </Tooltip>
-              ))}
+                </Tooltip>)}
             </div>
           </AnimatedSection>
         </div>
@@ -453,12 +539,8 @@ const ReportCover = () => {
           </AnimatedSection>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {sections.map((section, index) => (
-              <AnimatedSection key={section.label} delay={index * 100}>
-                <Link
-                  to={section.path}
-                  className="group p-6 bg-card rounded-2xl border border-border hover:border-primary/50 hover:shadow-lg transition-all block hover:-translate-y-1"
-                >
+            {sections.map((section, index) => <AnimatedSection key={section.label} delay={index * 100}>
+                <Link to={section.path} className="group p-6 bg-card rounded-2xl border border-border hover:border-primary/50 hover:shadow-lg transition-all block hover:-translate-y-1">
                   <div className={`w-12 h-12 rounded-xl ${section.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
                     <section.icon className="w-6 h-6 text-white" />
                   </div>
@@ -467,26 +549,23 @@ const ReportCover = () => {
                   </h3>
                   <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
                 </Link>
-              </AnimatedSection>
-            ))}
+              </AnimatedSection>)}
           </div>
         </div>
       </section>
 
       {/* Copyright Footer */}
       <footer className="bg-background py-8 px-6">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto">
           <p className="text-left text-sm text-muted-foreground">
             Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
           </p>
-          <MangueBadge />
         </div>
       </footer>
 
       {/* Floating Elements */}
       <ScrollToTop />
-    </div>
-  );
+      <MangueBadge />
+    </div>;
 };
-
 export default ReportCover;

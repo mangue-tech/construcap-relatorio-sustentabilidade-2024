@@ -11,13 +11,15 @@ import {
   Target
 } from "lucide-react";
 import urbiaLogo from "@/assets/companies/urbia.png";
+import urbiaHero from "@/assets/operations/urbia-park.jpg";
 
 const UrbiaPage = () => {
   return (
     <ReportLayout>
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden bg-gradient-to-r from-green-600 to-green-800">
-        <div className="absolute inset-0 flex items-center">
+      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
+        <img src={urbiaHero} alt="Urbia Parks" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-r from-green-900/90 to-green-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
             <img src={urbiaLogo} alt="Urbia" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />
             <div>

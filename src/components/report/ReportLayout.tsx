@@ -20,6 +20,9 @@ import {
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
+import construcapLogo from "@/assets/construcap-logo.png";
+import ScrollToTop from "./ScrollToTop";
+import MangueBadge from "./MangueBadge";
 
 const menuItems = [
   { path: "/", label: "Capa", icon: Home },
@@ -133,9 +136,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-1.5 left-0 right-0 h-16 bg-card border-b border-border z-40 flex items-center justify-between px-4">
         <Link to="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
-            <span className="text-primary-foreground font-bold text-sm">C</span>
-          </div>
+          <img src={construcapLogo} alt="Construcap" className="w-8 h-8" />
           <span className="font-bold text-sm">Relatório ESG 2024</span>
         </Link>
         <button 
@@ -155,9 +156,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
         {/* Logo */}
         <div className="p-6 border-b border-border">
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold">C</span>
-            </div>
+            <img src={construcapLogo} alt="Construcap" className="w-10 h-10" />
             <div>
               <p className="font-bold text-sm">Grupo Construcap</p>
               <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade</p>
@@ -274,7 +273,18 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
         <div className="p-6 lg:p-8">
           {children}
         </div>
+        
+        {/* Copyright Footer */}
+        <footer className="px-6 lg:px-8 pb-20">
+          <p className="text-left text-sm text-muted-foreground">
+            Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
+          </p>
+        </footer>
       </main>
+
+      {/* Floating Elements */}
+      <ScrollToTop />
+      <MangueBadge />
     </div>
   );
 };

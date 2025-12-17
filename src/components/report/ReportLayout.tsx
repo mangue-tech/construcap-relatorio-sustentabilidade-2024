@@ -7,16 +7,15 @@ import {
   User,
   Building2,
   Shield,
-  Users,
   TrendingUp,
   Leaf,
   Heart,
-  MessageSquare,
   FileText,
   ChevronDown,
   ChevronRight,
   PanelLeftClose,
-  PanelLeft
+  PanelLeft,
+  Briefcase
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
@@ -47,6 +46,16 @@ const menuItems = [
       { path: "/desempenho-social", label: "Desempenho Social" },
       { path: "/cadeia-fornecimento", label: "Cadeia de Fornecimento" },
       { path: "/comunidades", label: "Relacionamento com Comunidades" },
+    ]
+  },
+  { 
+    label: "Destaques das Operações", 
+    icon: Briefcase,
+    children: [
+      { path: "/operacao-urbia", label: "Urbia" },
+      { path: "/operacao-minas-arena", label: "Minas Arena" },
+      { path: "/operacao-inova-saude", label: "Inova Saúde" },
+      { path: "/operacao-ambicap", label: "Ambicap" },
     ]
   },
   { path: "/gri-index", label: "Índice GRI", icon: FileText },

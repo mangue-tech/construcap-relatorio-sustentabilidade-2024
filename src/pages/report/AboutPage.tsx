@@ -100,6 +100,8 @@ const supplyChainItems = [
   { icon: Wrench, title: "Serviços Técnicos", description: "Empresas especializadas em engenharia e manutenção" },
   { icon: TreePine, title: "Zeladoria e Conservação", description: "Serviços de conservação ambiental e manutenção de parques" },
   { icon: Truck, title: "Transporte e Logística", description: "Operações logísticas e movimentação de materiais" },
+  { icon: Settings, title: "Tecnologia", description: "Soluções tecnológicas para operações e gestão de ativos" },
+  { icon: Globe, title: "Soluções Turísticas", description: "Serviços que viabilizam operações nos parques urbanos e naturais" },
 ];
 
 const nationalPresence = [
@@ -299,15 +301,21 @@ const AboutPage = () => {
               <p className="text-muted-foreground">Eficiência, governança e conformidade em todas as etapas</p>
             </div>
           </div>
-          <p className="text-muted-foreground mb-8 max-w-4xl">
+          <p className="text-muted-foreground mb-4 max-w-4xl">
             A cadeia de suprimentos é estruturada para garantir eficiência, governança e conformidade 
             em todas as etapas. Ela abrange fornecedores de materiais de construção, equipamentos 
             industriais, insumos hospitalares, serviços técnicos especializados, empresas de zeladoria 
-            e conservação ambiental, transporte e logística.
+            e conservação ambiental, transporte, tecnologia e soluções turísticas que viabilizam 
+            nossas operações nos parques urbanos e naturais, nas unidades hospitalares e no Mineirão.
+          </p>
+          <p className="text-muted-foreground mb-8 max-w-4xl">
+            A área de Suprimentos conduz processos integrados de planejamento, compras, homologação 
+            de fornecedores, gestão de contratos, logística, padronização de especificações e mitigação 
+            de riscos socioambientais, assegurando a qualidade e a continuidade das operações.
           </p>
         </AnimatedSection>
         
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {supplyChainItems.map((item, index) => (
             <AnimatedSection key={item.title} delay={index * 100}>
               <div className="bg-card rounded-2xl border border-border p-6 h-full">

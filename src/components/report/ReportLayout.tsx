@@ -23,23 +23,23 @@ import { Progress } from "@/components/ui/progress";
 
 const menuItems = [
   { path: "/", label: "Capa", icon: Home },
-  { path: "/relatorio/carta-ceo", label: "Carta do CEO", icon: User },
-  { path: "/relatorio/quem-somos", label: "Quem Somos", icon: Building2 },
+  { path: "/carta-ceo", label: "Carta do CEO", icon: User },
+  { path: "/quem-somos", label: "Quem Somos", icon: Building2 },
   { 
     label: "Governança", 
     icon: Shield,
     children: [
-      { path: "/relatorio/governanca", label: "Estratégia e Governança" },
-      { path: "/relatorio/compliance", label: "Integridade e Compliance" },
-      { path: "/relatorio/gestao-riscos", label: "Gestão de Riscos" },
+      { path: "/governanca", label: "Estratégia e Governança" },
+      { path: "/compliance", label: "Integridade e Compliance" },
+      { path: "/gestao-riscos", label: "Gestão de Riscos" },
     ]
   },
-  { path: "/relatorio/materialidade", label: "Materialidade e Stakeholders", icon: Users },
-  { path: "/relatorio/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
-  { path: "/relatorio/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
-  { path: "/relatorio/desempenho-social", label: "Desempenho Social", icon: Heart },
-  { path: "/relatorio/comunidades", label: "Relacionamento com Comunidades", icon: MessageSquare },
-  { path: "/relatorio/gri-index", label: "Índice GRI", icon: FileText },
+  { path: "/materialidade", label: "Materialidade e Stakeholders", icon: Users },
+  { path: "/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
+  { path: "/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
+  { path: "/desempenho-social", label: "Desempenho Social", icon: Heart },
+  { path: "/comunidades", label: "Relacionamento com Comunidades", icon: MessageSquare },
+  { path: "/gri-index", label: "Índice GRI", icon: FileText },
 ];
 
 // Flatten menu items for progress calculation

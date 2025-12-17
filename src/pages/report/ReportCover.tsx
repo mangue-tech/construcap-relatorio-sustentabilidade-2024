@@ -8,12 +8,12 @@ import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const sections = [
-  { icon: Building2, label: "Quem Somos", path: "/relatorio/quem-somos", color: "bg-blue-500" },
-  { icon: Shield, label: "Governança", path: "/relatorio/governanca", color: "bg-purple-500" },
-  { icon: TrendingUp, label: "Econômico", path: "/relatorio/desempenho-economico", color: "bg-green-500" },
-  { icon: Leaf, label: "Ambiental", path: "/relatorio/desempenho-ambiental", color: "bg-emerald-500" },
-  { icon: Heart, label: "Social", path: "/relatorio/desempenho-social", color: "bg-rose-500" },
-  { icon: FileText, label: "Índice GRI", path: "/relatorio/gri-index", color: "bg-orange-500" },
+  { icon: Building2, label: "Quem Somos", path: "/quem-somos", color: "bg-blue-500" },
+  { icon: Shield, label: "Governança", path: "/governanca", color: "bg-purple-500" },
+  { icon: TrendingUp, label: "Econômico", path: "/desempenho-economico", color: "bg-green-500" },
+  { icon: Leaf, label: "Ambiental", path: "/desempenho-ambiental", color: "bg-emerald-500" },
+  { icon: Heart, label: "Social", path: "/desempenho-social", color: "bg-rose-500" },
+  { icon: FileText, label: "Índice GRI", path: "/gri-index", color: "bg-orange-500" },
 ];
 
 const highlights2024 = [
@@ -174,7 +174,7 @@ const ReportCover = () => {
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{ animationDelay: "500ms" }}>
               <Link
-                to="/relatorio/carta-ceo"
+                to="/carta-ceo"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105"
               >
                 Carta do CEO

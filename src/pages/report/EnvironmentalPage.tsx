@@ -29,7 +29,7 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, Legend, AreaChart, Area } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line, Legend } from "recharts";
 import environmentalHero from "@/assets/report/environmental-hero.jpg";
 
 // GRI 305 - Emissões de GEE por Escopo
@@ -64,12 +64,6 @@ const scope3Details = [
   { category: "Bens e serviços comprados", value: 3100.09, percentage: 18.4 },
 ];
 
-// Evolução das emissões
-const emissionsEvolution = [
-  { year: "2022", total: 38245, scope1: 17850, scope2: 2100, scope3: 18295 },
-  { year: "2023", total: 35890, scope1: 16200, scope2: 1850, scope3: 17840 },
-  { year: "2024", total: 33551, scope1: 15116, scope2: 1618, scope3: 16817 },
-];
 
 // GRI 302 - Energia
 const energyData = {
@@ -158,13 +152,6 @@ const certifications = [
   { name: "GHG Protocol", description: "Inventário de Emissões", status: "Verificado", scope: "Grupo Construcap" },
 ];
 
-// Metas e compromissos
-const environmentalTargets = [
-  { target: "Redução de 30% nas emissões de GEE", baseline: "2020", deadline: "2030", progress: 42, status: "Em andamento" },
-  { target: "100% de energia renovável nas operações próprias", baseline: "2022", deadline: "2035", progress: 15, status: "Em andamento" },
-  { target: "Zero resíduos para aterro", baseline: "2023", deadline: "2030", progress: 30, status: "Em andamento" },
-  { target: "Neutralidade de carbono (Escopo 1 e 2)", baseline: "2024", deadline: "2040", progress: 12, status: "Iniciado" },
-];
 
 // Iniciativas ambientais
 const environmentalInitiatives = [
@@ -280,10 +267,9 @@ const EnvironmentalPage = () => {
               {emissionsData.total.toLocaleString('pt-BR', { minimumFractionDigits: 0 })}
             </p>
             <p className="text-lg text-muted-foreground">toneladas de CO₂ equivalente (tCO₂e)</p>
-            <div className="flex items-center justify-center gap-2 mt-4 text-emerald-500">
-              <TrendingDown className="w-5 h-5" />
-              <span className="font-medium">-6,5% em relação a 2023</span>
-            </div>
+            <p className="text-sm text-muted-foreground mt-4 max-w-xl mx-auto">
+              Primeiro inventário consolidado de emissões do Grupo Construcap
+            </p>
           </div>
         </AnimatedSection>
 
@@ -352,30 +338,25 @@ const EnvironmentalPage = () => {
           </AnimatedSection>
         </div>
 
-        {/* Emissions Evolution Chart */}
+        {/* First Inventory Notice */}
         <AnimatedSection>
-          <div className="bg-card rounded-2xl border border-border p-6 mt-8">
-            <h4 className="font-bold mb-6">Evolução das Emissões (2022-2024)</h4>
-            <div className="h-72">
-              <ResponsiveContainer width="100%" height="100%">
-                <AreaChart data={emissionsEvolution}>
-                  <CartesianGrid strokeDasharray="3 3" stroke="hsl(var(--border))" />
-                  <XAxis dataKey="year" />
-                  <YAxis tickFormatter={(value) => `${(value / 1000).toFixed(0)}k`} />
-                  <Tooltip 
-                    formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']}
-                    contentStyle={{ 
-                      backgroundColor: 'hsl(var(--card))', 
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px'
-                    }}
-                  />
-                  <Legend />
-                  <Area type="monotone" dataKey="scope1" name="Escopo 1" stackId="1" fill="hsl(var(--primary))" stroke="hsl(var(--primary))" fillOpacity={0.6} />
-                  <Area type="monotone" dataKey="scope2" name="Escopo 2" stackId="1" fill="hsl(221, 83%, 53%)" stroke="hsl(221, 83%, 53%)" fillOpacity={0.6} />
-                  <Area type="monotone" dataKey="scope3" name="Escopo 3" stackId="1" fill="hsl(142, 76%, 36%)" stroke="hsl(142, 76%, 36%)" fillOpacity={0.6} />
-                </AreaChart>
-              </ResponsiveContainer>
+          <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 mt-8">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center flex-shrink-0">
+                <BarChart3 className="w-6 h-6 text-emerald-500" />
+              </div>
+              <div>
+                <h4 className="font-bold text-lg mb-2">Primeiro Inventário Consolidado de Emissões</h4>
+                <p className="text-muted-foreground mb-3">
+                  Em 2024, o Grupo Construcap elaborou seu primeiro inventário corporativo consolidado de emissões 
+                  de gases de efeito estufa (GEE), abrangendo todas as unidades de negócio e os três escopos de emissão 
+                  conforme metodologia do GHG Protocol e ABNT NBR ISO 14064-1.
+                </p>
+                <p className="text-muted-foreground">
+                  Este ano-base estabelece a referência para o acompanhamento da evolução das emissões nos próximos 
+                  ciclos de reporte, permitindo a definição de metas de redução baseadas em dados consolidados e verificados.
+                </p>
+              </div>
             </div>
           </div>
         </AnimatedSection>
@@ -802,54 +783,6 @@ const EnvironmentalPage = () => {
         </div>
       </section>
 
-      {/* Environmental Targets */}
-      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-primary/5">
-        <AnimatedSection>
-          <div className="flex items-center gap-3 mb-8">
-            <Target className="w-8 h-8 text-primary" />
-            <div>
-              <h2 className="text-2xl font-bold">Metas Ambientais</h2>
-              <p className="text-muted-foreground">Compromissos de médio e longo prazo</p>
-            </div>
-          </div>
-        </AnimatedSection>
-
-        <div className="grid md:grid-cols-2 gap-6">
-          {environmentalTargets.map((target, index) => (
-            <AnimatedSection key={target.target} delay={index * 75}>
-              <div className="bg-card rounded-2xl border border-border p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <h3 className="font-bold">{target.target}</h3>
-                  <span className={`text-xs px-2 py-1 rounded-full ${
-                    target.status === 'Em andamento' ? 'bg-blue-500/10 text-blue-500' :
-                    target.status === 'Iniciado' ? 'bg-yellow-500/10 text-yellow-500' :
-                    'bg-emerald-500/10 text-emerald-500'
-                  }`}>
-                    {target.status}
-                  </span>
-                </div>
-                <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
-                  <span>Linha de base: {target.baseline}</span>
-                  <span>•</span>
-                  <span>Prazo: {target.deadline}</span>
-                </div>
-                <div className="space-y-2">
-                  <div className="flex items-center justify-between text-sm">
-                    <span>Progresso</span>
-                    <span className="font-medium">{target.progress}%</span>
-                  </div>
-                  <div className="h-3 bg-secondary rounded-full overflow-hidden">
-                    <div 
-                      className="h-full bg-primary rounded-full transition-all duration-500"
-                      style={{ width: `${target.progress}%` }}
-                    />
-                  </div>
-                </div>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
     </ReportLayout>
   );
 };

@@ -40,8 +40,14 @@ const menuItems = [
   },
   { path: "/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
   { path: "/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
-  { path: "/desempenho-social", label: "Desempenho Social", icon: Heart },
-  { path: "/comunidades", label: "Relacionamento com Comunidades", icon: MessageSquare },
+  { 
+    label: "Desempenho Social", 
+    icon: Heart,
+    children: [
+      { path: "/desempenho-social", label: "Desempenho Social" },
+      { path: "/comunidades", label: "Relacionamento com Comunidades" },
+    ]
+  },
   { path: "/gri-index", label: "Índice GRI", icon: FileText },
 ];
 

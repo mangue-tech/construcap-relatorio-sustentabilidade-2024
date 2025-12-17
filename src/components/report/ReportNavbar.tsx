@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Home } from "lucide-react";
-
+import construcapLogo from "@/assets/construcap-logo.png";
 const reportPages = [
   { path: "/quem-somos", label: "Quem Somos" },
   { path: "/governanca", label: "Governança" },
@@ -38,9 +38,7 @@ const ReportNavbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-xl bg-primary flex items-center justify-center transition-all ${isScrolled ? '' : 'shadow-lg'}`}>
-              <span className="text-primary-foreground font-bold text-lg">C</span>
-            </div>
+            <img src={construcapLogo} alt="Construcap" className={`w-10 h-10 transition-all ${isScrolled ? '' : 'shadow-lg rounded-xl'}`} />
             <div className={`transition-colors ${isScrolled ? 'text-foreground' : 'text-primary-foreground'}`}>
               <p className="font-semibold text-sm">Relatório ESG</p>
               <p className="text-xs opacity-70">2024</p>

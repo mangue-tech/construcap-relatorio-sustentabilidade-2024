@@ -17,6 +17,11 @@ import {
   ChevronRight,
   PanelLeftClose,
   PanelLeft,
+  Truck,
+  Factory,
+  TreePine,
+  Stethoscope,
+  Recycle,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
@@ -41,8 +46,25 @@ const menuItems = [
   { path: "/materialidade", label: "Materialidade e Stakeholders", icon: Users },
   { path: "/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
   { path: "/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
-  { path: "/desempenho-social", label: "Desempenho Social", icon: Heart },
-  { path: "/comunidades", label: "Relacionamento com Comunidades", icon: MessageSquare },
+  {
+    label: "Desempenho Social",
+    icon: Heart,
+    children: [
+      { path: "/desempenho-social", label: "Desempenho Social" },
+      { path: "/cadeia-fornecimento", label: "Cadeia de Fornecimento" },
+      { path: "/comunidades", label: "Relacionamento com Comunidades" },
+    ],
+  },
+  {
+    label: "Destaques das Operações",
+    icon: Factory,
+    children: [
+      { path: "/operacao-urbia", label: "Urbia" },
+      { path: "/operacao-minas-arena", label: "Minas Arena" },
+      { path: "/operacao-inova-saude", label: "Inova Saúde" },
+      { path: "/operacao-ambicap", label: "Ambicap" },
+    ],
+  },
   { path: "/gri-index", label: "Índice GRI", icon: FileText },
 ];
 
@@ -64,7 +86,7 @@ interface ReportLayoutProps {
 const ReportLayout = ({ children, title }: ReportLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarVisible, setSidebarVisible] = useState(true);
-  const [expandedItems, setExpandedItems] = useState<string[]>(["Governança"]);
+  const [expandedItems, setExpandedItems] = useState<string[]>(["Governança", "Desempenho Social", "Destaques das Operações"]);
   const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
 

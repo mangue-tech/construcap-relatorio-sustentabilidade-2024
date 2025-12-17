@@ -21,6 +21,7 @@ import {
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
 import construcapLogo from "@/assets/construcap-logo.png";
+import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
 import ScrollToTop from "./ScrollToTop";
 import MangueBadge from "./MangueBadge";
 
@@ -265,9 +266,14 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
         {/* Copyright Footer */}
         <footer className="px-6 lg:px-8 pb-20">
-          <p className="text-left text-sm text-muted-foreground">
-            Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
-          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p className="text-sm text-muted-foreground">
+              Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
+            </p>
+            <a href="https://mangue.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+              <img src={mangueTechBadge2} alt="Desenvolvido por Mangue Tech" className="h-10" />
+            </a>
+          </div>
         </footer>
       </main>
 

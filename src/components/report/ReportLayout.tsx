@@ -15,9 +15,12 @@ import {
   MessageSquare,
   FileText,
   ChevronDown,
-  ChevronRight
+  ChevronRight,
+  PanelTopClose,
+  PanelTop
 } from "lucide-react";
 import { cn } from "@/lib/utils";
+import ReportNavbar from "./ReportNavbar";
 
 const menuItems = [
   { path: "/relatorio", label: "Capa", icon: Home },
@@ -27,8 +30,8 @@ const menuItems = [
     label: "Governança", 
     icon: Shield,
     children: [
-      { path: "/relatorio/estrategia-governanca", label: "Estratégia e Governança" },
-      { path: "/relatorio/integridade-compliance", label: "Integridade e Compliance" },
+      { path: "/relatorio/governanca", label: "Estratégia e Governança" },
+      { path: "/relatorio/compliance", label: "Integridade e Compliance" },
       { path: "/relatorio/gestao-riscos", label: "Gestão de Riscos" },
     ]
   },
@@ -47,6 +50,7 @@ interface ReportLayoutProps {
 
 const ReportLayout = ({ children, title }: ReportLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
   const [expandedItems, setExpandedItems] = useState<string[]>(["Governança"]);
   const location = useLocation();
 
@@ -64,8 +68,35 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Top Navbar */}
+      <div className={cn(
+        "transition-transform duration-300",
+        navbarVisible ? "translate-y-0" : "-translate-y-full"
+      )}>
+        <ReportNavbar />
+      </div>
+
+      {/* Toggle Navbar Button */}
+      <button
+        onClick={() => setNavbarVisible(!navbarVisible)}
+        className={cn(
+          "fixed right-4 z-50 p-2 rounded-lg bg-card border border-border shadow-lg transition-all duration-300 hover:bg-muted",
+          navbarVisible ? "top-20" : "top-4"
+        )}
+        title={navbarVisible ? "Ocultar navegação" : "Mostrar navegação"}
+      >
+        {navbarVisible ? (
+          <PanelTopClose className="w-5 h-5 text-muted-foreground" />
+        ) : (
+          <PanelTop className="w-5 h-5 text-muted-foreground" />
+        )}
+      </button>
+
       {/* Mobile Header */}
-      <header className="lg:hidden fixed top-0 left-0 right-0 h-16 bg-card border-b border-border z-50 flex items-center justify-between px-4">
+      <header className={cn(
+        "lg:hidden fixed left-0 right-0 h-16 bg-card border-b border-border z-40 flex items-center justify-between px-4 transition-all duration-300",
+        navbarVisible ? "top-16" : "top-0"
+      )}>
         <Link to="/relatorio" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">C</span>
@@ -82,9 +113,10 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed top-0 left-0 h-full w-72 bg-card border-r border-border z-40 transition-transform duration-300 overflow-y-auto",
+        "fixed left-0 h-full w-72 bg-card border-r border-border z-30 transition-all duration-300 overflow-y-auto",
         "lg:translate-x-0",
-        sidebarOpen ? "translate-x-0" : "-translate-x-full"
+        sidebarOpen ? "translate-x-0" : "-translate-x-full",
+        navbarVisible ? "top-16" : "top-0"
       )}>
         {/* Logo */}
         <div className="p-6 border-b border-border">
@@ -181,15 +213,18 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
       {/* Overlay */}
       {sidebarOpen && (
         <div 
-          className="fixed inset-0 bg-foreground/20 backdrop-blur-sm z-30 lg:hidden"
+          className="fixed inset-0 bg-foreground/20 backdrop-blur-sm z-20 lg:hidden"
           onClick={() => setSidebarOpen(false)}
         />
       )}
 
       {/* Main Content */}
-      <main className="lg:ml-72 min-h-screen pt-16 lg:pt-0">
+      <main className={cn(
+        "lg:ml-72 min-h-screen transition-all duration-300",
+        navbarVisible ? "pt-32 lg:pt-16" : "pt-16 lg:pt-0"
+      )}>
         {title && (
-          <div className="bg-card border-b border-border px-6 py-4 sticky top-0 lg:top-0 z-20">
+          <div className="bg-card border-b border-border px-6 py-4 sticky top-0 lg:top-0 z-10">
             <h1 className="text-xl font-bold">{title}</h1>
           </div>
         )}

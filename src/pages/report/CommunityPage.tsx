@@ -2,8 +2,8 @@ import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { 
   Users, MessageSquare, Phone, Building2, TreePine, Stethoscope, HardHat, 
-  AlertTriangle, CheckCircle, Heart, Megaphone, FileText, MapPin, Shield,
-  UserCheck, Handshake, Target, TrendingUp, Calendar, Award
+  AlertTriangle, CheckCircle, Heart, Megaphone, FileText, Shield,
+  Handshake, Target, Calendar
 } from "lucide-react";
 import communityHero from "@/assets/report/community-hero.jpg";
 
@@ -129,7 +129,6 @@ const unitActions = [
     name: "Urbia Parques",
     icon: TreePine,
     color: "bg-emerald-500",
-    highlight: "1,8 milhão de visitantes/ano",
     actions: [
       "Programas de educação ambiental para escolas e comunidades do entorno",
       "Voluntariado em conservação e manejo de áreas verdes",
@@ -143,7 +142,6 @@ const unitActions = [
     name: "Inova Saúde",
     icon: Stethoscope,
     color: "bg-blue-500",
-    highlight: "100% SUS",
     actions: [
       "Atendimento integral à população via Sistema Único de Saúde",
       "Programas de promoção da saúde e prevenção de doenças",
@@ -157,7 +155,6 @@ const unitActions = [
     name: "Minas Arena",
     icon: Building2,
     color: "bg-purple-500",
-    highlight: "Certificação LEED Platinum",
     actions: [
       "Eventos culturais, esportivos e de entretenimento para a comunidade",
       "Programas de inclusão social e acessibilidade",
@@ -171,7 +168,6 @@ const unitActions = [
     name: "Obras Construcap",
     icon: HardHat,
     color: "bg-amber-500",
-    highlight: "+900 obras entregues",
     actions: [
       "Priorização de contratação de mão de obra local",
       "Programas de capacitação técnica para trabalhadores da região",
@@ -181,20 +177,6 @@ const unitActions = [
       "Atendimento e resolução de demandas comunitárias"
     ]
   },
-];
-
-const socialInvestments = [
-  { category: "Educação e Capacitação", value: "R$ 892 mil", description: "Programas de formação profissional e bolsas de estudo" },
-  { category: "Saúde e Bem-estar", value: "R$ 1,2 milhão", description: "Campanhas de saúde, vacinação e prevenção" },
-  { category: "Cultura e Esporte", value: "R$ 650 mil", description: "Patrocínio a eventos e projetos culturais" },
-  { category: "Meio Ambiente", value: "R$ 480 mil", description: "Educação ambiental e recuperação de áreas" },
-];
-
-const communityMetrics = [
-  { label: "Manifestações Recebidas", value: "127", description: "em 2024" },
-  { label: "Taxa de Resolução", value: "94%", description: "no prazo estabelecido" },
-  { label: "Reuniões Comunitárias", value: "48", description: "realizadas no ano" },
-  { label: "Municípios Atendidos", value: "15", description: "com presença ativa" },
 ];
 
 const CommunityPage = () => {
@@ -223,21 +205,6 @@ const CommunityPage = () => {
               </p>
             </AnimatedSection>
           </div>
-        </div>
-      </section>
-
-      {/* Key Metrics */}
-      <section className="py-8">
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {communityMetrics.map((metric, index) => (
-            <AnimatedSection key={metric.label} delay={index * 100}>
-              <div className="bg-card rounded-xl border border-border p-6 text-center">
-                <p className="text-3xl font-bold text-teal-500">{metric.value}</p>
-                <p className="font-medium mt-1">{metric.label}</p>
-                <p className="text-xs text-muted-foreground">{metric.description}</p>
-              </div>
-            </AnimatedSection>
-          ))}
         </div>
       </section>
 
@@ -396,17 +363,14 @@ const CommunityPage = () => {
           {unitActions.map((unit, index) => (
             <AnimatedSection key={unit.name} delay={index * 100}>
               <div className="bg-card rounded-2xl border border-border overflow-hidden h-full">
-                <div className={`${unit.color} p-5 flex items-center justify-between`}>
-                  <div className="flex items-center gap-3">
-                    <unit.icon className="w-7 h-7 text-white" />
-                    <h3 className="font-bold text-white text-lg">{unit.name}</h3>
-                  </div>
-                  <span className="text-xs bg-white/20 text-white px-3 py-1 rounded-full">{unit.highlight}</span>
+                <div className={`${unit.color} p-4 flex items-center gap-3`}>
+                  <unit.icon className="w-6 h-6 text-white" />
+                  <h3 className="font-semibold text-white">{unit.name}</h3>
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-3">
+                <div className="p-5">
+                  <ul className="space-y-2">
                     {unit.actions.map((action, i) => (
-                      <li key={i} className="flex items-start gap-3 text-sm">
+                      <li key={i} className="flex items-start gap-2 text-sm">
                         <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5 flex-shrink-0" />
                         <span className="text-muted-foreground">{action}</span>
                       </li>
@@ -419,119 +383,51 @@ const CommunityPage = () => {
         </div>
       </section>
 
-      {/* Social Investments */}
+      {/* Governance */}
       <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
         <AnimatedSection>
-          <div className="flex items-center gap-3 mb-8">
-            <TrendingUp className="w-8 h-8 text-teal-500" />
-            <h2 className="text-2xl font-bold">Investimentos Sociais</h2>
-          </div>
-        </AnimatedSection>
-        
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {socialInvestments.map((item, index) => (
-            <AnimatedSection key={item.category} delay={index * 100}>
-              <div className="bg-card rounded-2xl border border-border p-6 h-full hover:border-teal-500/30 transition-colors">
-                <p className="text-2xl font-bold text-teal-500 mb-2">{item.value}</p>
-                <p className="font-semibold mb-2">{item.category}</p>
-                <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-        
-        <AnimatedSection delay={400}>
-          <div className="mt-8 bg-card rounded-2xl border border-border p-6">
+          <div className="bg-card rounded-2xl border border-border p-8">
             <div className="flex items-start gap-4">
-              <Award className="w-10 h-10 text-teal-500 shrink-0" />
+              <div className="w-12 h-12 rounded-xl bg-teal-500/10 flex items-center justify-center shrink-0">
+                <Shield className="w-6 h-6 text-teal-500" />
+              </div>
               <div>
-                <h3 className="font-semibold mb-2">Impacto Total em 2024</h3>
-                <p className="text-3xl font-bold text-teal-500 mb-2">R$ 3,2 milhões</p>
-                <p className="text-sm text-muted-foreground">
-                  Investimento total em ações sociais e comunitárias, incluindo projetos próprios, 
-                  patrocínios via leis de incentivo e doações diretas para instituições do terceiro setor.
-                </p>
+                <h2 className="text-xl font-bold mb-4">Governança do Relacionamento Comunitário</h2>
+                <div className="space-y-4 text-muted-foreground">
+                  <p>
+                    A gestão do relacionamento com comunidades é responsabilidade compartilhada entre 
+                    as áreas de Sustentabilidade, Comunicação e as diretorias de cada unidade de negócio, 
+                    com supervisão do Comitê de Sustentabilidade.
+                  </p>
+                  <p>
+                    Indicadores de relacionamento comunitário são monitorados mensalmente e reportados 
+                    ao Comitê Executivo, incluindo número de manifestações, tempo de resposta, 
+                    índice de resolução e pesquisas de percepção.
+                  </p>
+                  <p>
+                    Em caso de ocorrências críticas ou de alto impacto, há protocolos de escalação 
+                    que envolvem a alta administração e, quando necessário, o Conselho de Administração.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </AnimatedSection>
       </section>
 
-      {/* Governance Framework */}
+      {/* Final Section */}
       <section className="py-12">
         <AnimatedSection>
-          <div className="bg-card rounded-2xl border border-border p-8">
-            <div className="flex items-center gap-3 mb-6">
-              <UserCheck className="w-8 h-8 text-teal-500" />
-              <h2 className="text-2xl font-bold">Governança do Relacionamento Comunitário</h2>
-            </div>
-            
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h3 className="font-semibold mb-4">Responsabilidades</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Diretoria de Engenharia: supervisão geral e aprovação de planos de comunicação</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Gerência de Obra: execução e monitoramento das ações no canteiro</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">SSMA: integração com procedimentos de segurança e meio ambiente</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Comunicação Corporativa: apoio em materiais e relacionamento institucional</span>
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <h3 className="font-semibold mb-4">Indicadores de Desempenho</h3>
-                <ul className="space-y-3">
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Número de manifestações recebidas e resolvidas por obra</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Tempo médio de resposta às demandas comunitárias</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Satisfação das comunidades em pesquisas de encerramento</span>
-                  </li>
-                  <li className="flex items-start gap-2 text-sm">
-                    <CheckCircle className="w-4 h-4 text-teal-500 mt-0.5" />
-                    <span className="text-muted-foreground">Ocorrências e não conformidades ambientais reportadas</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
-      </section>
-
-      {/* Conclusion */}
-      <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-gradient-to-r from-teal-500/10 to-emerald-500/10">
-        <AnimatedSection>
-          <div className="bg-card rounded-2xl border border-border p-8 text-center">
+          <div className="text-center max-w-3xl mx-auto">
             <Heart className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-            <h3 className="text-xl font-bold mb-4">Compromisso com o Desenvolvimento Local</h3>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
-              O relacionamento com comunidades é pilar estratégico da atuação do Grupo Construcap. 
-              Ao integrar diálogo transparente, prevenção de impactos e investimento social, a empresa 
-              contribui para o desenvolvimento sustentável dos territórios onde atua, fortalecendo sua 
-              licença social de operação e gerando valor compartilhado para todas as partes interessadas.
+            <h2 className="text-2xl font-bold mb-4">Compromisso com o Desenvolvimento Local</h2>
+            <p className="text-muted-foreground">
+              O Grupo Construcap entende que o sucesso de suas operações está diretamente 
+              vinculado à qualidade do relacionamento com as comunidades. Por isso, investe 
+              continuamente em processos de diálogo, transparência e geração de valor 
+              compartilhado, contribuindo para o desenvolvimento sustentável dos territórios 
+              onde atua.
             </p>
-            <div className="mt-6 flex flex-wrap justify-center gap-3">
-              <span className="px-4 py-2 bg-teal-500/10 text-teal-500 rounded-full text-sm font-medium">GRI 413-1</span>
-              <span className="px-4 py-2 bg-teal-500/10 text-teal-500 rounded-full text-sm font-medium">GRI 413-2</span>
-              <span className="px-4 py-2 bg-teal-500/10 text-teal-500 rounded-full text-sm font-medium">ODS 11</span>
-              <span className="px-4 py-2 bg-teal-500/10 text-teal-500 rounded-full text-sm font-medium">ODS 17</span>
-            </div>
           </div>
         </AnimatedSection>
       </section>

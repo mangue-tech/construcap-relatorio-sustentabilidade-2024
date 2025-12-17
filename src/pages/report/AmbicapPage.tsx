@@ -2,14 +2,8 @@ import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Leaf, 
-  Droplets, 
   Building2,
-  Award,
-  Recycle,
-  Factory,
-  Truck,
-  Target,
-  TreePine
+  Recycle
 } from "lucide-react";
 import ambicapLogo from "@/assets/companies/ambicap.png";
 import ambicapHero from "@/assets/operations/ambicap-environmental.jpg";
@@ -49,44 +43,6 @@ const AmbicapPage = () => {
             áreas contaminadas e consultoria ambiental. A empresa atua com tecnologias inovadoras 
             e processos que promovem a economia circular e a regeneração ambiental.
           </p>
-        </section>
-
-        {/* KPIs Principais */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Target className="w-6 h-6 text-primary" />
-            Indicadores de Desempenho
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-teal-500/10 to-teal-500/5 border-teal-500/20">
-              <CardContent className="p-6 text-center">
-                <Recycle className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-teal-600">95%</p>
-                <p className="text-sm text-muted-foreground mt-1">Taxa de Reciclagem</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20">
-              <CardContent className="p-6 text-center">
-                <Droplets className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-blue-600">2M m³</p>
-                <p className="text-sm text-muted-foreground mt-1">Efluentes Tratados/Ano</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20">
-              <CardContent className="p-6 text-center">
-                <TreePine className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-green-600">150+</p>
-                <p className="text-sm text-muted-foreground mt-1">Áreas Remediadas</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border-amber-500/20">
-              <CardContent className="p-6 text-center">
-                <Factory className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-amber-600">500+</p>
-                <p className="text-sm text-muted-foreground mt-1">Clientes Industriais</p>
-              </CardContent>
-            </Card>
-          </div>
         </section>
 
         {/* Serviços */}
@@ -202,32 +158,12 @@ const AmbicapPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-6">
+              <p className="text-muted-foreground">
                 A Ambicap aplica os princípios da economia circular em todas as suas operações, 
-                transformando resíduos em recursos e promovendo o fechamento de ciclos produtivos.
+                transformando resíduos em recursos e promovendo o fechamento de ciclos produtivos. 
+                A empresa trabalha com valorização de resíduos, recuperação de materiais, 
+                reuso de água e práticas sustentáveis certificadas.
               </p>
-              <div className="grid md:grid-cols-4 gap-4">
-                <div className="p-4 bg-teal-50 dark:bg-teal-950/20 rounded-lg text-center">
-                  <Truck className="w-8 h-8 text-teal-600 mx-auto mb-2" />
-                  <p className="text-xl font-bold text-teal-700 dark:text-teal-400">120.000 t</p>
-                  <p className="text-xs text-muted-foreground">Resíduos valorizados/ano</p>
-                </div>
-                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
-                  <Recycle className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="text-xl font-bold text-green-700 dark:text-green-400">85%</p>
-                  <p className="text-xs text-muted-foreground">Recuperação de materiais</p>
-                </div>
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Droplets className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="text-xl font-bold text-blue-700 dark:text-blue-400">1.5M m³</p>
-                  <p className="text-xs text-muted-foreground">Água reutilizada/ano</p>
-                </div>
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <p className="text-xl font-bold text-amber-700 dark:text-amber-400">15</p>
-                  <p className="text-xs text-muted-foreground">Certificações ambientais</p>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </section>

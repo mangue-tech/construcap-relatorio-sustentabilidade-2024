@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun } from "lucide-react";
+import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, TreePine, Stethoscope, Recycle, Landmark } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-construction.jpg";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
@@ -8,10 +8,6 @@ import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/report/ScrollToTop";
 import MangueBadge from "@/components/report/MangueBadge";
-import urbiaLogo from "@/assets/companies/urbia.png";
-import minasArenaLogo from "@/assets/companies/minas-arena.png";
-import inovaSaudeLogo from "@/assets/companies/inova-saude.png";
-import ambicapLogo from "@/assets/companies/ambicap.png";
 const sections = [{
   icon: Building2,
   label: "Quem Somos",
@@ -143,26 +139,26 @@ const iconicWorks = [{
 }];
 const companies = [{
   name: "Urbia",
-  logo: urbiaLogo,
-  logoClass: "h-16 max-w-[140px]",
+  icon: TreePine,
+  color: "bg-green-500",
   description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
   highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"]
 }, {
   name: "Minas Arena",
-  logo: minasArenaLogo,
-  logoClass: "h-16 max-w-[140px]",
+  icon: Landmark,
+  color: "bg-amber-500",
   description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
   highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"]
 }, {
   name: "Inova Saúde",
-  logo: inovaSaudeLogo,
-  logoClass: "h-16 max-w-[140px]",
+  icon: Stethoscope,
+  color: "bg-blue-500",
   description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
   highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"]
 }, {
   name: "Ambicap",
-  logo: ambicapLogo,
-  logoClass: "h-10 max-w-[100px]",
+  icon: Recycle,
+  color: "bg-emerald-500",
   description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
   highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"]
 }];
@@ -281,11 +277,7 @@ const ReportCover = () => {
             <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
             animationDelay: "400ms"
           }}>
-              {iconicWorks.map((work, index) => (
-                <span key={index} className="px-3 py-1 bg-primary-foreground/10 text-primary-foreground text-sm rounded-full border border-primary-foreground/20">
-                  {work.name}
-                </span>
-              ))}
+              {iconicWorks.map(work => {})}
             </div>
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
@@ -404,7 +396,7 @@ const ReportCover = () => {
             bg: "bg-orange-500/10"
           }].map((item, index) => <AnimatedSection key={item.label} delay={index * 100}>
                 <div className="p-6 bg-card rounded-2xl border border-border hover:shadow-lg transition-all hover:-translate-y-1">
-                  <item.icon className={`w-8 h-8 ${item.color} mb-3`} />
+                  
                   <div className="flex items-baseline gap-1 mb-1">
                     <p className="text-2xl font-bold text-foreground">{item.value}</p>
                     <span className="text-sm text-muted-foreground">{item.unit}</span>
@@ -415,7 +407,7 @@ const ReportCover = () => {
           </div>
 
           {/* Charts Section */}
-          <div className="space-y-8">
+          <div className="grid lg:grid-cols-2 gap-8">
             {/* Pie Chart - Emissions by Scope */}
             <AnimatedSection delay={200}>
               <div className="bg-card rounded-2xl border border-border p-6">
@@ -491,8 +483,8 @@ const ReportCover = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
                 <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
-                  <div className="w-full h-16 flex items-center justify-center mb-4">
-                    <img src={company.logo} alt={company.name} className={`${company.logoClass} w-auto object-contain`} />
+                  <div className={`w-12 h-12 rounded-xl ${company.color} flex items-center justify-center mb-4`}>
+                    <company.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>

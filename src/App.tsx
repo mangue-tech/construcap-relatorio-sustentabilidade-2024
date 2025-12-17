@@ -27,17 +27,17 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<ReportCover />} />
-          <Route path="/relatorio/carta-ceo" element={<CEOLetterPage />} />
-          <Route path="/relatorio/quem-somos" element={<AboutPage />} />
-          <Route path="/relatorio/governanca" element={<GovernancePage />} />
-          <Route path="/relatorio/compliance" element={<CompliancePage />} />
-          <Route path="/relatorio/gestao-riscos" element={<RiskManagementPage />} />
-          <Route path="/relatorio/materialidade" element={<MaterialityPage />} />
-          <Route path="/relatorio/comunidades" element={<CommunityPage />} />
-          <Route path="/relatorio/desempenho-economico" element={<EconomicPage />} />
-          <Route path="/relatorio/desempenho-ambiental" element={<EnvironmentalPage />} />
-          <Route path="/relatorio/desempenho-social" element={<SocialPage />} />
-          <Route path="/relatorio/gri-index" element={<GRIIndexPage />} />
+          <Route path="/carta-ceo" element={<CEOLetterPage />} />
+          <Route path="/quem-somos" element={<AboutPage />} />
+          <Route path="/governanca" element={<GovernancePage />} />
+          <Route path="/compliance" element={<CompliancePage />} />
+          <Route path="/gestao-riscos" element={<RiskManagementPage />} />
+          <Route path="/materialidade" element={<MaterialityPage />} />
+          <Route path="/comunidades" element={<CommunityPage />} />
+          <Route path="/desempenho-economico" element={<EconomicPage />} />
+          <Route path="/desempenho-ambiental" element={<EnvironmentalPage />} />
+          <Route path="/desempenho-social" element={<SocialPage />} />
+          <Route path="/gri-index" element={<GRIIndexPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

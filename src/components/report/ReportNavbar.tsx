@@ -3,12 +3,12 @@ import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Home } from "lucide-react";
 
 const reportPages = [
-  { path: "/relatorio/quem-somos", label: "Quem Somos" },
-  { path: "/relatorio/governanca", label: "Governança" },
-  { path: "/relatorio/desempenho-economico", label: "Econômico" },
-  { path: "/relatorio/desempenho-ambiental", label: "Ambiental" },
-  { path: "/relatorio/desempenho-social", label: "Social" },
-  { path: "/relatorio/gri-index", label: "Índice GRI" },
+  { path: "/quem-somos", label: "Quem Somos" },
+  { path: "/governanca", label: "Governança" },
+  { path: "/desempenho-economico", label: "Econômico" },
+  { path: "/desempenho-ambiental", label: "Ambiental" },
+  { path: "/desempenho-social", label: "Social" },
+  { path: "/gri-index", label: "Índice GRI" },
 ];
 
 const ReportNavbar = () => {

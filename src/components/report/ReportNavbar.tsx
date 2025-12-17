@@ -39,7 +39,7 @@ const ReportNavbar = () => {
             <img
               src={construcapLogo}
               alt="Construcap"
-              className={`w-15 h-10 transition-all ${isScrolled ? "" : "shadow-lg rounded-xl"}`}
+              className={`w-30 h-20 transition-all ${isScrolled ? "" : "shadow-lg rounded-xl"}`}
             />
             <div className={`transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
               <p className="font-semibold text-sm">Relatório ESG</p>

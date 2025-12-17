@@ -3,6 +3,8 @@ import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, Fi
 import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-construction.jpg";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
+import { AnimatedCounter } from "@/hooks/useCountUp";
+import ReportNavbar from "@/components/report/ReportNavbar";
 
 const sections = [
   { icon: Building2, label: "Quem Somos", path: "/relatorio/quem-somos", color: "bg-blue-500" },
@@ -14,10 +16,10 @@ const sections = [
 ];
 
 const highlights2024 = [
-  { value: "R$ 1,6 bi", label: "Valor Econômico Gerado", icon: TrendingUp, color: "text-primary" },
-  { value: "4.345", label: "Colaboradores", icon: Users, color: "text-blue-500" },
-  { value: "80+", label: "Anos de História", icon: Award, color: "text-amber-500" },
-  { value: "27", label: "Estados Atendidos", icon: Building2, color: "text-purple-500" },
+  { value: 16, label: "Valor Econômico Gerado", icon: TrendingUp, color: "text-primary", prefix: "R$ ", suffix: " bi", decimals: 1 },
+  { value: 4345, label: "Colaboradores", icon: Users, color: "text-blue-500", prefix: "", suffix: "", decimals: 0 },
+  { value: 80, label: "Anos de História", icon: Award, color: "text-amber-500", prefix: "", suffix: "+", decimals: 0 },
+  { value: 27, label: "Estados Atendidos", icon: Building2, color: "text-purple-500", prefix: "", suffix: "", decimals: 0 },
 ];
 
 const esgHighlights = [
@@ -79,8 +81,10 @@ const emissionsBarData = [
 const ReportCover = () => {
   return (
     <div className="min-h-screen bg-background">
+      <ReportNavbar />
+      
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center">
+      <section className="relative min-h-[90vh] flex items-center pt-16">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Construcap" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/40" />
@@ -151,7 +155,7 @@ const ReportCover = () => {
       </section>
 
       {/* Key Numbers - Highlights */}
-      <section id="highlights" className="py-20 bg-gradient-to-b from-secondary/50 to-background">
+      <section id="highlights" className="py-20 bg-gradient-to-b from-secondary/50 to-background scroll-mt-20">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Destaques 2024</h2>
@@ -160,7 +164,7 @@ const ReportCover = () => {
             </p>
           </AnimatedSection>
 
-          {/* Main Stats Grid */}
+          {/* Main Stats Grid with Animated Counters */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {highlights2024.map((stat, index) => (
               <AnimatedSection key={stat.label} delay={index * 100}>
@@ -170,7 +174,14 @@ const ReportCover = () => {
                       <stat.icon className={`w-5 h-5 ${stat.color}`} />
                     </div>
                   </div>
-                  <p className={`text-3xl font-bold ${stat.color} mb-1`}>{stat.value}</p>
+                  <p className={`text-3xl font-bold ${stat.color} mb-1`}>
+                    <AnimatedCounter 
+                      value={stat.value * (stat.decimals > 0 ? Math.pow(10, stat.decimals) : 1)} 
+                      prefix={stat.prefix} 
+                      suffix={stat.suffix}
+                      decimals={stat.decimals}
+                    />
+                  </p>
                   <p className="text-sm text-muted-foreground">{stat.label}</p>
                 </div>
               </AnimatedSection>
@@ -205,7 +216,7 @@ const ReportCover = () => {
       </section>
 
       {/* Environmental Highlights with Charts */}
-      <section className="py-20 bg-emerald-950/10">
+      <section id="environmental" className="py-20 bg-emerald-950/10 scroll-mt-20">
         <div className="container mx-auto px-6">
           <AnimatedSection>
             <div className="flex items-center gap-3 mb-8">
@@ -325,7 +336,7 @@ const ReportCover = () => {
       </section>
 
       {/* Certifications & Achievements */}
-      <section className="py-20">
+      <section id="certifications" className="py-20 scroll-mt-20">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-2xl font-bold mb-4">Certificações e Reconhecimentos</h2>

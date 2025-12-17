@@ -6,6 +6,8 @@ import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { AnimatedCounter } from "@/hooks/useCountUp";
 import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
+import ScrollToTop from "@/components/report/ScrollToTop";
+import MangueBadge from "@/components/report/MangueBadge";
 
 const sections = [
   { icon: Building2, label: "Quem Somos", path: "/quem-somos", color: "bg-blue-500" },
@@ -148,15 +150,14 @@ const ReportCover = () => {
               </div>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground mb-4 animate-fade-in" style={{ animationDelay: "100ms" }}>
-              Relatório de<br />
-              <span className="text-primary">Sustentabilidade</span><br />
-              2024
-            </h1>
-            
-            <p className="text-xl text-primary-foreground/80 mb-4 animate-fade-in" style={{ animationDelay: "200ms" }}>
+            <p className="text-4xl md:text-5xl lg:text-7xl font-bold text-primary-foreground mb-2 animate-fade-in" style={{ animationDelay: "150ms" }}>
               Grupo Construcap
             </p>
+            
+            <h1 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-foreground/90 mb-4 animate-fade-in" style={{ animationDelay: "100ms" }}>
+              Relatório de<br />
+              <span className="text-primary">Sustentabilidade</span> 2024
+            </h1>
             
             <p className="text-primary-foreground/70 mb-8 max-w-lg animate-fade-in" style={{ animationDelay: "300ms" }}>
               80 anos construindo o Brasil com responsabilidade, transparência e compromisso 
@@ -471,6 +472,19 @@ const ReportCover = () => {
           </div>
         </div>
       </section>
+
+      {/* Copyright Footer */}
+      <footer className="bg-background py-8 px-6">
+        <div className="container mx-auto">
+          <p className="text-left text-sm text-muted-foreground">
+            Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
+          </p>
+        </div>
+      </footer>
+
+      {/* Floating Elements */}
+      <ScrollToTop />
+      <MangueBadge />
     </div>
   );
 };

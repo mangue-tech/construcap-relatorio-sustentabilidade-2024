@@ -105,8 +105,9 @@ const riskTypes = [
     items: [
       "Ataques cibernéticos",
       "Indisponibilidade de sistemas críticos",
-      "Vazamento de dados sensíveis",
-      "Falhas em infraestrutura de TI"
+      "Proteção de dados pessoais",
+      "Riscos associados à infraestrutura digital da Inova Saúde, parques e arenas",
+      "Incidentes que afetem plataformas de bilhetagem, controle de acesso ou sistemas médicos"
     ]
   },
 ];
@@ -375,16 +376,19 @@ const RiskManagementPage = () => {
                 <h3 className="font-semibold">Mitigação e Controle</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-4">
-                Para cada risco crítico são definidos:
+                As medidas incluem:
               </p>
               <ul className="space-y-2">
                 {[
-                  "Controles preventivos e detectivos",
-                  "Responsáveis pela gestão do risco",
-                  "Planos de ação com prazos definidos",
-                  "Indicadores de monitoramento",
-                  "Mecanismos de escalamento",
-                  "Revisões periódicas de eficácia"
+                  "Planos operacionais preventivos",
+                  "Protocolos de prevenção de acidentes",
+                  "Monitoramento ambiental e climático em tempo real",
+                  "Redundância de equipamentos",
+                  "Revisão de especificações técnicas",
+                  "Qualificação e monitoramento de fornecedores",
+                  "Contingência em eventos extremos",
+                  "Procedimentos específicos para riscos hospitalares",
+                  "Reforço de controle de acesso em estádios e parques"
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
                     <Target className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />

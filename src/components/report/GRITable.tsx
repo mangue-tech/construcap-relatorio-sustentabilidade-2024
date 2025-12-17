@@ -755,11 +755,8 @@ const GRITable = () => {
                           <th className="px-4 py-3 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wider w-48">
                             Indicador
                           </th>
-                          <th className="px-4 py-3 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wider hidden md:table-cell w-56">
-                            Descrição
-                          </th>
                           <th className="px-4 py-3 text-left text-xs font-semibold text-muted-foreground uppercase tracking-wider">
-                            Informação
+                            Descrição / Resposta Construcap
                           </th>
                         </tr>
                       </thead>
@@ -777,9 +774,6 @@ const GRITable = () => {
                             </td>
                             <td className="px-4 py-3">
                               <span className="text-sm font-medium">{item.indicator}</span>
-                            </td>
-                            <td className="px-4 py-3 hidden md:table-cell">
-                              <span className="text-sm text-muted-foreground">{item.description}</span>
                             </td>
                             <td className="px-4 py-3">
                               <span className="text-sm text-foreground">{item.response}</span>

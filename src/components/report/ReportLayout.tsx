@@ -22,7 +22,7 @@ import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
 
 const menuItems = [
-  { path: "/relatorio", label: "Capa", icon: Home },
+  { path: "/", label: "Capa", icon: Home },
   { path: "/relatorio/carta-ceo", label: "Carta do CEO", icon: User },
   { path: "/relatorio/quem-somos", label: "Quem Somos", icon: Building2 },
   { 
@@ -132,7 +132,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
       {/* Mobile Header */}
       <header className="lg:hidden fixed top-1.5 left-0 right-0 h-16 bg-card border-b border-border z-40 flex items-center justify-between px-4">
-        <Link to="/relatorio" className="flex items-center gap-2">
+        <Link to="/" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">C</span>
           </div>

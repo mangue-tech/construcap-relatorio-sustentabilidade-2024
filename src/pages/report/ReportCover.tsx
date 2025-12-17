@@ -1,14 +1,15 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun } from "lucide-react";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, Legend } from "recharts";
+import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, TreePine, Stethoscope, Recycle, Landmark } from "lucide-react";
+import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-construction.jpg";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { AnimatedCounter } from "@/hooks/useCountUp";
 import ReportNavbar from "@/components/report/ReportNavbar";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const sections = [
   { icon: Building2, label: "Quem Somos", path: "/relatorio/quem-somos", color: "bg-blue-500" },
-  { icon: Shield, label: "Governança", path: "/relatorio/estrategia-governanca", color: "bg-purple-500" },
+  { icon: Shield, label: "Governança", path: "/relatorio/governanca", color: "bg-purple-500" },
   { icon: TrendingUp, label: "Econômico", path: "/relatorio/desempenho-economico", color: "bg-green-500" },
   { icon: Leaf, label: "Ambiental", path: "/relatorio/desempenho-ambiental", color: "bg-emerald-500" },
   { icon: Heart, label: "Social", path: "/relatorio/desempenho-social", color: "bg-rose-500" },
@@ -60,6 +61,46 @@ const iconicWorks = [
   { name: "Arena Corinthians", detail: "Copa do Mundo 2014" },
   { name: "Hospital Einstein", detail: "Referência em saúde" },
   { name: "Mineirão", detail: "PPP pioneira no Brasil" },
+];
+
+const companies = [
+  {
+    name: "Urbia",
+    icon: TreePine,
+    color: "bg-green-500",
+    description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
+    highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"],
+  },
+  {
+    name: "Minas Arena",
+    icon: Landmark,
+    color: "bg-amber-500",
+    description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
+    highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"],
+  },
+  {
+    name: "Inova Saúde",
+    icon: Stethoscope,
+    color: "bg-blue-500",
+    description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
+    highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"],
+  },
+  {
+    name: "Ambicap",
+    icon: Recycle,
+    color: "bg-emerald-500",
+    description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
+    highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"],
+  },
+];
+
+const certifications = [
+  { name: "ISO 9001", description: "Sistema de Gestão da Qualidade - Padrão internacional que especifica requisitos para um sistema de gestão da qualidade, garantindo produtos e serviços consistentes." },
+  { name: "ISO 14001", description: "Sistema de Gestão Ambiental - Framework para organizações melhorarem seu desempenho ambiental através de uso eficiente de recursos e redução de resíduos." },
+  { name: "ISO 45001", description: "Sistema de Gestão de Saúde e Segurança Ocupacional - Padrão global para prevenir lesões e doenças ocupacionais, proporcionando ambientes de trabalho seguros." },
+  { name: "ISO 37001", description: "Sistema de Gestão Antissuborno - Especifica requisitos para estabelecer, implementar e manter um sistema de gestão antissuborno." },
+  { name: "LEED", description: "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental." },
+  { name: "GHG Protocol", description: "Protocolo de Gases de Efeito Estufa - Metodologia internacional para quantificação e gestão de emissões de gases de efeito estufa." },
 ];
 
 // Emissions data by scope
@@ -276,7 +317,7 @@ const ReportCover = () => {
                           <Cell key={`cell-${index}`} fill={entry.color} />
                         ))}
                       </Pie>
-                      <Tooltip 
+                      <RechartsTooltip 
                         formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']}
                         contentStyle={{ 
                           backgroundColor: 'hsl(var(--card))', 
@@ -314,7 +355,7 @@ const ReportCover = () => {
                     <BarChart data={emissionsBarData} layout="vertical">
                       <XAxis type="number" tickFormatter={(value) => value.toLocaleString('pt-BR')} />
                       <YAxis dataKey="category" type="category" width={100} tick={{ fontSize: 11 }} />
-                      <Tooltip 
+                      <RechartsTooltip 
                         formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']}
                         contentStyle={{ 
                           backgroundColor: 'hsl(var(--card))', 
@@ -335,25 +376,65 @@ const ReportCover = () => {
         </div>
       </section>
 
+      {/* Companies Section */}
+      <section id="companies" className="py-20 scroll-mt-20">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="text-center mb-12">
+            <h2 className="text-2xl font-bold mb-4">Empresas do Grupo Construcap</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Conheça as empresas que compõem nosso grupo e suas contribuições para o desenvolvimento sustentável
+            </p>
+          </AnimatedSection>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {companies.map((company, index) => (
+              <AnimatedSection key={company.name} delay={index * 100}>
+                <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
+                  <div className={`w-12 h-12 rounded-xl ${company.color} flex items-center justify-center mb-4`}>
+                    <company.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>
+                  <div className="flex flex-wrap gap-2">
+                    {company.highlights.map((highlight) => (
+                      <span key={highlight} className="px-2 py-1 rounded-full bg-secondary text-xs text-muted-foreground">
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Certifications & Achievements */}
-      <section id="certifications" className="py-20 scroll-mt-20">
+      <section id="certifications" className="py-20 bg-secondary/30 scroll-mt-20">
         <div className="container mx-auto px-6">
           <AnimatedSection className="text-center mb-12">
             <h2 className="text-2xl font-bold mb-4">Certificações e Reconhecimentos</h2>
-            <p className="text-muted-foreground">Padrões internacionais que atestam nossa excelência</p>
+            <p className="text-muted-foreground">Clique para ver detalhes de cada certificação</p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
             <div className="flex flex-wrap justify-center gap-4">
-              {["ISO 9001", "ISO 14001", "ISO 45001", "ISO 37001", "LEED", "GHG Protocol", "GRI Standards"].map((cert, index) => (
-                <div 
-                  key={cert} 
-                  className="px-6 py-3 bg-card rounded-xl border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1"
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  <Award className="w-5 h-5 text-primary" />
-                  <span className="font-medium">{cert}</span>
-                </div>
+              {certifications.map((cert, index) => (
+                <Tooltip key={cert.name}>
+                  <TooltipTrigger asChild>
+                    <div 
+                      className="px-6 py-3 bg-card rounded-xl border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer"
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <Award className="w-5 h-5 text-primary" />
+                      <span className="font-medium">{cert.name}</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="max-w-xs p-4">
+                    <p className="font-semibold mb-1">{cert.name}</p>
+                    <p className="text-sm text-muted-foreground">{cert.description}</p>
+                  </TooltipContent>
+                </Tooltip>
               ))}
             </div>
           </AnimatedSection>

@@ -37,7 +37,7 @@ const ReportNavbar = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/relatorio" className="flex items-center gap-3">
+          <Link to="/" className="flex items-center gap-3">
             <div className={`w-10 h-10 rounded-xl bg-primary flex items-center justify-center transition-all ${isScrolled ? '' : 'shadow-lg'}`}>
               <span className="text-primary-foreground font-bold text-lg">C</span>
             </div>
@@ -50,9 +50,9 @@ const ReportNavbar = () => {
           {/* Desktop Navigation - Report Pages */}
           <div className="hidden lg:flex items-center gap-1">
             <Link
-              to="/relatorio"
+              to="/"
               className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
-                location.pathname === "/relatorio"
+                location.pathname === "/"
                   ? "bg-primary text-primary-foreground"
                   : isScrolled
                   ? "text-foreground hover:bg-secondary"
@@ -108,10 +108,10 @@ const ReportNavbar = () => {
         <div className="lg:hidden bg-card border-t border-border animate-fade-in">
           <div className="container mx-auto px-6 py-4 space-y-2">
             <Link
-              to="/relatorio"
+              to="/"
               onClick={() => setIsMobileMenuOpen(false)}
               className={`flex items-center gap-2 w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-colors ${
-                location.pathname === "/relatorio"
+                location.pathname === "/"
                   ? "bg-primary text-primary-foreground"
                   : "text-foreground hover:bg-secondary"
               }`}

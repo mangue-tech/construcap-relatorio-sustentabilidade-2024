@@ -1,14 +1,11 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  Trophy, 
-  Users, 
   Leaf,
   Award,
   Zap,
   Droplets,
   Building2,
-  Target,
   Star
 } from "lucide-react";
 import minasArenaLogo from "@/assets/companies/minas-arena.png";
@@ -66,68 +63,13 @@ const MinasArenaPage = () => {
                 concedida pelo U.S. Green Building Council. Esta conquista reconhece as práticas 
                 exemplares de sustentabilidade implementadas na operação do estádio.
               </p>
-              <div className="grid md:grid-cols-4 gap-4">
-                <div className="text-center p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg">
-                  <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <p className="font-bold text-amber-700 dark:text-amber-400">1º do Mundo</p>
-                  <p className="text-xs text-muted-foreground">Estádio LEED Platinum</p>
-                </div>
-                <div className="text-center p-4 bg-green-50 dark:bg-green-950/30 rounded-lg">
-                  <Leaf className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <p className="font-bold text-green-700 dark:text-green-400">88 pontos</p>
-                  <p className="text-xs text-muted-foreground">Pontuação LEED</p>
-                </div>
-                <div className="text-center p-4 bg-blue-50 dark:bg-blue-950/30 rounded-lg">
-                  <Zap className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-bold text-blue-700 dark:text-blue-400">100%</p>
-                  <p className="text-xs text-muted-foreground">Energia Renovável</p>
-                </div>
-                <div className="text-center p-4 bg-cyan-50 dark:bg-cyan-950/30 rounded-lg">
-                  <Droplets className="w-8 h-8 text-cyan-600 mx-auto mb-2" />
-                  <p className="font-bold text-cyan-700 dark:text-cyan-400">70%</p>
-                  <p className="text-xs text-muted-foreground">Redução Consumo Água</p>
-                </div>
+              <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-center max-w-xs mx-auto">
+                <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
+                <p className="font-bold text-amber-700 dark:text-amber-400">1º do Mundo</p>
+                <p className="text-xs text-muted-foreground">Estádio LEED Platinum</p>
               </div>
             </CardContent>
           </Card>
-        </section>
-
-        {/* KPIs Principais */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Target className="w-6 h-6 text-primary" />
-            Indicadores de Desempenho
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20">
-              <CardContent className="p-6 text-center">
-                <Trophy className="w-8 h-8 text-primary mx-auto mb-2" />
-                <p className="text-3xl font-bold text-primary">200+</p>
-                <p className="text-sm text-muted-foreground mt-1">Eventos/Ano</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20">
-              <CardContent className="p-6 text-center">
-                <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-blue-600">3M+</p>
-                <p className="text-sm text-muted-foreground mt-1">Visitantes/Ano</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20">
-              <CardContent className="p-6 text-center">
-                <Zap className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-green-600">6MW</p>
-                <p className="text-sm text-muted-foreground mt-1">Usina Solar</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border-amber-500/20">
-              <CardContent className="p-6 text-center">
-                <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-amber-600">62.000</p>
-                <p className="text-sm text-muted-foreground mt-1">Capacidade</p>
-              </CardContent>
-            </Card>
-          </div>
         </section>
 
         {/* Iniciativas Sustentáveis */}
@@ -142,15 +84,18 @@ const MinasArenaPage = () => {
             <CardContent className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="space-y-4">
-                  <h4 className="font-semibold">Energia</h4>
+                  <h4 className="font-semibold flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-amber-500" />
+                    Energia
+                  </h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Usina solar fotovoltaica de 6MW na cobertura</span>
+                      <span>Usina solar fotovoltaica na cobertura</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
-                      <span>Iluminação 100% LED de alta eficiência</span>
+                      <span>Iluminação LED de alta eficiência</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-amber-500 rounded-full mt-2 shrink-0" />
@@ -163,11 +108,14 @@ const MinasArenaPage = () => {
                   </ul>
                 </div>
                 <div className="space-y-4">
-                  <h4 className="font-semibold">Água</h4>
+                  <h4 className="font-semibold flex items-center gap-2">
+                    <Droplets className="w-4 h-4 text-blue-500" />
+                    Água
+                  </h4>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Sistema de captação de água de chuva (5.000m³)</span>
+                      <span>Sistema de captação de água de chuva</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
@@ -175,7 +123,7 @@ const MinasArenaPage = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>Reuso de 100% da água tratada</span>
+                      <span>Reuso da água tratada</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
@@ -187,20 +135,10 @@ const MinasArenaPage = () => {
               
               <div className="space-y-4">
                 <h4 className="font-semibold">Resíduos e Materiais</h4>
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
-                    <p className="text-2xl font-bold text-green-600">95%</p>
-                    <p className="text-sm text-muted-foreground">Reciclagem de resíduos em eventos</p>
-                  </div>
-                  <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
-                    <p className="text-2xl font-bold text-amber-600">Zero</p>
-                    <p className="text-sm text-muted-foreground">Resíduos para aterro sanitário</p>
-                  </div>
-                  <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                    <p className="text-2xl font-bold text-blue-600">100%</p>
-                    <p className="text-sm text-muted-foreground">Compostagem de orgânicos</p>
-                  </div>
-                </div>
+                <p className="text-sm text-muted-foreground">
+                  O estádio implementa práticas avançadas de gestão de resíduos, incluindo reciclagem 
+                  em eventos, compostagem de resíduos orgânicos e destinação responsável de materiais.
+                </p>
               </div>
             </CardContent>
           </Card>

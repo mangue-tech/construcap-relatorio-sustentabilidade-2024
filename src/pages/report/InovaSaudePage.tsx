@@ -1,14 +1,9 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  HeartPulse, 
-  Users, 
   Building2,
   Award,
   Stethoscope,
-  BedDouble,
-  Activity,
-  Target,
   Shield
 } from "lucide-react";
 import inovaSaudeLogo from "@/assets/companies/inova-saude.png";
@@ -51,44 +46,6 @@ const InovaSaudePage = () => {
           </p>
         </section>
 
-        {/* KPIs Principais */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Target className="w-6 h-6 text-primary" />
-            Indicadores de Desempenho
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20">
-              <CardContent className="p-6 text-center">
-                <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-blue-600">8</p>
-                <p className="text-sm text-muted-foreground mt-1">Unidades Hospitalares</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20">
-              <CardContent className="p-6 text-center">
-                <BedDouble className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-green-600">2.500+</p>
-                <p className="text-sm text-muted-foreground mt-1">Leitos Gerenciados</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-red-500/10 to-red-500/5 border-red-500/20">
-              <CardContent className="p-6 text-center">
-                <HeartPulse className="w-8 h-8 text-red-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-red-600">1.2M+</p>
-                <p className="text-sm text-muted-foreground mt-1">Atendimentos/Ano</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border-amber-500/20">
-              <CardContent className="p-6 text-center">
-                <Users className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-amber-600">4.800+</p>
-                <p className="text-sm text-muted-foreground mt-1">Colaboradores</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Qualidade e Certificações */}
         <section>
           <Card>
@@ -99,10 +56,14 @@ const InovaSaudePage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-6">
+              <p className="text-muted-foreground">
+                A Inova Saúde mantém certificações de qualidade reconhecidas nacionalmente, 
+                assegurando padrões de excelência na gestão hospitalar.
+              </p>
               <div className="grid md:grid-cols-3 gap-4">
                 <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
                   <Shield className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <p className="font-bold text-amber-700 dark:text-amber-400">ONA Nível 3</p>
+                  <p className="font-bold text-amber-700 dark:text-amber-400">ONA</p>
                   <p className="text-xs text-muted-foreground">Acreditação Hospitalar</p>
                 </div>
                 <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
@@ -172,38 +133,6 @@ const InovaSaudePage = () => {
                       <span>Segurança patrimonial integrada</span>
                     </li>
                   </ul>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Indicadores de Qualidade */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Activity className="w-5 h-5 text-green-600" />
-                Indicadores de Qualidade
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">99.8%</p>
-                  <p className="text-sm text-muted-foreground">Disponibilidade de equipamentos</p>
-                </div>
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">98%</p>
-                  <p className="text-sm text-muted-foreground">Satisfação dos clientes</p>
-                </div>
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">Zero</p>
-                  <p className="text-sm text-muted-foreground">Infecções por falha de infraestrutura</p>
-                </div>
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">100%</p>
-                  <p className="text-sm text-muted-foreground">Conformidade regulatória</p>
                 </div>
               </div>
             </CardContent>

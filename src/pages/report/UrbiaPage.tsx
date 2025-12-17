@@ -1,14 +1,9 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
-  TreePine, 
-  Users, 
-  MapPin, 
-  Award,
   Leaf,
   Heart,
-  Building2,
-  Target
+  Building2
 } from "lucide-react";
 import urbiaLogo from "@/assets/companies/urbia.png";
 import urbiaHero from "@/assets/operations/urbia-park.jpg";
@@ -50,44 +45,6 @@ const UrbiaPage = () => {
           </p>
         </section>
 
-        {/* KPIs Principais */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Target className="w-6 h-6 text-primary" />
-            Indicadores de Desempenho
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Card className="bg-gradient-to-br from-green-500/10 to-green-500/5 border-green-500/20">
-              <CardContent className="p-6 text-center">
-                <TreePine className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-green-600">18</p>
-                <p className="text-sm text-muted-foreground mt-1">Parques Gerenciados</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-blue-500/10 to-blue-500/5 border-blue-500/20">
-              <CardContent className="p-6 text-center">
-                <Users className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-blue-600">25M+</p>
-                <p className="text-sm text-muted-foreground mt-1">Visitantes/Ano</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-amber-500/10 to-amber-500/5 border-amber-500/20">
-              <CardContent className="p-6 text-center">
-                <MapPin className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-amber-600">5.000+</p>
-                <p className="text-sm text-muted-foreground mt-1">Hectares de Área Verde</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-purple-500/10 to-purple-500/5 border-purple-500/20">
-              <CardContent className="p-6 text-center">
-                <Award className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                <p className="text-3xl font-bold text-purple-600">12</p>
-                <p className="text-sm text-muted-foreground mt-1">Certificações Ambientais</p>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
         {/* Destaques Ambientais */}
         <section>
           <Card>
@@ -104,7 +61,7 @@ const UrbiaPage = () => {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Monitoramento de 500+ espécies de fauna</span>
+                      <span>Monitoramento de espécies de fauna</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
@@ -116,7 +73,7 @@ const UrbiaPage = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-green-500 rounded-full mt-2 shrink-0" />
-                      <span>Plantio de 50.000+ mudas nativas/ano</span>
+                      <span>Plantio de mudas nativas</span>
                     </li>
                   </ul>
                 </div>
@@ -125,7 +82,7 @@ const UrbiaPage = () => {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>100% de energia renovável nos parques</span>
+                      <span>Uso de energia renovável nos parques</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
@@ -137,7 +94,7 @@ const UrbiaPage = () => {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 shrink-0" />
-                      <span>85% de reciclagem de resíduos sólidos</span>
+                      <span>Reciclagem de resíduos sólidos</span>
                     </li>
                   </ul>
                 </div>
@@ -156,20 +113,10 @@ const UrbiaPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">150.000+</p>
-                  <p className="text-sm text-muted-foreground">Pessoas atendidas em programas de educação ambiental</p>
-                </div>
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">2.500+</p>
-                  <p className="text-sm text-muted-foreground">Empregos diretos gerados</p>
-                </div>
-                <div className="p-4 bg-muted/50 rounded-lg text-center">
-                  <p className="text-2xl font-bold text-primary">R$ 15M</p>
-                  <p className="text-sm text-muted-foreground">Investimento social em comunidades do entorno</p>
-                </div>
-              </div>
+              <p className="text-muted-foreground">
+                A Urbia desenvolve diversos programas sociais voltados para as comunidades do entorno 
+                dos parques, promovendo educação ambiental, lazer, cultura e inclusão social.
+              </p>
               
               <div className="mt-6">
                 <h4 className="font-semibold mb-3">Programas Sociais</h4>

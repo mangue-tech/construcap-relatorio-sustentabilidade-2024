@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { 
   Menu, 
@@ -7,7 +7,6 @@ import {
   User,
   Building2,
   Shield,
-  AlertTriangle,
   Users,
   TrendingUp,
   Leaf,
@@ -16,11 +15,11 @@ import {
   FileText,
   ChevronDown,
   ChevronRight,
-  PanelTopClose,
-  PanelTop
+  PanelLeftClose,
+  PanelLeft
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import ReportNavbar from "./ReportNavbar";
+import { Progress } from "@/components/ui/progress";
 
 const menuItems = [
   { path: "/relatorio", label: "Capa", icon: Home },
@@ -43,6 +42,16 @@ const menuItems = [
   { path: "/relatorio/gri-index", label: "Índice GRI", icon: FileText },
 ];
 
+// Flatten menu items for progress calculation
+const getAllPaths = () => {
+  const paths: string[] = [];
+  menuItems.forEach(item => {
+    if (item.path) paths.push(item.path);
+    if (item.children) item.children.forEach(child => paths.push(child.path));
+  });
+  return paths;
+};
+
 interface ReportLayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -50,9 +59,27 @@ interface ReportLayoutProps {
 
 const ReportLayout = ({ children, title }: ReportLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [sidebarVisible, setSidebarVisible] = useState(true);
   const [expandedItems, setExpandedItems] = useState<string[]>(["Governança"]);
+  const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
+
+  // Calculate page progress
+  const allPaths = getAllPaths();
+  const currentIndex = allPaths.indexOf(location.pathname);
+  const pageProgress = currentIndex >= 0 ? ((currentIndex + 1) / allPaths.length) * 100 : 0;
+
+  // Scroll progress
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      setScrollProgress(progress);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleExpand = (label: string) => {
     setExpandedItems(prev => 
@@ -67,36 +94,44 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
     children.some(child => location.pathname === child.path);
 
   return (
-    <div className="min-h-screen bg-background">
-      {/* Top Navbar */}
-      <div className={cn(
-        "transition-transform duration-300",
-        navbarVisible ? "translate-y-0" : "-translate-y-full"
-      )}>
-        <ReportNavbar />
+    <div className="min-h-screen bg-muted/40">
+      {/* Progress Bars */}
+      <div className="fixed top-0 left-0 right-0 z-50">
+        {/* Page Progress */}
+        <div className="h-1 bg-muted">
+          <div 
+            className="h-full bg-primary transition-all duration-300"
+            style={{ width: `${pageProgress}%` }}
+          />
+        </div>
+        {/* Scroll Progress */}
+        <div className="h-0.5 bg-muted/50">
+          <div 
+            className="h-full bg-primary/60 transition-all duration-150"
+            style={{ width: `${scrollProgress}%` }}
+          />
+        </div>
       </div>
 
-      {/* Toggle Navbar Button */}
+      {/* Toggle Sidebar Button */}
       <button
-        onClick={() => setNavbarVisible(!navbarVisible)}
+        onClick={() => setSidebarVisible(!sidebarVisible)}
         className={cn(
-          "fixed right-4 z-50 p-2 rounded-lg bg-card border border-border shadow-lg transition-all duration-300 hover:bg-muted",
-          navbarVisible ? "top-20" : "top-4"
+          "fixed z-50 p-2 rounded-lg bg-card border border-border shadow-lg transition-all duration-300 hover:bg-muted",
+          sidebarVisible ? "left-[280px] top-20" : "left-4 top-20",
+          "hidden lg:flex"
         )}
-        title={navbarVisible ? "Ocultar navegação" : "Mostrar navegação"}
+        title={sidebarVisible ? "Ocultar menu" : "Mostrar menu"}
       >
-        {navbarVisible ? (
-          <PanelTopClose className="w-5 h-5 text-muted-foreground" />
+        {sidebarVisible ? (
+          <PanelLeftClose className="w-5 h-5 text-muted-foreground" />
         ) : (
-          <PanelTop className="w-5 h-5 text-muted-foreground" />
+          <PanelLeft className="w-5 h-5 text-muted-foreground" />
         )}
       </button>
 
       {/* Mobile Header */}
-      <header className={cn(
-        "lg:hidden fixed left-0 right-0 h-16 bg-card border-b border-border z-40 flex items-center justify-between px-4 transition-all duration-300",
-        navbarVisible ? "top-16" : "top-0"
-      )}>
+      <header className="lg:hidden fixed top-1.5 left-0 right-0 h-16 bg-card border-b border-border z-40 flex items-center justify-between px-4">
         <Link to="/relatorio" className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center">
             <span className="text-primary-foreground font-bold text-sm">C</span>
@@ -113,10 +148,9 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
       {/* Sidebar */}
       <aside className={cn(
-        "fixed left-0 h-full w-72 bg-card border-r border-border z-30 transition-all duration-300 overflow-y-auto",
-        "lg:translate-x-0",
+        "fixed top-1.5 left-0 h-[calc(100%-6px)] w-72 bg-card border-r border-border z-30 transition-all duration-300 overflow-y-auto",
         sidebarOpen ? "translate-x-0" : "-translate-x-full",
-        navbarVisible ? "top-16" : "top-0"
+        sidebarVisible ? "lg:translate-x-0" : "lg:-translate-x-full"
       )}>
         {/* Logo */}
         <div className="p-6 border-b border-border">
@@ -201,8 +235,17 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
           </ul>
         </nav>
 
+        {/* Progress indicator */}
+        <div className="p-4 border-t border-border">
+          <div className="flex items-center justify-between text-xs text-muted-foreground mb-2">
+            <span>Progresso</span>
+            <span>{Math.round(pageProgress)}%</span>
+          </div>
+          <Progress value={pageProgress} className="h-2" />
+        </div>
+
         {/* Footer */}
-        <div className="absolute bottom-0 left-0 right-0 p-4 border-t border-border bg-card">
+        <div className="p-4 border-t border-border bg-card">
           <div className="flex items-center gap-2 text-xs text-muted-foreground">
             <FileText className="w-4 h-4" />
             <span>GRI Standards 2021</span>
@@ -220,11 +263,11 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
 
       {/* Main Content */}
       <main className={cn(
-        "lg:ml-72 min-h-screen transition-all duration-300",
-        navbarVisible ? "pt-32 lg:pt-16" : "pt-16 lg:pt-0"
+        "min-h-screen transition-all duration-300 pt-20 lg:pt-4",
+        sidebarVisible ? "lg:ml-72" : "lg:ml-0"
       )}>
         {title && (
-          <div className="bg-card border-b border-border px-6 py-4 sticky top-0 lg:top-0 z-10">
+          <div className="bg-card border-b border-border px-6 py-4 sticky top-1.5 z-10">
             <h1 className="text-xl font-bold">{title}</h1>
           </div>
         )}

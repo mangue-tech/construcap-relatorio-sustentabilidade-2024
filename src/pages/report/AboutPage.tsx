@@ -73,6 +73,11 @@ const parks = [
     location: "CE", 
     description: "Gestão sustentável de atrativos naturais, controle de visitação e educação ambiental" 
   },
+  { 
+    name: "Cataratas", 
+    location: "PR/CE", 
+    description: "Operação em áreas associadas ao Parque Nacional do Iguaçu e ao Parque Nacional de Jericoacoara, com controle de fluxos de visitação e serviços de qualidade" 
+  },
 ];
 
 const values = [

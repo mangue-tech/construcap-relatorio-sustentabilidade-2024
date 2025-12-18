@@ -52,34 +52,6 @@ const businessUnits = [
   },
 ];
 
-const parks = [
-  { 
-    name: "Parque do Ibirapuera", 
-    location: "São Paulo/SP", 
-    description: "Operação integrada que inclui zeladoria, revitalização, segurança, acessibilidade e serviços culturais" 
-  },
-  { 
-    name: "Parques SP", 
-    location: "São Paulo/SP", 
-    description: "Carmo, Independência, Jardim da Luz e Trianon, com foco em conservação urbana, serviços públicos e melhoria da experiência dos usuários" 
-  },
-  { 
-    name: "Cânions Verdes", 
-    location: "SC/RS", 
-    description: "Nos Parques Nacionais de Aparados da Serra e Serra Geral, com manejo ambiental, trilhas estruturadas, monitoramento de biodiversidade e fortalecimento do ecoturismo" 
-  },
-  { 
-    name: "Parque Nacional de Jericoacoara", 
-    location: "CE", 
-    description: "Gestão sustentável de atrativos naturais, controle de visitação e educação ambiental" 
-  },
-  { 
-    name: "Cataratas", 
-    location: "PR/CE", 
-    description: "Operação em áreas associadas ao Parque Nacional do Iguaçu e ao Parque Nacional de Jericoacoara, com controle de fluxos de visitação e serviços de qualidade" 
-  },
-];
-
 const values = [
   { icon: Award, title: "Excelência Operacional", description: "Compromisso com padrões técnicos elevados e eficiência em todas as operações" },
   { icon: Heart, title: "Segurança Inegociável", description: "Proteção à vida como valor fundamental em todas as decisões operacionais" },
@@ -329,35 +301,6 @@ const AboutPage = () => {
                 </div>
                 <h3 className="font-semibold mb-2">{item.title}</h3>
                 <p className="text-sm text-muted-foreground">{item.description}</p>
-              </div>
-            </AnimatedSection>
-          ))}
-        </div>
-      </section>
-
-      {/* Parks */}
-      <section className="py-12">
-        <AnimatedSection>
-          <div className="flex items-center gap-3 mb-8">
-            <TreePine className="w-8 h-8 text-emerald-500" />
-            <div>
-              <h2 className="text-2xl font-bold">Parques sob Gestão Urbia</h2>
-              <p className="text-muted-foreground">Conservação ambiental e turismo sustentável</p>
-            </div>
-          </div>
-        </AnimatedSection>
-        
-        <div className="grid sm:grid-cols-2 gap-6">
-          {parks.map((park, index) => (
-            <AnimatedSection key={park.name} delay={index * 100}>
-              <div className="bg-card rounded-2xl border border-border p-6 hover:border-emerald-500/50 transition-colors">
-                <div className="flex items-center gap-2 mb-2">
-                  <h3 className="font-semibold">{park.name}</h3>
-                  <span className="text-xs px-2 py-1 rounded-full bg-emerald-500/10 text-emerald-600">
-                    {park.location}
-                  </span>
-                </div>
-                <p className="text-sm text-muted-foreground">{park.description}</p>
               </div>
             </AnimatedSection>
           ))}

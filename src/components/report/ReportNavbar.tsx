@@ -11,22 +11,30 @@ interface ReportPage {
 
 const reportPages: ReportPage[] = [
   { path: "/quem-somos", label: "Quem Somos" },
-  { 
-    path: "/governanca", 
+  {
+    path: "/governanca",
     label: "Governança",
-    subPages: [
-      { path: "/materialidade", label: "Materialidade e Stakeholders" }
-    ]
+    subPages: [{ path: "/materialidade", label: "Materialidade e Stakeholders" }],
   },
   { path: "/desempenho-economico", label: "Econômico" },
   { path: "/desempenho-ambiental", label: "Ambiental" },
-  { 
-    path: "/desempenho-social", 
+  {
+    path: "/desempenho-social",
     label: "Social",
     subPages: [
       { path: "/cadeia-fornecimento", label: "Cadeia de Fornecimento" },
-      { path: "/comunidades", label: "Relacionamento com Comunidades" }
-    ]
+      { path: "/comunidades", label: "Relacionamento com Comunidades" },
+    ],
+  },
+  {
+    path: "/operacao-urbia",
+    label: "Destaques das Operações",
+    subPages: [
+      { path: "/operacao-urbia", label: "Urbia" },
+      { path: "/operacao-minas-arena", label: "Minas Arena" },
+      { path: "/operacao-inova-saude", label: "Inova Saúde" },
+      { path: "/operacao-ambicap", label: "Ambicap" },
+    ],
   },
   { path: "/gri-index", label: "Índice GRI" },
 ];

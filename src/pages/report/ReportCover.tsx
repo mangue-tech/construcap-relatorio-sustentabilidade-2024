@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
 import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, Quote } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-cover.jpg";
@@ -197,13 +198,28 @@ const emissionsData = [{
   color: "#f59e0b"
 }];
 const ReportCover = () => {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return <div className="min-h-screen bg-background">
       <ReportNavbar />
       
-      {/* Hero Section */}
-      <section className="relative min-h-[85vh] flex items-center pt-16">
+      {/* Hero Section with Parallax */}
+      <section className="relative min-h-[85vh] flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Equipe Construcap" className="w-full h-full object-cover object-top" />
+          <img 
+            src={heroImage} 
+            alt="Equipe Construcap" 
+            className="w-full h-[120%] object-cover object-top will-change-transform"
+            style={{ transform: `translateY(${scrollY * 0.3}px)` }}
+          />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
         </div>
         

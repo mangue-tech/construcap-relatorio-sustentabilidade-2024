@@ -132,21 +132,25 @@ const esgHighlights = [{
 const companies = [{
   name: "Urbia",
   logo: urbiaLogo,
+  path: "/urbia",
   description: "Gestão de parques urbanos e áreas verdes. Responsável pela administração do Parque Ibirapuera e outros importantes espaços de lazer e preservação ambiental em São Paulo.",
   highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques administrados"]
 }, {
   name: "Minas Arena",
   logo: minasArenaLogo,
+  path: "/minas-arena",
   description: "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas esportivas e eventos.",
   highlights: ["Estádio Mineirão", "Copa do Mundo 2014", "1,3 GWh energia solar"]
 }, {
   name: "Inova Saúde",
   logo: inovaSaudeLogo,
+  path: "/inova-saude",
   description: "Gestão de equipamentos de saúde pública através de parcerias público-privadas. Operação de hospitais e unidades de saúde com foco em eficiência e qualidade no atendimento.",
   highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"]
 }, {
   name: "Ambicap",
   logo: ambicapLogo,
+  path: "/ambicap",
   description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil, promovendo economia circular.",
   highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"]
 }];
@@ -365,10 +369,10 @@ const ReportCover = () => {
               <div className="bg-card rounded-2xl border border-border p-6">
                 <h3 className="font-semibold text-lg mb-2">Emissões por Escopo</h3>
                 <p className="text-sm text-muted-foreground mb-6">Distribuição de emissões GEE (tCO₂e)</p>
-                <div className="h-[400px]">
+                <div className="h-[280px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
-                      <Pie data={emissionsData} cx="50%" cy="50%" innerRadius={60} outerRadius={100} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={1500}>
+                      <Pie data={emissionsData} cx="50%" cy="50%" innerRadius={50} outerRadius={85} paddingAngle={5} dataKey="value" animationBegin={0} animationDuration={1500}>
                         {emissionsData.map((entry, index) => <Cell key={`cell-${index}`} fill={entry.color} />)}
                       </Pie>
                       <RechartsTooltip formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']} contentStyle={{
@@ -408,18 +412,21 @@ const ReportCover = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
-                <div className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col">
+                <Link to={company.path} className="bg-card rounded-2xl border border-border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col hover:border-primary/50 group">
                   <div className="h-12 mb-4">
                     <img src={company.logo} alt={`${company.name} logo`} className="h-full w-auto object-contain" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{company.name}</h3>
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{company.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-3">
                     {company.highlights.map(highlight => <span key={highlight} className="px-2 py-1 rounded-full bg-secondary text-xs text-muted-foreground">
                         {highlight}
                       </span>)}
                   </div>
-                </div>
+                  <div className="flex items-center gap-1 text-sm text-primary font-medium">
+                    Saiba mais <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </div>
+                </Link>
               </AnimatedSection>)}
           </div>
         </div>

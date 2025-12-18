@@ -335,24 +335,38 @@ const ReportCover = () => {
           </div>
 
           {/* ESG Highlights Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {esgHighlights.map((pillar, index) => <AnimatedSection key={pillar.category} delay={index * 150}>
-                <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
-                  <div className={`${pillar.color} p-4 flex items-center gap-3`}>
-                    <pillar.icon className="w-6 h-6 text-white" />
-                    <h3 className="font-semibold text-white text-lg">{pillar.category}</h3>
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {esgHighlights.map((pillar, index) => (
+              <AnimatedSection key={pillar.category} delay={index * 150}>
+                <Link 
+                  to={pillar.category === "Social" ? "/desempenho-social" : "/governanca"}
+                  className="block bg-card rounded-2xl border border-border overflow-hidden hover:shadow-xl transition-all hover:-translate-y-2 group"
+                >
+                  <div className={`${pillar.color} p-5 flex items-center justify-between`}>
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
+                        <pillar.icon className="w-5 h-5 text-white" />
+                      </div>
+                      <h3 className="font-bold text-white text-xl">{pillar.category}</h3>
+                    </div>
+                    <ArrowRight className="w-5 h-5 text-white/70 group-hover:text-white group-hover:translate-x-1 transition-all" />
                   </div>
-                  <div className="p-6 space-y-4">
-                    {pillar.items.map(item => <div key={item.label} className="border-b border-border pb-4 last:border-0 last:pb-0">
-                        <div className="flex justify-between items-start mb-1">
-                          <span className="text-sm text-muted-foreground">{item.label}</span>
-                          <span className="font-bold text-foreground">{item.value}</span>
+                  <div className="p-6">
+                    <div className="grid gap-4">
+                      {pillar.items.map(item => (
+                        <div key={item.label} className="flex items-center justify-between p-3 rounded-xl bg-secondary/50 hover:bg-secondary transition-colors">
+                          <div>
+                            <span className="text-sm font-medium text-foreground">{item.label}</span>
+                            <p className="text-xs text-muted-foreground">{item.detail}</p>
+                          </div>
+                          <span className="text-lg font-bold text-foreground">{item.value}</span>
                         </div>
-                        <p className="text-xs text-muted-foreground">{item.detail}</p>
-                      </div>)}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              </AnimatedSection>)}
+                </Link>
+              </AnimatedSection>
+            ))}
           </div>
         </div>
       </section>

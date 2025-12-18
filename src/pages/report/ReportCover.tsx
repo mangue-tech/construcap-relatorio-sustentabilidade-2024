@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, TreePine, Stethoscope, Recycle, Landmark } from "lucide-react";
-import { PieChart, Pie, Cell, ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip as RechartsTooltip, Legend } from "recharts";
+import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-construction.jpg";
 import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
@@ -196,37 +196,6 @@ const emissionsData = [{
   name: "Escopo 3",
   value: 16816.781,
   color: "#f59e0b"
-}];
-const emissionsBarData = [{
-  category: "Combustão Estacionária",
-  escopo1: 2847,
-  escopo2: 0,
-  escopo3: 0
-}, {
-  category: "Combustão Móvel",
-  escopo1: 11892,
-  escopo2: 0,
-  escopo3: 0
-}, {
-  category: "Emissões Fugitivas",
-  escopo1: 377,
-  escopo2: 0,
-  escopo3: 0
-}, {
-  category: "Energia Elétrica",
-  escopo1: 0,
-  escopo2: 1618,
-  escopo3: 0
-}, {
-  category: "Viagens",
-  escopo1: 0,
-  escopo2: 0,
-  escopo3: 1254
-}, {
-  category: "Deslocamento",
-  escopo1: 0,
-  escopo2: 0,
-  escopo3: 15563
 }];
 const ReportCover = () => {
   return <div className="min-h-screen bg-background">
@@ -445,32 +414,6 @@ const ReportCover = () => {
               </div>
             </AnimatedSection>
 
-            {/* Bar Chart - Emissions by Category */}
-            <AnimatedSection delay={300}>
-              <div className="bg-card rounded-2xl border border-border p-6">
-                <h3 className="font-semibold text-lg mb-2">Emissões por Categoria</h3>
-                <p className="text-sm text-muted-foreground mb-6">Principais fontes de emissão (tCO₂e)</p>
-                <div className="h-[300px]">
-                  <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={emissionsBarData} layout="vertical">
-                      <XAxis type="number" tickFormatter={value => value.toLocaleString('pt-BR')} />
-                      <YAxis dataKey="category" type="category" width={100} tick={{
-                      fontSize: 11
-                    }} />
-                      <RechartsTooltip formatter={(value: number) => [`${value.toLocaleString('pt-BR')} tCO₂e`, '']} contentStyle={{
-                      backgroundColor: 'hsl(var(--card))',
-                      border: '1px solid hsl(var(--border))',
-                      borderRadius: '8px'
-                    }} />
-                      <Legend />
-                      <Bar dataKey="escopo1" name="Escopo 1" fill="#10b981" radius={[0, 4, 4, 0]} animationDuration={1500} />
-                      <Bar dataKey="escopo2" name="Escopo 2" fill="#3b82f6" radius={[0, 4, 4, 0]} animationDuration={1500} />
-                      <Bar dataKey="escopo3" name="Escopo 3" fill="#f59e0b" radius={[0, 4, 4, 0]} animationDuration={1500} />
-                    </BarChart>
-                  </ResponsiveContainer>
-                </div>
-              </div>
-            </AnimatedSection>
           </div>
         </div>
       </section>

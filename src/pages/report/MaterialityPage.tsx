@@ -1,7 +1,7 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Target, Users, MessageSquare, Building2, Heart, Leaf, Shield, Award, Stethoscope, TreePine, Briefcase, TrendingUp, CheckCircle2, ClipboardList, BarChart3, FileSearch, Layers, Lightbulb, CircleDot, ArrowRight, Globe, Factory, Truck, BookOpen, Phone, Mail, Megaphone, Calendar, UserCheck, Settings, Home } from "lucide-react";
-import socialHero from "@/assets/report/social-hero.jpg";
+import materialityHero from "@/assets/report/materiality-hero.jpg";
 
 // 6.3 - 10 Temas Materiais Prioritários
 const materialTopics = [
@@ -268,7 +268,7 @@ const MaterialityPage = () => {
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[400px] overflow-hidden">
           <img 
-            src={socialHero} 
+            src={materialityHero} 
             alt="Equipe de trabalho" 
             className="w-full h-full object-cover"
           />

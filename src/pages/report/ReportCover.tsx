@@ -98,23 +98,6 @@ const highlights2024 = [{
   decimals: 0
 }];
 const esgHighlights = [{
-  category: "Ambiental",
-  color: "bg-emerald-500",
-  icon: Leaf,
-  items: [{
-    label: "Emissões GEE",
-    value: "33.550 tCO₂e",
-    detail: "Inventário completo Escopo 1, 2 e 3"
-  }, {
-    label: "Energia Solar",
-    value: "1.317.600 kWh",
-    detail: "Geração no Mineirão"
-  }, {
-    label: "Água Reutilizada",
-    value: "51%",
-    detail: "Captação de água pluvial"
-  }]
-}, {
   category: "Social",
   color: "bg-rose-500",
   icon: Heart,
@@ -196,9 +179,6 @@ const certifications = [{
 }, {
   name: "LEED",
   description: "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental."
-}, {
-  name: "GHG Protocol",
-  description: "Protocolo de Gases de Efeito Estufa - Metodologia internacional para quantificação e gestão de emissões de gases de efeito estufa."
 }];
 
 // Emissions data by scope
@@ -281,12 +261,9 @@ const ReportCover = () => {
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
             animationDelay: "500ms"
           }}>
-              <Link to="/carta-ceo" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105">
-                Carta do CEO
-                <ArrowRight className="w-5 h-5" />
-              </Link>
-              <a href="#highlights" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20 hover:scale-105">
+              <a href="#highlights" className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105">
                 Destaques 2024
+                <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="/relatorio-sustentabilidade-2024.pdf" 
@@ -358,7 +335,7 @@ const ReportCover = () => {
           </div>
 
           {/* ESG Highlights Cards */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {esgHighlights.map((pillar, index) => <AnimatedSection key={pillar.category} delay={index * 150}>
                 <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
                   <div className={`${pillar.color} p-4 flex items-center gap-3`}>
@@ -566,25 +543,6 @@ const ReportCover = () => {
                   </TooltipContent>
                 </Tooltip>
               ))}
-            </div>
-          </AnimatedSection>
-
-          {/* GRI Link */}
-          <AnimatedSection delay={200} className="mt-8">
-            <div className="flex justify-center">
-              <Link 
-                to="/gri-index" 
-                className="inline-flex items-center gap-3 px-6 py-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold group-hover:text-primary transition-colors">Índice de Conteúdo GRI</p>
-                  <p className="text-xs text-muted-foreground">GRI Standards 2021</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-              </Link>
             </div>
           </AnimatedSection>
         </div>

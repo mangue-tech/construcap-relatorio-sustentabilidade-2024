@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, Quote } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
-import heroImage from "@/assets/hero-construction.jpg";
+import heroImage from "@/assets/hero-cover.jpg";
 import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
 import construcapLogo from "@/assets/construcap-logo.png";
 import urbiaLogo from "@/assets/companies/urbia.png";
@@ -276,7 +276,7 @@ const ReportCover = () => {
               </blockquote>
               <div className="flex items-center justify-center gap-3">
                 <div className="text-left">
-                  <p className="font-semibold text-foreground">Carlos Zanvettor</p>
+                  <p className="font-semibold text-foreground">Roberto Capobianco</p>
                   <p className="text-sm text-muted-foreground">CEO - Grupo Construcap</p>
                 </div>
               </div>
@@ -443,21 +443,21 @@ const ReportCover = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
-                <Link to={company.path} className={`bg-card rounded-2xl border p-5 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
-                  <div className="h-10 mb-3">
+                <Link to={company.path} className={`bg-card rounded-2xl border p-6 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
+                  <div className="h-12 mb-4">
                     <img src={company.logo} alt={`${company.name} logo`} className="h-full w-auto object-contain" />
                   </div>
-                  <h3 className="font-semibold text-base mb-2 group-hover:text-primary transition-colors">{company.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-3 flex-grow line-clamp-3">{company.description}</p>
-                  <div className="flex flex-wrap gap-1.5 mb-2">
-                    {company.highlights.slice(0, 2).map(highlight => <span key={highlight} className="px-2 py-0.5 rounded-full bg-secondary text-xs text-muted-foreground">
+                  <h3 className="font-semibold text-lg mb-2 group-hover:text-primary transition-colors">{company.name}</h3>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow">{company.description}</p>
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {company.highlights.map(highlight => <span key={highlight} className="px-2 py-1 rounded-full bg-secondary text-xs text-muted-foreground">
                         {highlight}
                       </span>)}
                   </div>
-                  <div className="flex items-center gap-1 text-xs text-primary font-medium">
-                    Saiba mais <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+                  <div className="flex items-center gap-1 text-sm text-primary font-medium">
+                    Saiba mais <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
               </AnimatedSection>)}

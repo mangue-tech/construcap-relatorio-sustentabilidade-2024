@@ -11,14 +11,21 @@ interface ReportPage {
 
 const reportPages: ReportPage[] = [
   { path: "/quem-somos", label: "Quem Somos" },
-  { path: "/governanca", label: "Governança" },
+  { 
+    path: "/governanca", 
+    label: "Governança",
+    subPages: [
+      { path: "/materialidade", label: "Materialidade e Stakeholders" }
+    ]
+  },
   { path: "/desempenho-economico", label: "Econômico" },
   { path: "/desempenho-ambiental", label: "Ambiental" },
   { 
     path: "/desempenho-social", 
     label: "Social",
     subPages: [
-      { path: "/comunidades", label: "Comunidades" }
+      { path: "/cadeia-fornecimento", label: "Cadeia de Fornecimento" },
+      { path: "/comunidades", label: "Relacionamento com Comunidades" }
     ]
   },
   { path: "/gri-index", label: "Índice GRI" },

@@ -129,19 +129,6 @@ const esgHighlights = [{
     detail: "Sistema antissuborno"
   }]
 }];
-const iconicWorks = [{
-  name: "Templo de Salomão",
-  detail: "55.000m² construídos"
-}, {
-  name: "Arena Corinthians",
-  detail: "Copa do Mundo 2014"
-}, {
-  name: "Hospital Einstein",
-  detail: "Referência em saúde"
-}, {
-  name: "Mineirão",
-  detail: "PPP pioneira no Brasil"
-}];
 const companies = [{
   name: "Urbia",
   logo: urbiaLogo,
@@ -243,16 +230,7 @@ const ReportCover = () => {
               com o desenvolvimento sustentável.
             </p>
 
-            {/* Iconic Works Tags */}
-            <div className="flex flex-wrap gap-2 mb-8 animate-fade-in" style={{
-            animationDelay: "400ms"
-          }}>
-              {iconicWorks.map((work, index) => (
-                <span key={index} className="px-3 py-1.5 bg-primary-foreground/10 text-primary-foreground rounded-full text-sm border border-primary-foreground/20">
-                  {work.name}
-                </span>
-              ))}
-            </div>
+            
             
             <div className="flex flex-wrap gap-4 animate-fade-in" style={{
             animationDelay: "500ms"

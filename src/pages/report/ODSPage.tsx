@@ -132,6 +132,18 @@ const odsData = [
       "Atuação por meio de parcerias e concessões com o poder público e parceiros operacionais",
       "Escopo do relato contemplando a controladora Construcap CCPS Engenharia e Comércio S.A. e seis empresas controladas"
     ]
+  },
+  {
+    number: 18,
+    name: "Igualdade Étnico-Racial",
+    color: "#7B2D26",
+    description: "Em 15 de novembro de 2024, o Brasil lançou oficialmente o ODS 18, que visa eliminar o racismo e a discriminação étnico-racial, em todas suas formas, contra os povos indígenas e afrodescendentes. A Construcap como empresa brasileira, presente na totalidade do território nacional tem o compromisso de respeito aos povos tradicionais, quilombolas e indígenas e o compromisso de combater o racismo em todas as suas formas.",
+    items: [
+      "Relacionamento estruturado com comunidades dos territórios de atuação, com diálogo transparente, escuta ativa e interface com lideranças locais, aplicável a contextos urbanos, rurais e territórios tradicionais, incluindo comunidades indígenas e quilombolas quando presentes",
+      "Procedimentos formais de consulta, comunicação e tratamento de demandas comunitárias, assegurando registro, classificação, resposta documentada e mitigação de impactos socioambientais decorrentes de obras e operações",
+      "Avaliação prévia de impactos socioambientais e adoção de medidas mitigadoras voltadas à redução de efeitos sobre modos de vida, uso do território, circulação, segurança e convivência comunitária",
+      "Atuação integrada das controladas do Grupo nos territórios, com educação ambiental em parques naturais e urbanos, fortalecimento de serviços públicos de saúde, zeladoria urbana e mobilização cultural, contribuindo para o desenvolvimento local e a convivência respeitosa com comunidades diversas"
+    ]
   }
 ];
 
@@ -182,7 +194,12 @@ const ODSPage = () => {
                     {ods.name}
                   </h3>
                 </div>
-                <div className="p-6">
+                <div className="p-6 space-y-4">
+                  {ods.description && (
+                    <p className="text-muted-foreground italic border-l-4 pl-4" style={{ borderColor: ods.color }}>
+                      {ods.description}
+                    </p>
+                  )}
                   <ul className="space-y-3">
                     {ods.items.map((item, index) => (
                       <li 
@@ -210,7 +227,7 @@ const ODSPage = () => {
           </h2>
           <p className="text-muted-foreground max-w-3xl mx-auto">
             O Grupo Construcap demonstra seu compromisso com o desenvolvimento sustentável através 
-            de ações concretas em <strong>13 dos 17 Objetivos de Desenvolvimento Sustentável</strong> da ONU, 
+            de ações concretas em <strong>14 dos 18 Objetivos de Desenvolvimento Sustentável</strong>, incluindo o ODS 18 lançado pelo Brasil em 2024, 
             contribuindo para um futuro mais justo, inclusivo e ambientalmente responsável.
           </p>
         </section>

@@ -9,10 +9,15 @@ import {
   Waves,
   Users,
   Music,
-  Telescope
+  Telescope,
+  ExternalLink
 } from "lucide-react";
 import urbiaLogo from "@/assets/companies/urbia.png";
-import urbiaHero from "@/assets/operations/urbia-park.jpg";
+import urbiaHero from "@/assets/operations/urbia-principal.jpg";
+import urbiaParques from "@/assets/operations/urbia-parques.jpg";
+import urbiaClaras from "@/assets/operations/urbia-claras.jpg";
+import urbiaCanions from "@/assets/operations/urbia-canions.webp";
+import urbiaCataratas from "@/assets/operations/urbia-cataratas.png";
 
 const UrbiaPage = () => {
   return (
@@ -65,31 +70,33 @@ const UrbiaPage = () => {
 
         {/* Urbia Parques */}
         <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <TreePine className="w-5 h-5 text-green-600" />
-                Urbia Parques – São Paulo
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                A frente Urbia Parques tem como destaque a gestão de <strong>seis parques urbanos em São Paulo</strong>, 
-                entre eles o <strong>Parque Ibirapuera</strong>, um dos mais emblemáticos parques da América Latina. 
-                Somados, esses parques urbanos receberam <strong>17,2 milhões de visitantes</strong> no período, 
-                constituindo um importante sistema de lazer, esporte, cultura e bem-estar para a população da cidade 
-                (GRI 203-1, 304-3).
-              </p>
-              <p className="text-muted-foreground">
-                A atuação envolve manutenção e zeladoria de áreas verdes, operação de equipamentos de lazer, 
-                concessão de serviços, segurança, monitoramento de qualidade ambiental e suporte a atividades 
-                culturais e esportivas.
-              </p>
-              <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center mt-4">
-                <p className="text-2xl font-bold text-green-700 dark:text-green-400">17,2 milhões</p>
-                <p className="text-sm text-muted-foreground">visitantes nos parques urbanos de São Paulo</p>
+          <Card className="overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5">
+                <img src={urbiaParques} alt="Urbia Parques - Vista aérea do Parque Ibirapuera" className="w-full h-48 md:h-full object-cover" />
               </div>
-            </CardContent>
+              <div className="md:w-3/5">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <TreePine className="w-5 h-5 text-green-600" />
+                    Urbia Parques – São Paulo
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">
+                    A frente Urbia Parques tem como destaque a gestão de <strong>seis parques urbanos em São Paulo</strong>, 
+                    entre eles o <strong>Parque Ibirapuera</strong>, um dos mais emblemáticos parques da América Latina. 
+                    Somados, esses parques urbanos receberam <strong>17,2 milhões de visitantes</strong> no período, 
+                    constituindo um importante sistema de lazer, esporte, cultura e bem-estar para a população da cidade 
+                    (GRI 203-1, 304-3).
+                  </p>
+                  <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
+                    <p className="text-2xl font-bold text-green-700 dark:text-green-400">17,2 milhões</p>
+                    <p className="text-sm text-muted-foreground">visitantes nos parques urbanos de São Paulo</p>
+                  </div>
+                </CardContent>
+              </div>
+            </div>
           </Card>
         </section>
 
@@ -132,81 +139,101 @@ const UrbiaPage = () => {
 
         {/* Urbia Águas Claras */}
         <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Leaf className="w-5 h-5 text-green-600" />
-                Urbia Águas Claras – Mata Atlântica
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                A frente Urbia Águas Claras abrange o <strong>Parque Estadual da Cantareira</strong> e o 
-                <strong> Parque Estadual Alberto Löfgren (Horto Florestal)</strong>, ambos em São Paulo, que 
-                constituem um importante remanescente de Mata Atlântica e um dos principais mananciais de água 
-                da região metropolitana. A gestão inclui manutenção de trilhas, controle de visitantes, conservação 
-                de vegetação nativa, apoio a ações de fiscalização em parceria com órgãos ambientais e promoção de 
-                atividades de interpretação ambiental (GRI 304-2, 304-3).
-              </p>
-            </CardContent>
+          <Card className="overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5">
+                <img src={urbiaClaras} alt="Urbia Águas Claras - Vista da Mata Atlântica" className="w-full h-48 md:h-full object-cover" />
+              </div>
+              <div className="md:w-3/5">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Leaf className="w-5 h-5 text-green-600" />
+                    Urbia Águas Claras – Mata Atlântica
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    A frente Urbia Águas Claras abrange o <strong>Parque Estadual da Cantareira</strong> e o 
+                    <strong> Parque Estadual Alberto Löfgren (Horto Florestal)</strong>, ambos em São Paulo, que 
+                    constituem um importante remanescente de Mata Atlântica e um dos principais mananciais de água 
+                    da região metropolitana. A gestão inclui manutenção de trilhas, controle de visitantes, conservação 
+                    de vegetação nativa, apoio a ações de fiscalização em parceria com órgãos ambientais e promoção de 
+                    atividades de interpretação ambiental (GRI 304-2, 304-3).
+                  </p>
+                </CardContent>
+              </div>
+            </div>
           </Card>
         </section>
 
         {/* Urbia Cânions Verdes */}
         <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Mountain className="w-5 h-5 text-amber-600" />
-                Urbia Cânions Verdes – UNESCO Geoparque
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                A Urbia Cânions Verdes atua na gestão dos <strong>parques nacionais de Aparados da Serra e 
-                Serra Geral</strong>, em Santa Catarina e Rio Grande do Sul, inseridos em área reconhecida como 
-                <strong> Geoparque Mundial pela UNESCO</strong>. A operação combina conservação ambiental com 
-                experiência turística qualificada, por meio de trilhas estruturadas, mirantes, serviços de apoio 
-                ao visitante e atrativos de aventura (GRI 203-1, 304-3, 413-1).
-              </p>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
-                  <h4 className="font-semibold text-amber-700 dark:text-amber-400 mb-2">Tirolesa do Cânion Fortaleza</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Considerada uma das maiores da América Latina, oferece experiência única de aventura.
-                  </p>
-                </div>
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
-                  <h4 className="font-semibold text-amber-700 dark:text-amber-400 mb-2">Trilha do Rio do Boi</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Figura entre os principais roteiros de ecoturismo do país, integrando conservação, geração de 
-                    renda em comunidades do entorno e estímulo ao turismo responsável.
-                  </p>
-                </div>
+          <Card className="overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5">
+                <img src={urbiaCanions} alt="Urbia Cânions Verdes - Tirolesa" className="w-full h-48 md:h-full object-cover" />
               </div>
-            </CardContent>
+              <div className="md:w-3/5">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Mountain className="w-5 h-5 text-amber-600" />
+                    Urbia Cânions Verdes – UNESCO Geoparque
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <p className="text-muted-foreground">
+                    A Urbia Cânions Verdes atua na gestão dos <strong>parques nacionais de Aparados da Serra e 
+                    Serra Geral</strong>, em Santa Catarina e Rio Grande do Sul, inseridos em área reconhecida como 
+                    <strong> Geoparque Mundial pela UNESCO</strong>. A operação combina conservação ambiental com 
+                    experiência turística qualificada, por meio de trilhas estruturadas, mirantes, serviços de apoio 
+                    ao visitante e atrativos de aventura (GRI 203-1, 304-3, 413-1).
+                  </p>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
+                      <h4 className="font-semibold text-amber-700 dark:text-amber-400 mb-2">Tirolesa do Cânion Fortaleza</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Considerada uma das maiores da América Latina, oferece experiência única de aventura.
+                      </p>
+                    </div>
+                    <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
+                      <h4 className="font-semibold text-amber-700 dark:text-amber-400 mb-2">Trilha do Rio do Boi</h4>
+                      <p className="text-sm text-muted-foreground">
+                        Figura entre os principais roteiros de ecoturismo do país.
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+            </div>
           </Card>
         </section>
 
         {/* Urbia Cataratas */}
         <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Waves className="w-5 h-5 text-blue-600" />
-                Urbia Cataratas – Iguaçu e Jericoacoara
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground">
-                A Urbia Cataratas compreende a atuação em áreas associadas ao <strong>Parque Nacional do Iguaçu</strong> 
-                e ao <strong>Parque Nacional de Jericoacoara</strong>, dois ícones do turismo brasileiro. Nessas 
-                operações, a gestão é orientada pela manutenção da integridade dos atrativos naturais, controle de 
-                fluxos de visitação, ordenamento de uso público, apoio à fiscalização ambiental e oferta de serviços 
-                de transporte, alimentação e atendimento ao visitante com elevados padrões de qualidade e segurança 
-                (GRI 304-2, 416-1).
-              </p>
-            </CardContent>
+          <Card className="overflow-hidden">
+            <div className="md:flex">
+              <div className="md:w-2/5">
+                <img src={urbiaCataratas} alt="Urbia Cataratas - Cataratas do Iguaçu" className="w-full h-48 md:h-full object-cover" />
+              </div>
+              <div className="md:w-3/5">
+                <CardHeader>
+                  <CardTitle className="flex items-center gap-2">
+                    <Waves className="w-5 h-5 text-blue-600" />
+                    Urbia Cataratas – Iguaçu e Jericoacoara
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground">
+                    A Urbia Cataratas compreende a atuação em áreas associadas ao <strong>Parque Nacional do Iguaçu</strong> 
+                    e ao <strong>Parque Nacional de Jericoacoara</strong>, dois ícones do turismo brasileiro. Nessas 
+                    operações, a gestão é orientada pela manutenção da integridade dos atrativos naturais, controle de 
+                    fluxos de visitação, ordenamento de uso público, apoio à fiscalização ambiental e oferta de serviços 
+                    de transporte, alimentação e atendimento ao visitante com elevados padrões de qualidade e segurança 
+                    (GRI 304-2, 416-1).
+                  </p>
+                </CardContent>
+              </div>
+            </div>
           </Card>
         </section>
 
@@ -225,6 +252,24 @@ const UrbiaPage = () => {
                 <strong> uso público responsável</strong>, <strong>geração de emprego e renda local</strong> e 
                 <strong> expansão da oferta de lazer e turismo de natureza</strong> para a população.
               </p>
+            </CardContent>
+          </Card>
+        </section>
+
+        {/* Saiba Mais */}
+        <section>
+          <Card className="bg-gradient-to-br from-green-600 to-green-700 border-0 text-white">
+            <CardContent className="py-8 text-center">
+              <h3 className="text-xl font-bold mb-4">Para saber mais, clique aqui e acesse o Relatório de Sustentabilidade 2024 da Urbia</h3>
+              <a 
+                href="https://www.urbia.com.br" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors"
+              >
+                <ExternalLink className="w-5 h-5" />
+                Acessar Relatório
+              </a>
             </CardContent>
           </Card>
         </section>

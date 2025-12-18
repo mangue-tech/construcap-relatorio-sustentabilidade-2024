@@ -14,8 +14,8 @@ const AmbicapPage = () => {
   return (
     <ReportLayout>
       {/* Hero Section */}
-      <div className="relative h-[500px] md:h-[600px] -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
-        <img src={ambicapHero} alt="Ambicap" className="w-full h-full object-cover object-center" />
+      <div className="relative h-[400px] md:h-[450px] -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
+        <img src={ambicapHero} alt="Ambicap" className="w-full h-full object-cover object-[center_60%]" />
         <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 to-teal-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
             <img src={ambicapLogo} alt="Ambicap" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />

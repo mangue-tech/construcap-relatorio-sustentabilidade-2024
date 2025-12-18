@@ -9,6 +9,7 @@ import urbiaLogo from "@/assets/companies/urbia.png";
 import minasArenaLogo from "@/assets/companies/minas-arena.png";
 import inovaSaudeLogo from "@/assets/companies/inova-saude.png";
 import ambicapLogo from "@/assets/companies/ambicap.png";
+import odsLogos from "@/assets/ods-logos.png";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { AnimatedCounter } from "@/hooks/useCountUp";
 import ReportNavbar from "@/components/report/ReportNavbar";
@@ -516,24 +517,13 @@ const ReportCover = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <div className="flex flex-wrap justify-center gap-3">
-              {odsData.map((ods, index) => (
-                <Tooltip key={ods.number}>
-                  <TooltipTrigger asChild>
-                    <div 
-                      className="w-16 h-16 rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-md"
-                      style={{ backgroundColor: ods.color }}
-                    >
-                      <span className="text-white text-2xl font-bold">{ods.number}</span>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent side="bottom" className="max-w-xs p-3">
-                    <p className="font-semibold">ODS {ods.number}</p>
-                    <p className="text-sm text-muted-foreground">{ods.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
+            <Link to="/ods" className="block hover:opacity-90 transition-opacity">
+              <img 
+                src={odsLogos} 
+                alt="Objetivos de Desenvolvimento Sustentável - Clique para ver detalhes" 
+                className="max-w-full h-auto mx-auto cursor-pointer hover:scale-[1.02] transition-transform"
+              />
+            </Link>
           </AnimatedSection>
         </div>
       </section>

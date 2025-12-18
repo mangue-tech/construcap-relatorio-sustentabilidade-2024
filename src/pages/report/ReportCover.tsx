@@ -410,7 +410,7 @@ const ReportCover = () => {
           </div>
 
           {/* ESG Highlights Cards */}
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {esgHighlights.map((pillar, index) => (
               <AnimatedSection key={pillar.category} delay={index * 150}>
                 <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
@@ -503,18 +503,18 @@ const ReportCover = () => {
           <div className="grid gap-8">
             {/* Pie Chart - Emissions by Scope - Full Width */}
             <AnimatedSection delay={200}>
-              <div className="bg-card rounded-2xl border border-border p-6">
+              <div className="bg-card rounded-2xl border border-border p-6 max-w-2xl mx-auto">
                 <h3 className="font-semibold text-lg mb-2">Emissões por Escopo</h3>
                 <p className="text-sm text-muted-foreground mb-6">Distribuição de emissões GEE (tCO₂e)</p>
-                <div className="h-[280px]">
+                <div className="h-[320px]">
                   <ResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie
                         data={emissionsData}
                         cx="50%"
                         cy="50%"
-                        innerRadius={50}
-                        outerRadius={85}
+                        innerRadius={70}
+                        outerRadius={110}
                         paddingAngle={5}
                         dataKey="value"
                         animationBegin={0}
@@ -639,16 +639,16 @@ const ReportCover = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex flex-wrap justify-center gap-6">
               {certifications.map((cert, index) => (
                 <Tooltip key={cert.name}>
                   <TooltipTrigger asChild>
                     <div
-                      className="px-5 py-3 bg-card rounded-full border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer"
+                      className="px-8 py-4 bg-card rounded-2xl border border-border flex items-center gap-3 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer"
                       style={{ animationDelay: `${index * 50}ms` }}
                     >
-                      <Award className="w-4 h-4 text-primary" />
-                      <span className="font-medium text-sm">{cert.name}</span>
+                      <Award className="w-5 h-5 text-primary" />
+                      <span className="font-semibold text-base">{cert.name}</span>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent side="bottom" className="max-w-xs p-4">

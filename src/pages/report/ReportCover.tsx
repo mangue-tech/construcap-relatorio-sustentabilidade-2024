@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, Quote } from "lucide-react";
+import { ArrowRight, ChevronDown, Building2, Leaf, Heart, Shield, TrendingUp, FileText, Award, Users, Zap, Droplets, Factory, Sun, Quote, Download, Target } from "lucide-react";
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-cover.jpg";
 import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
@@ -15,6 +15,23 @@ import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/report/ScrollToTop";
 import MangueBadge from "@/components/report/MangueBadge";
+
+// ODS (Objetivos de Desenvolvimento Sustentável) que o Grupo Construcap contribui
+const odsData = [
+  { number: 3, name: "Saúde e Bem-Estar", color: "#4c9f38" },
+  { number: 4, name: "Educação de Qualidade", color: "#c5192d" },
+  { number: 5, name: "Igualdade de Gênero", color: "#ff3a21" },
+  { number: 6, name: "Água Potável e Saneamento", color: "#26bde2" },
+  { number: 7, name: "Energia Limpa e Acessível", color: "#fcc30b" },
+  { number: 8, name: "Trabalho Decente e Crescimento Econômico", color: "#a21942" },
+  { number: 9, name: "Indústria, Inovação e Infraestrutura", color: "#fd6925" },
+  { number: 10, name: "Redução das Desigualdades", color: "#dd1367" },
+  { number: 11, name: "Cidades e Comunidades Sustentáveis", color: "#fd9d24" },
+  { number: 12, name: "Consumo e Produção Responsáveis", color: "#bf8b2e" },
+  { number: 13, name: "Ação Contra a Mudança Global do Clima", color: "#3f7e44" },
+  { number: 15, name: "Vida Terrestre", color: "#56c02b" },
+  { number: 16, name: "Paz, Justiça e Instituições Eficazes", color: "#00689d" },
+];
 const sections = [{
   icon: Building2,
   label: "Quem Somos",
@@ -270,6 +287,14 @@ const ReportCover = () => {
               <a href="#highlights" className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20 hover:scale-105">
                 Destaques 2024
               </a>
+              <a 
+                href="/relatorio-sustentabilidade-2024.pdf" 
+                download 
+                className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white rounded-xl font-semibold hover:bg-emerald-600 transition-all hover:scale-105"
+              >
+                <Download className="w-5 h-5" />
+                Baixar PDF
+              </a>
             </div>
           </div>
         </div>
@@ -476,30 +501,89 @@ const ReportCover = () => {
         </div>
       </section>
 
-      {/* Certifications & Achievements */}
+      {/* ODS Section */}
+      <section id="ods" className="py-12 bg-gradient-to-b from-background to-secondary/30 scroll-mt-20">
+        <div className="container mx-auto px-6">
+          <AnimatedSection className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+              <Target className="w-4 h-4 text-blue-500" />
+              <span className="text-sm font-medium text-blue-500">Agenda 2030</span>
+            </div>
+            <h2 className="text-2xl font-bold mb-3">Objetivos de Desenvolvimento Sustentável</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              O Grupo Construcap contribui ativamente para os ODS da ONU através de suas operações e iniciativas
+            </p>
+          </AnimatedSection>
+
+          <AnimatedSection delay={100}>
+            <div className="flex flex-wrap justify-center gap-3">
+              {odsData.map((ods, index) => (
+                <Tooltip key={ods.number}>
+                  <TooltipTrigger asChild>
+                    <div 
+                      className="w-16 h-16 rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-md"
+                      style={{ backgroundColor: ods.color }}
+                    >
+                      <span className="text-white text-2xl font-bold">{ods.number}</span>
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom" className="max-w-xs p-3">
+                    <p className="font-semibold">ODS {ods.number}</p>
+                    <p className="text-sm text-muted-foreground">{ods.name}</p>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
+      {/* Certifications & GRI Section */}
       <section id="certifications" className="py-12 bg-secondary/30 scroll-mt-20">
         <div className="container mx-auto px-6">
-          <AnimatedSection className="text-center mb-12">
-            <h2 className="text-2xl font-bold mb-4">Certificações e Reconhecimentos</h2>
-            <p className="text-muted-foreground">Clique para ver detalhes de cada certificação</p>
+          <AnimatedSection className="text-center mb-10">
+            <h2 className="text-2xl font-bold mb-3">Certificações e Padrões</h2>
+            <p className="text-muted-foreground">Conformidade com os principais padrões internacionais</p>
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
             <div className="flex flex-wrap justify-center gap-4">
-              {certifications.map((cert, index) => <Tooltip key={cert.name}>
+              {certifications.map((cert, index) => (
+                <Tooltip key={cert.name}>
                   <TooltipTrigger asChild>
-                    <div className="px-6 py-3 bg-card rounded-xl border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer" style={{
-                  animationDelay: `${index * 50}ms`
-                }}>
-                      <Award className="w-5 h-5 text-primary" />
-                      <span className="font-medium">{cert.name}</span>
+                    <div 
+                      className="px-5 py-3 bg-card rounded-full border border-border flex items-center gap-2 hover:border-primary/50 hover:shadow-md transition-all hover:-translate-y-1 cursor-pointer" 
+                      style={{ animationDelay: `${index * 50}ms` }}
+                    >
+                      <Award className="w-4 h-4 text-primary" />
+                      <span className="font-medium text-sm">{cert.name}</span>
                     </div>
                   </TooltipTrigger>
                   <TooltipContent side="bottom" className="max-w-xs p-4">
                     <p className="font-semibold mb-1">{cert.name}</p>
                     <p className="text-sm text-muted-foreground">{cert.description}</p>
                   </TooltipContent>
-                </Tooltip>)}
+                </Tooltip>
+              ))}
+            </div>
+          </AnimatedSection>
+
+          {/* GRI Link */}
+          <AnimatedSection delay={200} className="mt-8">
+            <div className="flex justify-center">
+              <Link 
+                to="/gri-index" 
+                className="inline-flex items-center gap-3 px-6 py-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all group"
+              >
+                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+                  <FileText className="w-5 h-5 text-primary" />
+                </div>
+                <div className="text-left">
+                  <p className="font-semibold group-hover:text-primary transition-colors">Índice de Conteúdo GRI</p>
+                  <p className="text-xs text-muted-foreground">GRI Standards 2021</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
+              </Link>
             </div>
           </AnimatedSection>
         </div>

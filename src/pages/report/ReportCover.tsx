@@ -201,10 +201,10 @@ const ReportCover = () => {
       <ReportNavbar />
       
       {/* Hero Section */}
-      <section className="relative min-h-[90vh] flex items-center pt-16">
+      <section className="relative min-h-[85vh] flex items-center pt-16">
         <div className="absolute inset-0">
-          <img src={heroImage} alt="Construcap" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/80 to-foreground/40" />
+          <img src={heroImage} alt="Equipe Construcap" className="w-full h-full object-cover object-top" />
+          <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
         </div>
         
         <div className="relative container mx-auto px-6 py-20">

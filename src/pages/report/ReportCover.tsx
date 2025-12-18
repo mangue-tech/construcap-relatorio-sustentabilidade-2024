@@ -459,14 +459,14 @@ const ReportCover = () => {
             </p>
           </AnimatedSection>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
-            {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
-                <Link to={company.path} className={`bg-card rounded-xl border p-5 hover:shadow-lg transition-all hover:-translate-y-1 h-[240px] flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch">
+            {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100} className="h-full">
+                <Link to={company.path} className={`bg-card rounded-xl border p-5 hover:shadow-lg transition-all hover:-translate-y-1 h-full min-h-[280px] flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
                   <div className="h-10 mb-3 flex-shrink-0">
                     <img src={company.logo} alt={`${company.name} logo`} className="h-full w-auto object-contain" />
                   </div>
                   <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors flex-shrink-0">{company.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-4 flex-grow overflow-hidden">{company.description}</p>
+                  <p className="text-xs text-muted-foreground mb-4 flex-grow">{company.description}</p>
                   <div className="flex items-center gap-1 text-xs text-primary font-medium flex-shrink-0 mt-auto">
                     Saiba mais <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>

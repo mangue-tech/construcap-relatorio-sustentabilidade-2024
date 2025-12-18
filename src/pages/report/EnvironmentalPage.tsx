@@ -173,7 +173,7 @@ const EnvironmentalPage = () => {
     <ReportLayout>
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
-        <div className="relative h-[500px] overflow-hidden">
+        <div className="relative h-[600px] overflow-hidden">
           <img 
             src={environmentalHero} 
             alt="Parque natural brasileiro" 

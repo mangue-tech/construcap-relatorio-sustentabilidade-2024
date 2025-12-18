@@ -22,6 +22,7 @@ import {
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip as RechartsTooltip, Legend } from "recharts";
 import heroImage from "@/assets/hero-cover.jpg";
 import mangueTechBadge2 from "@/assets/mangue-tech-badge-2.png";
+import odsLogos from "@/assets/ods-logos.png";
 import construcapLogo from "@/assets/construcap-logo.png";
 import urbiaLogo from "@/assets/companies/urbia.png";
 import minasArenaLogo from "@/assets/companies/minas-arena.png";
@@ -34,22 +35,6 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 import ScrollToTop from "@/components/report/ScrollToTop";
 import MangueBadge from "@/components/report/MangueBadge";
 
-// ODS (Objetivos de Desenvolvimento Sustentável) que o Grupo Construcap contribui
-const odsData = [
-  { number: 3, name: "Saúde e Bem-Estar", color: "#4c9f38" },
-  { number: 4, name: "Educação de Qualidade", color: "#c5192d" },
-  { number: 5, name: "Igualdade de Gênero", color: "#ff3a21" },
-  { number: 6, name: "Água Potável e Saneamento", color: "#26bde2" },
-  { number: 7, name: "Energia Limpa e Acessível", color: "#fcc30b" },
-  { number: 8, name: "Trabalho Decente e Crescimento Econômico", color: "#a21942" },
-  { number: 9, name: "Indústria, Inovação e Infraestrutura", color: "#fd6925" },
-  { number: 10, name: "Redução das Desigualdades", color: "#dd1367" },
-  { number: 11, name: "Cidades e Comunidades Sustentáveis", color: "#fd9d24" },
-  { number: 12, name: "Consumo e Produção Responsáveis", color: "#bf8b2e" },
-  { number: 13, name: "Ação Contra a Mudança Global do Clima", color: "#3f7e44" },
-  { number: 15, name: "Vida Terrestre", color: "#56c02b" },
-  { number: 16, name: "Paz, Justiça e Instituições Eficazes", color: "#00689d" },
-];
 const sections = [
   {
     icon: Building2,
@@ -127,28 +112,6 @@ const highlights2024 = [
   },
 ];
 const esgHighlights = [
-  {
-    category: "Ambiental",
-    color: "bg-emerald-500",
-    icon: Leaf,
-    items: [
-      {
-        label: "Emissões GEE",
-        value: "33.550 tCO₂e",
-        detail: "Inventário completo Escopo 1, 2 e 3",
-      },
-      {
-        label: "Energia Solar",
-        value: "1.317.600 kWh",
-        detail: "Geração no Mineirão",
-      },
-      {
-        label: "Água Reutilizada",
-        value: "51%",
-        detail: "Captação de água pluvial",
-      },
-    ],
-  },
   {
     category: "Social",
     color: "bg-rose-500",
@@ -263,11 +226,6 @@ const certifications = [
     description:
       "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental.",
   },
-  {
-    name: "GHG Protocol",
-    description:
-      "Protocolo de Gases de Efeito Estufa - Metodologia internacional para quantificação e gestão de emissões de gases de efeito estufa.",
-  },
 ];
 
 // Emissions data by scope
@@ -366,13 +324,6 @@ const ReportCover = () => {
                 animationDelay: "500ms",
               }}
             >
-              <Link
-                to="/carta-ceo"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-xl font-semibold hover:bg-primary/90 transition-all hover:scale-105"
-              >
-                Carta do CEO
-                <ArrowRight className="w-5 h-5" />
-              </Link>
               <a
                 href="#highlights"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-primary-foreground/10 text-primary-foreground rounded-xl font-semibold hover:bg-primary-foreground/20 transition-all border border-primary-foreground/20 hover:scale-105"
@@ -459,7 +410,7 @@ const ReportCover = () => {
           </div>
 
           {/* ESG Highlights Cards */}
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {esgHighlights.map((pillar, index) => (
               <AnimatedSection key={pillar.category} delay={index * 150}>
                 <div className="bg-card rounded-2xl border border-border overflow-hidden hover:shadow-lg transition-all hover:-translate-y-1">
@@ -658,24 +609,23 @@ const ReportCover = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <div className="flex flex-wrap justify-center gap-3">
-              {odsData.map((ods, index) => (
-                <Tooltip key={ods.number}>
-                  <TooltipTrigger asChild>
-                    <div
-                      className="w-16 h-16 rounded-lg flex items-center justify-center cursor-pointer hover:scale-110 transition-transform shadow-md"
-                      style={{ backgroundColor: ods.color }}
-                    >
-                      <span className="text-white text-2xl font-bold">{ods.number}</span>
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent side="bottom" className="max-w-xs p-3">
-                    <p className="font-semibold">ODS {ods.number}</p>
-                    <p className="text-sm text-muted-foreground">{ods.name}</p>
-                  </TooltipContent>
-                </Tooltip>
-              ))}
-            </div>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  to="/ods"
+                  className="block max-w-5xl mx-auto hover:scale-[1.02] transition-all duration-300 hover:shadow-2xl rounded-2xl overflow-hidden"
+                >
+                  <img
+                    src={odsLogos}
+                    alt="Objetivos de Desenvolvimento Sustentável - Clique para ver detalhes"
+                    className="w-full h-auto"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" className="p-3">
+                <p className="font-medium">Clique para ver detalhes dos ODS</p>
+              </TooltipContent>
+            </Tooltip>
           </AnimatedSection>
         </div>
       </section>
@@ -710,24 +660,6 @@ const ReportCover = () => {
             </div>
           </AnimatedSection>
 
-          {/* GRI Link */}
-          <AnimatedSection delay={200} className="mt-8">
-            <div className="flex justify-center">
-              <Link
-                to="/gri-index"
-                className="inline-flex items-center gap-3 px-6 py-4 bg-card rounded-xl border border-border hover:border-primary/50 hover:shadow-lg transition-all group"
-              >
-                <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <div className="text-left">
-                  <p className="font-semibold group-hover:text-primary transition-colors">Índice de Conteúdo GRI</p>
-                  <p className="text-xs text-muted-foreground">GRI Standards 2021</p>
-                </div>
-                <ArrowRight className="w-5 h-5 text-muted-foreground group-hover:text-primary group-hover:translate-x-1 transition-all" />
-              </Link>
-            </div>
-          </AnimatedSection>
         </div>
       </section>
 

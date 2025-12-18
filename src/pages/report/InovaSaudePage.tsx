@@ -3,7 +3,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { 
   Building2,
   Award,
-  Stethoscope,
   Shield,
   Users,
   Heart,
@@ -146,36 +145,6 @@ const InovaSaudePage = () => {
           </Card>
         </section>
 
-        {/* Hospitais - Cards resumidos */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Stethoscope className="w-5 h-5 text-blue-600" />
-                Unidades Hospitalares
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="grid md:grid-cols-3 gap-4">
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-bold text-blue-700 dark:text-blue-400">HEM</p>
-                  <p className="text-xs text-muted-foreground">Hospital Estadual da Mulher – Sorocaba</p>
-                </div>
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-bold text-blue-700 dark:text-blue-400">HRS</p>
-                  <p className="text-xs text-muted-foreground">Hospital Regional de Sorocaba</p>
-                </div>
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Building2 className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <p className="font-bold text-blue-700 dark:text-blue-400">HESJC</p>
-                  <p className="text-xs text-muted-foreground">Hospital Estadual de São José dos Campos</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-        </section>
 
         {/* Serviços Não Assistenciais */}
         <section>

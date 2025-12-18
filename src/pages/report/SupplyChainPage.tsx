@@ -18,7 +18,7 @@ import {
   ClipboardCheck,
   Ban
 } from "lucide-react";
-import supplyChainHero from "@/assets/report/social-hero.jpg";
+import supplyChainHero from "@/assets/report/supply-chain-hero.jpg";
 
 const supplyCategories = [
   {

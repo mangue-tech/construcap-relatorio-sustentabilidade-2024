@@ -69,10 +69,6 @@ const ReportNavbar = () => {
               alt="Construcap"
               className={`w-30 h-20 transition-all ${isScrolled ? "" : "shadow-lg rounded-xl"}`}
             />
-            <div className={`transition-colors ${isScrolled ? "text-foreground" : "text-primary-foreground"}`}>
-              <p className="font-semibold text-sm">Relatório ESG</p>
-              <p className="text-xs opacity-70">2024</p>
-            </div>
           </Link>
 
           {/* Desktop Navigation - Report Pages */}

@@ -21,6 +21,7 @@ import MinasArenaPage from "./pages/report/MinasArenaPage";
 import InovaSaudePage from "./pages/report/InovaSaudePage";
 import AmbicapPage from "./pages/report/AmbicapPage";
 import GRIIndexPage from "./pages/report/GRIIndexPage";
+import ODSPage from "./pages/report/ODSPage";
 
 const queryClient = new QueryClient();
 
@@ -48,6 +49,7 @@ const App = () => (
           <Route path="/operacao-inova-saude" element={<InovaSaudePage />} />
           <Route path="/operacao-ambicap" element={<AmbicapPage />} />
           <Route path="/gri-index" element={<GRIIndexPage />} />
+          <Route path="/ods" element={<ODSPage />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

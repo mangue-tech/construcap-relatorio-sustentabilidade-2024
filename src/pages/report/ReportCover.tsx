@@ -211,13 +211,13 @@ const ReportCover = () => {
   return <div className="min-h-screen bg-background">
       <ReportNavbar />
       
-      {/* Hero Section with Parallax */}
+      {/* Hero Section with Parallax and Zoom */}
       <section className="relative min-h-[85vh] flex items-center pt-16 overflow-hidden">
         <div className="absolute inset-0">
           <img 
             src={heroImage} 
             alt="Equipe Construcap" 
-            className="w-full h-[120%] object-cover object-top will-change-transform"
+            className="w-full h-[120%] object-cover object-center will-change-transform animate-zoomIn"
             style={{ transform: `translateY(${scrollY * 0.3}px)` }}
           />
           <div className="absolute inset-0 bg-gradient-to-r from-foreground/90 via-foreground/70 to-transparent" />
@@ -461,13 +461,13 @@ const ReportCover = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {companies.map((company, index) => <AnimatedSection key={company.name} delay={index * 100}>
-                <Link to={company.path} className={`bg-card rounded-xl border p-4 hover:shadow-lg transition-all hover:-translate-y-1 h-full flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
+                <Link to={company.path} className={`bg-card rounded-xl border p-5 hover:shadow-lg transition-all hover:-translate-y-1 min-h-[220px] flex flex-col group ${company.featured ? 'border-primary/50 ring-1 ring-primary/20' : 'border-border hover:border-primary/50'}`}>
                   <div className="h-10 mb-3">
                     <img src={company.logo} alt={`${company.name} logo`} className="h-full w-auto object-contain" />
                   </div>
-                  <h3 className="font-semibold text-sm mb-1 group-hover:text-primary transition-colors">{company.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-3 flex-grow line-clamp-3">{company.description}</p>
-                  <div className="flex items-center gap-1 text-xs text-primary font-medium">
+                  <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors">{company.name}</h3>
+                  <p className="text-xs text-muted-foreground mb-4 flex-grow">{company.description}</p>
+                  <div className="flex items-center gap-1 text-xs text-primary font-medium mt-auto">
                     Saiba mais <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>

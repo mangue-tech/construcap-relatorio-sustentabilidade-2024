@@ -521,12 +521,12 @@ const ReportCover = () => {
               <TooltipTrigger asChild>
                 <Link 
                   to="/ods" 
-                  className="block max-w-3xl mx-auto group"
+                  className="block max-w-5xl mx-auto group"
                 >
                   <img 
                     src={odsLogos} 
                     alt="Objetivos de Desenvolvimento Sustentável - Clique para ver detalhes" 
-                    className="w-full h-auto cursor-pointer transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/20 rounded-lg"
+                    className="w-full h-auto cursor-pointer transition-all duration-300 group-hover:scale-[1.02] group-hover:shadow-2xl group-hover:shadow-primary/20 rounded-xl"
                   />
                 </Link>
               </TooltipTrigger>

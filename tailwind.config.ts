@@ -95,14 +95,14 @@ export default {
           to: { height: "0" },
         },
         "zoomIn": {
-          "0%": { transform: "scale(1.1)", opacity: "0" },
+          "0%": { transform: "scale(1.05)", opacity: "0.8" },
           "100%": { transform: "scale(1)", opacity: "1" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "zoomIn": "zoomIn 1.5s ease-out forwards",
+        "zoomIn": "zoomIn 2.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards",
       },
       boxShadow: {
         'glow': '0 0 40px hsl(16 100% 50% / 0.3)',

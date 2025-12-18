@@ -22,7 +22,6 @@ import {
   TreePine,
   Stethoscope,
   Recycle,
-  Globe,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
@@ -66,7 +65,6 @@ const menuItems = [
       { path: "/operacao-ambicap", label: "Ambicap" },
     ],
   },
-  { path: "/ods", label: "ODS", icon: Globe },
   { path: "/gri-index", label: "Índice GRI", icon: FileText },
 ];
 
@@ -88,7 +86,11 @@ interface ReportLayoutProps {
 const ReportLayout = ({ children, title }: ReportLayoutProps) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [sidebarVisible, setSidebarVisible] = useState(true);
-  const [expandedItems, setExpandedItems] = useState<string[]>(["Governança", "Desempenho Social", "Destaques das Operações"]);
+  const [expandedItems, setExpandedItems] = useState<string[]>([
+    "Governança",
+    "Desempenho Social",
+    "Destaques das Operações",
+  ]);
   const [scrollProgress, setScrollProgress] = useState(0);
   const location = useLocation();
 
@@ -175,7 +177,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
             <img src={construcapLogo} alt="Construcap" className="w-15 h-10" />
             <div>
               <p className="font-bold text-sm">Grupo Construcap</p>
-              <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade</p>
+              <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade 2024</p>
             </div>
           </Link>
         </div>
@@ -294,7 +296,12 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
             <p className="text-sm text-muted-foreground">
               Copyright © 2025 - Grupo Construcap, todos os direitos reservados.
             </p>
-            <a href="https://mangue.tech" target="_blank" rel="noopener noreferrer" className="hover:opacity-80 transition-opacity">
+            <a
+              href="https://mangue.tech"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:opacity-80 transition-opacity"
+            >
               <img src={mangueTechBadge2} alt="Desenvolvido por Mangue Tech" className="h-10" />
             </a>
           </div>

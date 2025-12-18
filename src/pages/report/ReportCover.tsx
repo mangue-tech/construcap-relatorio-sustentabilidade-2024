@@ -517,13 +517,24 @@ const ReportCover = () => {
           </AnimatedSection>
 
           <AnimatedSection delay={100}>
-            <Link to="/ods" className="block hover:opacity-90 transition-opacity">
-              <img 
-                src={odsLogos} 
-                alt="Objetivos de Desenvolvimento Sustentável - Clique para ver detalhes" 
-                className="max-w-full h-auto mx-auto cursor-pointer hover:scale-[1.02] transition-transform"
-              />
-            </Link>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link 
+                  to="/ods" 
+                  className="block max-w-3xl mx-auto group"
+                >
+                  <img 
+                    src={odsLogos} 
+                    alt="Objetivos de Desenvolvimento Sustentável - Clique para ver detalhes" 
+                    className="w-full h-auto cursor-pointer transition-all duration-300 group-hover:scale-105 group-hover:shadow-2xl group-hover:shadow-primary/20 rounded-lg"
+                  />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent side="bottom" className="p-3">
+                <p className="font-medium">Clique para ver detalhes dos ODS</p>
+                <p className="text-xs text-muted-foreground">Saiba como contribuímos para cada objetivo</p>
+              </TooltipContent>
+            </Tooltip>
           </AnimatedSection>
         </div>
       </section>

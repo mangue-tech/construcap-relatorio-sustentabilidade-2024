@@ -160,8 +160,8 @@ const companies = [{
   name: "Ambicap",
   logo: ambicapLogo,
   path: "/operacao-ambicap",
-  description: "Soluções ambientais e gestão de resíduos. Especializada em tratamento e destinação adequada de resíduos da construção civil.",
-  highlights: ["Gestão de resíduos", "Reciclagem", "Economia circular"]
+  description: "Gestão de ativos urbanos e infraestrutura. Especializada em operação e manutenção de sistemas viários, iluminação pública e mobiliário urbano.",
+  highlights: ["Ativos urbanos", "ISO 9001/14001/45001", "Inventário GEE"]
 }];
 const certifications = [{
   name: "ISO 9001",
@@ -466,7 +466,7 @@ const ReportCover = () => {
                     <img src={company.logo} alt={`${company.name} logo`} className="h-full w-auto object-contain" />
                   </div>
                   <h3 className="font-semibold text-sm mb-2 group-hover:text-primary transition-colors flex-shrink-0">{company.name}</h3>
-                  <p className="text-xs text-muted-foreground mb-4 flex-grow">{company.description}</p>
+                  <p className="text-sm text-muted-foreground mb-4 flex-grow leading-relaxed">{company.description}</p>
                   <div className="flex items-center gap-1 text-xs text-primary font-medium flex-shrink-0 mt-auto">
                     Saiba mais <ArrowRight className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
                   </div>

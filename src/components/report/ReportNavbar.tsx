@@ -36,6 +36,7 @@ const reportPages: ReportPage[] = [
       { path: "/operacao-ambicap", label: "Ambicap" },
     ],
   },
+  { path: "/ods", label: "ODS" },
   { path: "/gri-index", label: "Índice GRI" },
 ];
 

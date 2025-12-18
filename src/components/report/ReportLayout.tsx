@@ -22,6 +22,7 @@ import {
   TreePine,
   Stethoscope,
   Recycle,
+  Globe,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
@@ -65,6 +66,7 @@ const menuItems = [
       { path: "/operacao-ambicap", label: "Ambicap" },
     ],
   },
+  { path: "/ods", label: "ODS", icon: Globe },
   { path: "/gri-index", label: "Índice GRI", icon: FileText },
 ];
 

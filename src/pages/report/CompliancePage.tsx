@@ -29,7 +29,7 @@ import {
   Wrench,
   Briefcase
 } from "lucide-react";
-import constructionHero from "@/assets/report/construction-hero.jpg";
+import complianceHero from "@/assets/report/compliance-hero.jpg";
 
 const codeOfConductTopics = [
   "Regras de integridade pessoal e profissional",
@@ -114,7 +114,7 @@ const CompliancePage = () => {
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[400px] overflow-hidden">
           <img 
-            src={constructionHero} 
+            src={complianceHero} 
             alt="Canteiro de obras Construcap" 
             className="w-full h-full object-cover"
           />

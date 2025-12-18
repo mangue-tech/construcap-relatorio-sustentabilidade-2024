@@ -24,7 +24,7 @@ import {
   BarChart3,
   Globe
 } from "lucide-react";
-import constructionHero from "@/assets/report/construction-hero.jpg";
+import economicHero from "@/assets/report/economic-hero.jpg";
 
 const EconomicPage = () => {
   return (
@@ -33,7 +33,7 @@ const EconomicPage = () => {
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[400px] overflow-hidden">
           <img 
-            src={constructionHero} 
+            src={economicHero} 
             alt="Construção e infraestrutura" 
             className="w-full h-full object-cover"
           />

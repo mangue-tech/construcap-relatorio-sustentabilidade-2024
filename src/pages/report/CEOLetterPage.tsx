@@ -1,10 +1,8 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Quote, PenLine } from "lucide-react";
-
 const CEOLetterPage = () => {
-  return (
-    <ReportLayout>
+  return <ReportLayout>
       {/* Hero Section */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[300px] overflow-hidden bg-gradient-to-br from-primary/20 via-primary/10 to-background">
@@ -113,7 +111,7 @@ const CEOLetterPage = () => {
               <p className="text-sm text-muted-foreground">Décadas de História</p>
             </div>
             <div className="bg-card rounded-xl border border-border p-5 text-center">
-              <p className="text-3xl font-bold text-primary mb-1">4</p>
+              <p className="text-3xl font-bold text-primary mb-1">5</p>
               <p className="text-sm text-muted-foreground">Unidades de Negócio</p>
             </div>
             <div className="bg-card rounded-xl border border-border p-5 text-center">
@@ -123,8 +121,6 @@ const CEOLetterPage = () => {
           </div>
         </AnimatedSection>
       </div>
-    </ReportLayout>
-  );
+    </ReportLayout>;
 };
-
 export default CEOLetterPage;

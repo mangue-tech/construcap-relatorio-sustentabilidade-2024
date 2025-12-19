@@ -31,11 +31,15 @@ const CEOLetterPage = () => {
             {/* CEO Photo */}
             <div className="lg:w-80 flex-shrink-0">
               <div className="sticky top-24">
-                <img 
-                  src={ceoPhoto} 
-                  alt="Roberto Capobianco - CEO" 
-                  className="w-full max-w-xs lg:max-w-none h-auto object-cover object-top rounded-2xl shadow-lg mx-auto lg:mx-0"
-                />
+                <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-4 ring-primary/20 mx-auto lg:mx-0 max-w-xs lg:max-w-none">
+                  <div className="aspect-[3/4] overflow-hidden">
+                    <img 
+                      src={ceoPhoto} 
+                      alt="Roberto Capobianco - CEO" 
+                      className="w-[130%] h-[85%] object-cover object-[60%_15%] -ml-[15%]"
+                    />
+                  </div>
+                </div>
                 <div className="mt-4 text-center lg:text-left">
                   <p className="font-bold text-xl">Roberto Capobianco</p>
                   <p className="text-muted-foreground">Presidente</p>

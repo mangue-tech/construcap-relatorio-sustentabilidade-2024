@@ -1,7 +1,7 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
 import { Quote } from "lucide-react";
-import ceoPhoto from "@/assets/ceo-photo.png";
+import ceoPhoto from "@/assets/ceo-photo-new.png";
 
 const CEOLetterPage = () => {
   return <ReportLayout>

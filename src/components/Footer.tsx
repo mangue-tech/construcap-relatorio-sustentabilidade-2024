@@ -17,8 +17,8 @@ const Footer = () => {
               </div>
             </div>
             <p className="text-sm text-primary-foreground/70 leading-relaxed">
-              Uma das maiores construtoras do Brasil, com 80 anos transformando sonhos em realidade 
-              através de obras icônicas e compromisso com a sustentabilidade.
+              Uma das maiores construtoras do Brasil, com 80 anos transformando sonhos em realidade através de obras
+              icônicas e compromisso com a sustentabilidade.
             </p>
           </div>
 
@@ -49,12 +49,7 @@ const Footer = () => {
           <div>
             <h3 className="font-bold mb-4">Empresas do Grupo</h3>
             <ul className="space-y-3">
-              {[
-                "Construcap CCPS",
-                "Inova Saúde",
-                "Minas Arena",
-                "Ambicap",
-              ].map((item) => (
+              {["Construcap CCPS", "Inova Saúde", "Minas Arena", "Ambicap"].map((item) => (
                 <li key={item}>
                   <span className="text-sm text-primary-foreground/70">{item}</span>
                 </li>
@@ -98,9 +93,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <p className="text-sm text-primary-foreground/60">
-              © 2024 Construcap CCPS Engenharia e Comércio S.A. Todos os direitos reservados.
-            </p>
+            <p className="text-sm text-primary-foreground/60">© 2025 Grupo Construcap Todos os direitos reservados.</p>
             <p className="text-sm text-primary-foreground/60">
               Relatório elaborado em conformidade com os GRI Standards 2021
             </p>

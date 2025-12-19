@@ -32,13 +32,13 @@ const CEOLetterPage = () => {
             <div className="lg:w-80 flex-shrink-0">
               <div className="sticky top-24">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-4 ring-primary/20 mx-auto lg:mx-0 max-w-xs lg:max-w-none">
-                  <div className="aspect-[3/4] overflow-hidden">
-                    <img 
-                      src={ceoPhoto} 
-                      alt="Roberto Capobianco - CEO" 
-                      className="w-[130%] h-[85%] object-cover object-[60%_15%] -ml-[15%]"
-                    />
-                  </div>
+                <div className="aspect-[4/5] overflow-hidden bg-gradient-to-b from-muted/30 to-muted/10">
+                  <img 
+                    src={ceoPhoto} 
+                    alt="Roberto Capobianco - CEO" 
+                    className="w-full h-full object-cover object-[center_top]"
+                  />
+                </div>
                 </div>
                 <div className="mt-4 text-center lg:text-left">
                   <p className="font-bold text-xl">Roberto Capobianco</p>

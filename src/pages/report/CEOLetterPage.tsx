@@ -42,7 +42,7 @@ const CEOLetterPage = () => {
                 <div className="mt-4 text-center lg:text-left">
                   <p className="font-bold text-xl">Roberto Capobianco</p>
                   <p className="text-muted-foreground">Presidente</p>
-                  <p className="text-sm text-muted-foreground">Construcap CCPS Engenharia e Comércio S.A.</p>
+                  <p className="text-sm text-muted-foreground">Grupo Construcap</p>
                 </div>
               </div>
             </div>

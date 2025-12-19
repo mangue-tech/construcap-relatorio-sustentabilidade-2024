@@ -1,6 +1,8 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { Quote, PenLine } from "lucide-react";
+import { Quote } from "lucide-react";
+import ceoPhoto from "@/assets/ceo-photo.png";
+
 const CEOLetterPage = () => {
   return <ReportLayout>
       {/* Hero Section */}
@@ -90,14 +92,16 @@ const CEOLetterPage = () => {
               </p>
             </div>
             
-            <div className="mt-12 pt-8 border-t border-border flex items-end justify-between">
+            <div className="mt-12 pt-8 border-t border-border flex items-center gap-6">
+              <img 
+                src={ceoPhoto} 
+                alt="Roberto Capobianco - CEO" 
+                className="w-32 h-40 object-cover object-top rounded-lg"
+              />
               <div>
                 <p className="font-bold text-xl">Roberto Capobianco</p>
                 <p className="text-muted-foreground">Presidente</p>
                 <p className="text-muted-foreground">Construcap CCPS Engenharia e Comércio S.A.</p>
-              </div>
-              <div className="hidden sm:block">
-                <PenLine className="w-16 h-16 text-primary/20" />
               </div>
             </div>
           </div>

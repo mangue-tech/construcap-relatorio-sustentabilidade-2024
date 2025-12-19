@@ -29,8 +29,8 @@ const CEOLetterPage = () => {
         <AnimatedSection>
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* CEO Photo */}
-            <div className="lg:w-64 flex-shrink-0">
-              <div className="sticky top-24 max-w-[220px] mx-auto lg:mx-0">
+            <div className="lg:w-80 flex-shrink-0">
+              <div className="sticky top-24">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-4 ring-primary/20 mx-auto lg:mx-0 max-w-xs lg:max-w-none">
                 <div className="aspect-[4/5] overflow-hidden bg-gradient-to-b from-muted/30 to-muted/10">
                   <img 

@@ -18,7 +18,7 @@ const MinasArenaPage = () => {
   return (
     <ReportLayout>
       {/* Hero Section */}
-      <div className="relative h-64 md:h-80 -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
+      <div className="relative h-[400px] md:h-[450px] -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-8 overflow-hidden">
         <img src={minasArenaHero} alt="Minas Arena Stadium" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 to-amber-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">

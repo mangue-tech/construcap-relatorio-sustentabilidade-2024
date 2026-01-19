@@ -1,14 +1,14 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { 
-  Shield, 
-  Users, 
-  Target, 
-  BookOpen, 
-  Scale, 
-  Eye, 
-  TrendingUp, 
-  CheckCircle, 
+import {
+  Shield,
+  Users,
+  Target,
+  BookOpen,
+  Scale,
+  Eye,
+  TrendingUp,
+  CheckCircle,
   GraduationCap,
   FileCheck,
   Briefcase,
@@ -18,7 +18,7 @@ import {
   MessageSquare,
   Lock,
   Layers,
-  Award
+  Award,
 } from "lucide-react";
 import governanceHero from "@/assets/report/governance-hero.jpg";
 
@@ -26,7 +26,8 @@ const governanceStructure = [
   {
     title: "Conselho de Administração",
     gri: "GRI 2-9",
-    description: "O Conselho de Administração é o órgão máximo de deliberação estratégica. Com composição experiente e multidisciplinar, o Conselho define as diretrizes de longo prazo, supervisiona a Diretoria Executiva, aprova políticas corporativas, acompanha resultados e avalia riscos estruturais do negócio, incluindo riscos operacionais, regulatórios, climáticos, socioambientais e reputacionais.",
+    description:
+      "O Conselho de Administração é o órgão máximo de deliberação estratégica. Com composição experiente e multidisciplinar, o Conselho define as diretrizes de longo prazo, supervisiona a Diretoria Executiva, acompanha resultados e avalia riscos estruturais do negócio, incluindo riscos operacionais, regulatórios, climáticos, socioambientais e reputacionais.",
     principles: "A atuação do Conselho se baseia em princípios de independência, prudência e visão sistêmica.",
     responsibilities: [
       "Orientar o posicionamento estratégico das unidades de negócio",
@@ -34,23 +35,25 @@ const governanceStructure = [
       "Revisar e aprovar políticas de integridade, ética e conformidade",
       "Acompanhar riscos relevantes, impactos de longo prazo e tendências setoriais",
       "Monitorar o desempenho da alta liderança",
-      "Deliberar sobre investimentos e expansão de operações"
-    ]
+      "Deliberar sobre investimentos e expansão de operações",
+    ],
   },
   {
     title: "Diretoria Executiva",
     gri: "GRI 2-10",
-    description: "A Diretoria Executiva, liderada pelo CEO Roberto Capobianco, é responsável pela gestão do dia a dia da companhia. Sua atuação envolve a execução das estratégias aprovadas pelo Conselho, a gestão operacional das unidades de negócio, a liderança sobre processos críticos e a promoção de práticas robustas de segurança operacional, qualidade, integridade e sustentabilidade.",
-    principles: "A Diretoria opera em sinergia com gestores das áreas de engenharia, operações, saúde, parques, arenas, suprimentos, jurídico e financeiro.",
+    description:
+      "A Diretoria Executiva, liderada pelo CEO Roberto Capobianco, é responsável pela gestão do dia a dia da companhia. Sua atuação envolve a execução das estratégias aprovadas pelo Conselho, a gestão operacional das unidades de negócio, a liderança sobre processos críticos e a promoção de práticas robustas de segurança operacional, qualidade, integridade e sustentabilidade.",
+    principles:
+      "A Diretoria opera em sinergia com gestores das áreas de engenharia, operações, saúde, parques, arenas, suprimentos, jurídico e financeiro.",
     responsibilities: [
       "Execução das estratégias aprovadas pelo Conselho",
       "Gestão operacional das unidades de negócio",
       "Liderança sobre processos críticos",
       "Promoção de práticas de segurança operacional e qualidade",
       "Implementação de políticas de integridade e sustentabilidade",
-      "Assegurar coerência entre planejamento, execução e resultados"
-    ]
-  }
+      "Assegurar coerência entre planejamento, execução e resultados",
+    ],
+  },
 ];
 
 const policies = [
@@ -61,45 +64,51 @@ const policies = [
   { name: "Política de Riscos e Controles Internos", icon: BarChart3 },
   { name: "Política de Relacionamento com Stakeholders", icon: MessageSquare },
   { name: "Política de Privacidade e Proteção de Dados", icon: Lock },
-  { name: "Normas técnicas de qualidade e engenharia", icon: Award }
+  { name: "Normas técnicas de qualidade e engenharia", icon: Award },
 ];
 
 const strategicAxes = [
-  { 
+  {
     number: 1,
-    icon: Shield, 
-    title: "Segurança como valor inegociável", 
-    description: "Priorização absoluta da proteção à vida, padrões rigorosos de prevenção, controles operacionais e fortalecimento contínuo da cultura de segurança em todas as unidades." 
+    icon: Shield,
+    title: "Segurança como valor inegociável",
+    description:
+      "Priorização absoluta da proteção à vida, padrões rigorosos de prevenção, controles operacionais e fortalecimento contínuo da cultura de segurança em todas as unidades.",
   },
-  { 
+  {
     number: 2,
-    icon: Scale, 
-    title: "Integridade e conformidade", 
-    description: "Adoção sistemática de práticas éticas, políticas de prevenção a riscos e processos robustos de governança em toda a cadeia de valor." 
+    icon: Scale,
+    title: "Integridade e conformidade",
+    description:
+      "Adoção sistemática de práticas éticas, políticas de prevenção a riscos e processos robustos de governança em toda a cadeia de valor.",
   },
-  { 
+  {
     number: 3,
-    icon: Target, 
-    title: "Excelência operacional", 
-    description: "Implementação de padrões técnicos elevados, inovação aplicada, engenharia de alta performance, gestão de qualidade e eficiência operacional." 
+    icon: Target,
+    title: "Excelência operacional",
+    description:
+      "Implementação de padrões técnicos elevados, inovação aplicada, engenharia de alta performance, gestão de qualidade e eficiência operacional.",
   },
-  { 
+  {
     number: 4,
-    icon: TrendingUp, 
-    title: "Sustentabilidade e responsabilidade socioambiental", 
-    description: "Integração de práticas ambientais, sociais e climáticas ao planejamento de obras, à operação de ativos e à gestão dos impactos sobre comunidades e territórios." 
+    icon: TrendingUp,
+    title: "Sustentabilidade e responsabilidade socioambiental",
+    description:
+      "Integração de práticas ambientais, sociais e climáticas ao planejamento de obras, à operação de ativos e à gestão dos impactos sobre comunidades e territórios.",
   },
-  { 
+  {
     number: 5,
-    icon: Users, 
-    title: "Desenvolvimento de pessoas e fortalecimento da cultura corporativa", 
-    description: "Promoção de capacidades técnicas, liderança qualificada, programas de treinamento contínuo e ambiente de trabalho pautado por segurança psicológica, ética e respeito." 
+    icon: Users,
+    title: "Desenvolvimento de pessoas e fortalecimento da cultura corporativa",
+    description:
+      "Promoção de capacidades técnicas, liderança qualificada, programas de treinamento contínuo e ambiente de trabalho pautado por segurança psicológica, ética e respeito.",
   },
-  { 
+  {
     number: 6,
-    icon: Eye, 
-    title: "Diversificação e resiliência dos negócios", 
-    description: "Atuação integrada em construção civil, parques naturais, unidades hospitalares, arenas esportivas e serviços de engenharia, assegurando estabilidade e crescimento sustentável." 
+    icon: Eye,
+    title: "Diversificação e resiliência dos negócios",
+    description:
+      "Atuação integrada em construção civil, parques naturais, unidades hospitalares, arenas esportivas e serviços de engenharia, assegurando estabilidade e crescimento sustentável.",
   },
 ];
 
@@ -108,7 +117,7 @@ const supervisionProcesses = [
   "Análises periódicas de desempenho e riscos",
   "Auditorias internas e externas",
   "Ciclos de planejamento e revisão estratégica",
-  "Mecanismos formais de reporte e transparência (GRI 2-12)"
+  "Mecanismos formais de reporte e transparência (GRI 2-12)",
 ];
 
 const councilCompetencies = [
@@ -116,7 +125,7 @@ const councilCompetencies = [
   "Tendências de infraestrutura e concessões",
   "Gestão de riscos, compliance e integridade",
   "Inovação, transformação digital e engenharia aplicada",
-  "Sustentabilidade, descarbonização e mudanças climáticas"
+  "Sustentabilidade, descarbonização e mudanças climáticas",
 ];
 
 const integrityTopics = [
@@ -125,14 +134,14 @@ const integrityTopics = [
   "Prevenção a conflitos de interesse",
   "Confidencialidade e proteção de dados",
   "Direitos humanos e condições dignas de trabalho",
-  "Respeito à diversidade e à não discriminação"
+  "Respeito à diversidade e à não discriminação",
 ];
 
 const integrityCulture = [
   "Treinamentos frequentes para funcionários e terceiros",
   "Comunicação ativa e campanhas de sensibilização",
   "Revisão periódica do Código de Conduta",
-  "Integração de compliance à gestão contratual e à cadeia de suprimentos (GRI 2-15)"
+  "Integração de compliance à gestão contratual e à cadeia de suprimentos (GRI 2-15)",
 ];
 
 const GovernancePage = () => {
@@ -141,9 +150,9 @@ const GovernancePage = () => {
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[720px] overflow-hidden">
-          <img 
-            src={governanceHero} 
-            alt="Reunião de governança corporativa" 
+          <img
+            src={governanceHero}
+            alt="Reunião de governança corporativa"
             className="w-full h-full object-cover object-[position:center_15%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -156,9 +165,8 @@ const GovernancePage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Estratégia e Governança</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                A estratégia corporativa do Grupo Construcap reflete a combinação de tradição, 
-                visão de longo prazo e capacidade de adaptação a um ambiente econômico, regulatório 
-                e tecnológico em constante transformação.
+                A estratégia corporativa do Grupo Construcap reflete a combinação de tradição, visão de longo prazo e
+                capacidade de adaptação a um ambiente econômico, regulatório e tecnológico em constante transformação.
               </p>
             </AnimatedSection>
           </div>
@@ -170,16 +178,17 @@ const GovernancePage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground leading-relaxed">
-              Sustentado por mais de oito décadas de atuação, o grupo consolida-se como uma 
-              plataforma integrada de engenharia, infraestrutura e serviços essenciais, com 
-              um modelo de governança que privilegia <strong className="text-foreground">transparência</strong>, 
-              <strong className="text-foreground"> diligência</strong>, <strong className="text-foreground">integridade</strong>, 
-              gestão robusta de riscos e execução técnica de alta performance.
+              Sustentado por mais de oito décadas de atuação, o grupo consolida-se como uma plataforma integrada de
+              engenharia, infraestrutura e serviços essenciais, com um modelo de governança que privilegia{" "}
+              <strong className="text-foreground">transparência</strong>,
+              <strong className="text-foreground"> diligência</strong>,{" "}
+              <strong className="text-foreground">integridade</strong>, gestão robusta de riscos e execução técnica de
+              alta performance.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              O compromisso com a <strong className="text-foreground">criação de valor compartilhado</strong> orienta 
-              todas as decisões corporativas, reforçando a responsabilidade da empresa com colaboradores, 
-              clientes, parceiros, governos, comunidades e com o desenvolvimento do país.
+              O compromisso com a <strong className="text-foreground">criação de valor compartilhado</strong> orienta
+              todas as decisões corporativas, reforçando a responsabilidade da empresa com colaboradores, clientes,
+              parceiros, governos, comunidades e com o desenvolvimento do país.
             </p>
           </div>
         </AnimatedSection>
@@ -190,12 +199,11 @@ const GovernancePage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">Modelo de Governança Corporativa</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            O sistema de governança da Construcap é estruturado para assegurar clareza de papéis, 
-            eficiência no processo decisório e supervisão contínua das operações. O modelo é composto por: 
-            (GRI 2-9, 2-10, 2-11)
+            O sistema de governança da Construcap é estruturado para assegurar clareza de papéis, eficiência no processo
+            decisório e supervisão contínua das operações. O modelo é composto por: (GRI 2-9, 2-10, 2-11)
           </p>
         </AnimatedSection>
-        
+
         <div className="grid lg:grid-cols-2 gap-8">
           {governanceStructure.map((item, index) => (
             <AnimatedSection key={item.title} delay={index * 150}>
@@ -234,9 +242,9 @@ const GovernancePage = () => {
               <div>
                 <h3 className="font-semibold mb-2">Segregação e Independência de Funções (GRI 2-11)</h3>
                 <p className="text-muted-foreground">
-                  O desenho institucional assegura autonomia e distinção entre as funções do Conselho e da Diretoria, 
-                  fortalecendo mecanismos de controle, mitigando potenciais conflitos de interesse e garantindo 
-                  decisões tecnicamente fundamentadas.
+                  O desenho institucional assegura autonomia e distinção entre as funções do Conselho e da Diretoria,
+                  fortalecendo mecanismos de controle, mitigando potenciais conflitos de interesse e garantindo decisões
+                  tecnicamente fundamentadas.
                 </p>
               </div>
             </div>
@@ -249,16 +257,16 @@ const GovernancePage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">Diretrizes, Políticas e Estruturas de Supervisão</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap possui um conjunto abrangente de políticas corporativas que orientam sua atuação 
-            em temas estratégicos e que são revisadas periodicamente para refletir transformações regulatórias, 
-            melhores práticas de mercado e compromissos públicos da organização. (GRI 2-12, 2-13)
+            A Construcap possui um conjunto abrangente de políticas corporativas que orientam sua atuação em temas
+            estratégicos e que são revisadas periodicamente para refletir transformações regulatórias, melhores práticas
+            de mercado e compromissos públicos da organização. (GRI 2-12, 2-13)
           </p>
         </AnimatedSection>
-        
+
         <AnimatedSection delay={100}>
           <p className="text-sm font-medium text-muted-foreground mb-4">Entre as políticas centrais estão:</p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {policies.map((policy, index) => (
             <AnimatedSection key={policy.name} delay={index * 50}>
@@ -272,7 +280,7 @@ const GovernancePage = () => {
 
         <AnimatedSection delay={400}>
           <p className="text-sm text-muted-foreground mt-6 p-4 bg-muted/50 rounded-xl">
-            Estas diretrizes sustentam o modelo de governança e garantem que todas as operações — obras, hospitais, 
+            Estas diretrizes sustentam o modelo de governança e garantem que todas as operações — obras, hospitais,
             arenas e parques — atuem sob padrões consistentes de integridade, responsabilidade e conformidade.
           </p>
         </AnimatedSection>
@@ -286,7 +294,7 @@ const GovernancePage = () => {
             O Conselho e a Diretoria monitoram continuamente a execução das políticas corporativas por meio de:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {supervisionProcesses.map((item, index) => (
             <AnimatedSection key={index} delay={index * 100}>
@@ -305,10 +313,10 @@ const GovernancePage = () => {
               Diligência e Avaliação de Impactos (GRI 2-13)
             </h3>
             <p className="text-muted-foreground">
-              A companhia adota metodologia estruturada de diligência e avaliação de impactos para identificar, 
-              mitigar e monitorar riscos operacionais, socioambientais, econômicos e reputacionais em todos os 
-              estágios dos projetos. Esses processos abrangem desde análise preliminar de viabilidade até a 
-              operação contínua dos ativos.
+              A companhia adota metodologia estruturada de diligência e avaliação de impactos para identificar, mitigar
+              e monitorar riscos operacionais, socioambientais, econômicos e reputacionais em todos os estágios dos
+              projetos. Esses processos abrangem desde análise preliminar de viabilidade até a operação contínua dos
+              ativos.
             </p>
           </div>
         </AnimatedSection>
@@ -325,12 +333,12 @@ const GovernancePage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A integridade é base do posicionamento institucional da Construcap. O Código de Conduta e as 
-            políticas de compliance estabelecem padrões obrigatórios de comportamento para todos os públicos 
-            internos e externos, cobrindo temas como:
+            A integridade é base do posicionamento institucional da Construcap. O Código de Conduta e as políticas de
+            compliance estabelecem padrões obrigatórios de comportamento para todos os públicos internos e externos,
+            cobrindo temas como:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {integrityTopics.map((topic, index) => (
             <AnimatedSection key={index} delay={index * 50}>
@@ -349,9 +357,9 @@ const GovernancePage = () => {
               Canal de Denúncias (GRI 2-16)
             </h3>
             <p className="text-muted-foreground">
-              A companhia mantém um Canal de Denúncias independente, com garantia de anonimato, confidencialidade 
-              e tratativa técnica, reforçando o compromisso com ética e transparência. Casos reportados são 
-              analisados de forma criteriosa, com investigações conduzidas segundo protocolos formais.
+              A companhia mantém um Canal de Denúncias independente, com garantia de anonimato, confidencialidade e
+              tratativa técnica, reforçando o compromisso com ética e transparência. Casos reportados são analisados de
+              forma criteriosa, com investigações conduzidas segundo protocolos formais.
             </p>
           </div>
         </AnimatedSection>
@@ -392,12 +400,17 @@ const GovernancePage = () => {
                 Composição do Conselho (GRI 2-17)
               </h3>
               <p className="text-muted-foreground mb-4">
-                A composição do Conselho de Administração reflete a busca por competências técnicas complementares, 
-                experiência setorial, capacidade analítica e visão estratégica. O processo de nomeação considera 
+                A composição do Conselho de Administração reflete a busca por competências técnicas complementares,
+                experiência setorial, capacidade analítica e visão estratégica. O processo de nomeação considera
                 conhecimento em:
               </p>
               <ul className="space-y-2">
-                {["Engenharia e infraestrutura", "Finanças e tecnologia", "Sustentabilidade", "Gestão pública e regulação"].map((item, i) => (
+                {[
+                  "Engenharia e infraestrutura",
+                  "Finanças e tecnologia",
+                  "Sustentabilidade",
+                  "Gestão pública e regulação",
+                ].map((item, i) => (
                   <li key={i} className="flex items-center gap-2 text-sm">
                     <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                     <span className="text-muted-foreground">{item}</span>
@@ -414,7 +427,7 @@ const GovernancePage = () => {
                 Programas de Capacitação
               </h3>
               <p className="text-muted-foreground mb-4">
-                A Construcap oferece programas estruturados de capacitação e atualização para conselheiros e executivos, 
+                A Construcap oferece programas estruturados de capacitação e atualização para conselheiros e executivos,
                 abrangendo:
               </p>
               <ul className="space-y-2">
@@ -436,10 +449,10 @@ const GovernancePage = () => {
               Avaliação da Alta Gestão (GRI 2-18)
             </h3>
             <p className="text-muted-foreground">
-              A avaliação da alta gestão considera desempenho operacional, disciplina financeira, aderência às 
-              políticas corporativas, qualidade dos resultados entregues e conformidade com a cultura ética da 
-              organização. Esse processo contínuo reforça a capacidade da liderança para tomar decisões com 
-              embasamento técnico e alinhadas ao futuro da companhia.
+              A avaliação da alta gestão considera desempenho operacional, disciplina financeira, aderência às políticas
+              corporativas, qualidade dos resultados entregues e conformidade com a cultura ética da organização. Esse
+              processo contínuo reforça a capacidade da liderança para tomar decisões com embasamento técnico e
+              alinhadas ao futuro da companhia.
             </p>
           </div>
         </AnimatedSection>
@@ -450,11 +463,11 @@ const GovernancePage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">Eixos Estratégicos Corporativos</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A estratégia da Construcap está estruturada em eixos que norteiam as decisões 
-            de crescimento, investimentos e gestão das operações:
+            A estratégia da Construcap está estruturada em eixos que norteiam as decisões de crescimento, investimentos
+            e gestão das operações:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {strategicAxes.map((axis, index) => (
             <AnimatedSection key={axis.title} delay={index * 100}>

@@ -50,9 +50,8 @@ const GovernanceSection = () => {
             Transparência e <span className="text-gradient">Integridade</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            O sistema de governança da Construcap é estruturado para assegurar clareza de papéis, 
-            eficiência no processo decisório e supervisão contínua das operações, privilegiando 
-            transparência, diligência e integridade.
+            O sistema de governança da Construcap é estruturado para assegurar clareza de papéis, eficiência no processo
+            decisório e supervisão contínua das operações, privilegiando transparência, diligência e integridade.
           </p>
         </div>
 
@@ -72,7 +71,6 @@ const GovernanceSection = () => {
               {[
                 "Define diretrizes de longo prazo",
                 "Supervisiona a Diretoria Executiva",
-                "Aprova políticas corporativas",
                 "Acompanha resultados e avalia riscos",
                 "Monitora desempenho da alta liderança",
               ].map((item) => (
@@ -140,10 +138,7 @@ const GovernanceSection = () => {
           <h3 className="text-xl font-bold mb-6">Políticas Corporativas</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {policies.map((policy) => (
-              <div
-                key={policy}
-                className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border"
-              >
+              <div key={policy} className="flex items-center gap-3 p-3 rounded-lg bg-card border border-border">
                 <FileCheck className="w-4 h-4 text-purple-500 shrink-0" />
                 <span className="text-sm">{policy}</span>
               </div>

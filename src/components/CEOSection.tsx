@@ -14,14 +14,21 @@ const CEOSection = () => {
                 "É com responsabilidade, transparência e convicção no papel transformador da infraestrutura que
                 apresentamos o Relatório de Sustentabilidade do Grupo Construcap referente ao ano de 2024. Este
                 documento consolida nossa visão estratégica, nossa forma de atuar e os resultados alcançados em um
-                período marcado por desafios relevantes, mas também por realizações significativas."
+                período marcado por desafios relevantes, mas também por realizações significativas em nossos negócios de
+                construção, concessionárias nos segmentos de parques naturais e urbanos, saúde, arena esportiva,
+                rodovias e demais serviços."
               </p>
 
               <p className="text-primary-foreground/80 mb-8">
                 Ao longo de oito décadas, construímos uma trajetória baseada em excelência operacional, disciplina
                 técnica e permanente compromisso com o desenvolvimento econômico e social do Brasil. Em 2024,
                 reafirmamos esses pilares ao intensificar nossos investimentos em segurança do trabalho, integridade
-                corporativa, governança robusta e práticas de gestão orientadas à eficiência e à inovação.
+                corporativa, governança robusta e práticas de gestão orientadas à eficiência e à inovação. A segurança e
+                integridade, em especial, permanecem como princípios inegociáveis. Todas as nossas decisões operacionais
+                são orientadas pela preservação da vida, pela prevenção de riscos e pela qualificação contínua das
+                equipes que atuam nos nossos canteiros e operações, bem como continuamos aprimorando nosso Programa de
+                Integridade, reforçando políticas, processos e mecanismos de prevenção e combate a irregularidades,
+                sempre alinhados à legislação vigente e às melhores práticas de mercado.
               </p>
 
               <div className="flex items-center gap-4">
@@ -29,7 +36,7 @@ const CEOSection = () => {
                   <span className="text-2xl font-bold text-primary-foreground">RC</span>
                 </div>
                 <div>
-                  <p className="font-bold text-lg">Roberto Capobianco</p>
+                  <p className="font-bold text-lg">Roberto Ribeiro Capobianco</p>
                   <p className="text-primary-foreground/70">Presidente</p>
                   <p className="text-sm text-primary-foreground/60">Grupo Construcap</p>
                 </div>

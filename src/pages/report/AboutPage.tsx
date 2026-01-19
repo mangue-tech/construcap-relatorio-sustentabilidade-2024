@@ -92,11 +92,13 @@ const values = [
 
 const controlledCompanies = [
   { name: "Ambicap Ltda.", description: "Soluções ambientais e gestão de resíduos" },
-  { name: "Inova Saúde São Paulo SPE S/A", description: "Gestão hospitalar em São Paulo" },
-  { name: "Inova Saúde Sorocaba SPE S/A", description: "Gestão hospitalar em Sorocaba" },
-  { name: "Urbia Águas Claras S/A", description: "Gestão de parques urbanos" },
-  { name: "Urbia Cânions Verdes S/A", description: "Gestão de parques naturais" },
-  { name: "Urbia Gestão de Parques S.P.E. S/A", description: "Gestão integrada de parques" },
+  { name: "Inova Saúde São Paulo SPE S.A.", description: "Gestão hospitalar em São Paulo" },
+  { name: "Inova Saúde Sorocaba SPE S.A.", description: "Gestão hospitalar em Sorocaba" },
+  { name: "Urbia Águas Claras S.A.", description: "Gestão do Núcleo das Águas Claras" },
+  { name: "Urbia Cânions Verdes S.A.", description: "Gestão dos parques que compõe os Cânions Verdes" },
+  { name: "Urbia Gestão de Parques S.P.E. S.A.", description: "Gestão integrada de parques urbanos" },
+  { name: "Urbia Cataratas S.A.", description: "Gestão das Cataratas do Iguaçu e Jericoacoara" },
+  { name: "Minas Arena - Gestão de Instalações Esportivas", description: "Gestão do Estádio Mineirão" },
 ];
 
 const supplyChainItems = [

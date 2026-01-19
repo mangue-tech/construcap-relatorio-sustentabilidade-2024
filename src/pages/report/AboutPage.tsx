@@ -135,8 +135,7 @@ const nationalPresence = [
   },
   {
     title: "Turismo e Economia Regional",
-    description:
-      "Fortalecimento do turismo e da economia regional em parques como Ibirapuera, Jericoacoara e Cânions Verdes",
+    description: "Fortalecimento do turismo e da economia regional em parques como Ibirapuera e Cânions Verdes",
   },
   {
     title: "Acesso à Saúde",
@@ -144,7 +143,8 @@ const nationalPresence = [
   },
   {
     title: "Cultura e Esporte",
-    description: "Dinamização do setor cultural, esportivo e de eventos por meio da operação do Mineirão",
+    description:
+      "Dinamização do setor cultural, esportivo e de eventos por meio da operação do Mineirão e do Parque Ibirapuera",
   },
   {
     title: "Infraestrutura Urbana",

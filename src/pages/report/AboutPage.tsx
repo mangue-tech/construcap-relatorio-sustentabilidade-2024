@@ -29,13 +29,13 @@ const businessUnits = [
     name: "Construção e Engenharia de Alta Complexidade",
     icon: Building2,
     description:
-      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital Regional de Sorocaba, que integra a operação da Inova Saúde.",
+      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital da Mulher (SP), que integra a operação da Inova Saúde.",
   },
   {
     name: "Gestão Hospitalar - Inova Saúde",
     icon: Stethoscope,
     description:
-      "Por meio da Inova Saúde, operamos unidades hospitalares de alta complexidade em São Paulo e Sorocaba, assegurando qualidade assistencial, governança clínica, eficiência operacional e oferta contínua de serviços essenciais à população. A atuação envolve desde gestão de centros cirúrgicos e UTIs até manutenção predial, hotelaria hospitalar e suporte diagnóstico.",
+      "Por meio da Inova Saúde, operamos unidades hospitalares de alta complexidade em São Paulo/ Capital, São José dos Campos e Sorocaba, assegurando qualidade assistencial, governança clínica, eficiência operacional e oferta contínua de serviços essenciais à população. A atuação envolve desde gestão de centros cirúrgicos e UTIs até manutenção predial, tecnologia, hotelaria hospitalar e suporte diagnóstico.",
   },
   {
     name: "Arenas Esportivas - Minas Arena",
@@ -47,7 +47,7 @@ const businessUnits = [
     name: "Parques Naturais e Urbanos - Urbia",
     icon: TreePine,
     description:
-      "Por meio da Urbia, administramos parques de relevância nacional e urbana, promovendo conservação ambiental, manejo responsável, visitação ordenada e oferta de serviços de lazer e turismo sustentável. Essa atuação fortalece o turismo sustentável, estimula as economias locais, amplia o acesso a áreas de lazer e contribui para a preservação de patrimônios naturais.",
+      "Por meio da Urbia, administramos parques urbanos e naturais de internacional, promovendo conservação ambiental, manejo responsável, visitação ordenada e oferta de serviços de esporte, lazer e turismo sustentável. Essa atuação fortalece o turismo sustentável, estimula as economias locais, amplia o acesso a áreas de lazer e contribui para a preservação de patrimônios naturais.",
   },
   {
     name: "Soluções de Engenharia Aplicada",

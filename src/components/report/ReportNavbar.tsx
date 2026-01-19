@@ -1,7 +1,8 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, ChevronDown } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Menu, X, Home, ChevronDown, Search } from "lucide-react";
 import construcapLogo from "@/assets/construcap-logo.png";
+import { Input } from "@/components/ui/input";
 
 interface ReportPage {
   path: string;
@@ -40,10 +41,21 @@ const reportPages: ReportPage[] = [
   { path: "/gri-index", label: "Índice GRI" },
 ];
 
+// Flatten all pages for search
+const allPages = reportPages.flatMap((page) => [
+  { path: page.path, label: page.label },
+  ...(page.subPages || []),
+]);
+
 const ReportNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<{ path: string; label: string }[]>([]);
+  const searchRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -54,6 +66,37 @@ const ReportNavbar = () => {
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Handle search
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const filtered = allPages.filter((page) =>
+        page.label.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filtered);
+    } else {
+      setSearchResults([]);
+    }
+  }, [searchQuery]);
+
+  // Close search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
+        setSearchOpen(false);
+        setSearchQuery("");
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchSelect = (path: string) => {
+    navigate(path);
+    setSearchOpen(false);
+    setSearchQuery("");
+  };
 
   return (
     <nav
@@ -121,6 +164,63 @@ const ReportNavbar = () => {
                 )}
               </div>
             ))}
+
+            {/* Search Bar */}
+            <div ref={searchRef} className="relative ml-2">
+              {searchOpen ? (
+                <div className="flex items-center">
+                  <Input
+                    type="text"
+                    placeholder="Buscar página..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    className="w-48 h-8 text-sm bg-background/90 border-border"
+                    autoFocus
+                  />
+                  <button
+                    onClick={() => {
+                      setSearchOpen(false);
+                      setSearchQuery("");
+                    }}
+                    className="ml-1 p-1.5 rounded-lg hover:bg-secondary text-foreground"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <button
+                  onClick={() => setSearchOpen(true)}
+                  className={`p-2 rounded-lg transition-colors ${
+                    isScrolled
+                      ? "text-foreground hover:bg-secondary"
+                      : "text-primary-foreground/80 hover:text-primary-foreground hover:bg-primary-foreground/10"
+                  }`}
+                >
+                  <Search className="w-4 h-4" />
+                </button>
+              )}
+
+              {/* Search Results Dropdown */}
+              {searchOpen && searchResults.length > 0 && (
+                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl min-w-[200px] overflow-hidden z-50">
+                  {searchResults.map((result) => (
+                    <button
+                      key={result.path}
+                      onClick={() => handleSearchSelect(result.path)}
+                      className="block w-full text-left px-4 py-2.5 text-sm text-foreground hover:bg-secondary transition-colors"
+                    >
+                      {result.label}
+                    </button>
+                  ))}
+                </div>
+              )}
+
+              {searchOpen && searchQuery && searchResults.length === 0 && (
+                <div className="absolute top-full right-0 mt-2 bg-card border border-border rounded-lg shadow-xl min-w-[200px] p-3 z-50">
+                  <p className="text-sm text-muted-foreground">Nenhum resultado encontrado</p>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile Menu Button */}

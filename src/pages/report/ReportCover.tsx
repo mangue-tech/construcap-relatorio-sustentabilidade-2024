@@ -365,7 +365,7 @@ const ReportCover = () => {
                 </div>
               </div>
               <Link
-                to="/carta-ceo"
+                to="/carta-presidente"
                 className="inline-flex items-center gap-2 mt-6 text-primary hover:text-primary/80 font-medium transition-colors"
               >
                 Ler carta completa <ArrowRight className="w-4 h-4" />

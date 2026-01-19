@@ -32,7 +32,6 @@ const governanceStructure = [
     responsibilities: [
       "Orientar o posicionamento estratégico das unidades de negócio",
       "Supervisionar indicadores de saúde financeira e performance operacional",
-      "Revisar e aprovar políticas de integridade, ética e conformidade",
       "Acompanhar riscos relevantes, impactos de longo prazo e tendências setoriais",
       "Monitorar o desempenho da alta liderança",
       "Deliberar sobre investimentos e expansão de operações",

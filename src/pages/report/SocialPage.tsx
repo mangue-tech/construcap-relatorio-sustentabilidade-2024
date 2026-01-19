@@ -1,11 +1,11 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { 
-  Users, 
-  Heart, 
-  Shield, 
-  GraduationCap, 
-  Award, 
+import {
+  Users,
+  Heart,
+  Shield,
+  GraduationCap,
+  Award,
   CheckCircle2,
   Accessibility,
   HeartHandshake,
@@ -18,7 +18,7 @@ import {
   FileText,
   Stethoscope,
   AlertTriangle,
-  Phone
+  Phone,
 } from "lucide-react";
 import socialHero from "@/assets/report/social-hero.jpg";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -29,9 +29,9 @@ const SocialPage = () => {
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[720px] overflow-hidden">
-          <img 
-            src={socialHero} 
-            alt="Equipe de trabalhadores em obra" 
+          <img
+            src={socialHero}
+            alt="Equipe de trabalhadores em obra"
             className="w-full h-full object-cover object-[position:center_15%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -44,8 +44,8 @@ const SocialPage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Desempenho Social</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                O capital humano é pilar estruturante da atuação do Grupo Construcap em um setor 
-                intensivo em obra e com elevada exposição a riscos ocupacionais.
+                O capital humano é pilar estruturante da atuação do Grupo Construcap em um setor intensivo em obra e com
+                elevada exposição a riscos ocupacionais.
               </p>
             </AnimatedSection>
           </div>
@@ -58,16 +58,16 @@ const SocialPage = () => {
           <div className="bg-card rounded-2xl border border-border p-8">
             <h2 className="text-2xl font-bold mb-4">Compromisso com Pessoas</h2>
             <p className="text-muted-foreground mb-4">
-              O desempenho social do Grupo Construcap é um dos pilares mais estruturantes da sua atuação. 
-              Em um setor intensivo em obra, operado em ambientes complexos e com elevada exposição a riscos 
-              ocupacionais, o compromisso com pessoas – segurança, desenvolvimento, diversidade, bem-estar e 
-              relações de trabalho – deixa de ser um componente de apoio e passa a integrar a própria lógica 
-              de continuidade e competitividade empresarial.
+              O desempenho social do Grupo Construcap é um dos pilares mais estruturantes da sua atuação. Em um setor
+              intensivo em obra, operado em ambientes complexos e com elevada exposição a riscos ocupacionais, o
+              compromisso com pessoas – segurança, desenvolvimento, diversidade, bem-estar e relações de trabalho –
+              deixa de ser um componente de apoio e passa a integrar a própria lógica de continuidade e competitividade
+              empresarial.
             </p>
             <p className="text-muted-foreground">
-              Este capítulo consolida o panorama mais amplo do capital humano, apresentando não apenas dados, 
-              mas o raciocínio institucional por trás das práticas, reforçando como políticas, sistemas, 
-              treinamentos e processos moldam diariamente a atuação do Grupo.
+              Este capítulo consolida o panorama mais amplo do capital humano, apresentando não apenas dados, mas o
+              raciocínio institucional por trás das práticas, reforçando como políticas, sistemas, treinamentos e
+              processos moldam diariamente a atuação do Grupo.
             </p>
           </div>
         </AnimatedSection>
@@ -88,16 +88,16 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-6">
-              Ao final do período, <strong>4.345 colaboradores</strong> compunham o quadro da Construcap, todos 
-              atuando no Brasil, majoritariamente na região Sudeste. Trata-se de uma força de trabalho que combina 
-              escala operacional, essencial a grandes obras e contratos de infraestrutura, com uma estrutura 
-              administrativa e técnica altamente especializada, indispensável para garantir conformidade legal, 
-              engenharia de precisão, planejamento e governança.
+              Ao final do período, <strong>4.345 colaboradores</strong> compunham o quadro da Construcap, todos atuando
+              no Brasil, majoritariamente na região Sudeste. Trata-se de uma força de trabalho que combina escala
+              operacional, essencial a grandes obras e contratos de infraestrutura, com uma estrutura administrativa e
+              técnica altamente especializada, indispensável para garantir conformidade legal, engenharia de precisão,
+              planejamento e governança.
             </p>
             <p className="text-muted-foreground">
-              A composição de gênero (4.019 homens e 326 mulheres) reflete a realidade do setor de construção pesada, 
-              mas também evidencia onde estão as oportunidades de avanço: promover a presença feminina especialmente 
-              em áreas técnicas e de liderança.
+              A composição de gênero (4.019 homens e 326 mulheres) reflete a realidade do setor de construção pesada,
+              mas também evidencia onde estão as oportunidades de avanço: promover a presença feminina especialmente em
+              áreas técnicas e de liderança.
             </p>
           </div>
         </AnimatedSection>
@@ -136,11 +136,11 @@ const SocialPage = () => {
           <div className="bg-card rounded-2xl border border-border p-6 mb-6">
             <h3 className="font-semibold mb-4">Tabela 9.2 – Colaboradores por faixa etária</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              A distribuição por faixa etária demonstra balanceamento importante entre vitalidade e experiência. 
-              A presença expressiva de colaboradores abaixo de 30 anos traduz a capacidade do Grupo de atrair novos 
-              talentos. O contingente entre 30 e 50 anos corresponde ao núcleo técnico e de liderança de campo. 
-              A presença de colaboradores acima de 50 anos garante a transferência de conhecimento e continuidade 
-              de práticas consolidadas.
+              A distribuição por faixa etária demonstra balanceamento importante entre vitalidade e experiência. A
+              presença expressiva de colaboradores abaixo de 30 anos traduz a capacidade do Grupo de atrair novos
+              talentos. O contingente entre 30 e 50 anos corresponde ao núcleo técnico e de liderança de campo. A
+              presença de colaboradores acima de 50 anos garante a transferência de conhecimento e continuidade de
+              práticas consolidadas.
             </p>
             <Table>
               <TableHeader>
@@ -183,14 +183,14 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-4">
-              A distribuição funcional reforça o caráter operacional da empresa: <strong>3.873 colaboradores</strong> desempenham 
-              funções diretamente ligadas à execução de obras, operação de equipamentos, manutenção e frentes de campo. 
-              Esse volume exige uma estrutura padronizada de formação, treinamentos obrigatórios, integração contínua 
-              e monitoramento frequente das condições de trabalho.
+              A distribuição funcional reforça o caráter operacional da empresa: <strong>3.873 colaboradores</strong>{" "}
+              desempenham funções diretamente ligadas à execução de obras, operação de equipamentos, manutenção e
+              frentes de campo. Esse volume exige uma estrutura padronizada de formação, treinamentos obrigatórios,
+              integração contínua e monitoramento frequente das condições de trabalho.
             </p>
             <p className="text-muted-foreground">
-              Por outro lado, os 312 profissionais administrativos e as equipes de gerência, supervisão e coordenação 
-              formam o eixo de governança operacional – essencial para manter disciplina de processos, cumprimento de 
+              Por outro lado, os 312 profissionais administrativos e as equipes de gerência, supervisão e coordenação
+              formam o eixo de governança operacional – essencial para manter disciplina de processos, cumprimento de
               normas, gestão de contratos e aderência ao Sistema Integrado de Gestão.
             </p>
           </div>
@@ -235,8 +235,8 @@ const SocialPage = () => {
               </TableBody>
             </Table>
             <p className="text-sm text-muted-foreground mt-4">
-              Essa estrutura comprova o desafio social da construção pesada: garantir consistência organizacional 
-              em ambientes pulverizados, com equipes frequentemente distribuídas em diversos municípios.
+              Essa estrutura comprova o desafio social da construção pesada: garantir consistência organizacional em
+              ambientes pulverizados, com equipes frequentemente distribuídas em diversos municípios.
             </p>
           </div>
         </AnimatedSection>
@@ -257,11 +257,11 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-6">
-              A Construcap evolui na consolidação de práticas de diversidade e inclusão, especialmente considerando 
-              o contexto de um setor que historicamente apresenta baixa representatividade feminina e de PCDs. 
-              O registro de <strong>7 colaboradores com deficiência</strong> (5 homens e 2 mulheres) aponta para um ponto 
-              de atenção e aprimoramento contínuo, especialmente no que diz respeito a programas de acessibilidade 
-              em obras e estaleiros.
+              A Construcap evolui na consolidação de práticas de diversidade e inclusão, especialmente considerando o
+              contexto de um setor que historicamente apresenta baixa representatividade feminina e de PCDs. O registro
+              de <strong>7 colaboradores com deficiência</strong> (5 homens e 2 mulheres) aponta para um ponto de
+              atenção e aprimoramento contínuo, especialmente no que diz respeito a programas de acessibilidade em obras
+              e estaleiros.
             </p>
           </div>
         </AnimatedSection>
@@ -294,8 +294,8 @@ const SocialPage = () => {
           <div className="bg-card rounded-2xl border border-border p-6">
             <h3 className="font-semibold mb-4">Tabela 9.5 – Diversidade na liderança (GRI 405-1)</h3>
             <p className="text-sm text-muted-foreground mb-4">
-              A distribuição por gênero nas posições de liderança demonstra avanços graduais. Embora ainda minoritária 
-              em campo, a presença feminina é relevante em áreas administrativas e coordenação técnica, sinalizando 
+              A distribuição por gênero nas posições de liderança demonstra avanços graduais. Embora ainda minoritária
+              em campo, a presença feminina é relevante em áreas administrativas e coordenação técnica, sinalizando
               tendência de ascensão.
             </p>
             <Table>
@@ -353,8 +353,8 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-4">
-              A rotatividade de <strong>12%</strong> reflete, acima de tudo, características estruturais do setor: 
-              obras com fases definidas, contratos com início e fim e alta mobilização de mão de obra.
+              A rotatividade de <strong>12%</strong> reflete, acima de tudo, características estruturais do setor: obras
+              com fases definidas, contratos com início e fim e alta mobilização de mão de obra.
             </p>
             <div className="p-4 bg-green-50 dark:bg-green-950/30 rounded-lg mt-6">
               <div className="flex items-center gap-3">
@@ -362,8 +362,8 @@ const SocialPage = () => {
                 <div>
                   <p className="font-semibold text-green-700 dark:text-green-400">100% de retenção pós-licença</p>
                   <p className="text-sm text-muted-foreground">
-                    Retorno e permanência de colaboradores que usufruíram licença maternidade/paternidade, 
-                    indicando ambiente acolhedor e práticas alinhadas ao bem-estar e estabilidade laboral.
+                    Retorno e permanência de colaboradores que usufruíram licença maternidade/paternidade, indicando
+                    ambiente acolhedor e práticas alinhadas ao bem-estar e estabilidade laboral.
                   </p>
                 </div>
               </div>
@@ -488,14 +488,14 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground mb-4">
-              Todos os colaboradores de tempo integral recebem benefícios essenciais, o que reforça a relação de 
-              longo prazo estabelecida pela Construcap com seu capital humano.
+              Todos os colaboradores de tempo integral recebem benefícios essenciais, o que reforça a relação de longo
+              prazo estabelecida pela Construcap com seu capital humano.
             </p>
             <p className="text-muted-foreground">
-              A gestão de mudanças organizacionais, especialmente em obras, segue fluxo claro: comunicação prévia 
-              formal, alinhamento com lideranças e observância de normas coletivas. Isso é crítico em empreendimentos 
-              de grande porte, onde mudanças de fase, transição de turnos, início ou encerramento de frentes de 
-              trabalho podem impactar centenas de profissionais.
+              A gestão de mudanças organizacionais, especialmente em obras, segue fluxo claro: comunicação prévia
+              formal, alinhamento com lideranças e observância de normas coletivas. Isso é crítico em empreendimentos de
+              grande porte, onde mudanças de fase, transição de turnos, início ou encerramento de frentes de trabalho
+              podem impactar centenas de profissionais.
             </p>
           </div>
         </AnimatedSection>
@@ -519,7 +519,7 @@ const SocialPage = () => {
               Em um setor onde o risco é inerente, <strong>capacitação não é diferencial – é necessidade vital</strong>.
             </p>
             <p className="text-muted-foreground mb-6">
-              O procedimento <strong>CCT – Capacitação, Conscientização e Treinamento</strong> organiza toda a lógica 
+              O procedimento <strong>CCT – Capacitação, Conscientização e Treinamento</strong> organiza toda a lógica
               formativa da empresa. Sob ele, são ofertados:
             </p>
             <div className="grid md:grid-cols-2 gap-4">
@@ -529,7 +529,7 @@ const SocialPage = () => {
                 "Treinamentos de integração",
                 "Reciclagens periódicas",
                 "Emergências e resposta a incidentes",
-                "Campanhas temáticas (segurança, qualidade, integridade)"
+                "Campanhas temáticas (segurança, qualidade, integridade)",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
                   <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -538,9 +538,9 @@ const SocialPage = () => {
               ))}
             </div>
             <p className="text-sm text-muted-foreground mt-6">
-              A ausência de um processo formal de avaliação anual para 100% dos colaboradores é reconhecida, mas mitigada 
-              por práticas constantes de feedback, supervisão direta em obra e orientação operacional, características 
-              que sustentam a cultura técnica do setor.
+              A ausência de um processo formal de avaliação anual para 100% dos colaboradores é reconhecida, mas
+              mitigada por práticas constantes de feedback, supervisão direta em obra e orientação operacional,
+              características que sustentam a cultura técnica do setor.
             </p>
           </div>
         </AnimatedSection>
@@ -557,9 +557,9 @@ const SocialPage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-8">
-            Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde e Segurança. 
-            A empresa opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001</strong>, sustentado 
-            por ferramentas, protocolos e mecanismos que permitem controle sistemático em ambientes de risco.
+            Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde e Segurança. A empresa
+            opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001</strong>, sustentado por
+            ferramentas, protocolos e mecanismos que permitem controle sistemático em ambientes de risco.
           </p>
         </AnimatedSection>
 
@@ -579,9 +579,7 @@ const SocialPage = () => {
               </div>
               <div className="p-4 bg-green-50 dark:bg-green-950/30 rounded-lg">
                 <p className="font-medium text-green-700 dark:text-green-400 mb-1">Atualizações Semestrais</p>
-                <p className="text-sm text-muted-foreground">
-                  Garantem aderência permanente às normas vigentes
-                </p>
+                <p className="text-sm text-muted-foreground">Garantem aderência permanente às normas vigentes</p>
               </div>
               <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg md:col-span-2">
                 <p className="font-medium text-amber-700 dark:text-amber-400 mb-1">PGR em 100% das obras</p>
@@ -601,7 +599,7 @@ const SocialPage = () => {
               9.7.2 Cultura preventiva e participação ativa
             </h3>
             <p className="text-sm text-muted-foreground mb-4">
-              A cultura de prevenção é materializada em práticas que traduzem um princípio basilar: 
+              A cultura de prevenção é materializada em práticas que traduzem um princípio basilar:
               <strong> todos são responsáveis pela segurança</strong>.
             </p>
             <div className="grid md:grid-cols-2 gap-3">
@@ -612,7 +610,7 @@ const SocialPage = () => {
                 "Campanhas de registro de desvios",
                 "Comitês formais como CIPA",
                 "Canal Alô Construcap para denúncias e desvios",
-                "Avaliações comportamentais regulares"
+                "Avaliações comportamentais regulares",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                   <ShieldCheck className="w-4 h-4 text-primary shrink-0" />
@@ -638,7 +636,7 @@ const SocialPage = () => {
                 "NRs aplicáveis por função (altura, eletricidade, confinamento, máquinas)",
                 "Treinamentos específicos para riscos críticos",
                 "Protocolos operacionais padronizados (OSMAs)",
-                "Capacitação obrigatória de contratadas"
+                "Capacitação obrigatória de contratadas",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-2 p-3 bg-orange-50 dark:bg-orange-950/20 rounded-lg">
                   <AlertTriangle className="w-4 h-4 text-orange-500 mt-0.5 shrink-0" />
@@ -665,7 +663,7 @@ const SocialPage = () => {
                 "Monitoramento epidemiológico",
                 "Rastreamento de riscos crônicos",
                 "Registro sigiloso de informações médicas",
-                "Atendimento técnico especializado"
+                "Atendimento técnico especializado",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                   <CheckCircle2 className="w-4 h-4 text-green-500 shrink-0" />
@@ -700,7 +698,7 @@ const SocialPage = () => {
                 "Interface com lideranças locais",
                 "Mitigação de impactos previstos em obra",
                 "Procedimentos estruturados para registro e tratamento de demandas",
-                "Participação em iniciativas sociais das unidades do Grupo"
+                "Participação em iniciativas sociais das unidades do Grupo",
               ].map((item, index) => (
                 <div key={index} className="flex items-start gap-2 p-3 bg-muted/50 rounded-lg">
                   <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 shrink-0" />
@@ -709,8 +707,9 @@ const SocialPage = () => {
               ))}
             </div>
             <p className="text-muted-foreground">
-              A atuação social das controladas reforça o papel do Grupo no território, especialmente em mobilização 
-              cultural (Mineirão), zeladoria urbana (Ambicap), educação ambiental (Urbia) e serviços de saúde (Inova).
+              A atuação social das controladas e coligadas reforça o papel do Grupo no território, especialmente em
+              mobilização cultural (Mineirão), zeladoria urbana (Ambicap), educação ambiental (Urbia) e serviços de
+              saúde (Inova).
             </p>
           </div>
         </AnimatedSection>
@@ -723,10 +722,10 @@ const SocialPage = () => {
             <HandHeart className="w-12 h-12 text-primary mx-auto mb-4" />
             <h2 className="text-2xl font-bold mb-4">Compromisso com as Pessoas</h2>
             <p className="text-muted-foreground">
-              O desempenho social da Construcap demonstra um equilíbrio entre escala operacional, rigor técnico, 
-              governança e respeito às pessoas. Os dados quantitativos reforçam um quadro robusto, enquanto as 
-              práticas qualitativas – especialmente em segurança, integridade e desenvolvimento – revelam a 
-              profundidade com que o Grupo incorpora responsabilidade social como eixo estratégico de sua atuação.
+              O desempenho social da Construcap demonstra um equilíbrio entre escala operacional, rigor técnico,
+              governança e respeito às pessoas. Os dados quantitativos reforçam um quadro robusto, enquanto as práticas
+              qualitativas – especialmente em segurança, integridade e desenvolvimento – revelam a profundidade com que
+              o Grupo incorpora responsabilidade social como eixo estratégico de sua atuação.
             </p>
           </div>
         </AnimatedSection>

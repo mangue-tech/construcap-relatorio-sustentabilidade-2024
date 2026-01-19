@@ -229,7 +229,7 @@ const AboutPage = () => {
                   <p className="font-medium">Construcap CCPS Engenharia e Comércio S.A.</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-2">Controladas incluídas</p>
+                  <p className="text-sm text-muted-foreground mb-2">Controladas e coligadas incluídas</p>
                   <div className="space-y-2">
                     {controlledCompanies.map((company) => (
                       <div key={company.name} className="flex items-start gap-2">
@@ -250,9 +250,10 @@ const AboutPage = () => {
                     <strong>Conformidade:</strong> GRI Standards 2021, modalidade In Accordance (GRI Compliant)
                   </p>
                   <p className="text-xs text-muted-foreground mt-2">
-                    As informações financeiras são apresentadas de forma consolidada e auditada, enquanto os dados
-                    ambientais, sociais e de governança seguem limites operacionais definidos pelo GHG Protocol e pelas
-                    metodologias corporativas de sustentabilidade (GRI 2-2).
+                    As informações financeiras são apresentadas de forma segregada por empresa, por meio de
+                    demonstrações financeiras próprias e auditadas de cada sociedade. Adicionalmente, no âmbito da
+                    Construcap, as demonstrações financeiras consolidadas refletem o resultado financeiro da Construtora
+                    e das empresas controladas, em conformidade com as práticas contábeis aplicáveis. (GRI 2-2).
                   </p>
                 </div>
               </div>

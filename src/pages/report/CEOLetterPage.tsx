@@ -17,7 +17,7 @@ const CEOLetterPage = () => {
                 <span>•</span>
                 <span>Carta do Presidente</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Carta do Prediente</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Carta do Presidente</h1>
               <p className="text-xl text-muted-foreground max-w-3xl"></p>
             </AnimatedSection>
           </div>
@@ -73,7 +73,7 @@ const CEOLetterPage = () => {
                 </p>
 
                 <p className="leading-relaxed mb-6">
-                  Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.
+                  Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.</strong>
                 </p>
 
                 <p className="leading-relaxed mb-6">

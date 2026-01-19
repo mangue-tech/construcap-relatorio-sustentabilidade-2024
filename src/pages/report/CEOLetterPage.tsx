@@ -34,13 +34,13 @@ const CEOLetterPage = () => {
                   <div className="aspect-[4/5] overflow-hidden bg-gradient-to-b from-muted/30 to-muted/10">
                     <img
                       src={ceoPhoto}
-                      alt="Roberto Capobianco - CEO"
+                      alt="Roberto Ribeiro Capobianco - Presidente"
                       className="w-full h-full object-cover object-[center_top]"
                     />
                   </div>
                 </div>
                 <div className="mt-4 text-center lg:text-left">
-                  <p className="font-bold text-xl">Roberto Capobianco</p>
+                  <p className="font-bold text-xl">Roberto Ribeiro Capobianco</p>
                   <p className="text-muted-foreground">Presidente</p>
                   <p className="text-sm text-muted-foreground">Grupo Construcap</p>
                 </div>
@@ -73,7 +73,7 @@ const CEOLetterPage = () => {
                 </p>
 
                 <p className="leading-relaxed mb-6">
-                  <strong>Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.</strong>
+                  Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.</strong>
                 </p>
 
                 <p className="leading-relaxed mb-6">

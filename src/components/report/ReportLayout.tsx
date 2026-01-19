@@ -34,7 +34,7 @@ import MangueBadge from "./MangueBadge";
 
 const menuItems = [
   { path: "/", label: "Capa", icon: Home },
-  { path: "/carta-ceo", label: "Carta do CEO", icon: User },
+  { path: "/carta-presidente", label: "Carta do Presidente", icon: User },
   { path: "/quem-somos", label: "Quem Somos", icon: Building2 },
   {
     label: "Governança",
@@ -119,9 +119,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
   // Search filter
   useEffect(() => {
     if (searchQuery.trim()) {
-      const filtered = allPages.filter((page) =>
-        page.label.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      const filtered = allPages.filter((page) => page.label.toLowerCase().includes(searchQuery.toLowerCase()));
       setSearchResults(filtered);
     } else {
       setSearchResults([]);
@@ -244,9 +242,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
                       >
                         <span className="font-medium">{result.label}</span>
                         {result.parent && (
-                          <span className="text-xs text-muted-foreground ml-2">
-                            em {result.parent}
-                          </span>
+                          <span className="text-xs text-muted-foreground ml-2">em {result.parent}</span>
                         )}
                       </button>
                     ))}
@@ -309,11 +305,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
                     className="w-full text-left px-4 py-3 text-sm hover:bg-muted transition-colors border-b border-border last:border-b-0"
                   >
                     <span className="font-medium">{result.label}</span>
-                    {result.parent && (
-                      <span className="text-xs text-muted-foreground ml-2">
-                        em {result.parent}
-                      </span>
-                    )}
+                    {result.parent && <span className="text-xs text-muted-foreground ml-2">em {result.parent}</span>}
                   </button>
                 ))}
               </div>

@@ -92,11 +92,13 @@ const values = [
 
 const controlledCompanies = [
   { name: "Ambicap Ltda.", description: "Soluções ambientais e gestão de resíduos" },
-  { name: "Inova Saúde São Paulo SPE S/A", description: "Gestão hospitalar em São Paulo" },
-  { name: "Inova Saúde Sorocaba SPE S/A", description: "Gestão hospitalar em Sorocaba" },
-  { name: "Urbia Águas Claras S/A", description: "Gestão de parques urbanos" },
-  { name: "Urbia Cânions Verdes S/A", description: "Gestão de parques naturais" },
-  { name: "Urbia Gestão de Parques S.P.E. S/A", description: "Gestão integrada de parques" },
+  { name: "Inova Saúde São Paulo SPE S.A.", description: "Gestão hospitalar em São Paulo" },
+  { name: "Inova Saúde Sorocaba SPE S.A.", description: "Gestão hospitalar em Sorocaba" },
+  { name: "Urbia Águas Claras S.A.", description: "Gestão de parques urbanos" },
+  { name: "Urbia Cânions Verdes S.A.", description: "Gestão de parques naturais" },
+  { name: "Urbia Gestão de Parques S.P.E. S.A.", description: "Gestão integrada de parques urbanos" },
+  { name: "Urbia Cataratas S.A.", description: "Gestão das Cataratas do Iguaçu e Jericoacoara" },
+  { name: "Minas Arena - Gestão de Instalações Esportivas S.A.", description: "Gestão do Estádio Mineirão" },
 ];
 
 const supplyChainItems = [
@@ -227,7 +229,7 @@ const AboutPage = () => {
                   <p className="font-medium">Construcap CCPS Engenharia e Comércio S.A.</p>
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground mb-2">Controladas e coligadas incluídas</p>
+                  <p className="text-sm text-muted-foreground mb-2">Controladas incluídas</p>
                   <div className="space-y-2">
                     {controlledCompanies.map((company) => (
                       <div key={company.name} className="flex items-start gap-2">

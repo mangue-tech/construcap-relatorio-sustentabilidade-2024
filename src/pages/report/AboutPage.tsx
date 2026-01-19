@@ -65,7 +65,7 @@ const values = [
   },
   {
     icon: Heart,
-    title: "Segurança Inegociável",
+    title: "Segurança",
     description: "Proteção à vida como valor fundamental em todas as decisões operacionais",
   },
   {
@@ -92,13 +92,11 @@ const values = [
 
 const controlledCompanies = [
   { name: "Ambicap Ltda.", description: "Soluções ambientais e gestão de resíduos" },
-  { name: "Inova Saúde São Paulo SPE S.A.", description: "Gestão hospitalar em São Paulo" },
-  { name: "Inova Saúde Sorocaba SPE S.A.", description: "Gestão hospitalar em Sorocaba" },
-  { name: "Urbia Águas Claras S.A.", description: "Gestão de parques urbanos" },
-  { name: "Urbia Cânions Verdes S.A.", description: "Gestão de parques naturais" },
-  { name: "Urbia Gestão de Parques S.P.E. S.A.", description: "Gestão integrada de parques urbanos" },
-  { name: "Urbia Cataratas S.A.", description: "Gestão das Cataratas do Iguaçu e Jericoacoara" },
-  { name: "Minas Arena - Gestão de Instalações Esportivas S.A.", description: "Gestão do Estádio Mineirão" },
+  { name: "Inova Saúde São Paulo SPE S/A", description: "Gestão hospitalar em São Paulo" },
+  { name: "Inova Saúde Sorocaba SPE S/A", description: "Gestão hospitalar em Sorocaba" },
+  { name: "Urbia Águas Claras S/A", description: "Gestão de parques urbanos" },
+  { name: "Urbia Cânions Verdes S/A", description: "Gestão de parques naturais" },
+  { name: "Urbia Gestão de Parques S.P.E. S/A", description: "Gestão integrada de parques" },
 ];
 
 const supplyChainItems = [

@@ -26,7 +26,7 @@ import aboutHero from "@/assets/report/about-hero.jpg";
 
 const businessUnits = [
   {
-    name: "Construção Civil e Infraestrutura",
+    name: "Construção e Engenharia de Alta Complexidade",
     icon: Building2,
     description:
       "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital Regional de Sorocaba, que integra a operação da Inova Saúde.",

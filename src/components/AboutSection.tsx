@@ -3,13 +3,15 @@ import { Building, Shield, Award, Users, Target, Briefcase } from "lucide-react"
 const features = [
   {
     icon: Building,
-    title: "Construção Civil e Infraestrutura",
-    description: "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas.",
+    title: "Construção e Engenharia de Alta Complexidade",
+    description:
+      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas.",
   },
   {
     icon: Shield,
     title: "Segurança como Valor",
-    description: "Priorização absoluta da proteção à vida, padrões rigorosos de prevenção e controles operacionais em todas as unidades.",
+    description:
+      "Priorização absoluta da proteção à vida, padrões rigorosos de prevenção e controles operacionais em todas as unidades.",
   },
   {
     icon: Award,
@@ -24,12 +26,14 @@ const features = [
   {
     icon: Target,
     title: "Integridade e Conformidade",
-    description: "Adoção sistemática de práticas éticas, políticas de prevenção a riscos e processos robustos de governança.",
+    description:
+      "Adoção sistemática de práticas éticas, políticas de prevenção a riscos e processos robustos de governança.",
   },
   {
     icon: Briefcase,
     title: "Diversificação de Negócios",
-    description: "Atuação em construção, saúde, arenas esportivas e serviços essenciais, gerando resiliência e valor sustentável.",
+    description:
+      "Atuação em construção, saúde, arenas esportivas e serviços essenciais, gerando resiliência e valor sustentável.",
   },
 ];
 
@@ -44,9 +48,9 @@ const AboutSection = () => {
             Uma História de <span className="text-gradient">80 Anos</span> Construindo o Brasil
           </h2>
           <p className="text-muted-foreground text-lg">
-            Desde 1944, o Grupo Construcap se destaca como uma das maiores construtoras do Brasil, 
-            responsável por obras icônicas que transformaram a paisagem urbana nacional. Com um portfólio 
-            que inclui o Templo de Salomão, Arena Corinthians, hospitais de referência e complexos de grande porte.
+            Desde 1944, o Grupo Construcap se destaca como uma das maiores construtoras do Brasil, responsável por obras
+            icônicas que transformaram a paisagem urbana nacional. Com um portfólio que inclui o Templo de Salomão,
+            Arena Corinthians, hospitais de referência e complexos de grande porte.
           </p>
         </div>
 
@@ -61,12 +65,8 @@ const AboutSection = () => {
               <div className="w-12 h-12 rounded-xl bg-accent flex items-center justify-center mb-4 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
                 <feature.icon className="w-6 h-6 text-primary group-hover:text-primary-foreground transition-colors" />
               </div>
-              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">
-                {feature.title}
-              </h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {feature.description}
-              </p>
+              <h3 className="text-lg font-semibold mb-2 group-hover:text-primary transition-colors">{feature.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">{feature.description}</p>
             </div>
           ))}
         </div>

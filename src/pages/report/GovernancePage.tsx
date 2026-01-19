@@ -41,7 +41,7 @@ const governanceStructure = [
     title: "Diretoria Executiva",
     gri: "GRI 2-10",
     description:
-      "A Diretoria Executiva, liderada pelo CEO Roberto Capobianco, é responsável pela gestão do dia a dia da companhia. Sua atuação envolve a execução das estratégias aprovadas pelo Conselho, a gestão operacional das unidades de negócio, a liderança sobre processos críticos e a promoção de práticas robustas de segurança operacional, qualidade, integridade e sustentabilidade.",
+      "A Diretoria Executiva, liderada pelo Presidente Roberto Ribeiro Capobianco, é responsável pela gestão do dia a dia da companhia. Sua atuação envolve a execução das estratégias aprovadas pelo Conselho, a gestão operacional das unidades de negócio, a liderança sobre processos críticos e a promoção de práticas robustas de segurança operacional, qualidade, integridade e sustentabilidade.",
     principles:
       "A Diretoria opera em sinergia com gestores das áreas de engenharia, operações, saúde, parques, arenas, suprimentos, jurídico e financeiro.",
     responsibilities: [

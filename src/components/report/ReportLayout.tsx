@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Menu,
   X,
@@ -23,6 +23,7 @@ import {
   Stethoscope,
   Recycle,
   Target,
+  Search,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Progress } from "@/components/ui/progress";
@@ -80,6 +81,19 @@ const getAllPaths = () => {
   return paths;
 };
 
+// Flatten all pages for search
+type SearchPage = { path: string; label: string; parent?: string };
+const allPages: SearchPage[] = menuItems.flatMap((item) => {
+  if (item.children) {
+    return item.children.map((child) => ({
+      path: child.path,
+      label: child.label,
+      parent: item.label,
+    }));
+  }
+  return item.path ? [{ path: item.path, label: item.label }] : [];
+});
+
 interface ReportLayoutProps {
   children: React.ReactNode;
   title?: string;
@@ -94,7 +108,49 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
     "Destaques das Operações",
   ]);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState<typeof allPages>([]);
+  const [searchOpen, setSearchOpen] = useState(false);
+  const searchRef = useRef<HTMLDivElement>(null);
+  const mobileSearchRef = useRef<HTMLDivElement>(null);
   const location = useLocation();
+  const navigate = useNavigate();
+
+  // Search filter
+  useEffect(() => {
+    if (searchQuery.trim()) {
+      const filtered = allPages.filter((page) =>
+        page.label.toLowerCase().includes(searchQuery.toLowerCase())
+      );
+      setSearchResults(filtered);
+    } else {
+      setSearchResults([]);
+    }
+  }, [searchQuery]);
+
+  // Close search on click outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        searchRef.current &&
+        !searchRef.current.contains(event.target as Node) &&
+        mobileSearchRef.current &&
+        !mobileSearchRef.current.contains(event.target as Node)
+      ) {
+        setSearchOpen(false);
+        setSearchQuery("");
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleSearchSelect = (path: string) => {
+    navigate(path);
+    setSearchQuery("");
+    setSearchOpen(false);
+    setSidebarOpen(false);
+  };
 
   // Calculate page progress
   const allPaths = getAllPaths();
@@ -157,12 +213,60 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
           <img src={construcapLogo} alt="Construcap" className="w-8 h-8" />
           <span className="font-bold text-sm">Relatório ESG 2024</span>
         </Link>
-        <button
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="p-2 hover:bg-muted rounded-lg transition-colors"
-        >
-          {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        <div className="flex items-center gap-2">
+          {/* Mobile Search */}
+          <div className="relative" ref={mobileSearchRef}>
+            <button
+              onClick={() => setSearchOpen(!searchOpen)}
+              className="p-2 hover:bg-muted rounded-lg transition-colors"
+            >
+              <Search className="w-5 h-5" />
+            </button>
+            {searchOpen && (
+              <div className="absolute right-0 top-full mt-2 w-72 bg-card border border-border rounded-lg shadow-lg z-50">
+                <div className="p-3">
+                  <input
+                    type="text"
+                    placeholder="Buscar no relatório..."
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
+                    autoFocus
+                    className="w-full px-3 py-2 text-sm bg-muted/50 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                  />
+                </div>
+                {searchResults.length > 0 && (
+                  <div className="max-h-64 overflow-y-auto border-t border-border">
+                    {searchResults.map((result) => (
+                      <button
+                        key={result.path}
+                        onClick={() => handleSearchSelect(result.path)}
+                        className="w-full text-left px-4 py-3 text-sm hover:bg-muted transition-colors border-b border-border last:border-b-0"
+                      >
+                        <span className="font-medium">{result.label}</span>
+                        {result.parent && (
+                          <span className="text-xs text-muted-foreground ml-2">
+                            em {result.parent}
+                          </span>
+                        )}
+                      </button>
+                    ))}
+                  </div>
+                )}
+                {searchQuery && searchResults.length === 0 && (
+                  <div className="p-4 text-sm text-muted-foreground border-t border-border">
+                    Nenhum resultado encontrado
+                  </div>
+                )}
+              </div>
+            )}
+          </div>
+          <button
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            className="p-2 hover:bg-muted rounded-lg transition-colors"
+          >
+            {sidebarOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </header>
 
       {/* Sidebar */}
@@ -182,6 +286,44 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
               <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade 2024</p>
             </div>
           </Link>
+        </div>
+
+        {/* Search Bar - Sidebar */}
+        <div className="p-4 border-b border-border" ref={searchRef}>
+          <div className="relative">
+            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+            <input
+              type="text"
+              placeholder="Buscar no relatório..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              onFocus={() => setSearchOpen(true)}
+              className="w-full pl-9 pr-3 py-2 text-sm bg-muted/50 border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-colors"
+            />
+            {searchOpen && searchResults.length > 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-lg shadow-lg max-h-64 overflow-y-auto z-50">
+                {searchResults.map((result) => (
+                  <button
+                    key={result.path}
+                    onClick={() => handleSearchSelect(result.path)}
+                    className="w-full text-left px-4 py-3 text-sm hover:bg-muted transition-colors border-b border-border last:border-b-0"
+                  >
+                    <span className="font-medium">{result.label}</span>
+                    {result.parent && (
+                      <span className="text-xs text-muted-foreground ml-2">
+                        em {result.parent}
+                      </span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+            {searchOpen && searchQuery && searchResults.length === 0 && (
+              <div className="absolute top-full left-0 right-0 mt-2 bg-card border border-border rounded-lg shadow-lg p-4 text-sm text-muted-foreground z-50">
+                Nenhum resultado encontrado
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Navigation */}

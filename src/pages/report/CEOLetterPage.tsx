@@ -73,7 +73,7 @@ const CEOLetterPage = () => {
                 </p>
 
                 <p className="leading-relaxed mb-6">
-                  Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.</strong>
+                  Infraestrutura é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.
                 </p>
 
                 <p className="leading-relaxed mb-6">

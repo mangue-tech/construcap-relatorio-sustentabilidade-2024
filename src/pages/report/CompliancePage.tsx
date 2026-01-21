@@ -364,7 +364,7 @@ const CompliancePage = () => {
               <h3 className="font-semibold mb-3">Políticas de Proteção</h3>
               <p className="text-muted-foreground">
                 A Construcap possui políticas formais que proíbem qualquer forma de retaliação contra indivíduos que, de
-                boa-fé, reportem situações de risco, suspeitas de irregularidade ou descumprimento de políticas.
+                boa-fé, reportem situações de risco, suspeitas de irregularidade ou descumprimento de normativos.
               </p>
             </div>
           </AnimatedSection>

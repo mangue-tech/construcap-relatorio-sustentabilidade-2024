@@ -104,7 +104,7 @@ const strategicAxes = [
     icon: Eye,
     title: "Diversificação e resiliência dos negócios",
     description:
-      "Atuação integrada em construção civil, parques naturais, unidades hospitalares, arenas esportivas e serviços de engenharia, assegurando estabilidade e crescimento sustentável.",
+      "Atuação integrada em construção civil, parques naturais, unidades hospitalares, arenas esportivas, serviços de engenharia e zeladoria, assegurando estabilidade e crescimento sustentável.",
   },
 ];
 

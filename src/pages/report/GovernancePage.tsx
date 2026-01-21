@@ -56,14 +56,11 @@ const governanceStructure = [
 ];
 
 const policies = [
-  { name: "Política de Integridade e Compliance", icon: Shield },
-  { name: "Política de Prevenção à Corrupção", icon: Lock },
-  { name: "Política de Segurança, Saúde e Meio Ambiente", icon: Users },
-  { name: "Política de Contratos, Compras e Suprimentos", icon: FileCheck },
-  { name: "Política de Riscos e Controles Internos", icon: BarChart3 },
-  { name: "Política de Relacionamento com Stakeholders", icon: MessageSquare },
-  { name: "Política de Privacidade e Proteção de Dados", icon: Lock },
-  { name: "Normas técnicas de qualidade e engenharia", icon: Award },
+  { name: "Código de Conduta", icon: Shield },
+  { name: "Política do Programa de Integridade", icon: Lock },
+  { name: "Política de Prevenção e Combate a Fraudes e Corrupção", icon: Users },
+  { name: "Política de Privacidade e Proteção de Dados", icon: FileCheck },
+  { name: "Prevenção e Combate à Lavagem de Dinheiro", icon: BarChart3 },
 ];
 
 const strategicAxes = [

@@ -28,12 +28,11 @@ const pillars = [
 ];
 
 const policies = [
-  "Política de Integridade e Compliance",
-  "Política de Prevenção à Corrupção",
-  "Política de Segurança, Saúde e Meio Ambiente",
-  "Política de Contratos, Compras e Suprimentos",
-  "Política de Riscos e Controles Internos",
+  "Código de Conduta",
+  "Política do Programa de Integridade",
+  "Política de Prevenção e Combate a Fraudes e Corrupção",
   "Política de Privacidade e Proteção de Dados",
+  "Prevenção e Combate à Lavagem de Dinheiro",
 ];
 
 const GovernanceSection = () => {

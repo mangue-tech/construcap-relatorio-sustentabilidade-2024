@@ -265,8 +265,8 @@ const CompliancePage = () => {
             <div className="bg-card rounded-xl border border-border p-4">
               <p className="text-sm text-muted-foreground">
                 <strong className="text-foreground">Monitoramento:</strong> Contratos considerados sensíveis contam com
-                monitoramento adicional e cláusulas específicas de integridade, assegurando que terceiros atuem segundo
-                os mesmos padrões aplicados internamente.
+                monitoramento adicional. Todos os contratos possuem cláusulas específicas de integridade, assegurando
+                que terceiros atuem segundo os mesmos padrões aplicados internamente.
               </p>
             </div>
           </AnimatedSection>

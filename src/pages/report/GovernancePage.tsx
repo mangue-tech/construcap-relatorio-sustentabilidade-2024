@@ -67,14 +67,14 @@ const strategicAxes = [
   {
     number: 1,
     icon: Shield,
-    title: "Segurança como valor inegociável",
+    title: "Segurança do Trabalho como valor inegociável",
     description:
       "Priorização absoluta da proteção à vida, padrões rigorosos de prevenção, controles operacionais e fortalecimento contínuo da cultura de segurança em todas as unidades.",
   },
   {
     number: 2,
     icon: Scale,
-    title: "Integridade e conformidade",
+    title: "Integridade e conformidade como princípio fundamental",
     description:
       "Adoção sistemática de práticas éticas, políticas de prevenção a riscos e processos robustos de governança em toda a cadeia de valor.",
   },

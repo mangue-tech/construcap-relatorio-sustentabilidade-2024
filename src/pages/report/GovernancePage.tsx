@@ -137,7 +137,7 @@ const integrityCulture = [
   "Treinamentos frequentes para funcionários e terceiros",
   "Comunicação ativa e campanhas de sensibilização",
   "Revisão periódica do Código de Conduta",
-  "Integração de compliance à gestão contratual e à cadeia de suprimentos (GRI 2-15)",
+  "Integração à gestão contratual e à cadeia de suprimentos (GRI 2-15)",
 ];
 
 const GovernancePage = () => {

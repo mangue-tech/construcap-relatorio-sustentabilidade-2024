@@ -423,8 +423,7 @@ const GovernancePage = () => {
                 Programas de Capacitação
               </h3>
               <p className="text-muted-foreground mb-4">
-                A Construcap oferece programas estruturados de capacitação e atualização para conselheiros e executivos,
-                abrangendo:
+                A Construcap oferece programas estruturados de capacitação e atualização para executivos, abrangendo:
               </p>
               <ul className="space-y-2">
                 {councilCompetencies.map((item, i) => (

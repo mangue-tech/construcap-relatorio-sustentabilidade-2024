@@ -19,7 +19,7 @@ const sectionToPath: Record<string, string> = {
   "Estratégia e Governança": "/governanca",
   "Integridade e Compliance": "/compliance",
   "Carta do Presidente": "/carta-presidente",
-  "Materialidade e Stakeholders": "/materialidade",
+  "Materialidade e Públicos de Interesse": "/materialidade",
   "Desempenho Econômico": "/desempenho-economico",
   "Gestão de Riscos": "/gestao-riscos",
   "Desempenho Ambiental": "/desempenho-ambiental",
@@ -258,11 +258,11 @@ const griData: GRIItem[] = [
   },
   {
     code: "GRI 2-29",
-    indicator: "Abordagem ao engajamento de stakeholders",
+    indicator: "Abordagem ao engajamento de públicos de interesse",
     description: "Estratégia de engajamento",
-    section: "Materialidade e Stakeholders",
+    section: "Materialidade e Públicos de Interesse",
     response:
-      "Mapeamento de grupos de stakeholders com engajamento contínuo via canais específicos e pesquisa de materialidade.",
+      "Mapeamento de grupos de grupos de interesse com engajamento contínuo via canais específicos e pesquisa de materialidade.",
     link: "/materialidade",
   },
   {
@@ -280,7 +280,8 @@ const griData: GRIItem[] = [
     indicator: "Processo de determinação de temas materiais",
     description: "Processo para identificar temas materiais",
     section: "Materialidade e Stakeholders",
-    response: "Matriz de materialidade atualizada com consulta a stakeholders e análise de impacto e relevância.",
+    response:
+      "Matriz de materialidade atualizada com consulta a grupos de interesse+ e análise de impacto e relevância.",
     link: "/materialidade",
   },
   {

@@ -48,7 +48,7 @@ const riskTypes = [
       "Acidentes, incidentes graves",
       "Exposição a agentes perigosos",
       "Falhas em equipamentos críticos",
-      "Protocolos específicos em obras, hospitais e parques",
+      "Protocolos específicos em obras, hospitais e parques (especialmente trilhas em Jericoacoara e Cânions Verdes)",
     ],
   },
   {
@@ -95,7 +95,7 @@ const riskTypes = [
       "Fraudes",
       "Interação inadequada com agentes públicos",
       "Riscos decorrentes de terceiros",
-      "Não conformidades",
+      "Não conformidades em auditorias",
     ],
   },
   {
@@ -120,7 +120,7 @@ const businessUnitRisks = [
       "Protocolos hospitalares robustos, gestão clínica, segurança de pacientes, manutenção predial, qualificação rigorosa de fornecedores e gestão de riscos sanitários.",
   },
   {
-    name: "Urbia Gestão de Parques, Urbia Cânions Verdes, Urbia Cânions Verdes e Urbia Cataratas",
+    name: "Urbia Parques e Urbia Cânions Verdes",
     icon: TreePine,
     description:
       "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais e protocolos de segurança para visitantes.",
@@ -151,7 +151,7 @@ const identificationMethods = [
   "Auditorias internas",
   "Mapeamento de processos críticos",
   "Avaliação de incidentes e quase acidentes",
-  "Consultas a públicos de interesse",
+  "Consultas a grupos de interesse",
   "Requisitos regulatórios e ambientais",
 ];
 
@@ -289,7 +289,8 @@ const RiskManagementPage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">5.2 Principais Tipos de Riscos Monitorados</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap mantém matrizes de riscos específicas para determinados tipos de operação.
+            A Construcap mantém matrizes de riscos específicas para cada tipo de operação, além de um mapa consolidado
+            em nível corporativo.
           </p>
         </AnimatedSection>
 

@@ -19,7 +19,7 @@ const sectionToPath: Record<string, string> = {
   "Estratégia e Governança": "/governanca",
   "Integridade e Compliance": "/compliance",
   "Carta do Presidente": "/carta-presidente",
-  "Materialidade e Públicos de Interesse": "/materialidade",
+  "Materialidade e Stakeholders": "/materialidade",
   "Desempenho Econômico": "/desempenho-economico",
   "Gestão de Riscos": "/gestao-riscos",
   "Desempenho Ambiental": "/desempenho-ambiental",
@@ -258,11 +258,11 @@ const griData: GRIItem[] = [
   },
   {
     code: "GRI 2-29",
-    indicator: "Abordagem ao engajamento de públicos de interesse",
+    indicator: "Abordagem ao engajamento de stakeholders",
     description: "Estratégia de engajamento",
-    section: "Materialidade e Públicos de Interesse",
+    section: "Materialidade e Stakeholders",
     response:
-      "Mapeamento de grupos de grupos de interesse com engajamento contínuo via canais específicos e pesquisa de materialidade.",
+      "Mapeamento de grupos de stakeholders com engajamento contínuo via canais específicos e pesquisa de materialidade.",
     link: "/materialidade",
   },
   {
@@ -280,8 +280,7 @@ const griData: GRIItem[] = [
     indicator: "Processo de determinação de temas materiais",
     description: "Processo para identificar temas materiais",
     section: "Materialidade e Stakeholders",
-    response:
-      "Matriz de materialidade atualizada com consulta a grupos de interesse+ e análise de impacto e relevância.",
+    response: "Matriz de materialidade atualizada com consulta a stakeholders e análise de impacto e relevância.",
     link: "/materialidade",
   },
   {
@@ -817,8 +816,8 @@ const GRITable = () => {
         <p className="text-sm text-muted-foreground">
           Este relatório foi elaborado em conformidade com os GRI Standards 2021. Os indicadores foram selecionados com
           base no processo de materialidade do Grupo Construcap, considerando os impactos mais significativos da
-          organização e as expectativas de seus stakeholders. Para mais informações sobre a metodologia e verificação,
-          consulte a seção de Metodologia.
+          organização e as expectativas de seus grupos de interesse. Para mais informações sobre a metodologia e
+          verificação, consulte a seção de Metodologia.
         </p>
       </div>
     </div>

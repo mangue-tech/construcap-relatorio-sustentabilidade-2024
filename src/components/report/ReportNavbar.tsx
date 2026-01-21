@@ -15,7 +15,7 @@ const reportPages: ReportPage[] = [
   {
     path: "/governanca",
     label: "Governança",
-    subPages: [{ path: "/materialidade", label: "Materialidade e Stakeholders" }],
+    subPages: [{ path: "/materialidade", label: "Materialidade e Grupos de Interesse" }],
   },
   { path: "/desempenho-economico", label: "Econômico" },
   { path: "/desempenho-ambiental", label: "Ambiental" },
@@ -42,10 +42,7 @@ const reportPages: ReportPage[] = [
 ];
 
 // Flatten all pages for search
-const allPages = reportPages.flatMap((page) => [
-  { path: page.path, label: page.label },
-  ...(page.subPages || []),
-]);
+const allPages = reportPages.flatMap((page) => [{ path: page.path, label: page.label }, ...(page.subPages || [])]);
 
 const ReportNavbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,9 +67,7 @@ const ReportNavbar = () => {
   // Handle search
   useEffect(() => {
     if (searchQuery.trim()) {
-      const filtered = allPages.filter((page) =>
-        page.label.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+      const filtered = allPages.filter((page) => page.label.toLowerCase().includes(searchQuery.toLowerCase()));
       setSearchResults(filtered);
     } else {
       setSearchResults([]);
@@ -135,7 +130,7 @@ const ReportNavbar = () => {
                 <Link
                   to={page.path}
                   className={`px-3 py-2 rounded-lg text-sm font-medium transition-all flex items-center gap-1 ${
-                    location.pathname === page.path || page.subPages?.some(sub => location.pathname === sub.path)
+                    location.pathname === page.path || page.subPages?.some((sub) => location.pathname === sub.path)
                       ? "bg-primary text-primary-foreground"
                       : isScrolled
                         ? "text-foreground hover:bg-secondary"

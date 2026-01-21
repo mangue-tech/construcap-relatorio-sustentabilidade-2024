@@ -45,7 +45,7 @@ const menuItems = [
       { path: "/gestao-riscos", label: "Gestão de Riscos" },
     ],
   },
-  { path: "/materialidade", label: "Materialidade e Stakeholders", icon: Users },
+  { path: "/materialidade", label: "Materialidade e Grupos de Interesse", icon: Users },
   { path: "/desempenho-economico", label: "Desempenho Econômico", icon: TrendingUp },
   { path: "/desempenho-ambiental", label: "Desempenho Ambiental", icon: Leaf },
   {

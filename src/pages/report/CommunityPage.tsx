@@ -439,7 +439,7 @@ const CommunityPage = () => {
           <div className="flex items-center gap-3 mb-4">
             <Users className="w-8 h-8 text-teal-500" />
             <div>
-              <h2 className="text-2xl font-bold">10.6 Engajamento de Stakeholders e Governança Social</h2>
+              <h2 className="text-2xl font-bold">10.6 Engajamento de Grupos de Interesse e Governança Social</h2>
               <p className="text-muted-foreground">GRI 2-29</p>
             </div>
           </div>

@@ -355,8 +355,8 @@ const ReportCover = () => {
               <Quote className="w-10 h-10 text-primary/40 mx-auto mb-4" />
               <blockquote className="text-lg md:text-xl text-foreground/80 italic mb-6 leading-relaxed">
                 "Nosso compromisso é construir um legado de responsabilidade, transparência e excelência. Em 2024,
-                reafirmamos nossa missão de gerar valor para todos os nossos stakeholders, com foco na sustentabilidade
-                e na integridade que nos guiam há mais de 80 anos."
+                reafirmamos nossa missão de gerar valor para todos os nossos grupos de interesse, com foco na
+                sustentabilidade e na integridade que nos guiam há mais de 80 anos."
               </blockquote>
               <div className="flex items-center justify-center gap-3">
                 <div className="text-left">
@@ -659,7 +659,6 @@ const ReportCover = () => {
               ))}
             </div>
           </AnimatedSection>
-
         </div>
       </section>
 

@@ -266,7 +266,7 @@ const methodologySteps = [
     step: 3,
     title: "Engajamento",
     description:
-      "Consideração das expectativas e interesses de stakeholders estratégicos por meio de mecanismos de escuta.",
+      "Consideração das expectativas e interesses de grupos de interesse estratégicos por meio de mecanismos de escuta.",
     details: [
       "Pesquisas com colaboradores e lideranças",
       "Feedback de clientes e contratantes",
@@ -283,7 +283,7 @@ const methodologySteps = [
       "Construção da matriz de materialidade",
       "Validação pela Diretoria Executiva",
       "Aprovação pelo Conselho de Administração",
-      "Comunicação aos stakeholders",
+      "Comunicação aos grupos de interesse",
     ],
     icon: ClipboardList,
   },
@@ -324,7 +324,7 @@ const materialityUsage = [
   },
   {
     title: "Transparência",
-    description: "Base para prestação de contas e comunicação com stakeholders.",
+    description: "Base para prestação de contas e comunicação com grupos de interesse.",
     icon: BookOpen,
   },
 ];
@@ -341,7 +341,7 @@ const prioritizationCriteria = [
   },
   { criterion: "Reversibilidade", description: "Possibilidade de remediação ou recuperação dos impactos gerados." },
   {
-    criterion: "Relevância para Stakeholders",
+    criterion: "Relevância para Grupos de Interesse",
     description: "Importância atribuída ao tema pelos principais grupos de interesse.",
   },
   {
@@ -373,11 +373,11 @@ const MaterialityPage = () => {
                 <span>•</span>
                 <span>GRI 2-29, 3-1, 3-2, 3-3</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Materialidade e Stakeholders</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Materialidade e Grupos de Interesse</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
                 O processo de materialidade orienta a priorização dos temas que mais influenciam nossa capacidade de
                 criar valor, considerando os impactos sobre pessoas, meio ambiente e economia, além das expectativas dos
-                stakeholders.
+                grupos de interesse.
               </p>
             </AnimatedSection>
           </div>
@@ -396,8 +396,8 @@ const MaterialityPage = () => {
             </p>
             <p className="text-muted-foreground">
               A análise de materialidade é revisada periodicamente para garantir que os temas priorizados reflitam a
-              evolução do contexto de negócio, as mudanças regulatórias e as novas demandas de stakeholders. O resultado
-              orienta a estratégia ESG, a definição de indicadores e a elaboração deste relatório.
+              evolução do contexto de negócio, as mudanças regulatórias e as novas demandas de grupos de interesse. O
+              resultado orienta a estratégia ESG, a definição de indicadores e a elaboração deste relatório.
             </p>
           </div>
         </AnimatedSection>
@@ -447,7 +447,7 @@ const MaterialityPage = () => {
           <h2 className="text-2xl font-bold mb-4">Critérios de Priorização</h2>
           <p className="text-muted-foreground mb-8">
             A priorização dos temas materiais considera múltiplos critérios que permitem avaliar a relevância de cada
-            tema para o Grupo e seus stakeholders.
+            tema para o Grupo e seus grupos de interesse.
           </p>
         </AnimatedSection>
 
@@ -622,7 +622,7 @@ const MaterialityPage = () => {
                     "Revisão anual dos temas materiais",
                     "Atualização mediante mudanças significativas de contexto",
                     "Consideração de novos requisitos regulatórios",
-                    "Incorporação de feedback de stakeholders",
+                    "Incorporação de feedback de grupos de interesse",
                     "Alinhamento com melhores práticas setoriais",
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-2 text-muted-foreground">

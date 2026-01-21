@@ -148,8 +148,8 @@ const CompliancePage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Integridade e Compliance</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                A integridade é base do posicionamento institucional da Construcap. O sistema de compliance garante que
-                todas as atividades sejam conduzidas com disciplina, legalidade e transparência.
+                A integridade é base do posicionamento institucional da Construcap. O Programa de Integridade garante
+                que todas as atividades sejam conduzidas com disciplina, legalidade e transparência.
               </p>
             </AnimatedSection>
           </div>
@@ -222,7 +222,7 @@ const CompliancePage = () => {
       {/* Compliance System */}
       <section className="py-12">
         <AnimatedSection>
-          <h2 className="text-2xl font-bold mb-4">4.3 Sistema de Compliance e Controles Internos</h2>
+          <h2 className="text-2xl font-bold mb-4">4.3 Programa de Integridade e Controles Internos</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
             A estrutura do Programa de Integridade concentra-se em prevenção, monitoramento e resposta. Ela é composta
             por políticas, procedimentos, instâncias de governança e instrumentos de verificação continuamente

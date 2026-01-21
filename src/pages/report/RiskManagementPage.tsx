@@ -1,17 +1,17 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { 
-  AlertTriangle, 
-  Shield, 
-  Factory, 
-  Heart, 
-  Leaf, 
-  Scale, 
-  Cpu, 
-  Building2, 
-  Stethoscope, 
-  TreePine, 
-  HardHat, 
+import {
+  AlertTriangle,
+  Shield,
+  Factory,
+  Heart,
+  Leaf,
+  Scale,
+  Cpu,
+  Building2,
+  Stethoscope,
+  TreePine,
+  HardHat,
   RefreshCw,
   Users,
   Search,
@@ -24,7 +24,7 @@ import {
   Siren,
   Activity,
   Recycle,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 import riskHero from "@/assets/report/risk-management-hero.jpg";
 
@@ -37,8 +37,8 @@ const riskTypes = [
       "Falhas técnicas, incidentes estruturais ou interrupções operacionais",
       "Desvios de qualidade ou não conformidade com normas técnicas",
       "Atrasos de obra devido a fornecedores, clima, restrições logísticas ou imprevistos geotécnicos",
-      "Interrupções em parques naturais decorrentes de fenômenos climáticos extremos"
-    ]
+      "Interrupções em parques naturais decorrentes de fenômenos climáticos extremos",
+    ],
   },
   {
     title: "Riscos de Saúde e Segurança",
@@ -48,8 +48,8 @@ const riskTypes = [
       "Acidentes, incidentes graves",
       "Exposição a agentes perigosos",
       "Falhas em equipamentos críticos",
-      "Protocolos específicos em obras, hospitais e parques (especialmente trilhas em Jericoacoara e Cânions Verdes)"
-    ]
+      "Protocolos específicos em obras, hospitais e parques",
+    ],
   },
   {
     title: "Riscos Ambientais e Climáticos",
@@ -60,8 +60,8 @@ const riskTypes = [
       "Eventos extremos (chuvas, rajadas de vento, altas temperaturas)",
       "Riscos de incêndio em áreas naturais",
       "Riscos de erosão ou deslizamentos em trilhas e estruturas de parques",
-      "Exigências regulatórias e de licenciamento"
-    ]
+      "Exigências regulatórias e de licenciamento",
+    ],
   },
   {
     title: "Riscos Regulatórios e Contratuais",
@@ -72,8 +72,8 @@ const riskTypes = [
       "Exigências adicionais de órgãos públicos",
       "Revisão de contratos de concessão",
       "Cumprimento de indicadores contratuais obrigatórios",
-      "Multas, sanções ou penalidades"
-    ]
+      "Multas, sanções ou penalidades",
+    ],
   },
   {
     title: "Riscos Socioeconômicos e Comunitários",
@@ -83,8 +83,8 @@ const riskTypes = [
       "Impactos sobre comunidades do entorno (fluxo turístico, mobilidade, uso do território)",
       "Demandas sociais relacionadas à conservação ambiental",
       "Percepções públicas sobre gestão de áreas naturais e culturais",
-      "Riscos de incidentes com visitantes"
-    ]
+      "Riscos de incidentes com visitantes",
+    ],
   },
   {
     title: "Riscos de Integridade",
@@ -95,8 +95,8 @@ const riskTypes = [
       "Fraudes",
       "Interação inadequada com agentes públicos",
       "Riscos decorrentes de terceiros",
-      "Não conformidades em auditorias"
-    ]
+      "Não conformidades",
+    ],
   },
   {
     title: "Riscos Tecnológicos e Cibernéticos",
@@ -107,8 +107,8 @@ const riskTypes = [
       "Indisponibilidade de sistemas críticos",
       "Proteção de dados pessoais",
       "Riscos associados à infraestrutura digital da Inova Saúde, parques e arenas",
-      "Incidentes que afetem plataformas de bilhetagem, controle de acesso ou sistemas médicos"
-    ]
+      "Incidentes que afetem plataformas de bilhetagem, controle de acesso ou sistemas médicos",
+    ],
   },
 ];
 
@@ -116,27 +116,32 @@ const businessUnitRisks = [
   {
     name: "Inova Saúde",
     icon: Stethoscope,
-    description: "Protocolos hospitalares robustos, gestão clínica, segurança de pacientes, manutenção predial, qualificação rigorosa de fornecedores e gestão de riscos sanitários."
+    description:
+      "Protocolos hospitalares robustos, gestão clínica, segurança de pacientes, manutenção predial, qualificação rigorosa de fornecedores e gestão de riscos sanitários.",
   },
   {
-    name: "Urbia Parques e Urbia Cânions Verdes",
+    name: "Urbia Gestão de Parques, Urbia Cânions Verdes, Urbia Cânions Verdes e Urbia Cataratas",
     icon: TreePine,
-    description: "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais e protocolos de segurança para visitantes."
+    description:
+      "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais e protocolos de segurança para visitantes.",
   },
   {
     name: "Minas Arena",
     icon: Building2,
-    description: "Gestão multidisciplinar que inclui segurança do público, engenharia estrutural, gestão energética, controle de acesso e resposta a emergências em grandes eventos."
+    description:
+      "Gestão multidisciplinar que inclui segurança do público, engenharia estrutural, gestão energética, controle de acesso e resposta a emergências em grandes eventos.",
   },
   {
     name: "Ambicap e operações industriais",
     icon: Recycle,
-    description: "Sistemas de controle técnico, conformidade ambiental, monitoramento de emissões e segurança operacional em ambientes de risco."
+    description:
+      "Sistemas de controle técnico, conformidade ambiental, monitoramento de emissões e segurança operacional em ambientes de risco.",
   },
   {
     name: "Obras",
     icon: HardHat,
-    description: "Planos de Segurança do Trabalho, gestão de riscos geotécnicos, inspeções estruturais, controle de qualidade de materiais, logística e contingência climática."
+    description:
+      "Planos de Segurança do Trabalho, gestão de riscos geotécnicos, inspeções estruturais, controle de qualidade de materiais, logística e contingência climática.",
   },
 ];
 
@@ -146,8 +151,8 @@ const identificationMethods = [
   "Auditorias internas",
   "Mapeamento de processos críticos",
   "Avaliação de incidentes e quase acidentes",
-  "Consultas a stakeholders",
-  "Requisitos regulatórios e ambientais"
+  "Consultas a públicos de interesse",
+  "Requisitos regulatórios e ambientais",
 ];
 
 const evaluationCriteria = [
@@ -164,22 +169,22 @@ const continuityAreas = [
   {
     area: "Gestão hospitalar",
     description: "Onde falhas podem comprometer atendimento à população",
-    icon: Stethoscope
+    icon: Stethoscope,
   },
   {
     area: "Operação de parques naturais",
     description: "Onde intempéries podem gerar riscos aos visitantes",
-    icon: TreePine
+    icon: TreePine,
   },
   {
     area: "Operação de arenas",
     description: "Especialmente em eventos de grande público",
-    icon: Building2
+    icon: Building2,
   },
   {
     area: "Obras essenciais",
     description: "Cujos atrasos afetam contratos públicos e privados",
-    icon: HardHat
+    icon: HardHat,
   },
 ];
 
@@ -189,7 +194,7 @@ const monitoringItems = [
   "Monitoramento de performance ambiental e climática",
   "Revisões de riscos prioritários",
   "Análises críticas de acidentes e incidentes",
-  "Atualização de matrizes de risco e uso de dashboards gerenciais"
+  "Atualização de matrizes de risco e uso de dashboards gerenciais",
 ];
 
 const RiskManagementPage = () => {
@@ -198,9 +203,9 @@ const RiskManagementPage = () => {
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[720px] overflow-hidden">
-          <img 
-            src={riskHero} 
-            alt="Canteiro de obras Construcap" 
+          <img
+            src={riskHero}
+            alt="Canteiro de obras Construcap"
             className="w-full h-full object-cover object-[position:center_15%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -213,9 +218,9 @@ const RiskManagementPage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Gestão de Riscos</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                A dinâmica dos setores em que atuamos exige uma abordagem estruturada de gestão 
-                de riscos, capaz de antecipar cenários, mitigar impactos, proteger pessoas, 
-                preservar a integridade dos ativos e assegurar a continuidade operacional.
+                A dinâmica dos setores em que atuamos exige uma abordagem estruturada de gestão de riscos, capaz de
+                antecipar cenários, mitigar impactos, proteger pessoas, preservar a integridade dos ativos e assegurar a
+                continuidade operacional.
               </p>
             </AnimatedSection>
           </div>
@@ -227,16 +232,16 @@ const RiskManagementPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground leading-relaxed">
-              A Construcap opera em setores altamente regulados e de elevada complexidade técnica — 
-              construção civil de grande porte, gestão hospitalar, concessões de parques naturais e 
-              urbanos, operação de arenas esportivas e serviços críticos de engenharia.
+              A Construcap opera em setores altamente regulados e de elevada complexidade técnica — construção civil de
+              grande porte, gestão hospitalar, concessões de parques naturais e urbanos, operação de arenas esportivas e
+              serviços críticos de engenharia.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Nosso modelo de gestão de riscos integra processos corporativos, diretrizes técnicas, 
-              metodologias próprias e mecanismos de controle distribuídos nas áreas operacionais e 
-              administrativas. Ele se sustenta em princípios de <strong className="text-foreground">prevenção</strong>, 
-              <strong className="text-foreground"> diligência</strong>, 
-              <strong className="text-foreground"> disciplina operacional</strong> e 
+              Nosso modelo de gestão de riscos integra processos corporativos, diretrizes técnicas, metodologias
+              próprias e mecanismos de controle distribuídos nas áreas operacionais e administrativas. Ele se sustenta
+              em princípios de <strong className="text-foreground">prevenção</strong>,
+              <strong className="text-foreground"> diligência</strong>,
+              <strong className="text-foreground"> disciplina operacional</strong> e
               <strong className="text-foreground"> melhoria contínua</strong> (GRI 2-23).
             </p>
           </div>
@@ -251,14 +256,20 @@ const RiskManagementPage = () => {
             O processo de gestão de riscos segue uma arquitetura corporativa que contempla: (GRI 2-25)
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-4">
           {[
             { step: "Identificação sistemática", desc: "de riscos em todas as unidades de negócio" },
-            { step: "Avaliação", desc: "de probabilidade e impacto (operacionais, financeiros, socioambientais, reputacionais, climáticos e regulatórios)" },
+            {
+              step: "Avaliação",
+              desc: "de probabilidade e impacto (operacionais, financeiros, socioambientais, reputacionais, climáticos e regulatórios)",
+            },
             { step: "Planos de mitigação", desc: "desenhados segundo criticidade e urgência" },
-            { step: "Monitoramento contínuo", desc: "por lideranças operacionais, equipes técnicas e áreas corporativas" },
-            { step: "Reportes regulares", desc: "às instâncias de governança e alta administração" }
+            {
+              step: "Monitoramento contínuo",
+              desc: "por lideranças operacionais, equipes técnicas e áreas corporativas",
+            },
+            { step: "Reportes regulares", desc: "às instâncias de governança e alta administração" },
           ].map((item, index) => (
             <AnimatedSection key={index} delay={index * 100}>
               <div className="bg-card rounded-xl border border-border p-4 h-full">
@@ -278,11 +289,10 @@ const RiskManagementPage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">5.2 Principais Tipos de Riscos Monitorados</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap mantém matrizes de riscos específicas para cada tipo de operação, 
-            além de um mapa consolidado em nível corporativo.
+            A Construcap mantém matrizes de riscos específicas para determinados tipos de operação.
           </p>
         </AnimatedSection>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {riskTypes.map((risk, index) => (
             <AnimatedSection key={risk.title} delay={index * 75}>
@@ -315,7 +325,7 @@ const RiskManagementPage = () => {
             A gestão de riscos segue processos formais que empregam metodologias qualitativas e quantitativas. (GRI 3-3)
           </p>
         </AnimatedSection>
-        
+
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Identificação */}
           <AnimatedSection delay={100}>
@@ -375,9 +385,7 @@ const RiskManagementPage = () => {
                 </div>
                 <h3 className="font-semibold">Mitigação e Controle</h3>
               </div>
-              <p className="text-sm text-muted-foreground mb-4">
-                As medidas incluem:
-              </p>
+              <p className="text-sm text-muted-foreground mb-4">As medidas incluem:</p>
               <ul className="space-y-2">
                 {[
                   "Planos operacionais preventivos",
@@ -388,7 +396,7 @@ const RiskManagementPage = () => {
                   "Qualificação e monitoramento de fornecedores",
                   "Contingência em eventos extremos",
                   "Procedimentos específicos para riscos hospitalares",
-                  "Reforço de controle de acesso em estádios e parques"
+                  "Reforço de controle de acesso em estádios e parques",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm">
                     <Target className="w-4 h-4 text-red-500 mt-0.5 flex-shrink-0" />
@@ -409,11 +417,11 @@ const RiskManagementPage = () => {
             <h2 className="text-2xl font-bold">5.4 Continuidade de Negócios</h2>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap mantém mecanismos de continuidade para assegurar funcionamento ininterrupto 
-            de suas atividades, especialmente em setores críticos:
+            A Construcap mantém mecanismos de continuidade para assegurar funcionamento ininterrupto de suas atividades,
+            especialmente em setores críticos:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
           {continuityAreas.map((item, index) => (
             <AnimatedSection key={index} delay={index * 100}>
@@ -437,7 +445,7 @@ const RiskManagementPage = () => {
                 "Protocolos de contingência",
                 "Rotinas de comunicação de emergência",
                 "Equipes de prontidão",
-                "Planos de evacuação"
+                "Planos de evacuação",
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-red-500" />
@@ -458,7 +466,7 @@ const RiskManagementPage = () => {
           </div>
           <p className="text-muted-foreground mb-6">A companhia realiza:</p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {monitoringItems.map((item, index) => (
             <AnimatedSection key={index} delay={index * 75}>
@@ -473,8 +481,8 @@ const RiskManagementPage = () => {
         <AnimatedSection delay={500}>
           <div className="bg-card rounded-xl border border-border p-4">
             <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Indicadores acompanhados:</strong> Severidade, frequência, 
-              desvios e não conformidades são acompanhados pela alta gestão e por comitês responsáveis.
+              <strong className="text-foreground">Indicadores acompanhados:</strong> Severidade, frequência, desvios e
+              não conformidades são acompanhados pela alta gestão e por comitês responsáveis.
             </p>
           </div>
         </AnimatedSection>
@@ -485,7 +493,7 @@ const RiskManagementPage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-8">5.6 Gestão de Riscos nas Unidades do Grupo</h2>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {businessUnitRisks.map((unit, index) => (
             <AnimatedSection key={unit.name} delay={index * 100}>
@@ -522,7 +530,7 @@ const RiskManagementPage = () => {
                 "Mudanças regulatórias",
                 "Avanços em engenharia e sustentabilidade",
                 "Recomendações de auditorias",
-                "Contribuições das equipes de obra, operação e manutenção"
+                "Contribuições das equipes de obra, operação e manutenção",
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 text-sm">
                   <div className="w-2 h-2 rounded-full bg-red-500" />
@@ -532,7 +540,7 @@ const RiskManagementPage = () => {
             </div>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="text-sm text-muted-foreground">
-                Esse processo cíclico fortalece a <strong className="text-foreground">maturidade do sistema</strong> e 
+                Esse processo cíclico fortalece a <strong className="text-foreground">maturidade do sistema</strong> e
                 aprimora a <strong className="text-foreground">resiliência operacional</strong>.
               </p>
             </div>

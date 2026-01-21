@@ -88,10 +88,10 @@ const trainingTopics = [
 
 const channelFeatures = [
   { icon: Lock, text: "Garante anonimato e confidencialidade" },
-  { icon: Clock, text: "Funciona 24 horas por dia" },
+  { icon: Clock, text: "Funciona 24 horas por dia e 7 dias por semana" },
   { icon: Users, text: "Operado por empresa externa especializada" },
-  { icon: Phone, text: "Acesso por telefone" },
-  { icon: Globe, text: "Acesso por site" },
+  { icon: Phone, text: "Acesso por ligação gratuita" },
+  { icon: Globe, text: "Acesso por site e app" },
   { icon: Mail, text: "Acesso por e-mail" },
   { icon: FileText, text: "Protocolo formal de registro e encaminhamento" },
   { icon: ShieldCheck, text: "Proteção contra retaliação" },
@@ -325,7 +325,8 @@ const CompliancePage = () => {
                   <p className="text-sm text-muted-foreground">
                     Todas as denúncias são analisadas tecnicamente, com foco em materialidade, evidências e risco
                     envolvido. Quando necessário, investigações internas são conduzidas em conjunto por compliance,
-                    jurídico e auditoria, seguindo metodologia estruturada.
+                    jurídico e auditoria, seguindo metodologia estruturada. Dependendo da relevância e especificidade
+                    terceiros podem ser contratados para suportar as investigações, por exemplo, análises forenses.
                   </p>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4">

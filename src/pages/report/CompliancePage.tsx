@@ -1,14 +1,14 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { 
-  Shield, 
-  FileText, 
-  Phone, 
-  Search, 
-  Users, 
-  AlertTriangle, 
-  CheckCircle, 
-  BookOpen, 
+import {
+  Shield,
+  FileText,
+  Phone,
+  Search,
+  Users,
+  AlertTriangle,
+  CheckCircle,
+  BookOpen,
   Lock,
   Scale,
   Gavel,
@@ -27,7 +27,7 @@ import {
   Eye,
   FileWarning,
   Wrench,
-  Briefcase
+  Briefcase,
 } from "lucide-react";
 import complianceHero from "@/assets/report/compliance-hero.jpg";
 
@@ -39,16 +39,32 @@ const codeOfConductTopics = [
   "Responsabilidade no uso e tratamento de dados",
   "Respeito aos direitos humanos e diversidade",
   "Proibição de assédio e discriminação",
-  "Salvaguardas para conflitos de interesse"
+  "Salvaguardas para conflitos de interesse",
 ];
 
 const compliancePolicies = [
-  { title: "Política Anticorrupção", icon: Shield, description: "Diretrizes para prevenção e combate à corrupção" },
-  { title: "Política de Brindes, Presentes e Hospitalidades", icon: FileText, description: "Regras para recebimento e oferecimento" },
-  { title: "Política de Interação com o Setor Público", icon: Users, description: "Conduta em relacionamentos governamentais" },
-  { title: "Procedimentos de conferência e aprovação de contratos", icon: CheckCircle, description: "Fluxos de aprovação e verificação" },
-  { title: "Regras de integridade em compras e suprimentos", icon: Search, description: "Diretrizes para aquisições éticas" },
-  { title: "Normas de conduta em obras e ambientes críticos", icon: AlertTriangle, description: "Padrões específicos para canteiros" },
+  { title: "Anticorrupção", icon: Shield, description: "Diretrizes para prevenção e combate à corrupção" },
+  {
+    title: "Brindes, Presentes e Hospitalidades",
+    icon: FileText,
+    description: "Regras para recebimento e oferecimento",
+  },
+  { title: "Interação com o Setor Público", icon: Users, description: "Conduta em relacionamentos governamentais" },
+  {
+    title: "Conferência e aprovação de contratos",
+    icon: CheckCircle,
+    description: "Fluxos de aprovação e verificação",
+  },
+  {
+    title: "Regras de integridade em compras e suprimentos",
+    icon: Search,
+    description: "Diretrizes para aquisições éticas",
+  },
+  {
+    title: "Normas de conduta em obras e ambientes críticos",
+    icon: AlertTriangle,
+    description: "Padrões específicos para canteiros",
+  },
 ];
 
 const dueDiligenceItems = [
@@ -57,7 +73,7 @@ const dueDiligenceItems = [
   "Conformidade socioambiental",
   "Histórico de penalidades, sanções ou litígios relevantes",
   "Aderência ao Código de Conduta",
-  "Exigência de comprovações documentais"
+  "Exigência de comprovações documentais",
 ];
 
 const trainingTopics = [
@@ -67,7 +83,7 @@ const trainingTopics = [
   { topic: "Integridade em contratações e suprimentos", icon: ClipboardCheck },
   { topic: "Condutas proibidas e situações de risco", icon: AlertTriangle },
   { topic: "Privacidade e proteção de dados pessoais", icon: Lock },
-  { topic: "Direitos humanos, igualdade e prevenção ao assédio", icon: UserCheck }
+  { topic: "Direitos humanos, igualdade e prevenção ao assédio", icon: UserCheck },
 ];
 
 const channelFeatures = [
@@ -82,7 +98,11 @@ const channelFeatures = [
 ];
 
 const regulatoryCompliance = [
-  { area: "Segurança e Saúde no Trabalho", icon: UserCheck, description: "Legislação de SST e normas regulamentadoras" },
+  {
+    area: "Segurança e Saúde no Trabalho",
+    icon: UserCheck,
+    description: "Legislação de SST e normas regulamentadoras",
+  },
   { area: "Engenharia e Construção Civil", icon: Building2, description: "Normas técnicas e padrões de engenharia" },
   { area: "Concessões e Gestão de Parques", icon: TreePine, description: "Regulamentações específicas de concessões" },
   { area: "Legislação Sanitária", icon: Stethoscope, description: "Qualidade aplicável a unidades hospitalares" },
@@ -96,7 +116,7 @@ const correctiveActions = [
   "Alteração de fluxos operacionais e de aprovação",
   "Readequação de contratos",
   "Ajustes de controles internos",
-  "Responsabilização disciplinar quando aplicável"
+  "Responsabilização disciplinar quando aplicável",
 ];
 
 const trainingAudiences = [
@@ -113,9 +133,9 @@ const CompliancePage = () => {
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[720px] overflow-hidden">
-          <img 
-            src={complianceHero} 
-            alt="Canteiro de obras Construcap" 
+          <img
+            src={complianceHero}
+            alt="Canteiro de obras Construcap"
             className="w-full h-full object-cover object-[position:center_15%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -128,9 +148,8 @@ const CompliancePage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Integridade e Compliance</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                A integridade é base do posicionamento institucional da Construcap. O sistema 
-                de compliance garante que todas as atividades sejam conduzidas com disciplina, 
-                legalidade e transparência.
+                A integridade é base do posicionamento institucional da Construcap. O sistema de compliance garante que
+                todas as atividades sejam conduzidas com disciplina, legalidade e transparência.
               </p>
             </AnimatedSection>
           </div>
@@ -143,17 +162,16 @@ const CompliancePage = () => {
           <div className="bg-card rounded-2xl border border-border p-8">
             <h2 className="text-xl font-bold mb-4">4.1 Sistema de Integridade e Compliance</h2>
             <p className="text-muted-foreground leading-relaxed">
-              A Construcap adota um sistema de integridade estruturado para prevenir, detectar 
-              e responder a desvios éticos, ilícitos e inconformidades operacionais. O programa 
-              combina <strong className="text-foreground">políticas corporativas</strong>, 
-              <strong className="text-foreground"> controles internos</strong>, 
-              <strong className="text-foreground"> canal de denúncias independente</strong>, 
-              processos de due diligence, monitoramento contínuo e treinamentos regulares.
+              A Construcap adota um sistema de integridade estruturado para prevenir, detectar e responder a desvios
+              éticos, ilícitos e inconformidades operacionais. O Programa de Integridade combina{" "}
+              <strong className="text-foreground">políticas corporativas</strong>,
+              <strong className="text-foreground"> controles internos</strong>,
+              <strong className="text-foreground"> canal de denúncias independente</strong>, processos de due diligence,
+              monitoramento contínuo e treinamentos regulares.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              O objetivo central é assegurar que todas as atividades — em obras, operações, 
-              contratos, relacionamentos institucionais e processos administrativos — sejam 
-              conduzidas com disciplina, legalidade e transparência.
+              O objetivo central é assegurar que todas as atividades — em obras, operações, contratos, relacionamentos
+              institucionais e processos administrativos — sejam conduzidas com disciplina, legalidade e transparência.
             </p>
           </div>
         </AnimatedSection>
@@ -173,19 +191,18 @@ const CompliancePage = () => {
               </div>
             </div>
             <p className="text-muted-foreground mb-4">
-              O Código de Conduta da Construcap estabelece diretrizes claras para comportamentos 
-              aceitáveis e não aceitáveis dentro da organização. Ele é vinculante para todos os 
-              níveis hierárquicos e se estende a terceiros relacionados: colaboradores, consultores, 
-              fornecedores e demais públicos.
+              O Código de Conduta da Construcap estabelece diretrizes claras para comportamentos aceitáveis e não
+              aceitáveis dentro da organização. Ele é vinculante para todos os níveis hierárquicos e se estende a
+              terceiros relacionados: colaboradores, consultores, fornecedores e demais públicos.
             </p>
             <div className="bg-card rounded-xl border border-border p-4 mt-4">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Abrangência:</strong> O documento é referência obrigatória 
-                para decisões cotidianas, dilemas éticos e gestão de riscos de conduta.
+                <strong className="text-foreground">Abrangência:</strong> O documento é referência obrigatória para
+                decisões cotidianas, dilemas éticos e gestão de riscos de conduta.
               </p>
             </div>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <div className="bg-card rounded-2xl border border-border p-6">
               <h3 className="font-semibold mb-4">Conteúdo abrangido:</h3>
@@ -207,12 +224,12 @@ const CompliancePage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">4.3 Sistema de Compliance e Controles Internos</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A estrutura de compliance concentra-se em prevenção, monitoramento e resposta. Ela é 
-            composta por políticas, procedimentos, instâncias de governança e instrumentos de 
-            verificação continuamente aprimorados. (GRI 2-15)
+            A estrutura do Programa de Integridade concentra-se em prevenção, monitoramento e resposta. Ela é composta
+            por políticas, procedimentos, instâncias de governança e instrumentos de verificação continuamente
+            aprimorados. (GRI 2-15)
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {compliancePolicies.map((policy, index) => (
             <AnimatedSection key={policy.title} delay={index * 100}>
@@ -238,24 +255,22 @@ const CompliancePage = () => {
               </div>
             </div>
             <p className="text-muted-foreground mb-4">
-              A Construcap aplica processos de due diligence antes da contratação e durante 
-              o relacionamento com fornecedores, prestadores de serviços, consultores, 
-              parceiros operacionais e subcontratados.
+              A Construcap aplica processos de due diligence antes da contratação e durante o relacionamento com
+              fornecedores, prestadores de serviços, consultores, parceiros operacionais e subcontratados.
             </p>
             <p className="text-muted-foreground mb-4">
-              A qualificação de terceiros visa mitigar riscos de integridade, reputacionais e 
-              contratuais. O processo é conduzido pela área de compliance em conjunto com 
-              suprimentos e jurídico.
+              A qualificação de terceiros visa mitigar riscos de integridade, reputacionais e contratuais. O processo é
+              conduzido pela área de compliance em conjunto com suprimentos e jurídico.
             </p>
             <div className="bg-card rounded-xl border border-border p-4">
               <p className="text-sm text-muted-foreground">
-                <strong className="text-foreground">Monitoramento:</strong> Contratos considerados 
-                sensíveis contam com monitoramento adicional e cláusulas específicas de integridade, 
-                assegurando que terceiros atuem segundo os mesmos padrões aplicados internamente.
+                <strong className="text-foreground">Monitoramento:</strong> Contratos considerados sensíveis contam com
+                monitoramento adicional e cláusulas específicas de integridade, assegurando que terceiros atuem segundo
+                os mesmos padrões aplicados internamente.
               </p>
             </div>
           </AnimatedSection>
-          
+
           <AnimatedSection delay={200}>
             <div className="bg-card rounded-2xl border border-border p-6">
               <h3 className="font-semibold mb-4">A avaliação inclui:</h3>
@@ -289,8 +304,8 @@ const CompliancePage = () => {
             </div>
             <div className="p-6">
               <p className="text-muted-foreground mb-6">
-                A companhia mantém um Canal de Denúncias independente, acessível a colaboradores, 
-                comunidades, fornecedores e demais públicos. O canal:
+                A companhia mantém um Canal de Denúncias independente, acessível a colaboradores, comunidades,
+                fornecedores e demais públicos. O canal:
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {channelFeatures.map((item, index) => (
@@ -300,7 +315,7 @@ const CompliancePage = () => {
                   </div>
                 ))}
               </div>
-              
+
               <div className="grid md:grid-cols-2 gap-6">
                 <div className="bg-muted/50 rounded-xl p-4">
                   <h4 className="font-semibold mb-2 flex items-center gap-2">
@@ -308,9 +323,9 @@ const CompliancePage = () => {
                     Análise e Investigação
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Todas as denúncias são analisadas tecnicamente, com foco em materialidade, evidências 
-                    e risco envolvido. Quando necessário, investigações internas são conduzidas em conjunto 
-                    por compliance, jurídico e auditoria, seguindo metodologia estruturada.
+                    Todas as denúncias são analisadas tecnicamente, com foco em materialidade, evidências e risco
+                    envolvido. Quando necessário, investigações internas são conduzidas em conjunto por compliance,
+                    jurídico e auditoria, seguindo metodologia estruturada.
                   </p>
                 </div>
                 <div className="bg-muted/50 rounded-xl p-4">
@@ -319,9 +334,9 @@ const CompliancePage = () => {
                     Tratamento de Casos
                   </h4>
                   <p className="text-sm text-muted-foreground">
-                    Os casos confirmados resultam em medidas disciplinares, melhorias de controle, revisão 
-                    de processos e comunicação à alta administração. Relatórios consolidados são apresentados 
-                    periodicamente às instâncias de governança.
+                    Os casos confirmados resultam em medidas disciplinares, melhorias de controle, revisão de processos
+                    e comunicação à alta administração. Relatórios consolidados são apresentados periodicamente às
+                    instâncias de governança.
                   </p>
                 </div>
               </div>
@@ -341,15 +356,14 @@ const CompliancePage = () => {
             </div>
           </div>
         </AnimatedSection>
-        
+
         <div className="grid md:grid-cols-2 gap-6">
           <AnimatedSection delay={100}>
             <div className="bg-card rounded-2xl border border-border p-6 h-full">
               <h3 className="font-semibold mb-3">Políticas de Proteção</h3>
               <p className="text-muted-foreground">
-                A Construcap possui políticas formais que proíbem qualquer forma de retaliação 
-                contra indivíduos que, de boa-fé, reportem situações de risco, suspeitas de 
-                irregularidade ou descumprimento de políticas.
+                A Construcap possui políticas formais que proíbem qualquer forma de retaliação contra indivíduos que, de
+                boa-fé, reportem situações de risco, suspeitas de irregularidade ou descumprimento de políticas.
               </p>
             </div>
           </AnimatedSection>
@@ -357,8 +371,8 @@ const CompliancePage = () => {
             <div className="bg-card rounded-2xl border border-border p-6 h-full">
               <h3 className="font-semibold mb-3">Salvaguardas</h3>
               <p className="text-muted-foreground">
-                A companhia monitora casos sensíveis e garante salvaguardas para colaboradores 
-                envolvidos em denúncias, preservando sua integridade física, psicológica e profissional.
+                A companhia monitora casos sensíveis e garante salvaguardas para colaboradores envolvidos em denúncias,
+                preservando sua integridade física, psicológica e profissional.
               </p>
             </div>
           </AnimatedSection>
@@ -376,11 +390,11 @@ const CompliancePage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-6 max-w-4xl">
-            A disseminação da cultura de integridade é sustentada por programas permanentes 
-            de treinamento e capacitação. Os conteúdos são adaptados para diferentes públicos:
+            A disseminação da cultura de integridade é sustentada por programas permanentes de treinamento e
+            capacitação. Os conteúdos são adaptados para diferentes públicos:
           </p>
         </AnimatedSection>
-        
+
         <AnimatedSection delay={100}>
           <div className="flex flex-wrap gap-3 mb-8">
             {trainingAudiences.map((item, index) => (
@@ -391,11 +405,11 @@ const CompliancePage = () => {
             ))}
           </div>
         </AnimatedSection>
-        
+
         <AnimatedSection delay={200}>
           <p className="text-sm font-medium text-muted-foreground mb-4">Os treinamentos incluem:</p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {trainingTopics.map((item, index) => (
             <AnimatedSection key={item.topic} delay={index * 50 + 250}>
@@ -410,8 +424,8 @@ const CompliancePage = () => {
         <AnimatedSection delay={600}>
           <div className="mt-6 p-4 bg-muted/50 rounded-xl">
             <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Formatos:</strong> Treinamentos periódicos, 
-              trilhas on-line e materiais de apoio asseguram atualização contínua dos colaboradores.
+              <strong className="text-foreground">Formatos:</strong> Treinamentos periódicos, trilhas on-line e
+              materiais de apoio asseguram atualização contínua dos colaboradores.
             </p>
           </div>
         </AnimatedSection>
@@ -425,11 +439,11 @@ const CompliancePage = () => {
             <h2 className="text-2xl font-bold">4.7 Conformidade Regulatória e Contratual</h2>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap adota processos estruturados para assegurar aderência às normas aplicáveis 
-            aos segmentos em que atua:
+            A Construcap adota processos estruturados para assegurar aderência às normas aplicáveis aos segmentos em que
+            atua:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {regulatoryCompliance.map((item, index) => (
             <AnimatedSection key={item.area} delay={index * 100}>
@@ -445,8 +459,8 @@ const CompliancePage = () => {
         <AnimatedSection delay={600}>
           <div className="mt-8 bg-card rounded-xl border border-border p-4">
             <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Verificação:</strong> As práticas de conformidade 
-              são avaliadas por auditorias internas e externas, revisões técnicas e verificações de campo.
+              <strong className="text-foreground">Verificação:</strong> As práticas de conformidade são avaliadas por
+              auditorias internas e externas, revisões técnicas e verificações de campo.
             </p>
           </div>
         </AnimatedSection>
@@ -463,11 +477,11 @@ const CompliancePage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            Quando identificados desvios, inconformidades ou fragilidades de controle, a companhia 
-            implementa medidas corretivas estruturadas:
+            Quando identificados desvios, inconformidades ou fragilidades de controle, a companhia implementa medidas
+            corretivas estruturadas:
           </p>
         </AnimatedSection>
-        
+
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {correctiveActions.map((action, index) => (
             <AnimatedSection key={index} delay={index * 100}>
@@ -482,8 +496,8 @@ const CompliancePage = () => {
         <AnimatedSection delay={600}>
           <div className="mt-8 bg-amber-500/10 rounded-2xl border border-amber-500/20 p-6">
             <p className="text-muted-foreground">
-              Esse ciclo contínuo de <strong className="text-foreground">prevenção, detecção e correção</strong> sustenta 
-              um ambiente organizacional íntegro, confiável e orientado pelas melhores práticas de compliance.
+              Esse ciclo contínuo de <strong className="text-foreground">prevenção, detecção e correção</strong>{" "}
+              sustenta um ambiente organizacional íntegro, confiável e orientado pelas melhores práticas de compliance.
             </p>
           </div>
         </AnimatedSection>

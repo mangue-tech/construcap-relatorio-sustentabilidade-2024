@@ -4,7 +4,8 @@ const pillars = [
   {
     icon: Scale,
     title: "Integridade e Ética",
-    description: "Código de Conduta e políticas de compliance estabelecem padrões obrigatórios para todos os públicos.",
+    description:
+      "Código de Conduta e políticas do Programa de Integridade estabelecem padrões obrigatórios para todos os públicos.",
     items: ["Combate à corrupção", "Prevenção a conflitos", "Direitos humanos"],
   },
   {

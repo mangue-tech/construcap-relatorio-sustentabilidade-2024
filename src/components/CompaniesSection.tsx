@@ -1,4 +1,4 @@
-import { Building2, Heart, Trophy, MapPin, Phone, Globe, Users, Briefcase } from "lucide-react";
+import { Building2, Heart, Trophy, MapPin, Phone, Globe, Users, Briefcase, TreePine } from "lucide-react";
 
 const companies = [
   {
@@ -49,16 +49,16 @@ const companies = [
   },
   {
     name: "Ambicap",
-    description: "Empresa especializada em projetos estruturados e desenvolvimento de grandes obras de infraestrutura com foco em parcerias público-privadas.",
-    founded: "2015",
-    employees: "800+",
+    description: "Empresa do Grupo Construcap criada para executar atividades de zeladoria, limpeza e manejo de áreas verdes em operações de parques, com origem na estruturação da operação no Parque Ibirapuera.",
+    founded: "2023",
+    employees: "200+",
     location: "São Paulo, SP",
-    sector: "Construção Civil, PPP, Infraestrutura",
+    sector: "Zeladoria, Áreas Verdes, Parques",
     highlights: [
-      "Projetos estruturados",
-      "Parcerias público-privadas",
-      "Infraestrutura nacional",
-      "Gestão integrada",
+      "8 parques sob gestão",
+      "8.163 hectares de área",
+      "Parque Ibirapuera",
+      "Resposta emergencial climática",
     ],
     metrics: {
       co2: "24%",
@@ -67,7 +67,7 @@ const companies = [
       safety: "94%",
     },
     score: 84,
-    icon: Building2,
+    icon: TreePine,
     color: "green",
   },
 ];

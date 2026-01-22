@@ -196,8 +196,8 @@ const companies = [
     logo: ambicapLogo,
     path: "/operacao-ambicap",
     description:
-      "Gestão de ativos urbanos e infraestrutura. Especializada em operação e manutenção de sistemas viários, iluminação pública e mobiliário urbano.",
-    highlights: ["Ativos urbanos", "ISO 9001/14001/45001", "Inventário GEE"],
+      "Zeladoria, limpeza e manejo de áreas verdes em parques. Atua em 8 parques incluindo Ibirapuera, Cantareira e Horto Florestal, totalizando mais de 8.000 hectares.",
+    highlights: ["8 parques", "8.163 hectares", "Resposta emergencial"],
   },
 ];
 const certifications = [

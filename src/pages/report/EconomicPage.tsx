@@ -64,8 +64,8 @@ const EconomicPage = () => {
               O desempenho econômico da Construcap evidencia a solidez de seu modelo de negócios e a capacidade de
               enfrentar um ambiente operacional complexo, mantendo eficiência, disciplina financeira e criação de valor
               sustentável. A atuação diversificada — engenharia, gestão hospitalar, parques naturais e urbanos, arenas
-              esportivas e serviços técnicos — reduz a exposição a ciclos econômicos, amplia a resiliência e fortalece a
-              geração de resultados consistentes ao longo dos anos.
+              esportivas, zeladoria e serviços técnicos — reduz a exposição a ciclos econômicos, amplia a resiliência e
+              fortalece a geração de resultados consistentes ao longo dos anos.
             </p>
             <p className="text-muted-foreground">
               A companhia opera integralmente no Brasil e desempenha papel relevante na dinamização da infraestrutura
@@ -382,8 +382,9 @@ const EconomicPage = () => {
                 <h3 className="font-bold">Fortalecimento de Cadeias Produtivas</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                A empresa movimenta setores como engenharia, construção, tecnologia, logística, hotelaria, turismo,
-                manutenção industrial e serviços especializados, fortalecendo fornecedores locais e nacionais.
+                A empresa movimenta, principalmente, setores como engenharia, construção, tecnologia, logística,
+                hotelaria, turismo, manutenção industrial e serviços especializados, fortalecendo fornecedores locais e
+                nacionais.
               </p>
             </div>
           </AnimatedSection>
@@ -400,13 +401,17 @@ const EconomicPage = () => {
                 como:
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Ibirapuera (SP)", "Jericoacoara (CE)", "Cânions Verdes (SC/RS)", "Entorno do Mineirão (MG)"].map(
-                  (local, i) => (
-                    <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
-                      {local}
-                    </span>
-                  ),
-                )}
+                {[
+                  "Parque Ibirapuera e demais parques vizinhos (SP)",
+                  "Parque Nacional do Iguaçu (PR)",
+                  "Parque Estadual da Cantareira e o Parque Estadual Alberto Löfgren (Horto Florestal)  (SP)",
+                  "Parques Nacionais Aparados da Serra e Serra Geral (SC/RS)",
+                  "Entorno do Mineirão (MG)",
+                ].map((local, i) => (
+                  <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
+                    {local}
+                  </span>
+                ))}
               </div>
             </div>
           </AnimatedSection>

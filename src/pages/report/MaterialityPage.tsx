@@ -133,8 +133,8 @@ const materialTopics = [
   },
 ];
 
-// 6.2 - Stakeholders e Engajamento
-const stakeholders = [
+// 6.2 - Públicos de Interesse e Engajamento
+const publicosDeInteresse = [
   {
     name: "Colaboradores",
     description: "Profissionais próprios e terceiros que atuam em obras, hospitais, parques e arenas.",
@@ -466,40 +466,40 @@ const MaterialityPage = () => {
         </div>
       </section>
 
-      {/* Stakeholders - 6.2 */}
+      {/* Públicos de Interesse - 6.2 */}
       <section className="py-12 -mx-6 lg:-mx-8 px-6 lg:px-8 bg-secondary/30">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-4">
             <MessageSquare className="w-8 h-8 text-indigo-500" />
             <div>
-              <h2 className="text-2xl font-bold">Engajamento com Stakeholders</h2>
+              <h2 className="text-2xl font-bold">Engajamento com Públicos de Interesse</h2>
               <p className="text-muted-foreground">GRI 2-29 | Partes interessadas e mecanismos de escuta</p>
             </div>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            O Grupo Construcap mantém relacionamento ativo com diversos grupos de interesse, utilizando mecanismos
+            O Grupo Construcap mantém relacionamento ativo com diversos públicos de interesse, utilizando mecanismos
             específicos de engajamento para cada público. Esse diálogo contínuo alimenta o processo de materialidade e
             orienta a gestão de impactos.
           </p>
         </AnimatedSection>
 
         <div className="grid md:grid-cols-2 gap-6">
-          {stakeholders.map((stakeholder, index) => (
-            <AnimatedSection key={stakeholder.name} delay={index * 75}>
+          {publicosDeInteresse.map((publico, index) => (
+            <AnimatedSection key={publico.name} delay={index * 75}>
               <div className="bg-card rounded-2xl border border-border p-6 h-full hover:border-indigo-500/50 transition-colors">
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-12 h-12 rounded-xl bg-indigo-500/10 flex items-center justify-center">
-                    <stakeholder.icon className="w-6 h-6 text-indigo-500" />
+                    <publico.icon className="w-6 h-6 text-indigo-500" />
                   </div>
                   <div>
-                    <h3 className="font-bold">{stakeholder.name}</h3>
-                    <p className="text-xs text-muted-foreground">{stakeholder.description}</p>
+                    <h3 className="font-bold">{publico.name}</h3>
+                    <p className="text-xs text-muted-foreground">{publico.description}</p>
                   </div>
                 </div>
                 <div className="mt-4">
                   <p className="text-xs font-medium text-muted-foreground mb-2">Mecanismos de Engajamento:</p>
                   <ul className="space-y-1.5">
-                    {stakeholder.engagement.map((item, i) => (
+                    {publico.engagement.map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                         <ArrowRight className="w-3 h-3 mt-1 text-indigo-500 flex-shrink-0" />
                         <span>{item}</span>

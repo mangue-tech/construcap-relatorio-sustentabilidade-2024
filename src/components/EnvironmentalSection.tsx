@@ -145,17 +145,23 @@ const EnvironmentalSection = () => {
         </div>
 
         {/* Certifications */}
-        <div className="mt-12 grid sm:grid-cols-3 gap-6">
-          {[
-            { cert: "ISO 9001:2015", label: "Qualidade" },
-            { cert: "ISO 14001:2015", label: "Gestão Ambiental" },
-            { cert: "ISO 45001:2018", label: "Saúde e Segurança" },
-          ].map((item) => (
-            <div key={item.cert} className="text-center p-6 rounded-xl bg-green-100/50 border border-green-500/20">
-              <p className="font-bold text-lg text-green-500">{item.cert}</p>
-              <p className="text-sm text-muted-foreground">{item.label}</p>
-            </div>
-          ))}
+        <div className="mt-12">
+          <h3 className="text-lg font-bold mb-4 text-center">Certificações Construcap</h3>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              { cert: "NBR ISO 9001:2015", label: "Qualidade", detail: "Desde 2014 • Válida até 17/07/2026" },
+              { cert: "NBR ISO 14001:2015", label: "Gestão Ambiental", detail: "Desde 2014 • Válida até 16/07/2026" },
+              { cert: "ISO 45001:2018", label: "Saúde e Segurança", detail: "Desde 2023 • Válida até 16/07/2026" },
+              { cert: "SIAC 2021 – Nível A", label: "Conformidade", detail: "Edificações, infraestrutura viária e saneamento • Válida até 17/07/2026" },
+              { cert: "Certificado de Recurso Florestal", label: "Regularidade Ambiental", detail: "Ano-base 2024" },
+            ].map((item) => (
+              <div key={item.cert} className="text-center p-5 rounded-xl bg-green-100/50 border border-green-500/20">
+                <p className="font-bold text-base text-green-500">{item.cert}</p>
+                <p className="text-sm text-muted-foreground">{item.label}</p>
+                <p className="text-xs text-muted-foreground mt-1">{item.detail}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

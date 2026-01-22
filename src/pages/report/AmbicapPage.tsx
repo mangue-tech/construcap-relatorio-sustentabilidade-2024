@@ -60,16 +60,19 @@ const AmbicapPage = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
                 As operações da Ambicap são estruturadas sob as diretrizes do Sistema Integrado de Gestão do Grupo, 
-                certificadas pelas normas <strong>ISO 9001</strong>, <strong>ISO 14001</strong> e <strong>ISO 45001</strong> 
+                certificadas pelas normas <strong>NBR ISO 9001:2015</strong> (Qualidade, desde 2014, válida até 17/07/2026), 
+                <strong> NBR ISO 14001:2015</strong> (Meio Ambiente, desde 2014, válida até 16/07/2026) e 
+                <strong> ISO 45001:2018</strong> (Saúde e Segurança Ocupacional, desde 2023, válida até 16/07/2026)
                 (GRI 302-1, 303-3, 403-1). Isso significa que a gestão de atividades como iluminação, sinalização, 
                 limpeza, manutenção de pavimentos, mobiliário urbano e equipamentos de cobrança é realizada com base 
                 em procedimentos padronizados, controles de qualidade, requisitos de saúde e segurança ocupacional e 
                 critérios ambientais, buscando a redução de impactos e o uso eficiente de recursos.
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-950/50 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">ISO 9001</span>
-                <span className="px-3 py-1 bg-green-100 dark:bg-green-950/50 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">ISO 14001</span>
-                <span className="px-3 py-1 bg-amber-100 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 rounded-full text-sm font-medium">ISO 45001</span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-950/50 text-blue-800 dark:text-blue-300 rounded-full text-sm font-medium">NBR ISO 9001:2015</span>
+                <span className="px-3 py-1 bg-green-100 dark:bg-green-950/50 text-green-800 dark:text-green-300 rounded-full text-sm font-medium">NBR ISO 14001:2015</span>
+                <span className="px-3 py-1 bg-amber-100 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 rounded-full text-sm font-medium">ISO 45001:2018</span>
+                <span className="px-3 py-1 bg-purple-100 dark:bg-purple-950/50 text-purple-800 dark:text-purple-300 rounded-full text-sm font-medium">SIAC 2021 – Nível A</span>
               </div>
               
               <div className="mt-6">

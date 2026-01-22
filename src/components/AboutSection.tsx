@@ -77,7 +77,7 @@ const AboutSection = () => {
             { value: "2.500+", label: "Obras Entregues" },
             { value: "R$ 1,6bi", label: "Receita Anual" },
             { value: "27", label: "Estados Atendidos" },
-            { value: "ISO 9001", label: "Certificações" },
+            { value: "5", label: "Certificações ISO e SIAC" },
           ].map((stat) => (
             <div key={stat.label} className="text-center p-6 rounded-xl bg-card border border-border">
               <p className="text-2xl lg:text-3xl font-bold text-primary">{stat.value}</p>

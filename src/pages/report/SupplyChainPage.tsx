@@ -521,7 +521,7 @@ const SupplyChainPage = () => {
                 "Auditoria interna e externa",
                 "Melhoria contínua",
                 "Registro e rastreabilidade",
-                "Conformidade ISO 9001, 14001, 45001"
+                "Conformidade NBR ISO 9001:2015, NBR ISO 14001:2015, ISO 45001:2018 e SIAC 2021 – Nível A"
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                   <CheckCircle className="w-4 h-4 text-primary shrink-0" />

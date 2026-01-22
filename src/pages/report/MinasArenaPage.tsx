@@ -1,16 +1,6 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Leaf,
-  Award,
-  Zap,
-  Droplets,
-  Building2,
-  Star,
-  Recycle,
-  Heart,
-  TrendingUp
-} from "lucide-react";
+import { Leaf, Award, Zap, Droplets, Building2, Star, Recycle, Heart, TrendingUp } from "lucide-react";
 import minasArenaLogo from "@/assets/companies/minas-arena.png";
 import minasArenaHero from "@/assets/operations/minas-arena-stadium.jpg";
 
@@ -22,12 +12,14 @@ const MinasArenaPage = () => {
         <img src={minasArenaHero} alt="Minas Arena Stadium" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-amber-900/90 to-amber-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
-            <img src={minasArenaLogo} alt="Minas Arena" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />
+            <img
+              src={minasArenaLogo}
+              alt="Minas Arena"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4"
+            />
             <div>
               <p className="text-white/80 text-sm font-medium mb-2">Destaque das Operações</p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Minas Arena
-              </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Minas Arena</h1>
               <p className="text-white/90 text-lg max-w-2xl">
                 Gestão do Mineirão - primeiro estádio LEED Platinum do mundo
               </p>
@@ -44,12 +36,12 @@ const MinasArenaPage = () => {
             Sobre a Minas Arena
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            A Minas Arena é responsável pela gestão do Estádio Governador Magalhães Pinto – o Mineirão –, 
-            em Belo Horizonte (MG), por meio de uma parceria público-privada de longo prazo, atuando como 
-            operadora de um dos principais equipamentos esportivos e de entretenimento do país. A concessão 
-            envolve a administração, operação, manutenção e modernização da arena, assegurando padrões 
-            elevados de segurança, conforto e experiência do público em jogos de futebol, grandes eventos 
-            culturais e shows de porte nacional e internacional.
+            A Minas Arena é responsável pela gestão do Estádio Governador Magalhães Pinto – o Mineirão –, em Belo
+            Horizonte (MG), por meio de uma parceria público-privada de longo prazo, atuando como operadora de um dos
+            principais equipamentos esportivos e de entretenimento do país. A concessão envolve a administração,
+            operação, manutenção e modernização da arena, assegurando padrões elevados de segurança, conforto e
+            experiência do público em jogos de futebol, grandes eventos culturais e shows de porte nacional e
+            internacional.
           </p>
         </section>
 
@@ -64,10 +56,10 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground mb-6">
-                O Mineirão consolidou-se como referência em gestão sustentável de arenas multiuso. O estádio 
-                foi o primeiro do mundo a obter a certificação LEED na categoria Platinum, em 2014 (GRI 302-1, 
-                302-3, 303-5), resultado de investimentos em eficiência energética, gestão hídrica, manejo de 
-                resíduos e racionalização de insumos.
+                O Mineirão consolidou-se como referência em gestão sustentável de arenas multiuso. O estádio foi o
+                primeiro do mundo a obter a certificação LEED na categoria Platinum, em 2014 (GRI 302-1, 302-3, 303-5),
+                resultado de investimentos em eficiência energética, gestão hídrica, manejo de resíduos e racionalização
+                de insumos.
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-4 bg-amber-50 dark:bg-amber-950/30 rounded-lg text-center">
@@ -101,11 +93,12 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                A usina solar fotovoltaica instalada na cobertura e em áreas adjacentes do complexo esportivo 
-                gerou <strong>1.317.600 kWh</strong> no período de referência, o que correspondeu a aproximadamente 
-                <strong> 23,7%</strong> do consumo total de energia elétrica da operação, de <strong>5.564.830 kWh</strong>. 
-                Essa contribuição reduz a dependência de fontes fósseis e reforça a estratégia de mitigação de 
-                emissões de gases de efeito estufa associadas ao uso de eletricidade (GRI 302-1, 305-2).
+                A usina solar fotovoltaica instalada na cobertura e em áreas adjacentes do complexo esportivo gerou{" "}
+                <strong>1.317.600 kWh</strong> no período de referência, o que correspondeu a aproximadamente
+                <strong> 23,7%</strong> do consumo total de energia elétrica da operação, de{" "}
+                <strong>5.564.830 kWh</strong>. Essa contribuição reduz a dependência de fontes fósseis e reforça a
+                estratégia de mitigação de emissões de gases de efeito estufa associadas ao uso de eletricidade (GRI
+                302-1, 305-2).
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-4">
                 <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
@@ -136,17 +129,17 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Na gestão hídrica, o Mineirão opera um sistema de reaproveitamento de água que permitiu utilizar 
-                <strong> 15.337 m³ de água de reúso</strong>, reduzindo em cerca de <strong>51%</strong> o consumo 
-                de água potável, que totalizou <strong>10.557 m³</strong> no período (GRI 303-3, 303-5). A combinação 
-                de uso de água de reúso em bacias sanitárias, irrigação e limpeza, aliada à modernização de 
-                instalações hidráulicas, reforça o compromisso com o uso eficiente de recursos naturais e a 
-                resiliência hídrica da operação.
+                Na gestão hídrica, o Mineirão opera um sistema de reaproveitamento de água que permitiu utilizar
+                <strong> 15.337 m³ de água de reuso</strong>, reduzindo em cerca de <strong>51%</strong> o consumo de
+                água potável, que totalizou <strong>10.557 m³</strong> no período (GRI 303-3, 303-5). A combinação de
+                uso de água de reuso em bacias sanitárias, irrigação e limpeza, aliada à modernização de instalações
+                hidráulicas, reforça o compromisso com o uso eficiente de recursos naturais e a resiliência hídrica da
+                operação.
               </p>
               <div className="grid md:grid-cols-3 gap-4 mt-4">
                 <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
                   <p className="text-2xl font-bold text-blue-700 dark:text-blue-400">15.337</p>
-                  <p className="text-xs text-muted-foreground">m³ de água de reúso</p>
+                  <p className="text-xs text-muted-foreground">m³ de água de reuso</p>
                 </div>
                 <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
                   <p className="text-2xl font-bold text-blue-700 dark:text-blue-400">51%</p>
@@ -172,11 +165,10 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                A arena também se destaca pela gestão de resíduos e pela promoção de práticas circulares e de 
-                educação ambiental (GRI 306-2, 306-4). Programas estruturados de segregação na fonte, coleta 
-                seletiva e parcerias com cooperativas de catadores resultam em maior taxa de desvio de resíduos 
-                de aterros sanitários, especialmente em eventos de grande porte, quando há maior geração de 
-                resíduos recicláveis.
+                A arena também se destaca pela gestão de resíduos e pela promoção de práticas circulares e de educação
+                ambiental (GRI 306-2, 306-4). Programas estruturados de segregação na fonte, coleta seletiva e parcerias
+                com cooperativas de catadores resultam em maior taxa de desvio de resíduos de aterros sanitários,
+                especialmente em eventos de grande porte, quando há maior geração de resíduos recicláveis.
               </p>
             </CardContent>
           </Card>
@@ -193,15 +185,16 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground">
-                No eixo social, a Minas Arena desenvolve e apoia uma série de projetos com foco em inclusão, 
-                diversidade e relacionamento com comunidades do entorno (GRI 203-1, 413-1).
+                No eixo social, a Minas Arena desenvolve e apoia uma série de projetos com foco em inclusão, diversidade
+                e relacionamento com comunidades do entorno (GRI 203-1, 413-1).
               </p>
-              
+
               <div className="grid md:grid-cols-2 gap-4">
                 <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg">
                   <h4 className="font-semibold text-purple-700 dark:text-purple-400 mb-2">#MineirãoDeTodos</h4>
                   <p className="text-sm text-muted-foreground">
-                    Voltado à democratização do acesso ao estádio e à promoção de atividades esportivas e culturais acessíveis.
+                    Voltado à democratização do acesso ao estádio e à promoção de atividades esportivas e culturais
+                    acessíveis.
                   </p>
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
@@ -219,13 +212,15 @@ const MinasArenaPage = () => {
                 <div className="p-4 bg-red-50 dark:bg-red-950/20 rounded-lg">
                   <h4 className="font-semibold text-red-700 dark:text-red-400 mb-2">Mineirão Antirracista</h4>
                   <p className="text-sm text-muted-foreground">
-                    Promove campanhas de combate ao racismo em parceria com clubes, federações e organizações da sociedade civil.
+                    Promove campanhas de combate ao racismo em parceria com clubes, federações e organizações da
+                    sociedade civil.
                   </p>
                 </div>
                 <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg md:col-span-2">
                   <h4 className="font-semibold text-amber-700 dark:text-amber-400 mb-2">Vizinhos do Mineirão</h4>
                   <p className="text-sm text-muted-foreground">
-                    Fortalece o relacionamento com o entorno imediato da arena, com foco em diálogo, mitigação de impactos e oportunidades econômicas locais.
+                    Fortalece o relacionamento com o entorno imediato da arena, com foco em diálogo, mitigação de
+                    impactos e oportunidades econômicas locais.
                   </p>
                 </div>
               </div>
@@ -244,11 +239,11 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Estudo econômico independente apontou que a operação do Mineirão pela Minas Arena gerou impactos 
-                expressivos na economia de Belo Horizonte e da região metropolitana. A atividade da concessionária 
-                contribuiu com <strong>R$ 963 milhões</strong> em geração de valor na economia local e a manutenção 
-                de <strong>7.232 postos de trabalho</strong> diretos, indiretos e induzidos ao longo da cadeia 
-                produtiva, considerando atividades de eventos, serviços, comércio e turismo (GRI 201-1, 203-1).
+                Estudo econômico independente apontou que a operação do Mineirão pela Minas Arena gerou impactos
+                expressivos na economia de Belo Horizonte e da região metropolitana. A atividade da concessionária
+                contribuiu com <strong>R$ 963 milhões</strong> em geração de valor na economia local e a manutenção de{" "}
+                <strong>7.232 postos de trabalho</strong> diretos, indiretos e induzidos ao longo da cadeia produtiva,
+                considerando atividades de eventos, serviços, comércio e turismo (GRI 201-1, 203-1).
               </p>
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="p-6 bg-green-50 dark:bg-green-950/30 rounded-lg text-center">
@@ -261,66 +256,9 @@ const MinasArenaPage = () => {
                 </div>
               </div>
               <p className="text-muted-foreground mt-4">
-                Essa combinação de impacto econômico, inovação em sustentabilidade e programas sociais posiciona 
-                a Minas Arena como um dos principais casos de referência em concessões de arenas esportivas no Brasil.
+                Essa combinação de impacto econômico, inovação em sustentabilidade e programas sociais posiciona a Minas
+                Arena como um dos principais casos de referência em concessões de arenas esportivas no Brasil.
               </p>
-            </CardContent>
-          </Card>
-        </section>
-
-        {/* Certificações e Reconhecimentos */}
-        <section>
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Award className="w-5 h-5 text-amber-500" />
-                Certificações e Reconhecimentos
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-muted-foreground mb-6">
-                A Minas Arena consolidou-se como referência em gestão sustentável de arenas multiuso, acumulando 
-                certificações e reconhecimentos que atestam sua liderança em critérios de eficiência energética, 
-                gestão hídrica, conforto, acessibilidade e desempenho ambiental.
-              </p>
-              <div className="grid sm:grid-cols-2 gap-4">
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="w-5 h-5 text-amber-600" />
-                    <h4 className="font-bold text-amber-700 dark:text-amber-400">LEED Platinum</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Primeiro estádio do mundo a obter esta certificação (2014), emitida pelo U.S. Green Building Council
-                  </p>
-                </div>
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="w-5 h-5 text-blue-600" />
-                    <h4 className="font-bold text-blue-700 dark:text-blue-400">Pacto Global da ONU</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Membro da Rede Brasil desde 2016
-                  </p>
-                </div>
-                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="w-5 h-5 text-green-600" />
-                    <h4 className="font-bold text-green-700 dark:text-green-400">Selo BH Sustentável</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Categoria Ouro - Prefeitura de Belo Horizonte
-                  </p>
-                </div>
-                <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg">
-                  <div className="flex items-center gap-2 mb-2">
-                    <Star className="w-5 h-5 text-purple-600" />
-                    <h4 className="font-bold text-purple-700 dark:text-purple-400">SISBRACE Cinco Bolas</h4>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    Classificação máxima no Sistema Brasileiro de Classificação de Estádios
-                  </p>
-                </div>
-              </div>
             </CardContent>
           </Card>
         </section>

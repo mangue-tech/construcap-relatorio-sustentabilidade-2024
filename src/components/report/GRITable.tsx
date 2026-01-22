@@ -41,7 +41,7 @@ const griData: GRIItem[] = [
     indicator: "Entidades incluídas no relatório",
     description: "Lista de entidades incluídas no relatório de sustentabilidade",
     section: "Quem Somos",
-    response: "Grupo Construcap e suas controladas e coligadas: Urbia, Minas Arena, Inova Saúde e Ambicap.",
+    response: "Grupo Construcap e suas controladas/coligadas: Urbia, Minas Arena, Inova Saúde e Ambicap.",
     link: "/quem-somos",
   },
   {
@@ -395,7 +395,7 @@ const griData: GRIItem[] = [
     indicator: "Gestão de impactos relacionados ao descarte de água",
     description: "Abordagem para gestão de efluentes",
     section: "Desempenho Ambiental",
-    response: "Obras com tratamento de efluentes e reúso de água quando aplicável.",
+    response: "Obras com tratamento de efluentes e reuso de água quando aplicável.",
     link: "/desempenho-ambiental",
   },
   {
@@ -495,7 +495,7 @@ const griData: GRIItem[] = [
     indicator: "Resíduos não destinados à disposição final",
     description: "Resíduos reciclados ou recuperados",
     section: "Desempenho Ambiental",
-    response: "Resíduos desviados de aterro: reciclagem, coprocessamento e reúso em obras.",
+    response: "Resíduos desviados de aterro: reciclagem, coprocessamento e reuso em obras.",
     link: "/desempenho-ambiental",
   },
   {

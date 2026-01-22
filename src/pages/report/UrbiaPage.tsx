@@ -256,6 +256,38 @@ const UrbiaPage = () => {
           </Card>
         </section>
 
+        {/* Certificações e Compromissos */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Leaf className="w-5 h-5 text-green-600" />
+                Compromissos de Sustentabilidade
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-4">
+                A Urbia Parques formalizou seu compromisso com o desenvolvimento sustentável ao aderir ao 
+                Pacto Global da Organização das Nações Unidas (ONU).
+              </p>
+              <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
+                <div className="flex items-center gap-3">
+                  <div className="p-3 bg-green-100 dark:bg-green-900/30 rounded-full">
+                    <Leaf className="w-6 h-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-green-700 dark:text-green-400">Pacto Global da ONU</h4>
+                    <p className="text-sm text-muted-foreground">Adesão em 17 de novembro de 2022</p>
+                    <p className="text-xs text-green-600 dark:text-green-400 mt-1">
+                      Compromisso com os princípios de direitos humanos, trabalho, meio ambiente e anticorrupção
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
+
         {/* Saiba Mais */}
         <section>
           <Card className="bg-gradient-to-br from-green-600 to-green-700 border-0 text-white">

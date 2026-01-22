@@ -918,28 +918,107 @@ const EnvironmentalPage = () => {
 
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-8">
               O Grupo Construcap conta com reconhecimentos ambientais que reforçam sua capacidade de operar ativos
               complexos dentro de padrões internacionais de sustentabilidade.
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {certifications.map((cert, index) => (
-                <div
-                  key={cert.name}
-                  className="p-4 rounded-xl bg-secondary/50 border border-border hover:border-primary/50 transition-colors"
-                >
-                  <div className="flex items-center gap-2 mb-2">
-                    <Award className="w-5 h-5 text-primary" />
-                    <h4 className="font-bold">{cert.name}</h4>
+            {/* Construcap */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <Building2 className="w-5 h-5 text-primary" />
+                <h3 className="text-lg font-bold">Construcap</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certificationsConstrucap.map((cert) => (
+                  <div
+                    key={cert.name}
+                    className="p-4 rounded-xl bg-secondary/50 border border-border hover:border-primary/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Award className="w-5 h-5 text-primary" />
+                      <h4 className="font-bold text-sm">{cert.name}</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                    <p className="text-xs text-muted-foreground mb-1">
+                      <strong>Escopo:</strong> {cert.scope}
+                    </p>
+                    <p className="text-xs text-primary font-medium">{cert.validity}</p>
                   </div>
-                  <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <strong>Escopo:</strong> {cert.scope}
-                  </p>
-                  <p className="text-xs text-primary font-medium">{cert.validity}</p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Minas Arena */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <MapPin className="w-5 h-5 text-amber-500" />
+                <h3 className="text-lg font-bold">Minas Arena</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                {certificationsMinas.map((cert) => (
+                  <div
+                    key={cert.name}
+                    className="p-4 rounded-xl bg-amber-500/10 border border-amber-500/20 hover:border-amber-500/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Award className="w-5 h-5 text-amber-500" />
+                      <h4 className="font-bold text-sm">{cert.name}</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                    <p className="text-xs text-amber-600 dark:text-amber-400 font-medium">{cert.validity}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Urbia */}
+            <div className="mb-8">
+              <div className="flex items-center gap-2 mb-4">
+                <TreePine className="w-5 h-5 text-green-600" />
+                <h3 className="text-lg font-bold">Urbia Parques</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certificationsUrbia.map((cert) => (
+                  <div
+                    key={cert.name}
+                    className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 hover:border-green-500/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Globe className="w-5 h-5 text-green-600" />
+                      <h4 className="font-bold text-sm">{cert.name}</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                    <p className="text-xs text-green-600 dark:text-green-400 font-medium">{cert.validity}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Inova Saúde */}
+            <div>
+              <div className="flex items-center gap-2 mb-4">
+                <Hospital className="w-5 h-5 text-blue-500" />
+                <h3 className="text-lg font-bold">Inova Saúde</h3>
+              </div>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {certificationsInova.map((cert) => (
+                  <div
+                    key={cert.name}
+                    className="p-4 rounded-xl bg-blue-500/10 border border-blue-500/20 hover:border-blue-500/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      <Award className="w-5 h-5 text-blue-500" />
+                      <h4 className="font-bold text-sm">{cert.name}</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-2">{cert.description}</p>
+                    <p className="text-xs text-muted-foreground mb-1">
+                      <strong>Escopo:</strong> {cert.scope}
+                    </p>
+                    <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">{cert.validity}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </AnimatedSection>

@@ -43,47 +43,44 @@ const InovaSaudePage = () => {
             A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são
             sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade no
             Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o
-            <strong> Hospital Centro de Referência da Saúde da Mulher</strong> e o{" "}
+            <strong> Hospital Centro de Referência da Saúde da Mulher</strong> na cidade de São Paulo, o{" "}
             <strong>Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'</strong>, em Sorocaba, além do{" "}
             <strong>Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'</strong> (GRI 203-1, 416-1).
           </p>
         </section>
 
-        {/* Hospital Centro de Referência da Saúde da Mulher */}
+        {/* Hospital SJC */}
         <section>
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="h-64 md:h-auto">
                 <img
-                  src={hospitalMulher}
-                  alt="Hospital Centro de Referência da Saúde da Mulher"
+                  src={hospitalSjc}
+                  alt="Hospital Regional de São José dos Campos"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
                 <CardTitle className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-5 h-5 text-pink-600" />
-                  Hospital Centro de Referência da Saúde da Mulher
+                  <MapPin className="w-5 h-5 text-blue-600" />
+                  Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, é o
-                    terceiro do estado de São Paulo a ser entregue seguindo o modelo de Parceria Público-Privada (PPP)
-                    da Saúde.
+                    Inaugurado em 2018, com investimento de R$ 239 milhões, o Hospital Regional de São José dos Campos
+                    'Dr. Rubens Savastano' oferece 180 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de
+                    serviço de apoio diagnóstico por imagem, endoscopia e terapia. A estrutura possui 33 mil metros
+                    quadrados de área construída, alto nível de resolução e grande capacidade de atenção às urgências.
                   </p>
                   <p>
-                    Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10
-                    leitos dedicados à realização de cirurgia ambulatorial (hospital-dia), distribuídos em cerca de 44
-                    mil metros quadrados de área construída.
+                    O hospital, por meio da Central de Regulação de Serviços de Saúde do Estado de São Paulo, atende a
+                    população local, com mais de 727 mil habitantes, além dos 39 municípios da região, se tornando
+                    referência para todo o Vale do Paraíba, com mais de dois milhões de habitantes (IBGE-2020).
                   </p>
                   <p>
-                    O hospital conta com ambulatório de especialidades médicas, serviço de infusões e quimioterapia,
-                    Centro de Alta Resolutividade (CARE), Centro de Reprodução Humana, Centro de Reabilitação e
-                    Fisioterapia e serviço de diagnósticos clínicos e por imagem.
-                  </p>
-                  <p>
-                    A unidade também mantém o projeto Bem-Me-Quer, parceria entre a Secretaria da Saúde e a Secretaria
-                    de Segurança Pública, que contempla o atendimento humanizado para vítimas de violência sexual.
+                    A unidade foi responsável pela geração de cerca de 1.200 novos empregos na região e recebe pacientes
+                    de média e alta complexidades em cirurgia trauma-ortopedia, neurocirurgia, cardiovascular, pediatria
+                    e especialidades relacionadas a casos de urgência e emergência.
                   </p>
                 </div>
               </div>
@@ -98,7 +95,7 @@ const InovaSaudePage = () => {
               <div className="h-64 md:h-auto md:order-2">
                 <img
                   src={hospitalSorocaba}
-                  alt="Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'"
+                  alt="Hospital Regional de Sorocaba"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -136,38 +133,41 @@ const InovaSaudePage = () => {
           </Card>
         </section>
 
-        {/* Hospital SJC */}
+        {/* Hospital da Mulher */}
         <section>
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="h-64 md:h-auto">
                 <img
-                  src={hospitalSjc}
-                  alt="Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'"
+                  src={hospitalMulher}
+                  alt="Hospital Centro de Referência da Saúde da Mulher"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="p-6">
                 <CardTitle className="flex items-center gap-2 mb-4">
-                  <MapPin className="w-5 h-5 text-blue-600" />
-                  Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'
+                  <MapPin className="w-5 h-5 text-pink-600" />
+                  Hospital Centro de Referência da Saúde da Mulher
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    Inaugurado em 2018, com investimento de R$ 239 milhões, o Hospital Regional de São José dos Campos
-                    'Dr. Rubens Savastano' oferece 180 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de
-                    serviço de apoio diagnóstico por imagem, endoscopia e terapia. A estrutura possui 33 mil metros
-                    quadrados de área construída, alto nível de resolução e grande capacidade de atenção às urgências.
+                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, está
+                    localizado na região central da cidade de São Paulo e é o terceiro do estado de São Paulo a ser
+                    entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde.
                   </p>
                   <p>
-                    O hospital, por meio da Central de Regulação de Serviços de Saúde do Estado de São Paulo, atende a
-                    população local, com mais de 727 mil habitantes, além dos 39 municípios da região, se tornando
-                    referência para todo o Vale do Paraíba, com mais de dois milhões de habitantes (IBGE-2020).
+                    Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10
+                    leitos dedicados à realização de cirurgia ambulatorial (hospital-dia), distribuídos em cerca de 44
+                    mil metros quadrados de área construída.
                   </p>
                   <p>
-                    A unidade foi responsável pela geração de cerca de 1.200 novos empregos na região e recebe pacientes
-                    de média e alta complexidades em cirurgia trauma-ortopedia, neurocirurgia, cardiovascular, pediatria
-                    e especialidades relacionadas a casos de urgência e emergência.
+                    O hospital conta com ambulatório de especialidades médicas, serviço de infusões e quimioterapia,
+                    Centro de Alta Resolutividade (CARE), Centro de Reprodução Humana, Centro de Reabilitação e
+                    Fisioterapia e serviço de diagnósticos clínicos e por imagem.
+                  </p>
+                  <p>
+                    A unidade também mantém o projeto Bem-Me-Quer, parceria entre a Secretaria da Saúde e a Secretaria
+                    de Segurança Pública, que contempla o atendimento humanizado para vítimas de violência sexual.
                   </p>
                 </div>
               </div>

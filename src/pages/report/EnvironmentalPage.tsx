@@ -192,13 +192,19 @@ const certificationsConstrucap = [
   },
 ];
 
-// Outras certificações do Grupo
-const certificationsOther = [
+// Certificações Minas Arena
+const certificationsMinas = [
   {
     name: "LEED Platinum",
-    description: "Primeira certificação para estádio no mundo (2014)",
+    description: "Primeiro estádio do mundo a obter esta certificação (2014)",
     scope: "Minas Arena - Mineirão",
-    validity: "Certificado",
+    validity: "Certificado desde 2014",
+  },
+  {
+    name: "Pacto Global",
+    description: "Rede Brasil da ONU",
+    scope: "Minas Arena",
+    validity: "Membro desde 2016",
   },
   {
     name: "Selo BH Sustentável",
@@ -212,16 +218,42 @@ const certificationsOther = [
     scope: "Minas Arena",
     validity: "Vigente",
   },
+];
+
+// Certificações Urbia
+const certificationsUrbia = [
   {
-    name: "Pacto Global",
-    description: "Rede Brasil desde 2016",
-    scope: "Urbia e Minas Arena",
-    validity: "Membro ativo",
+    name: "Pacto Global da ONU",
+    description: "Compromisso com o desenvolvimento sustentável",
+    scope: "Urbia Parques",
+    validity: "Adesão em 17/11/2022",
+  },
+];
+
+// Certificações Inova Saúde
+const certificationsInova = [
+  {
+    name: "ISO 9001:2015",
+    description: "Sistema de Gestão da Qualidade",
+    scope: "Inova Saúde - Unidades Hospitalares",
+    validity: "Válida até 2026",
+  },
+  {
+    name: "ISO 14001:2015",
+    description: "Sistema de Gestão Ambiental",
+    scope: "Inova Saúde - Unidades Hospitalares",
+    validity: "Válida até 2026",
+  },
+  {
+    name: "ISO 45001:2018",
+    description: "Sistema de Saúde e Segurança Ocupacional",
+    scope: "Inova Saúde - Unidades Hospitalares",
+    validity: "Válida até 2026",
   },
 ];
 
 // Todas as certificações combinadas
-const certifications = [...certificationsConstrucap, ...certificationsOther];
+const certifications = [...certificationsConstrucap, ...certificationsMinas, ...certificationsUrbia, ...certificationsInova];
 
 const CHART_COLORS = ["hsl(var(--primary))", "hsl(221, 83%, 53%)", "hsl(142, 76%, 36%)", "hsl(48, 96%, 53%)"];
 

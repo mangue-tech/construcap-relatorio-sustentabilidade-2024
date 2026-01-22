@@ -51,7 +51,7 @@ const materialTopics = [
     number: 2,
     title: "Integridade, Ética e Conformidade",
     description:
-      "Mecanismos de compliance, combate à corrupção, canal de denúncias e controles internos aplicáveis a todas as unidades.",
+      "Mecanismos de combate à corrupção, canal de denúncias, due dilligence de integridade e controles internos aplicáveis a todas as unidades.",
     context:
       "Requisito de clientes públicos e privados, além de exigência do ambiente regulatório em que a empresa atua.",
     icon: Shield,

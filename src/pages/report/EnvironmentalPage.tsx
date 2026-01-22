@@ -158,26 +158,42 @@ const wasteData = {
   ],
 };
 
-// Certificações
-const certifications = [
+// Certificações Construcap
+const certificationsConstrucap = [
   {
-    name: "ISO 9001:2015",
+    name: "NBR ISO 9001:2015",
     description: "Sistema de Gestão da Qualidade",
-    scope: "Inova Saúde e unidades hospitalares",
-    validity: "Válida até 2026",
+    scope: "Construcap - primeira certificação em 2014",
+    validity: "Válida até 17/07/2026",
   },
   {
-    name: "ISO 14001:2015",
+    name: "NBR ISO 14001:2015",
     description: "Sistema de Gestão Ambiental",
-    scope: "Inova Saúde e unidades hospitalares",
-    validity: "Válida até 2026",
+    scope: "Construcap - certificada desde 2014",
+    validity: "Válida até 16/07/2026",
   },
   {
     name: "ISO 45001:2018",
     description: "Saúde e Segurança Ocupacional",
-    scope: "Inova Saúde e unidades hospitalares",
-    validity: "Válida até 2026",
+    scope: "Construcap - obtida em 2023",
+    validity: "Válida até 16/07/2026",
   },
+  {
+    name: "SIAC 2021 – Nível A",
+    description: "Sistema de Avaliação da Conformidade de Empresas de Serviços e Obras da Construção Civil",
+    scope: "Edificações, infraestrutura viária e saneamento",
+    validity: "Válida até 17/07/2026",
+  },
+  {
+    name: "Certificado de Regularidade de Consumidor de Recurso Florestal",
+    description: "Regularidade ambiental para uso de recursos florestais",
+    scope: "Construcap",
+    validity: "Ano-base 2024",
+  },
+];
+
+// Outras certificações do Grupo
+const certificationsOther = [
   {
     name: "LEED Platinum",
     description: "Primeira certificação para estádio no mundo (2014)",
@@ -203,6 +219,9 @@ const certifications = [
     validity: "Membro ativo",
   },
 ];
+
+// Todas as certificações combinadas
+const certifications = [...certificationsConstrucap, ...certificationsOther];
 
 const CHART_COLORS = ["hsl(var(--primary))", "hsl(221, 83%, 53%)", "hsl(142, 76%, 36%)", "hsl(48, 96%, 53%)"];
 

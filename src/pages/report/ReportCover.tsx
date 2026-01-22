@@ -202,29 +202,34 @@ const companies = [
 ];
 const certifications = [
   {
-    name: "ISO 9001",
+    name: "NBR ISO 9001:2015",
     description:
-      "Sistema de Gestão da Qualidade - Padrão internacional que especifica requisitos para um sistema de gestão da qualidade, garantindo produtos e serviços consistentes.",
+      "Sistema de Gestão da Qualidade - Primeira certificação em 2014, com validade atual até 17/07/2026. Padrão internacional que especifica requisitos para um sistema de gestão da qualidade.",
   },
   {
-    name: "ISO 14001",
+    name: "NBR ISO 14001:2015",
     description:
-      "Sistema de Gestão Ambiental - Framework para organizações melhorarem seu desempenho ambiental através de uso eficiente de recursos e redução de resíduos.",
+      "Sistema de Gestão Ambiental - Certificada desde 2014, com renovação até 16/07/2026. Framework para organizações melhorarem seu desempenho ambiental através de uso eficiente de recursos.",
   },
   {
-    name: "ISO 45001",
+    name: "ISO 45001:2018",
     description:
-      "Sistema de Gestão de Saúde e Segurança Ocupacional - Padrão global para prevenir lesões e doenças ocupacionais, proporcionando ambientes de trabalho seguros.",
+      "Sistema de Gestão de Saúde e Segurança Ocupacional - Obtida em 2023, válida até 16/07/2026. Padrão global para prevenir lesões e doenças ocupacionais.",
   },
   {
-    name: "ISO 37001",
+    name: "SIAC 2021 – Nível A",
     description:
-      "Sistema de Gestão Antissuborno - Especifica requisitos para estabelecer, implementar e manter um sistema de gestão antissuborno.",
+      "Sistema de Avaliação da Conformidade - Aplicado a obras de edificações, infraestrutura viária e saneamento, com validade até 17/07/2026.",
   },
   {
-    name: "LEED",
+    name: "Certificado de Recurso Florestal",
     description:
-      "Leadership in Energy and Environmental Design - Certificação de edificações sustentáveis que avalia eficiência energética, uso de água, materiais e qualidade ambiental.",
+      "Certificado de Regularidade de Consumidor de Recurso Florestal - Referente ao ano-base de 2024, atestando conformidade ambiental.",
+  },
+  {
+    name: "LEED Platinum",
+    description:
+      "Leadership in Energy and Environmental Design - Certificação Platinum do Mineirão (Minas Arena), primeira para estádio no mundo em 2014.",
   },
 ];
 

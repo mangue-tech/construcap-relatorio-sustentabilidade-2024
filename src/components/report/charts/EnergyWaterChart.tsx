@@ -153,21 +153,22 @@ const EnergyWaterChart = () => {
 
         {/* Certifications */}
         <div className="bg-card rounded-2xl border border-border p-6">
-          <h4 className="font-semibold mb-4">Certificações Ambientais</h4>
+          <h4 className="font-semibold mb-4">Certificações Construcap</h4>
           <div className="space-y-4">
             {[
-              { cert: "ISO 14001:2015", desc: "Sistema de Gestão Ambiental", status: "Vigente" },
-              { cert: "ISO 45001:2018", desc: "Saúde e Segurança Ocupacional", status: "Vigente" },
-              { cert: "ISO 9001:2015", desc: "Sistema de Gestão da Qualidade", status: "Vigente" },
-              { cert: "LEED Platinum", desc: "Minas Arena - Mineirão", status: "Certificado" },
-              { cert: "AQUA-HQE", desc: "Alta Qualidade Ambiental", status: "Projetos selecionados" },
+              { cert: "NBR ISO 9001:2015", desc: "Sistema de Gestão da Qualidade", status: "Desde 2014 • Válida até 17/07/2026" },
+              { cert: "NBR ISO 14001:2015", desc: "Sistema de Gestão Ambiental", status: "Desde 2014 • Válida até 16/07/2026" },
+              { cert: "ISO 45001:2018", desc: "Saúde e Segurança Ocupacional", status: "Desde 2023 • Válida até 16/07/2026" },
+              { cert: "SIAC 2021 – Nível A", desc: "Edificações, infraestrutura viária e saneamento", status: "Válida até 17/07/2026" },
+              { cert: "Certificado de Recurso Florestal", desc: "Regularidade de Consumidor de Recurso Florestal", status: "Ano-base 2024" },
+              { cert: "LEED Platinum", desc: "Minas Arena - Mineirão", status: "Certificado desde 2014" },
             ].map((item) => (
               <div key={item.cert} className="flex items-start justify-between p-4 rounded-xl bg-secondary/50">
                 <div>
                   <p className="font-semibold">{item.cert}</p>
                   <p className="text-sm text-muted-foreground">{item.desc}</p>
                 </div>
-                <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-500 font-medium">
+                <span className="text-xs px-2 py-1 rounded-full bg-green-100 text-green-500 font-medium whitespace-nowrap">
                   {item.status}
                 </span>
               </div>

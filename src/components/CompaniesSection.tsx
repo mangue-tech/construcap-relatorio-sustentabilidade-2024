@@ -1,9 +1,10 @@
-import { Building2, Heart, Trophy, MapPin, Phone, Globe, Users, Briefcase, TreePine } from "lucide-react";
+import { Building2, Heart, Trophy, MapPin, Phone, Globe, Users, Briefcase } from "lucide-react";
 
 const companies = [
   {
     name: "Inova Saúde",
-    description: "Empresa constituída em 2014 para a construção, fornecimento de equipamentos, manutenção e gestão dos serviços não assistenciais em complexos hospitalares no Estado de São Paulo.",
+    description:
+      "Empresa constituída em 2014 para a construção, fornecimento de equipamentos, manutenção e gestão dos serviços não assistenciais em complexos hospitalares no Estado de São Paulo.",
     founded: "2014",
     employees: "1.500+",
     location: "São Paulo, SP",
@@ -26,17 +27,13 @@ const companies = [
   },
   {
     name: "Minas Arena",
-    description: "Pioneira na consolidação da parceria público-privada no Brasil, responsável pela elaboração do projeto, investimento, construção e operação do Estádio do Mineirão.",
+    description:
+      "Pioneira na consolidação da parceria público-privada no Brasil, responsável pela elaboração do projeto, investimento, construção e operação do Estádio do Mineirão.",
     founded: "2010",
     employees: "500+",
     location: "Belo Horizonte, MG",
     sector: "Esportivo, Eventos, PPP",
-    highlights: [
-      "Gestão do Mineirão",
-      "Parceria Público-Privada",
-      "Copa do Mundo 2014",
-      "Eventos sustentáveis",
-    ],
+    highlights: ["Gestão do Mineirão", "Parceria Público-Privada", "Copa do Mundo 2014", "Eventos sustentáveis"],
     metrics: {
       co2: "30%",
       energy: "45%",
@@ -49,17 +46,13 @@ const companies = [
   },
   {
     name: "Ambicap",
-    description: "Empresa do Grupo Construcap criada para executar atividades de zeladoria, limpeza e manejo de áreas verdes em operações de parques, com origem na estruturação da operação no Parque Ibirapuera.",
-    founded: "2023",
-    employees: "200+",
+    description:
+      "Empresa criada para executar atividades de zeladoria, limpeza e manejo de áreas verdes em operações de parques.",
+    founded: "2015",
+    employees: "800+",
     location: "São Paulo, SP",
-    sector: "Zeladoria, Áreas Verdes, Parques",
-    highlights: [
-      "8 parques sob gestão",
-      "8.163 hectares de área",
-      "Parque Ibirapuera",
-      "Resposta emergencial climática",
-    ],
+    sector: "Construção Civil, PPP, Infraestrutura",
+    highlights: ["Projetos estruturados", "Parcerias público-privadas", "Infraestrutura nacional", "Gestão integrada"],
     metrics: {
       co2: "24%",
       energy: "38%",
@@ -67,7 +60,7 @@ const companies = [
       safety: "94%",
     },
     score: 84,
-    icon: TreePine,
+    icon: Building2,
     color: "green",
   },
 ];
@@ -83,8 +76,8 @@ const CompaniesSection = () => {
             Conheça o <span className="text-gradient">Grupo Construcap</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            Projetos estruturados que transformam infraestrutura em desenvolvimento sustentável e social. 
-            Atuação diversificada em saúde, esportes e construção civil.
+            Projetos estruturados que transformam infraestrutura em desenvolvimento sustentável e social. Atuação
+            diversificada em saúde, esportes e construção civil.
           </p>
         </div>
 
@@ -100,14 +93,24 @@ const CompaniesSection = () => {
                   {/* Left side - Info */}
                   <div className="flex-1 space-y-6">
                     <div className="flex items-start gap-4">
-                      <div className={`w-14 h-14 rounded-xl flex items-center justify-center shrink-0 ${
-                        company.color === 'primary' ? 'bg-accent' :
-                        company.color === 'blue' ? 'bg-blue-100' : 'bg-green-100'
-                      }`}>
-                        <company.icon className={`w-7 h-7 ${
-                          company.color === 'primary' ? 'text-primary' :
-                          company.color === 'blue' ? 'text-blue-500' : 'text-green-500'
-                        }`} />
+                      <div
+                        className={`w-14 h-14 rounded-xl flex items-center justify-center shrink-0 ${
+                          company.color === "primary"
+                            ? "bg-accent"
+                            : company.color === "blue"
+                              ? "bg-blue-100"
+                              : "bg-green-100"
+                        }`}
+                      >
+                        <company.icon
+                          className={`w-7 h-7 ${
+                            company.color === "primary"
+                              ? "text-primary"
+                              : company.color === "blue"
+                                ? "text-blue-500"
+                                : "text-green-500"
+                          }`}
+                        />
                       </div>
                       <div>
                         <h3 className="text-2xl font-bold">{company.name}</h3>
@@ -138,10 +141,15 @@ const CompaniesSection = () => {
                       <div className="grid grid-cols-2 gap-2">
                         {company.highlights.map((highlight) => (
                           <div key={highlight} className="flex items-center gap-2 text-sm">
-                            <span className={`w-1.5 h-1.5 rounded-full ${
-                              company.color === 'primary' ? 'bg-primary' :
-                              company.color === 'blue' ? 'bg-blue-500' : 'bg-green-500'
-                            }`} />
+                            <span
+                              className={`w-1.5 h-1.5 rounded-full ${
+                                company.color === "primary"
+                                  ? "bg-primary"
+                                  : company.color === "blue"
+                                    ? "bg-blue-500"
+                                    : "bg-green-500"
+                              }`}
+                            />
                             {highlight}
                           </div>
                         ))}
@@ -153,7 +161,7 @@ const CompaniesSection = () => {
                   <div className="lg:w-80 space-y-4">
                     <div className="p-6 rounded-xl bg-secondary/50">
                       <h4 className="font-semibold mb-4">Indicadores ESG</h4>
-                      
+
                       <div className="space-y-4">
                         <div>
                           <div className="flex justify-between text-sm mb-1">
@@ -164,27 +172,33 @@ const CompaniesSection = () => {
                             <div className="h-full bg-green-500 rounded-full" style={{ width: company.metrics.co2 }} />
                           </div>
                         </div>
-                        
+
                         <div>
                           <div className="flex justify-between text-sm mb-1">
                             <span className="text-muted-foreground">Energia Renovável</span>
                             <span className="font-medium text-blue-500">{company.metrics.energy}</span>
                           </div>
                           <div className="h-2 bg-secondary rounded-full">
-                            <div className="h-full bg-blue-500 rounded-full" style={{ width: company.metrics.energy }} />
+                            <div
+                              className="h-full bg-blue-500 rounded-full"
+                              style={{ width: company.metrics.energy }}
+                            />
                           </div>
                         </div>
-                        
+
                         <div>
                           <div className="flex justify-between text-sm mb-1">
                             <span className="text-muted-foreground">Diversidade</span>
                             <span className="font-medium text-purple-500">{company.metrics.diversity}</span>
                           </div>
                           <div className="h-2 bg-secondary rounded-full">
-                            <div className="h-full bg-purple-500 rounded-full" style={{ width: company.metrics.diversity }} />
+                            <div
+                              className="h-full bg-purple-500 rounded-full"
+                              style={{ width: company.metrics.diversity }}
+                            />
                           </div>
                         </div>
-                        
+
                         <div>
                           <div className="flex justify-between text-sm mb-1">
                             <span className="text-muted-foreground">Segurança</span>
@@ -197,15 +211,27 @@ const CompaniesSection = () => {
                       </div>
                     </div>
 
-                    <div className={`p-4 rounded-xl text-center ${
-                      company.color === 'primary' ? 'bg-accent' :
-                      company.color === 'blue' ? 'bg-blue-100' : 'bg-green-100'
-                    }`}>
+                    <div
+                      className={`p-4 rounded-xl text-center ${
+                        company.color === "primary"
+                          ? "bg-accent"
+                          : company.color === "blue"
+                            ? "bg-blue-100"
+                            : "bg-green-100"
+                      }`}
+                    >
                       <p className="text-sm text-muted-foreground">Score ESG</p>
-                      <p className={`text-3xl font-bold ${
-                        company.color === 'primary' ? 'text-primary' :
-                        company.color === 'blue' ? 'text-blue-500' : 'text-green-500'
-                      }`}>{company.score}/100</p>
+                      <p
+                        className={`text-3xl font-bold ${
+                          company.color === "primary"
+                            ? "text-primary"
+                            : company.color === "blue"
+                              ? "text-blue-500"
+                              : "text-green-500"
+                        }`}
+                      >
+                        {company.score}/100
+                      </p>
                     </div>
                   </div>
                 </div>

@@ -1,15 +1,6 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { 
-  Building2,
-  Award,
-  Shield,
-  Users,
-  Heart,
-  Server,
-  GraduationCap,
-  MapPin
-} from "lucide-react";
+import { Building2, Award, Shield, Users, Heart, Server, GraduationCap, MapPin } from "lucide-react";
 import inovaSaudeLogo from "@/assets/companies/inova-saude.png";
 import inovaSaudeHero from "@/assets/operations/inova-saude-hospital.jpg";
 import hospitalSjc from "@/assets/operations/hospital-sjc.jpg";
@@ -25,12 +16,14 @@ const InovaSaudePage = () => {
         <img src={inovaSaudeHero} alt="Inova Saúde Hospital" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-600/50 flex items-center">
           <div className="px-6 lg:px-12 flex items-center gap-8">
-            <img src={inovaSaudeLogo} alt="Inova Saúde" className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4" />
+            <img
+              src={inovaSaudeLogo}
+              alt="Inova Saúde"
+              className="w-24 h-24 md:w-32 md:h-32 object-contain bg-white rounded-xl p-4"
+            />
             <div>
               <p className="text-white/80 text-sm font-medium mb-2">Destaque das Operações</p>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-                Inova Saúde
-              </h1>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">Inova Saúde</h1>
               <p className="text-white/90 text-lg max-w-2xl">
                 Gestão de hospitais públicos de alta complexidade no Estado de São Paulo
               </p>
@@ -47,11 +40,12 @@ const InovaSaudePage = () => {
             Sobre a Inova Saúde
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são 
-            sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade 
-            no Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o 
-            <strong> Hospital Estadual da Mulher (HEM)</strong> e o <strong>Hospital Regional de Sorocaba (HRS)</strong>, 
-            em Sorocaba, além do <strong>Hospital Estadual de São José dos Campos (HESJC)</strong> (GRI 203-1, 416-1).
+            A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são
+            sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade no
+            Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o
+            <strong> Hospital Centro de Referência da Saúde da Mulher</strong> e o{" "}
+            <strong>Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'</strong>, em Sorocaba, além do{" "}
+            <strong>Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'</strong> (GRI 203-1, 416-1).
           </p>
         </section>
 
@@ -60,7 +54,11 @@ const InovaSaudePage = () => {
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="h-64 md:h-auto">
-                <img src={hospitalSjc} alt="Hospital Regional de São José dos Campos" className="w-full h-full object-cover" />
+                <img
+                  src={hospitalSjc}
+                  alt="Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <CardTitle className="flex items-center gap-2 mb-4">
@@ -69,13 +67,20 @@ const InovaSaudePage = () => {
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    Inaugurado em 2018, com investimento de R$ 239 milhões, o Hospital Regional de São José dos Campos 'Dr. Rubens Savastano' oferece 180 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de serviço de apoio diagnóstico por imagem, endoscopia e terapia. A estrutura possui 33 mil metros quadrados de área construída, alto nível de resolução e grande capacidade de atenção às urgências.
+                    Inaugurado em 2018, com investimento de R$ 239 milhões, o Hospital Regional de São José dos Campos
+                    'Dr. Rubens Savastano' oferece 180 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de
+                    serviço de apoio diagnóstico por imagem, endoscopia e terapia. A estrutura possui 33 mil metros
+                    quadrados de área construída, alto nível de resolução e grande capacidade de atenção às urgências.
                   </p>
                   <p>
-                    O hospital, por meio da Central de Regulação de Serviços de Saúde do Estado de São Paulo, atende a população local, com mais de 727 mil habitantes, além dos 39 municípios da região, se tornando referência para todo o Vale do Paraíba, com mais de dois milhões de habitantes (IBGE-2020).
+                    O hospital, por meio da Central de Regulação de Serviços de Saúde do Estado de São Paulo, atende a
+                    população local, com mais de 727 mil habitantes, além dos 39 municípios da região, se tornando
+                    referência para todo o Vale do Paraíba, com mais de dois milhões de habitantes (IBGE-2020).
                   </p>
                   <p>
-                    A unidade foi responsável pela geração de cerca de 1.200 novos empregos na região e recebe pacientes de média e alta complexidades em cirurgia trauma-ortopedia, neurocirurgia, cardiovascular, pediatria e especialidades relacionadas a casos de urgência e emergência.
+                    A unidade foi responsável pela geração de cerca de 1.200 novos empregos na região e recebe pacientes
+                    de média e alta complexidades em cirurgia trauma-ortopedia, neurocirurgia, cardiovascular, pediatria
+                    e especialidades relacionadas a casos de urgência e emergência.
                   </p>
                 </div>
               </div>
@@ -88,7 +93,11 @@ const InovaSaudePage = () => {
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="h-64 md:h-auto md:order-2">
-                <img src={hospitalSorocaba} alt="Hospital Regional de Sorocaba" className="w-full h-full object-cover" />
+                <img
+                  src={hospitalSorocaba}
+                  alt="Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6 md:order-1">
                 <CardTitle className="flex items-center gap-2 mb-4">
@@ -97,16 +106,26 @@ const InovaSaudePage = () => {
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    O Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene' foi o primeiro do estado de São Paulo a ser entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde. Ele é referência para a população da cidade de Sorocaba, que tem cerca de 660 mil habitantes, além de atender os 48 municípios da região e 15 municípios das Regiões de Saúde de Mananciais e Rota dos Bandeirantes, totalizando uma população de mais de 5 milhões de habitantes (IBGE – 2016), por meio da Central de Regulação de Serviços de Saúde do Estado de São Paulo.
+                    O Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene' foi o primeiro do estado de São Paulo a
+                    ser entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde. Ele é referência para a
+                    população da cidade de Sorocaba, que tem cerca de 660 mil habitantes, além de atender os 48
+                    municípios da região e 15 municípios das Regiões de Saúde de Mananciais e Rota dos Bandeirantes,
+                    totalizando uma população de mais de 5 milhões de habitantes (IBGE – 2016), por meio da Central de
+                    Regulação de Serviços de Saúde do Estado de São Paulo.
                   </p>
                   <p>
-                    Inaugurado em 2018, o hospital oferece 260 leitos, dos quais 144 são de internação, 96 de UTI e 20 de cirurgia ambulatorial, distribuídos em 27 mil metros quadrados de área construída. Os recursos utilizados para a execução das obras somam um total de R$ 255 milhões.
+                    Inaugurado em 2018, o hospital oferece 260 leitos, dos quais 144 são de internação, 96 de UTI e 20
+                    de cirurgia ambulatorial, distribuídos em 27 mil metros quadrados de área construída. Os recursos
+                    utilizados para a execução das obras somam um total de R$ 255 milhões.
                   </p>
                   <p>
-                    Conta ainda com ambulatório de especialidades médicas, que inclui cirurgia geral, cirurgia plástica, ortopedia, urologia, anestesiologia e cardiologia clínica, além de centro de reabilitação e fisioterapia, serviço de diagnósticos clínicos e por imagem e setor de urgência e emergência.
+                    Conta ainda com ambulatório de especialidades médicas, que inclui cirurgia geral, cirurgia plástica,
+                    ortopedia, urologia, anestesiologia e cardiologia clínica, além de centro de reabilitação e
+                    fisioterapia, serviço de diagnósticos clínicos e por imagem e setor de urgência e emergência.
                   </p>
                   <p>
-                    A unidade foi responsável pela geração de cerca de 1.350 novos empregos na região, funciona 24h e suas unidades de emergência atendem crianças e adultos.
+                    A unidade foi responsável pela geração de cerca de 1.350 novos empregos na região, funciona 24h e
+                    suas unidades de emergência atendem crianças e adultos.
                   </p>
                 </div>
               </div>
@@ -114,12 +133,16 @@ const InovaSaudePage = () => {
           </Card>
         </section>
 
-        {/* Hospital da Mulher */}
+        {/* Hospital Centro de Referência da Saúde da Mulher */}
         <section>
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
               <div className="h-64 md:h-auto">
-                <img src={hospitalMulher} alt="Hospital Centro de Referência da Saúde da Mulher" className="w-full h-full object-cover" />
+                <img
+                  src={hospitalMulher}
+                  alt="Hospital Centro de Referência da Saúde da Mulher"
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="p-6">
                 <CardTitle className="flex items-center gap-2 mb-4">
@@ -128,23 +151,29 @@ const InovaSaudePage = () => {
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, é o terceiro do estado de São Paulo a ser entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde.
+                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, é o
+                    terceiro do estado de São Paulo a ser entregue seguindo o modelo de Parceria Público-Privada (PPP)
+                    da Saúde.
                   </p>
                   <p>
-                    Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10 leitos dedicados à realização de cirurgia ambulatorial (hospital-dia), distribuídos em cerca de 44 mil metros quadrados de área construída.
+                    Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10
+                    leitos dedicados à realização de cirurgia ambulatorial (hospital-dia), distribuídos em cerca de 44
+                    mil metros quadrados de área construída.
                   </p>
                   <p>
-                    O hospital conta com ambulatório de especialidades médicas, serviço de infusões e quimioterapia, Centro de Alta Resolutividade (CARE), Centro de Reprodução Humana, Centro de Reabilitação e Fisioterapia e serviço de diagnósticos clínicos e por imagem.
+                    O hospital conta com ambulatório de especialidades médicas, serviço de infusões e quimioterapia,
+                    Centro de Alta Resolutividade (CARE), Centro de Reprodução Humana, Centro de Reabilitação e
+                    Fisioterapia e serviço de diagnósticos clínicos e por imagem.
                   </p>
                   <p>
-                    A unidade também mantém o projeto Bem-Me-Quer, parceria entre a Secretaria da Saúde e a Secretaria de Segurança Pública, que contempla o atendimento humanizado para vítimas de violência sexual.
+                    A unidade também mantém o projeto Bem-Me-Quer, parceria entre a Secretaria da Saúde e a Secretaria
+                    de Segurança Pública, que contempla o atendimento humanizado para vítimas de violência sexual.
                   </p>
                 </div>
               </div>
             </div>
           </Card>
         </section>
-
 
         {/* Serviços Não Assistenciais */}
         <section>
@@ -157,8 +186,8 @@ const InovaSaudePage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                A Inova Saúde oferece infraestrutura hospitalar moderna e serviços não assistenciais essenciais 
-                à qualidade do atendimento SUS:
+                A Inova Saúde oferece infraestrutura hospitalar moderna e serviços não assistenciais essenciais à
+                qualidade do atendimento SUS:
               </p>
               <div className="grid md:grid-cols-3 gap-3">
                 {[
@@ -170,7 +199,7 @@ const InovaSaudePage = () => {
                   "Limpeza especializada",
                   "Segurança patrimonial",
                   "Tecnologia da informação",
-                  "Engenharia clínica"
+                  "Engenharia clínica",
                 ].map((servico, index) => (
                   <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                     <span className="w-2 h-2 bg-blue-500 rounded-full" />
@@ -195,14 +224,12 @@ const InovaSaudePage = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <p className="text-muted-foreground text-sm">
-                    A proposta de valor da Inova Saúde diferencia-se por integrar infraestrutura física de última 
-                    geração com gestão profissionalizada de serviços de apoio, garantindo disponibilidade operacional 
-                    elevada, menores tempos de indisponibilidade de equipamentos e maior conforto para pacientes, 
+                    A proposta de valor da Inova Saúde diferencia-se por integrar infraestrutura física de última
+                    geração com gestão profissionalizada de serviços de apoio, garantindo disponibilidade operacional
+                    elevada, menores tempos de indisponibilidade de equipamentos e maior conforto para pacientes,
                     familiares e equipes de saúde (GRI 416-1, 416-2).
                   </p>
-                  <p className="text-muted-foreground text-sm">
-                    Os hospitais contam com:
-                  </p>
+                  <p className="text-muted-foreground text-sm">Os hospitais contam com:</p>
                   <div className="grid gap-2">
                     {[
                       "Sistemas automatizados de climatização",
@@ -212,9 +239,12 @@ const InovaSaudePage = () => {
                       "Equipamentos médico-hospitalares de última geração",
                       "Mobiliário técnico especializado",
                       "Prontuários eletrônicos",
-                      "Monitoramento e suporte à operação hospitalar"
+                      "Monitoramento e suporte à operação hospitalar",
                     ].map((item, index) => (
-                      <div key={index} className="flex items-center gap-2 p-2 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                      <div
+                        key={index}
+                        className="flex items-center gap-2 p-2 bg-blue-50 dark:bg-blue-950/20 rounded-lg"
+                      >
                         <span className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0" />
                         <span className="text-xs">{item}</span>
                       </div>
@@ -240,10 +270,10 @@ const InovaSaudePage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                No campo social e de recursos humanos, as unidades da Inova Saúde empregam centenas de profissionais 
-                e contratam fornecedores locais, contribuindo para o desenvolvimento econômico das regiões onde atuam. 
-                Em conjunto, as operações reúnem centenas de colaboradores diretos e terceirizados distribuídos entre 
-                funções administrativas, de apoio e técnicas, com políticas de capacitação contínua e foco em saúde e 
+                No campo social e de recursos humanos, as unidades da Inova Saúde empregam centenas de profissionais e
+                contratam fornecedores locais, contribuindo para o desenvolvimento econômico das regiões onde atuam. Em
+                conjunto, as operações reúnem centenas de colaboradores diretos e terceirizados distribuídos entre
+                funções administrativas, de apoio e técnicas, com políticas de capacitação contínua e foco em saúde e
                 segurança ocupacional (GRI 401-1, 403-1, 404-1).
               </p>
             </CardContent>
@@ -269,7 +299,7 @@ const InovaSaudePage = () => {
                   "Prevenção de infecções",
                   "Uso seguro de equipamentos",
                   "Gestão de resíduos de serviços de saúde",
-                  "Atendimento humanizado"
+                  "Atendimento humanizado",
                 ].map((tema, index) => (
                   <div key={index} className="flex items-center gap-2 p-3 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
                     <span className="w-2 h-2 bg-amber-500 rounded-full" />
@@ -287,39 +317,21 @@ const InovaSaudePage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-amber-600" />
-                Certificações e Sistema Integrado de Gestão
+                Certificações e Reconhecimento
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground mb-6">
-                O Sistema Integrado de Gestão da Inova Saúde inclui certificações alinhadas a padrões internacionais 
-                em qualidade, meio ambiente e segurança, aplicadas às unidades hospitalares e válidas até 2026.
-              </p>
-              <div className="grid sm:grid-cols-3 gap-4 mb-6">
-                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
-                  <h4 className="font-bold text-blue-700 dark:text-blue-400 mb-1">ISO 9001:2015</h4>
-                  <p className="text-xs text-muted-foreground">Sistema de Gestão da Qualidade</p>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">Válida até 2026</p>
-                </div>
-                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-green-600 mx-auto mb-2" />
-                  <h4 className="font-bold text-green-700 dark:text-green-400 mb-1">ISO 14001:2015</h4>
-                  <p className="text-xs text-muted-foreground">Sistema de Gestão Ambiental</p>
-                  <p className="text-xs text-green-600 dark:text-green-400 mt-1">Válida até 2026</p>
-                </div>
-                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
-                  <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
-                  <h4 className="font-bold text-amber-700 dark:text-amber-400 mb-1">ISO 45001:2018</h4>
-                  <p className="text-xs text-muted-foreground">Saúde e Segurança Ocupacional</p>
-                  <p className="text-xs text-amber-600 dark:text-amber-400 mt-1">Válida até 2026</p>
-                </div>
-              </div>
               <p className="text-muted-foreground">
-                A combinação entre infraestrutura moderna, serviços de suporte altamente estruturados e compromisso 
-                com a qualidade dos ambientes hospitalares diferencia a Inova Saúde de parte significativa da rede SUS, 
-                contribuindo para ampliar a capacidade do sistema público de ofertar serviços de saúde em instalações 
-                mais modernas, seguras e eficientes (GRI 416-1, 416-2).
+                Em termos de reconhecimento institucional, as unidades da Inova Saúde contam com certificações
+                relevantes em qualidade e segurança assistencial, bem como selos específicos em gestão ambiental e
+                alimentação hospitalar, o que reforça a aderência a padrões rigorosos de conformidade, segurança
+                sanitária e governança (GRI 416-1, 416-2).
+              </p>
+              <p className="text-muted-foreground mt-4">
+                A combinação entre infraestrutura moderna, serviços de suporte altamente estruturados e compromisso com
+                a qualidade dos ambientes hospitalares diferencia a Inova Saúde de parte significativa da rede SUS,
+                contribuindo para ampliar a capacidade do sistema público de ofertar serviços de saúde em instalações
+                mais modernas, seguras e eficientes.
               </p>
             </CardContent>
           </Card>
@@ -336,9 +348,9 @@ const InovaSaudePage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                A atuação da Inova Saúde gera impactos socioeconômicos relevantes nas cidades de Sorocaba e São José 
-                dos Campos, ao fortalecer a rede pública de saúde, ampliar a oferta de leitos e serviços de alta 
-                complexidade e promover ambientes hospitalares mais adequados à recuperação de pacientes, ao trabalho 
+                A atuação da Inova Saúde gera impactos socioeconômicos relevantes nas cidades de Sorocaba e São José dos
+                Campos, ao fortalecer a rede pública de saúde, ampliar a oferta de leitos e serviços de alta
+                complexidade e promover ambientes hospitalares mais adequados à recuperação de pacientes, ao trabalho
                 das equipes multidisciplinares e à experiência de familiares e acompanhantes (GRI 203-1, 203-2).
               </p>
             </CardContent>

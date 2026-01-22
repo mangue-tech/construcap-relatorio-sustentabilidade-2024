@@ -7,7 +7,7 @@ const odsData = [
     name: "Saúde e Bem Estar",
     color: "#4C9F38",
     items: [
-      "Operação de três unidades hospitalares públicas pela Inova Saúde, Hospital da Mulher, Hospital Regional de Sorocaba e Hospital Regional de São José dos Campos",
+      "Operação de três unidades hospitalares públicas pela Inova Saúde, Hospital Centro de Referência da Saúde da Mulher, Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene' e Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
       "Consumo total de água das unidades hospitalares em 2024 de 119,281 ML",
       "Quadro funcional total do Grupo de 4.345 colaboradores, com cobertura por políticas estruturadas de saúde e segurança do trabalho",
     ],
@@ -130,7 +130,7 @@ const odsData = [
     color: "#19486A",
     items: [
       "Atuação por meio de parcerias e concessões com o poder público e parceiros operacionais",
-      "Escopo do relato contemplando a controladora Construcap CCPS Engenharia e Comércio S.A., seis empresas controladas e duas empresas coligadas",
+      "Escopo do relato contemplando a controladora Construcap CCPS Engenharia e Comércio S.A. e seis empresas controladas",
     ],
   },
   {

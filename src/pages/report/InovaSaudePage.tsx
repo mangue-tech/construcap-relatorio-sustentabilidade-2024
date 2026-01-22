@@ -43,9 +43,9 @@ const InovaSaudePage = () => {
             A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são
             sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade no
             Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o
-            <strong> Hospital Estadual da Mulher (HEM)</strong>, na cidade de São Paulo, o{" "}
+            <strong> Hospital Centro de Referência da Saúde da Mulher</strong>, na cidade de São Paulo, o{" "}
             <strong>Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'</strong>, em Sorocaba e o{" "}
-            <strong>Hospital Estadual de São José dos Campos (HESJC)</strong> (GRI 203-1, 416-1).
+            <strong>Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'</strong> (GRI 203-1, 416-1).
           </p>
         </section>
 

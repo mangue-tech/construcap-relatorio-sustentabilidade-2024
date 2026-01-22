@@ -267,6 +267,63 @@ const MinasArenaPage = () => {
             </CardContent>
           </Card>
         </section>
+
+        {/* Certificações e Reconhecimentos */}
+        <section>
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Award className="w-5 h-5 text-amber-500" />
+                Certificações e Reconhecimentos
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-muted-foreground mb-6">
+                A Minas Arena consolidou-se como referência em gestão sustentável de arenas multiuso, acumulando 
+                certificações e reconhecimentos que atestam sua liderança em critérios de eficiência energética, 
+                gestão hídrica, conforto, acessibilidade e desempenho ambiental.
+              </p>
+              <div className="grid sm:grid-cols-2 gap-4">
+                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Award className="w-5 h-5 text-amber-600" />
+                    <h4 className="font-bold text-amber-700 dark:text-amber-400">LEED Platinum</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Primeiro estádio do mundo a obter esta certificação (2014), emitida pelo U.S. Green Building Council
+                  </p>
+                </div>
+                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Award className="w-5 h-5 text-blue-600" />
+                    <h4 className="font-bold text-blue-700 dark:text-blue-400">Pacto Global da ONU</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Membro da Rede Brasil desde 2016
+                  </p>
+                </div>
+                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Award className="w-5 h-5 text-green-600" />
+                    <h4 className="font-bold text-green-700 dark:text-green-400">Selo BH Sustentável</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Categoria Ouro - Prefeitura de Belo Horizonte
+                  </p>
+                </div>
+                <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg">
+                  <div className="flex items-center gap-2 mb-2">
+                    <Star className="w-5 h-5 text-purple-600" />
+                    <h4 className="font-bold text-purple-700 dark:text-purple-400">SISBRACE Cinco Bolas</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Classificação máxima no Sistema Brasileiro de Classificação de Estádios
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </section>
       </div>
     </ReportLayout>
   );

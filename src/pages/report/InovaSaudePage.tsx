@@ -287,21 +287,39 @@ const InovaSaudePage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Award className="w-5 h-5 text-amber-600" />
-                Certificações e Reconhecimento
+                Certificações e Sistema Integrado de Gestão
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-muted-foreground">
-                Em termos de reconhecimento institucional, as unidades da Inova Saúde contam com certificações 
-                relevantes em qualidade e segurança assistencial, bem como selos específicos em gestão ambiental 
-                e alimentação hospitalar, o que reforça a aderência a padrões rigorosos de conformidade, segurança 
-                sanitária e governança (GRI 416-1, 416-2).
+              <p className="text-muted-foreground mb-6">
+                O Sistema Integrado de Gestão da Inova Saúde inclui certificações alinhadas a padrões internacionais 
+                em qualidade, meio ambiente e segurança, aplicadas às unidades hospitalares e válidas até 2026.
               </p>
-              <p className="text-muted-foreground mt-4">
+              <div className="grid sm:grid-cols-3 gap-4 mb-6">
+                <div className="p-4 bg-blue-50 dark:bg-blue-950/20 rounded-lg text-center">
+                  <Award className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                  <h4 className="font-bold text-blue-700 dark:text-blue-400 mb-1">ISO 9001:2015</h4>
+                  <p className="text-xs text-muted-foreground">Sistema de Gestão da Qualidade</p>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-1">Válida até 2026</p>
+                </div>
+                <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg text-center">
+                  <Award className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                  <h4 className="font-bold text-green-700 dark:text-green-400 mb-1">ISO 14001:2015</h4>
+                  <p className="text-xs text-muted-foreground">Sistema de Gestão Ambiental</p>
+                  <p className="text-xs text-green-600 dark:text-green-400 mt-1">Válida até 2026</p>
+                </div>
+                <div className="p-4 bg-amber-50 dark:bg-amber-950/20 rounded-lg text-center">
+                  <Award className="w-8 h-8 text-amber-600 mx-auto mb-2" />
+                  <h4 className="font-bold text-amber-700 dark:text-amber-400 mb-1">ISO 45001:2018</h4>
+                  <p className="text-xs text-muted-foreground">Saúde e Segurança Ocupacional</p>
+                  <p className="text-xs text-amber-600 dark:text-amber-400 mt-1">Válida até 2026</p>
+                </div>
+              </div>
+              <p className="text-muted-foreground">
                 A combinação entre infraestrutura moderna, serviços de suporte altamente estruturados e compromisso 
                 com a qualidade dos ambientes hospitalares diferencia a Inova Saúde de parte significativa da rede SUS, 
                 contribuindo para ampliar a capacidade do sistema público de ofertar serviços de saúde em instalações 
-                mais modernas, seguras e eficientes.
+                mais modernas, seguras e eficientes (GRI 416-1, 416-2).
               </p>
             </CardContent>
           </Card>

@@ -199,7 +199,7 @@ const certifications = [
   {
     name: "Pacto Global",
     description: "Rede Brasil desde 2016",
-    scope: "Minas Arena",
+    scope: "Urbia e Minas Arena",
     validity: "Membro ativo",
   },
 ];

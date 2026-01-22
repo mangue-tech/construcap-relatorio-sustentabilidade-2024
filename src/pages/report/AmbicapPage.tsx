@@ -184,7 +184,7 @@ const AmbicapPage = () => {
               <div className="p-4 bg-green-100 dark:bg-green-950/40 rounded-lg mt-6">
                 <p className="text-center">
                   <span className="text-3xl font-bold text-green-700 dark:text-green-400">8.163,32</span>
-                  <span className="text-lg text-muted-foreground ml-2">hectares de área total sob gestão</span>
+                  <span className="text-lg text-muted-foreground ml-2">hectares de área total atendida</span>
                 </p>
               </div>
             </CardContent>

@@ -110,7 +110,7 @@ const odsData = [
     name: "Vida Terrestre",
     color: "#56C02B",
     items: [
-      "Gestão de parques naturais e áreas protegidas, incluindo o Parque Nacional de Jericoacoara e os Parques Nacionais de Aparados da Serra e Serra Geral",
+      "Gestão de parques naturais e áreas protegidas, incluindo os Parques Nacionais de Aparados da Serra e Serra Geral",
       "Ações de manejo ambiental, conservação da biodiversidade, educação ambiental e ordenamento da visitação",
     ],
   },

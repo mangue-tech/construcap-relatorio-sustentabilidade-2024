@@ -37,7 +37,7 @@ const riskTypes = [
       "Falhas técnicas, incidentes estruturais ou interrupções operacionais",
       "Desvios de qualidade ou não conformidade com normas técnicas",
       "Atrasos de obra devido a fornecedores, clima, restrições logísticas ou imprevistos geotécnicos",
-      "Interrupções em parques naturais decorrentes de fenômenos climáticos extremos",
+      "Interrupções em parques naturais e urbanos decorrentes de fenômenos climáticos extremos",
     ],
   },
   {
@@ -172,7 +172,7 @@ const continuityAreas = [
     icon: Stethoscope,
   },
   {
-    area: "Operação de parques naturais",
+    area: "Operação de parques naturais e urbanos",
     description: "Onde intempéries podem gerar riscos aos visitantes",
     icon: TreePine,
   },

@@ -1,11 +1,11 @@
 import ReportLayout from "@/components/report/ReportLayout";
 import { AnimatedSection } from "@/hooks/useScrollAnimation";
-import { 
-  DollarSign, 
-  Users, 
-  Landmark, 
+import {
+  DollarSign,
+  Users,
+  Landmark,
   TrendingUp,
-  Truck, 
+  Truck,
   Briefcase,
   CloudRain,
   ThermometerSun,
@@ -22,7 +22,7 @@ import {
   XCircle,
   PiggyBank,
   BarChart3,
-  Globe
+  Globe,
 } from "lucide-react";
 import economicHero from "@/assets/report/economic-hero.jpg";
 
@@ -32,9 +32,9 @@ const EconomicPage = () => {
       {/* Hero with Image */}
       <section className="relative -mx-6 lg:-mx-8 -mt-6 lg:-mt-8 mb-12">
         <div className="relative h-[720px] overflow-hidden">
-          <img 
-            src={economicHero} 
-            alt="Construção e infraestrutura" 
+          <img
+            src={economicHero}
+            alt="Construção e infraestrutura"
             className="w-full h-full object-cover object-[position:center_15%]"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent" />
@@ -47,9 +47,9 @@ const EconomicPage = () => {
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Desempenho Econômico</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
-                O desempenho econômico da Construcap evidencia a solidez de seu modelo de negócios 
-                e a capacidade de enfrentar um ambiente operacional complexo, mantendo eficiência, 
-                disciplina financeira e criação de valor sustentável.
+                O desempenho econômico da Construcap evidencia a solidez de seu modelo de negócios e a capacidade de
+                enfrentar um ambiente operacional complexo, mantendo eficiência, disciplina financeira e criação de
+                valor sustentável.
               </p>
             </AnimatedSection>
           </div>
@@ -61,17 +61,16 @@ const EconomicPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground mb-4">
-              O desempenho econômico da Construcap evidencia a solidez de seu modelo de negócios e a capacidade 
-              de enfrentar um ambiente operacional complexo, mantendo eficiência, disciplina financeira e criação 
-              de valor sustentável. A atuação diversificada — engenharia, gestão hospitalar, parques naturais e 
-              urbanos, arenas esportivas e serviços técnicos — reduz a exposição a ciclos econômicos, amplia a 
-              resiliência e fortalece a geração de resultados consistentes ao longo dos anos.
+              O desempenho econômico da Construcap evidencia a solidez de seu modelo de negócios e a capacidade de
+              enfrentar um ambiente operacional complexo, mantendo eficiência, disciplina financeira e criação de valor
+              sustentável. A atuação diversificada — engenharia, gestão hospitalar, parques naturais e urbanos, arenas
+              esportivas e serviços técnicos — reduz a exposição a ciclos econômicos, amplia a resiliência e fortalece a
+              geração de resultados consistentes ao longo dos anos.
             </p>
             <p className="text-muted-foreground">
-              A companhia opera integralmente no Brasil e desempenha papel relevante na dinamização da 
-              infraestrutura nacional, estimulando cadeias produtivas, gerando empregos e impulsionando o 
-              desenvolvimento regional por meio de obras, concessões, serviços públicos essenciais e operações 
-              de grande impacto socioeconômico.
+              A companhia opera integralmente no Brasil e desempenha papel relevante na dinamização da infraestrutura
+              nacional, estimulando cadeias produtivas, gerando empregos e impulsionando o desenvolvimento regional por
+              meio de obras, concessões, serviços públicos essenciais e operações de grande impacto socioeconômico.
             </p>
           </div>
         </AnimatedSection>
@@ -124,8 +123,8 @@ const EconomicPage = () => {
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Capacidade de geração de receita em um ambiente marcado por exigências técnicas, 
-                  contratuais e regulatórias elevadas;
+                  Capacidade de geração de receita em um ambiente marcado por exigências técnicas, contratuais e
+                  regulatórias elevadas;
                 </span>
               </li>
               <li className="flex items-start gap-3">
@@ -137,15 +136,15 @@ const EconomicPage = () => {
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-muted-foreground">
-                  Reinvestimento estratégico que fortalece a posição da companhia para novos ciclos de 
-                  crescimento e modernização.
+                  Reinvestimento estratégico que fortalece a posição da companhia para novos ciclos de crescimento e
+                  modernização.
                 </span>
               </li>
             </ul>
             <p className="text-sm text-muted-foreground mt-6 p-4 rounded-xl bg-secondary/50">
-              Os recursos distribuídos contemplam salários e benefícios, pagamentos a fornecedores, tributos, 
-              encargos financeiros e investimentos sociais, demonstrando impacto econômico significativo nas 
-              regiões onde a empresa atua.
+              Os recursos distribuídos contemplam salários e benefícios, pagamentos a fornecedores, tributos, encargos
+              financeiros e investimentos sociais, demonstrando impacto econômico significativo nas regiões onde a
+              empresa atua.
             </p>
           </div>
         </AnimatedSection>
@@ -157,7 +156,9 @@ const EconomicPage = () => {
           <div className="flex items-center gap-3 mb-4">
             <CloudRain className="w-8 h-8 text-blue-500" />
             <div>
-              <h2 className="text-2xl font-bold">7.2 Riscos e Oportunidades Econômicas Relacionados às Mudanças Climáticas</h2>
+              <h2 className="text-2xl font-bold">
+                7.2 Riscos e Oportunidades Econômicas Relacionados às Mudanças Climáticas
+              </h2>
               <p className="text-muted-foreground">GRI 201-2</p>
             </div>
           </div>
@@ -165,8 +166,8 @@ const EconomicPage = () => {
 
         <AnimatedSection>
           <p className="text-muted-foreground mb-8">
-            A Construcap monitora continuamente riscos econômicos associados às mudanças climáticas, particularmente 
-            relevantes para obras, parques naturais, trilhas, áreas urbanas densas e operações hospitalares.
+            A Construcap monitora continuamente riscos econômicos associados às mudanças climáticas, particularmente
+            relevantes para obras, parques naturais e urbanos, trilhas, áreas urbanas densas e operações hospitalares.
           </p>
         </AnimatedSection>
 
@@ -182,9 +183,9 @@ const EconomicPage = () => {
                 {[
                   "Aumento da frequência de chuvas intensas, com impactos diretos em cronogramas, logística e erosões;",
                   "Necessidade de readequação de equipes, turnos e horários durante ondas de calor;",
-                  "Interrupções temporárias em parques naturais devido a eventos extremos;",
+                  "Interrupções temporárias em parques naturais e urbanos devido a eventos extremos;",
                   "Custos adicionais para implementação de medidas emergenciais ou de reforço estrutural;",
-                  "Impactos potenciais sobre produtividade, segurança e integridade de ativos."
+                  "Impactos potenciais sobre produtividade, segurança e integridade de ativos.",
                 ].map((risk, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <XCircle className="w-4 h-4 text-red-500 mt-1 flex-shrink-0" />
@@ -207,7 +208,7 @@ const EconomicPage = () => {
                   "Adoção de técnicas construtivas mais eficientes e resilientes;",
                   "Ampliação de serviços em engenharia climática e infraestrutura adaptativa;",
                   "Fortalecimento da imagem institucional por práticas de gestão de riscos climaticamente responsáveis;",
-                  "Ganhos de eficiência operacional por processos inovadores de prevenção e contingência."
+                  "Ganhos de eficiência operacional por processos inovadores de prevenção e contingência.",
                 ].map((opportunity, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-1 flex-shrink-0" />
@@ -222,9 +223,9 @@ const EconomicPage = () => {
         <AnimatedSection>
           <div className="mt-8 p-6 rounded-2xl bg-blue-500/10 border border-blue-500/20">
             <p className="text-sm text-muted-foreground">
-              A companhia incorpora variáveis climáticas em seus planejamentos operacionais, utiliza monitoramento 
-              meteorológico em obras e parques, revisa rotinas de manejo, e aplica metodologias de engenharia 
-              adequadas às novas condições ambientais, reduzindo exposição a impactos financeiros adversos.
+              A companhia incorpora variáveis climáticas em seus planejamentos operacionais, utiliza monitoramento
+              meteorológico em obras e parques, revisa rotinas de manejo, e aplica metodologias de engenharia adequadas
+              às novas condições ambientais, reduzindo exposição a impactos financeiros adversos.
             </p>
           </div>
         </AnimatedSection>
@@ -245,9 +246,9 @@ const EconomicPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
             <p className="text-muted-foreground mb-6">
-              A Construcap disponibiliza aos colaboradores planos de previdência complementar nas modalidades 
-              <strong className="text-foreground"> PGBL e VGBL</strong>, como benefício voluntário associado à 
-              segurança financeira de longo prazo.
+              A Construcap disponibiliza aos colaboradores planos de previdência complementar nas modalidades
+              <strong className="text-foreground"> PGBL e VGBL</strong>, como benefício voluntário associado à segurança
+              financeira de longo prazo.
             </p>
 
             <h3 className="font-bold mb-4">Características dos planos:</h3>
@@ -256,7 +257,7 @@ const EconomicPage = () => {
                 { icon: BarChart3, text: "Operam sob regime de capitalização individual" },
                 { icon: Shield, text: "Não geram passivos atuariais para a empresa" },
                 { icon: Landmark, text: "São administrados por instituições financeiras especializadas" },
-                { icon: Heart, text: "Reforçam políticas de bem-estar, retenção e valorização profissional" }
+                { icon: Heart, text: "Reforçam políticas de bem-estar, retenção e valorização profissional" },
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-4 rounded-xl bg-secondary/50">
                   <item.icon className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -267,8 +268,8 @@ const EconomicPage = () => {
 
             <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
               <p className="text-sm text-muted-foreground">
-                A inexistência de planos de benefício definido assegura previsibilidade financeira e evita 
-                compromissos atuariais futuros em nome da companhia.
+                A inexistência de planos de benefício definido assegura previsibilidade financeira e evita compromissos
+                atuariais futuros em nome da companhia.
               </p>
             </div>
           </div>
@@ -296,8 +297,9 @@ const EconomicPage = () => {
               <div>
                 <h3 className="font-bold text-lg mb-2">Independência de Apoios Governamentais</h3>
                 <p className="text-muted-foreground">
-                  Em 2024, a Construcap <strong className="text-foreground">não recebeu apoio financeiro direto de governos</strong>, 
-                  seja por meio de subsídios, incentivos específicos, subvenções, benefícios fiscais extraordinários, créditos 
+                  Em 2024, a Construcap{" "}
+                  <strong className="text-foreground">não recebeu apoio financeiro direto de governos</strong>, seja por
+                  meio de subsídios, incentivos específicos, subvenções, benefícios fiscais extraordinários, créditos
                   especiais, aportes públicos ou quaisquer instrumentos similares.
                 </p>
               </div>
@@ -308,8 +310,8 @@ const EconomicPage = () => {
               {[
                 "Contratos públicos e privados celebrados em condições de mercado",
                 "Concessões e parcerias estabelecidas conforme legislação vigente",
-                "Operações de engenharia, saúde, parques naturais e arenas esportivas",
-                "Prestação de serviços técnicos, operacionais e de manutenção"
+                "Operações de engenharia, saúde, parques naturais e urbanos e arenas esportivas",
+                "Prestação de serviços técnicos, operacionais e de manutenção",
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3 p-3 rounded-lg bg-secondary/50">
                   <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
@@ -320,9 +322,11 @@ const EconomicPage = () => {
 
             <div className="p-4 rounded-xl bg-primary/10 border border-primary/20">
               <p className="text-sm text-muted-foreground">
-                O desempenho econômico da companhia reflete, portanto, <strong className="text-foreground">competitividade técnica, 
-                governança sólida e eficiência operacional</strong>, sem dependência de quaisquer mecanismos extraordinários de 
-                fomento governamental.
+                O desempenho econômico da companhia reflete, portanto,{" "}
+                <strong className="text-foreground">
+                  competitividade técnica, governança sólida e eficiência operacional
+                </strong>
+                , sem dependência de quaisquer mecanismos extraordinários de fomento governamental.
               </p>
             </div>
           </div>
@@ -359,7 +363,7 @@ const EconomicPage = () => {
                 {[
                   "Contratação de milhares de trabalhadores diretos e indiretos",
                   "Capacitação técnica e profissional de equipes locais",
-                  "Dinamização das economias regionais em obras, parques e hospitais"
+                  "Dinamização das economias regionais em obras, parques e hospitais",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
                     <CheckCircle2 className="w-4 h-4 text-blue-500 mt-0.5 flex-shrink-0" />
@@ -378,7 +382,7 @@ const EconomicPage = () => {
                 <h3 className="font-bold">Fortalecimento de Cadeias Produtivas</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                A empresa movimenta setores como engenharia, construção, tecnologia, logística, hotelaria, turismo, 
+                A empresa movimenta setores como engenharia, construção, tecnologia, logística, hotelaria, turismo,
                 manutenção industrial e serviços especializados, fortalecendo fornecedores locais e nacionais.
               </p>
             </div>
@@ -392,12 +396,17 @@ const EconomicPage = () => {
                 <h3 className="font-bold">Impulso ao Turismo e à Economia Regional</h3>
               </div>
               <p className="text-sm text-muted-foreground mb-3">
-                Operações da Urbia e da Minas Arena ampliam fluxo turístico, eventos, comércio e arrecadação em regiões como:
+                Operações da Urbia e da Minas Arena ampliam fluxo turístico, eventos, comércio e arrecadação em regiões
+                como:
               </p>
               <div className="flex flex-wrap gap-2">
-                {["Ibirapuera (SP)", "Jericoacoara (CE)", "Cânions Verdes (SC/RS)", "Entorno do Mineirão (MG)"].map((local, i) => (
-                  <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">{local}</span>
-                ))}
+                {["Ibirapuera (SP)", "Jericoacoara (CE)", "Cânions Verdes (SC/RS)", "Entorno do Mineirão (MG)"].map(
+                  (local, i) => (
+                    <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">
+                      {local}
+                    </span>
+                  ),
+                )}
               </div>
             </div>
           </AnimatedSection>
@@ -410,7 +419,7 @@ const EconomicPage = () => {
                 <h3 className="font-bold">Melhoria da Infraestrutura e dos Serviços Públicos</h3>
               </div>
               <p className="text-sm text-muted-foreground">
-                Obras e operações elevam a qualidade de hospitais, parques, equipamentos urbanos, espaços culturais e 
+                Obras e operações elevam a qualidade de hospitais, parques, equipamentos urbanos, espaços culturais e
                 estruturas de mobilidade, contribuindo para a melhoria do bem-estar da população.
               </p>
             </div>
@@ -432,8 +441,8 @@ const EconomicPage = () => {
 
         <AnimatedSection>
           <p className="text-muted-foreground mb-8">
-            O posicionamento atual da Construcap permite vislumbrar um ciclo positivo para os próximos anos, 
-            sustentado pelos seguintes vetores:
+            O posicionamento atual da Construcap permite vislumbrar um ciclo positivo para os próximos anos, sustentado
+            pelos seguintes vetores:
           </p>
         </AnimatedSection>
 
@@ -442,28 +451,33 @@ const EconomicPage = () => {
             {
               icon: Shield,
               title: "Diversificação como Matriz de Resiliência",
-              description: "A atuação simultânea em obras, saúde, parques e arenas amortiza oscilações de mercado e assegura estabilidade financeira."
+              description:
+                "A atuação simultânea em obras, saúde, parques e arenas amortiza oscilações de mercado e assegura estabilidade financeira.",
             },
             {
               icon: Target,
               title: "Eficiência Operacional",
-              description: "A empresa prioriza otimização de processos, controle rigoroso de custos, qualificação de fornecedores e digitalização crescente das operações."
+              description:
+                "A empresa prioriza otimização de processos, controle rigoroso de custos, qualificação de fornecedores e digitalização crescente das operações.",
             },
             {
               icon: TrendingUp,
               title: "Expansão em Concessões",
-              description: "O know-how acumulado em hospitalar, parques e arenas posiciona o grupo para disputar novos ativos e contratos de longo prazo."
+              description:
+                "O know-how acumulado em hospitalar, parques e arenas posiciona o grupo para disputar novos ativos e contratos de longo prazo.",
             },
             {
               icon: Lightbulb,
               title: "Inovação e Engenharia Avançada",
-              description: "Investimentos em metodologias construtivas modernas, soluções digitais, sistemas de gestão integrada e práticas sustentáveis."
+              description:
+                "Investimentos em metodologias construtivas modernas, soluções digitais, sistemas de gestão integrada e práticas sustentáveis.",
             },
             {
               icon: Leaf,
               title: "Integração de Critérios ESG",
-              description: "Indicadores ambientais, climáticos, sociais e de governança são incorporados às decisões operacionais e financeiras."
-            }
+              description:
+                "Indicadores ambientais, climáticos, sociais e de governança são incorporados às decisões operacionais e financeiras.",
+            },
           ].map((item, i) => (
             <AnimatedSection key={item.title} delay={i * 75}>
               <div className="bg-card rounded-2xl border border-border p-6 h-full hover:border-primary/50 transition-colors">
@@ -481,10 +495,10 @@ const EconomicPage = () => {
         <AnimatedSection>
           <div className="bg-gradient-to-br from-primary to-primary/80 text-primary-foreground rounded-2xl p-8">
             <p className="text-lg text-primary-foreground/90">
-              Com esse conjunto de fatores, a Construcap reforça seu papel como uma das principais empresas de 
-              infraestrutura do país, combinando <strong>solidez econômica, responsabilidade socioambiental e 
-              capacidade técnica</strong> para entregar obras e serviços de alta complexidade com impacto direto 
-              no desenvolvimento do Brasil.
+              Com esse conjunto de fatores, a Construcap reforça seu papel como uma das principais empresas de
+              infraestrutura do país, combinando{" "}
+              <strong>solidez econômica, responsabilidade socioambiental e capacidade técnica</strong> para entregar
+              obras e serviços de alta complexidade com impacto direto no desenvolvimento do Brasil.
             </p>
           </div>
         </AnimatedSection>

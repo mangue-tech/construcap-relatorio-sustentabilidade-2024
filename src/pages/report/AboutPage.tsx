@@ -200,7 +200,7 @@ const AboutPage = () => {
               </p>
               <p>
                 Todas as operações são realizadas no território brasileiro, com presença em regiões metropolitanas,
-                polos industriais, áreas turísticas, parques naturais protegidos e municípios de diferentes portes (GRI
+                polos industriais, áreas turísticas, parques naturais e urbanos e municípios de diferentes portes (GRI
                 2-1).
               </p>
               <p>

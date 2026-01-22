@@ -41,7 +41,7 @@ const griData: GRIItem[] = [
     indicator: "Entidades incluídas no relatório",
     description: "Lista de entidades incluídas no relatório de sustentabilidade",
     section: "Quem Somos",
-    response: "Grupo Construcap e suas controladas/coligadas: Urbia, Inova Saúde, Minas Arena e Ambicap.",
+    response: "Grupo Construcap e suas controladas e coligadas: Urbia, Minas Arena, Inova Saúde e Ambicap.",
     link: "/quem-somos",
   },
   {
@@ -280,7 +280,8 @@ const griData: GRIItem[] = [
     indicator: "Processo de determinação de temas materiais",
     description: "Processo para identificar temas materiais",
     section: "Materialidade e Públicos de Interesse",
-    response: "Matriz de materialidade atualizada com consulta a públicos de interesse e análise de impacto e relevância.",
+    response:
+      "Matriz de materialidade atualizada com consulta a públicos de interesse e análise de impacto e relevância.",
     link: "/materialidade",
   },
   {

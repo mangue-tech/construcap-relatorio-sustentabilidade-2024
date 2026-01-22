@@ -557,10 +557,11 @@ const SocialPage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-8">
-            Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde e Segurança. A empresa
-            opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001:2018</strong> (obtida em 2023, válida até 16/07/2026), 
-            integrado às certificações <strong>NBR ISO 9001:2015</strong> (Qualidade) e <strong>NBR ISO 14001:2015</strong> (Meio Ambiente), 
-            sustentado por ferramentas, protocolos e mecanismos que permitem controle sistemático em ambientes de risco.
+            Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde Ocupacional e Segurança
+            do Trabalho. A empresa opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001:2018</strong>{" "}
+            (obtida em 2023, válida até 16/07/2026), integrado às certificações <strong>NBR ISO 9001:2015</strong>{" "}
+            (Qualidade) e <strong>NBR ISO 14001:2015</strong> (Meio Ambiente), sustentado por ferramentas, protocolos e
+            mecanismos que permitem controle sistemático em ambientes de risco.
           </p>
         </AnimatedSection>
 

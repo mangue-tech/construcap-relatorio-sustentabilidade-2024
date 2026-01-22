@@ -130,7 +130,7 @@ const odsData = [
     color: "#19486A",
     items: [
       "Atuação por meio de parcerias e concessões com o poder público e parceiros operacionais",
-      "Escopo do relato contemplando a controladora Construcap CCPS Engenharia e Comércio S.A. e seis empresas controladas",
+      "Escopo do relato contemplando a controladora Construcap CCPS Engenharia e Comércio S.A., seis empresas controladas e duas empresas coligadas",
     ],
   },
   {

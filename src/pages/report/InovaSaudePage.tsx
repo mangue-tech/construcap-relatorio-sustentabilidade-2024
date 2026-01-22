@@ -43,8 +43,8 @@ const InovaSaudePage = () => {
             A <strong>Inova Saúde São Paulo SPE S.A.</strong> e a <strong>Inova Saúde Sorocaba SPE S.A.</strong> são
             sociedades de propósito específico responsáveis pela gestão de hospitais públicos de alta complexidade no
             Estado de São Paulo, por meio de parcerias público-privadas. As operações contemplam o
-            <strong> Hospital Estadual da Mulher (HEM)</strong> ,localizado na cidade de São Paulo, o{" "}
-            <strong>Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'</strong>, em Sorocaba, além do{" "}
+            <strong> Hospital Estadual da Mulher (HEM)</strong>, na cidade de São Paulo, o{" "}
+            <strong>Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'</strong>, em Sorocaba e o{" "}
             <strong>Hospital Estadual de São José dos Campos (HESJC)</strong> (GRI 203-1, 416-1).
           </p>
         </section>
@@ -56,7 +56,7 @@ const InovaSaudePage = () => {
               <div className="h-64 md:h-auto">
                 <img
                   src={hospitalSjc}
-                  alt="Hospital Regional de São José dos Campos"
+                  alt="Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -95,7 +95,7 @@ const InovaSaudePage = () => {
               <div className="h-64 md:h-auto md:order-2">
                 <img
                   src={hospitalSorocaba}
-                  alt="Hospital Regional de Sorocaba"
+                  alt="Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -133,7 +133,7 @@ const InovaSaudePage = () => {
           </Card>
         </section>
 
-        {/* Hospital da Mulher */}
+        {/* Hospital Centro de Referência da Saúde da Mulher */}
         <section>
           <Card className="overflow-hidden">
             <div className="grid md:grid-cols-2">
@@ -151,9 +151,9 @@ const InovaSaudePage = () => {
                 </CardTitle>
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
-                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, é o
-                    terceiro do estado de São Paulo a ser entregue seguindo o modelo de Parceria Público-Privada (PPP)
-                    da Saúde.
+                    O Hospital Centro de Referência da Saúde da Mulher, mais conhecido como Hospital da Mulher, fica
+                    localizado na região Centro da cidade de São Paulo e é o terceiro do estado de São Paulo a ser
+                    entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde.
                   </p>
                   <p>
                     Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10

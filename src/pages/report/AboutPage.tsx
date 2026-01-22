@@ -29,7 +29,7 @@ const businessUnits = [
     name: "Construção e Engenharia de Alta Complexidade",
     icon: Building2,
     description:
-      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital da Mulher (SP), que integra a operação da Inova Saúde.",
+      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital Centro de Referência da Saúde da Mulher (SP), que integra a operação da Inova Saúde.",
   },
   {
     name: "Gestão Hospitalar - Inova Saúde",
@@ -253,8 +253,7 @@ const AboutPage = () => {
                     As informações financeiras são apresentadas de forma segregada por empresa, por meio de
                     demonstrações financeiras próprias e auditadas de cada sociedade. Adicionalmente, no âmbito da
                     Construcap, as demonstrações financeiras consolidadas refletem o resultado financeiro da Construtora
-                    e das empresas controladas e coligadas, em conformidade com as práticas contábeis aplicáveis. (GRI
-                    2-2).
+                    e das empresas controladas, em conformidade com as práticas contábeis aplicáveis. (GRI 2-2).
                   </p>
                 </div>
               </div>

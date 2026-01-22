@@ -433,7 +433,7 @@ const CommunityPage = () => {
         </div>
       </section>
 
-      {/* 10.6 Engajamento de Stakeholders */}
+      {/* 10.6 Engajamento de Públicos de Interesse */}
       <section className="py-12">
         <AnimatedSection>
           <div className="flex items-center gap-3 mb-4">

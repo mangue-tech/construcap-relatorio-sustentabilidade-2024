@@ -176,20 +176,20 @@ const companies = [
     highlights: ["Parque Ibirapuera", "Horto Florestal", "13 parques"],
   },
   {
-    name: "Minas Arena",
-    logo: minasArenaLogo,
-    path: "/operacao-minas-arena",
-    description:
-      "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas.",
-    highlights: ["Estádio Mineirão", "Copa 2014", "LEED Platinum"],
-  },
-  {
     name: "Inova Saúde",
     logo: inovaSaudeLogo,
     path: "/operacao-inova-saude",
     description:
       "Gestão de equipamentos de saúde pública através de parcerias público-privadas em hospitais e unidades de saúde.",
     highlights: ["Hospitais públicos", "PPPs em saúde", "Gestão integrada"],
+  },
+  {
+    name: "Minas Arena",
+    logo: minasArenaLogo,
+    path: "/operacao-minas-arena",
+    description:
+      "Operação e manutenção do Estádio Mineirão através de PPP pioneira no Brasil. Referência em gestão sustentável de grandes arenas.",
+    highlights: ["Estádio Mineirão", "Copa 2014", "LEED Platinum"],
   },
   {
     name: "Ambicap",

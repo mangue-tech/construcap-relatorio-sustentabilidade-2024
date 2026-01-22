@@ -32,8 +32,8 @@ const reportPages: ReportPage[] = [
     label: "Destaques das Operações",
     subPages: [
       { path: "/operacao-urbia", label: "Urbia" },
-      { path: "/operacao-minas-arena", label: "Minas Arena" },
       { path: "/operacao-inova-saude", label: "Inova Saúde" },
+      { path: "/operacao-minas-arena", label: "Minas Arena" },
       { path: "/operacao-ambicap", label: "Ambicap" },
     ],
   },

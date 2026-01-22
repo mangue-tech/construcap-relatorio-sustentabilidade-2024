@@ -114,16 +114,16 @@ const riskTypes = [
 
 const businessUnitRisks = [
   {
-    name: "Inova Saúde",
-    icon: Stethoscope,
-    description:
-      "Protocolos hospitalares robustos, gestão clínica, segurança de pacientes, manutenção predial, qualificação rigorosa de fornecedores e gestão de riscos sanitários.",
-  },
-  {
     name: "Urbia Parques e Urbia Cânions Verdes",
     icon: TreePine,
     description:
       "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais e protocolos de segurança para visitantes.",
+  },
+  {
+    name: "Inova Saúde",
+    icon: Stethoscope,
+    description:
+      "Protocolos hospitalares robustos, gestão clínica, segurança de pacientes, manutenção predial, qualificação rigorosa de fornecedores e gestão de riscos sanitários.",
   },
   {
     name: "Minas Arena",

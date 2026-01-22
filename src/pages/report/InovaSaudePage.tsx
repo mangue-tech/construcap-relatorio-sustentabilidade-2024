@@ -352,10 +352,11 @@ const InovaSaudePage = () => {
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground">
-                A atuação da Inova Saúde gera impactos socioeconômicos relevantes nas cidades de Sorocaba e São José dos
-                Campos, ao fortalecer a rede pública de saúde, ampliar a oferta de leitos e serviços de alta
-                complexidade e promover ambientes hospitalares mais adequados à recuperação de pacientes, ao trabalho
-                das equipes multidisciplinares e à experiência de familiares e acompanhantes (GRI 203-1, 203-2).
+                A atuação da Inova Saúde gera impactos socioeconômicos relevantes nas cidades de São Paulo, Sorocaba e
+                São José dos Campos, ao fortalecer a rede pública de saúde, ampliar a oferta de leitos e serviços de
+                alta complexidade e promover ambientes hospitalares mais adequados à recuperação de pacientes, ao
+                trabalho das equipes multidisciplinares e à experiência de familiares e acompanhantes (GRI 203-1,
+                203-2).
               </p>
             </CardContent>
           </Card>

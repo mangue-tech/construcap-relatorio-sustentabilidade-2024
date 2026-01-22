@@ -110,12 +110,8 @@ const energyData = {
 // Hospitais da Inova Saúde - energia
 const hospitalEnergy = [
   { hospital: "Hospital da Mulher (HM)", consumption: 10165190, emissions: 553.621 },
-  { hospital: "Hospital Regional de Sorocaba (HSOR)", consumption: null, emissions: 314.248 },
-  {
-    hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
-    consumption: null,
-    emissions: 256.579,
-  },
+  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: null, emissions: 314.248 },
+  { hospital: "Hospital Regional de São José dos Campos (HSJC)", consumption: null, emissions: 256.579 },
 ];
 
 // Minas Arena - energia
@@ -131,8 +127,8 @@ const inovaWater = {
   total: 119.281, // megalitros
   units: [
     { hospital: "Hospital da Mulher (HM)", consumption: 59.198 },
-    { hospital: "Hospital Regional de Sorocaba (HSOR)", consumption: 34.04 },
-    { hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'", consumption: 26.043 },
+    { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 34.04 },
+    { hospital: "Hospital Regional de São José dos Campos (HSJC)", consumption: 26.043 },
   ],
 };
 

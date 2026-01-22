@@ -227,7 +227,11 @@ const InovaSaudePage = () => {
                     A proposta de valor da Inova Saúde diferencia-se por integrar infraestrutura física de última
                     geração com gestão profissionalizada de serviços de apoio, garantindo disponibilidade operacional
                     elevada, menores tempos de indisponibilidade de equipamentos e maior conforto para pacientes,
-                    familiares e equipes de saúde (GRI 416-1, 416-2).
+                    familiares e equipes de saúde. Os hospitais contam com sistemas automatizados de climatização, redes
+                    estruturadas de dados, centrais modernas de utilidades, gestão de manutenção preventiva e corretiva
+                    de equipamentos médico-hospitalares e mobiliário técnico, além de soluções de tecnologia da
+                    informação que suportam indicadores de performance e eficiência, prontuários eletrônicos,
+                    monitoramento e suporte à operação hospitalar (GRI 416-1, 416-2).
                   </p>
                   <p className="text-muted-foreground text-sm">Os hospitais contam com:</p>
                   <div className="grid gap-2">

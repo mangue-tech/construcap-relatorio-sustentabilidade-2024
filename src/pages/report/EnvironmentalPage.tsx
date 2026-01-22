@@ -96,9 +96,9 @@ const scope3Categories = [
 // Emissões por unidade de negócio
 const emissionsByUnit = [
   { unit: "Construcap Construção Civil", value: 23029.79, percentage: 68.6 },
+  { unit: "Urbia/Ambicap e demais", value: 1078.41, percentage: 3.3 },
   { unit: "Inova Saúde", value: 9203.174, percentage: 27.4 },
   { unit: "Minas Arena", value: 239.444, percentage: 0.7 },
-  { unit: "Urbia/Ambicap e demais", value: 1078.41, percentage: 3.3 },
 ];
 
 // GRI 302 - Energia
@@ -253,7 +253,7 @@ const certificationsInova = [
 ];
 
 // Todas as certificações combinadas
-const certifications = [...certificationsConstrucap, ...certificationsMinas, ...certificationsUrbia, ...certificationsInova];
+const certifications = [...certificationsConstrucap, ...certificationsUrbia, ...certificationsInova, ...certificationsMinas];
 
 const CHART_COLORS = ["hsl(var(--primary))", "hsl(221, 83%, 53%)", "hsl(142, 76%, 36%)", "hsl(48, 96%, 53%)"];
 

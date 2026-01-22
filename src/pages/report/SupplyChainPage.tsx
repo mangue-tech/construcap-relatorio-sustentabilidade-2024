@@ -441,7 +441,7 @@ const SupplyChainPage = () => {
               Há destaque para a exigência de <strong>treinamento em direitos humanos para as equipes de segurança</strong>, 
               incluindo terceirizados. Essa premissa reforça o compromisso do Grupo com conduta adequada, especialmente em 
               interação com comunidades, usuários, colaboradores e visitantes de áreas administradas pelo Grupo (Urbia, 
-              Minas Arena, Inova, Ambicap).
+              Inova, Minas Arena, Ambicap).
             </p>
           </div>
         </AnimatedSection>

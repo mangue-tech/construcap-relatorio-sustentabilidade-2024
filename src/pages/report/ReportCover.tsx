@@ -310,7 +310,7 @@ const ReportCover = () => {
             >
               Relatório de
               <br />
-              <span className="text-primary">Sustentabilidade</span> 2024
+              <span className="text-primary">Sustentabilidade</span> - 2024
             </h1>
 
             <p

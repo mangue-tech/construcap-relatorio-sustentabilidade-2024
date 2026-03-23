@@ -279,7 +279,7 @@ const ReportLayout = ({ children, title }: ReportLayoutProps) => {
             <img src={construcapLogo} alt="Construcap" className="w-15 h-10" />
             <div>
               <p className="font-bold text-sm">Grupo Construcap</p>
-              <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade 2024</p>
+              <p className="text-xs text-muted-foreground">Relatório de Sustentabilidade - 2024</p>
             </div>
           </Link>
         </div>

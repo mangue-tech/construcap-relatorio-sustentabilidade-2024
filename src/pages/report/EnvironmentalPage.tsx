@@ -110,10 +110,10 @@ const energyData = {
 // Hospitais da Inova Saúde - energia
 const hospitalEnergy = [
   { hospital: "Hospital Centro de Referência da Saúde da Mulher", consumption: 10165190, emissions: 553.621 },
-  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: null, emissions: 314.248 },
+  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 5770000, emissions: 314.248 },
   {
     hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
-    consumption: null,
+    consumption: 4711108.4,
     emissions: 256.579,
   },
 ];

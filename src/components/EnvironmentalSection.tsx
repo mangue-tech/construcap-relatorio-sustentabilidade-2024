@@ -3,7 +3,7 @@ import { Leaf, Zap, Droplets, Recycle, Factory, Sun } from "lucide-react";
 const metrics = [
   {
     icon: Factory,
-    value: "33.550",
+    value: "29.442",
     unit: "tCO₂e",
     label: "Emissões Totais GEE",
     description: "Primeiro inventário consolidado de emissões",

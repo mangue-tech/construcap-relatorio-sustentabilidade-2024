@@ -461,7 +461,7 @@ const ReportCover = () => {
             {[
               {
                 icon: Factory,
-                value: "33.550",
+                value: "29.442",
                 unit: "tCO₂e",
                 label: "Emissões Totais",
                 color: "text-emerald-500",

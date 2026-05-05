@@ -3,10 +3,10 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 const emissionsData = [
   { name: "Escopo 1", value: 15116.357, description: "Emissões diretas" },
   { name: "Escopo 2", value: 1617.679, description: "Energia elétrica" },
-  { name: "Escopo 3", value: 16816.781, description: "Cadeia de valor" },
+  { name: "Escopo 3", value: 12708.196, description: "Cadeia de valor" },
 ];
 
-const totalEmissions = 33550.818;
+const totalEmissions = 29442.232;
 
 const COLORS = ["hsl(var(--primary))", "hsl(var(--blue-500))", "hsl(var(--green-500))"];
 

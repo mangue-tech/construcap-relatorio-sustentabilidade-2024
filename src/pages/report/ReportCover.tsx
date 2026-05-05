@@ -247,7 +247,7 @@ const emissionsData = [
   },
   {
     name: "Escopo 3",
-    value: 16816.781,
+    value: 12708.196,
     color: "#f59e0b",
   },
 ];

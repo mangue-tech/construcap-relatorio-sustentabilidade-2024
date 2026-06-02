@@ -12,14 +12,14 @@ import ambicapLogo from "@/assets/companies/ambicap.png";
 import ambicapHero from "@/assets/operations/ambicap-hero.png";
 
 const parks = [
-  { name: "Parque Estadual da Cantareira", area: "7.916,52 hectares" },
-  { name: "Parque Ibirapuera", area: "158 hectares" },
-  { name: "Parque Estadual Alberto Löfgren (Horto Florestal)", area: "73,9 hectares" },
-  { name: "Parque Tenente Brigadeiro Roberto Faria Lima", area: "5 hectares" },
-  { name: "Parque Jacintho Alberto", area: "4,1 hectares" },
-  { name: "Parque Jardim Felicidade", area: "2,9 hectares" },
-  { name: "Parque dos Eucaliptos", area: "1,5 hectares" },
-  { name: "Parque do Lajeado", area: "1,4 hectares" },
+  { name: "Parque Estadual da Cantareira", area: "79,2 milhões de m²" },
+  { name: "Parque Ibirapuera", area: "1,6 milhões de m²" },
+  { name: "Parque Estadual Alberto Löfgren (Horto Florestal)", area: "739 mil m²" },
+  { name: "Parque Tenente Brigadeiro Roberto Faria Lima", area: "50,3 mil m²" },
+  { name: "Parque Jacintho Alberto", area: "40,9 mil m²" },
+  { name: "Parque Jardim Felicidade", area: "28,8 mil m²" },
+  { name: "Parque dos Eucaliptos", area: "16,7 mil m²" },
+  { name: "Parque do Lajeado", area: "14,1 mil m²" },
 ];
 
 const AmbicapPage = () => {
@@ -183,8 +183,8 @@ const AmbicapPage = () => {
               
               <div className="p-4 bg-green-100 dark:bg-green-950/40 rounded-lg mt-6">
                 <p className="text-center">
-                  <span className="text-3xl font-bold text-green-700 dark:text-green-400">8.163,32</span>
-                  <span className="text-lg text-muted-foreground ml-2">hectares de área total atendida</span>
+                  <span className="text-3xl font-bold text-green-700 dark:text-green-400">81,7 milhões</span>
+                  <span className="text-lg text-muted-foreground ml-2"> de m² de área total atendida</span>
                 </p>
               </div>
             </CardContent>

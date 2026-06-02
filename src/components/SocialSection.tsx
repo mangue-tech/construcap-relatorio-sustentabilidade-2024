@@ -9,17 +9,18 @@ const stats = [
 
 const ageDistribution = [
   { range: "Até 30 anos", count: 991, percentage: 23 },
-  { range: "31 a 50 anos", count: 2210, percentage: 51 },
-  { range: "Acima de 50 anos", count: 906, percentage: 21 },
+  { range: "31 a 50 anos", count: 2403, percentage: 55 },
+  { range: "Acima de 50 anos", count: 951, percentage: 22 },
 ];
 
 const hierarchy = [
   { level: "Diretoria", count: 8 },
+  { level: "Superintendência", count: 9 },
   { level: "Gerência", count: 76 },
   { level: "Coordenação", count: 35 },
   { level: "Supervisão", count: 41 },
   { level: "Administrativo", count: 312 },
-  { level: "Operacional", count: 3873 },
+  { level: "Operacional", count: 3864 },
 ];
 
 const SocialSection = () => {

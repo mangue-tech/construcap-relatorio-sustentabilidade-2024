@@ -156,11 +156,11 @@ const SocialPage = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell>31 a 50 anos</TableCell>
-                  <TableCell className="text-right font-medium">2.210</TableCell>
+                  <TableCell className="text-right font-medium">2.403</TableCell>
                 </TableRow>
                 <TableRow>
                   <TableCell>Acima de 50 anos</TableCell>
-                  <TableCell className="text-right font-medium">906</TableCell>
+                  <TableCell className="text-right font-medium">951</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -183,7 +183,7 @@ const SocialPage = () => {
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8 mb-8">
             <p className="text-muted-foreground mb-4">
-              A distribuição funcional reforça o caráter operacional da empresa: <strong>3.873 colaboradores</strong>{" "}
+              A distribuição funcional reforça o caráter operacional da empresa: <strong>3.864 colaboradores</strong>{" "}
               desempenham funções diretamente ligadas à execução de obras, operação de equipamentos, manutenção e
               frentes de campo. Esse volume exige uma estrutura padronizada de formação, treinamentos obrigatórios,
               integração contínua e monitoramento frequente das condições de trabalho.
@@ -213,6 +213,10 @@ const SocialPage = () => {
                   <TableCell className="text-right font-medium">8</TableCell>
                 </TableRow>
                 <TableRow>
+                  <TableCell>Superintendência</TableCell>
+                  <TableCell className="text-right font-medium">9</TableCell>
+                </TableRow>
+                <TableRow>
                   <TableCell>Gerência</TableCell>
                   <TableCell className="text-right font-medium">76</TableCell>
                 </TableRow>
@@ -230,7 +234,7 @@ const SocialPage = () => {
                 </TableRow>
                 <TableRow>
                   <TableCell>Operacional</TableCell>
-                  <TableCell className="text-right font-medium">3.873</TableCell>
+                  <TableCell className="text-right font-medium">3.864</TableCell>
                 </TableRow>
               </TableBody>
             </Table>
@@ -310,6 +314,11 @@ const SocialPage = () => {
                 <TableRow>
                   <TableCell>Diretoria</TableCell>
                   <TableCell className="text-right">5</TableCell>
+                  <TableCell className="text-right">3</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Superintendência</TableCell>
+                  <TableCell className="text-right">6</TableCell>
                   <TableCell className="text-right">3</TableCell>
                 </TableRow>
                 <TableRow>
@@ -451,20 +460,8 @@ const SocialPage = () => {
                     <TableCell className="text-right">40</TableCell>
                   </TableRow>
                   <TableRow>
-                    <TableCell>Supervisão</TableCell>
-                    <TableCell className="text-right">10</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Coordenação</TableCell>
-                    <TableCell className="text-right">5</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Gerência</TableCell>
-                    <TableCell className="text-right">6</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Alta gerência</TableCell>
-                    <TableCell className="text-right">1</TableCell>
+                    <TableCell>Gestão</TableCell>
+                    <TableCell className="text-right">22</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -559,7 +556,7 @@ const SocialPage = () => {
           <p className="text-muted-foreground mb-8">
             Nenhuma dimensão social é tão crítica à sustentabilidade da Construcap quanto Saúde Ocupacional e Segurança
             do Trabalho. A empresa opera um <strong>Sistema Integrado de Gestão certificado pela ISO 45001:2018</strong>{" "}
-            certificada desde 2021 (anteriormente certificada na OHSAS 18001, desde 2001), integrado às certificações{" "}
+            (obtida em 2023, válida até 16/07/2026), integrado às certificações{" "}
             <strong>NBR ISO 9001:2015</strong>{" "}
             (Qualidade) e <strong>NBR ISO 14001:2015</strong> (Meio Ambiente), sustentado por ferramentas, protocolos e
             mecanismos que permitem controle sistemático em ambientes de risco.

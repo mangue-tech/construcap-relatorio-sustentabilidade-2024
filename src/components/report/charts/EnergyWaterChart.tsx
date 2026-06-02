@@ -22,7 +22,7 @@ const energyMetrics = [
     icon: Droplets,
     label: "Água Pluvial Captada (Minas Arena)",
     value: "15.337",
-    unit: "megalitros",
+    unit: "m³",
     gri: "GRI 303-3",
     color: "blue",
   },
@@ -37,7 +37,7 @@ const energyMetrics = [
 ];
 
 const waterConsumption = [
-  { source: "Inova Saúde", value: 119281, unit: "megalitros" },
+  { source: "Inova Saúde", value: 119281, unit: "m³" },
 ];
 
 const wasteByType = [

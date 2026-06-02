@@ -185,7 +185,7 @@ const MinasArenaPage = () => {
             </CardHeader>
             <CardContent className="space-y-6">
               <p className="text-muted-foreground">
-                No eixo social, a Minas Arena desenvolve e apoia uma série de projetos com foco em inclusão, diversidade
+                No eixo social, o Mineirão desenvolve e apoia uma série de projetos com foco em inclusão, diversidade
                 e relacionamento com comunidades do entorno (GRI 203-1, 413-1).
               </p>
 
@@ -199,6 +199,12 @@ const MinasArenaPage = () => {
                 </div>
                 <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
                   <h4 className="font-semibold text-green-700 dark:text-green-400 mb-2">#Repense</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Projeto voltado à representatividade e segurança das mulheres no estádio.
+                  </p>
+                </div>
+                <div className="p-4 bg-emerald-50 dark:bg-emerald-950/20 rounded-lg">
+                  <h4 className="font-semibold text-emerald-700 dark:text-emerald-400 mb-2">#GigantepelaNatureza</h4>
                   <p className="text-sm text-muted-foreground">
                     Sensibiliza torcedores e visitantes sobre consumo consciente e descarte adequado de resíduos.
                   </p>

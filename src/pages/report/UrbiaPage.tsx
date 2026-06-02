@@ -43,14 +43,14 @@ const UrbiaPage = () => {
             A Urbia reúne as operações de gestão de parques do Grupo Construcap, atuando em parques urbanos de grande
             relevância e em unidades de conservação naturais de alto valor ecológico. No conjunto de concessões, a Urbia
             é responsável pela administração de áreas que somam aproximadamente
-            <strong> 123 mil hectares</strong>, abrangendo parques urbanos, áreas de mata atlântica e parques nacionais,
+            <strong> ~1,42 bilhões de m²</strong>, abrangendo parques urbanos, áreas de mata atlântica e parques nacionais,
             com cerca de <strong>20 milhões de visitas anuais</strong>, consolidando-se como um dos maiores operadores
             privados de parques e atrativos naturais do país (GRI 304-1, 203-1).
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <div className="p-6 bg-green-50 dark:bg-green-950/30 rounded-lg text-center">
-              <p className="text-3xl font-bold text-green-700 dark:text-green-400">~123 mil</p>
-              <p className="text-sm text-muted-foreground">hectares administrados</p>
+              <p className="text-3xl font-bold text-green-700 dark:text-green-400">~1,42 bilhões</p>
+              <p className="text-sm text-muted-foreground">metros quadrados administrados</p>
             </div>
             <div className="p-6 bg-green-50 dark:bg-green-950/30 rounded-lg text-center">
               <p className="text-3xl font-bold text-green-700 dark:text-green-400">~20 milhões</p>
@@ -107,7 +107,7 @@ const UrbiaPage = () => {
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
                 No eixo de educação ambiental e cultura, as operações do Ibirapuera incluem a realização de
-                <strong> 642 sessões de planetário</strong>, ações de divulgação científica, atividades culturais
+                <strong> 732 sessões de planetário</strong>, ações de divulgação científica, atividades culturais
                 permanentes e programação voltada a escolas da rede pública, com foco em astronomia, ciência e meio
                 ambiente (GRI 413-1, 404-2).
               </p>
@@ -119,7 +119,7 @@ const UrbiaPage = () => {
               <div className="grid md:grid-cols-2 gap-4 mt-4">
                 <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg text-center">
                   <Telescope className="w-8 h-8 text-purple-600 mx-auto mb-2" />
-                  <p className="text-2xl font-bold text-purple-700 dark:text-purple-400">642</p>
+                  <p className="text-2xl font-bold text-purple-700 dark:text-purple-400">732</p>
                   <p className="text-sm text-muted-foreground">sessões de planetário</p>
                 </div>
                 <div className="p-4 bg-purple-50 dark:bg-purple-950/20 rounded-lg text-center">
@@ -235,11 +235,11 @@ const UrbiaPage = () => {
                 <CardContent>
                   <p className="text-muted-foreground">
                     A Urbia Cataratas compreende a atuação em áreas associadas ao{" "}
-                    <strong>Parque Nacional do Iguaçu</strong>, ícone do turismo brasileiro. Nessas operações, a gestão
+                    <strong>Parque Nacional do Iguaçu</strong>, ícone do turismo brasileiro e mundial. Nessas operações, a gestão
                     é orientada pela manutenção da integridade dos atrativos naturais, controle de fluxos de visitação,
                     ordenamento de uso público, apoio à fiscalização ambiental e oferta de serviços de transporte,
                     alimentação e atendimento ao visitante com elevados padrões de qualidade e segurança (GRI 304-2,
-                    416-1).
+                    416-1) e futuramente do Parque Nacional de Jericoacoara.
                   </p>
                 </CardContent>
               </div>

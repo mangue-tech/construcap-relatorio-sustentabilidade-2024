@@ -43,7 +43,7 @@ const governanceStructure = [
     description:
       "A Diretoria Executiva, liderada pelo Presidente Roberto Ribeiro Capobianco, é responsável pela gestão do dia a dia da companhia. Sua atuação envolve a execução das estratégias aprovadas pelo Conselho, a gestão operacional das unidades de negócio, a liderança sobre processos críticos e a promoção de práticas robustas de segurança operacional, qualidade, integridade e sustentabilidade.",
     principles:
-      "A Diretoria opera em sinergia com gestores das áreas de engenharia, operações, saúde, parques, arenas, suprimentos, jurídico e financeiro.",
+      "A Diretoria opera em sinergia com gestores de todas as áreas e negócios.",
     responsibilities: [
       "Execução das estratégias aprovadas pelo Conselho",
       "Gestão operacional das unidades de negócio",
@@ -329,8 +329,8 @@ const GovernancePage = () => {
             </div>
           </div>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A integridade é base do posicionamento institucional da Construcap. O Código de Conduta e as políticas de
-            compliance estabelecem padrões obrigatórios de comportamento para todos os públicos internos e externos,
+            A integridade é base do posicionamento institucional da Construcap. O Código de Conduta e as políticas do
+            Programa de Integridade estabelecem padrões obrigatórios de comportamento para todos os públicos internos e externos,
             cobrindo temas como:
           </p>
         </AnimatedSection>

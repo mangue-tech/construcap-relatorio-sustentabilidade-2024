@@ -305,7 +305,7 @@ const CompliancePage = () => {
             <div className="p-6">
               <p className="text-muted-foreground mb-6">
                 A companhia mantém um Canal de Denúncias independente, acessível a colaboradores, comunidades,
-                fornecedores e demais públicos. O canal:
+                fornecedores e demais públicos de interesse. O canal:
               </p>
               <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {channelFeatures.map((item, index) => (

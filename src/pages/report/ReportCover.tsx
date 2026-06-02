@@ -75,13 +75,13 @@ const sections = [
 ];
 const highlights2024 = [
   {
-    value: 16,
+    value: 1.65,
     label: "Valor Econômico Gerado",
     icon: TrendingUp,
     color: "text-primary",
     prefix: "R$ ",
     suffix: " bi",
-    decimals: 1,
+    decimals: 2,
   },
   {
     value: 4345,
@@ -196,8 +196,8 @@ const companies = [
     logo: ambicapLogo,
     path: "/operacao-ambicap",
     description:
-      "Zeladoria, limpeza e manejo de áreas verdes em parques. Atua em 8 parques incluindo Ibirapuera, Cantareira e Horto Florestal, totalizando mais de 8.000 hectares.",
-    highlights: ["8 parques", "8.163 hectares", "Resposta emergencial"],
+      "Zeladoria, limpeza e manejo de áreas verdes em parques. Atua em 8 parques incluindo Ibirapuera, Cantareira e Horto Florestal, totalizando mais de 81,7 milhões de m².",
+    highlights: ["8 parques", "81,7 milhões de m²", "Resposta emergencial"],
   },
 ];
 const certifications = [
@@ -247,7 +247,7 @@ const emissionsData = [
   },
   {
     name: "Escopo 3",
-    value: 12708.196,
+    value: 16816.781,
     color: "#f59e0b",
   },
 ];
@@ -461,7 +461,7 @@ const ReportCover = () => {
             {[
               {
                 icon: Factory,
-                value: "29.442",
+                value: "33.551",
                 unit: "tCO₂e",
                 label: "Emissões Totais",
                 color: "text-emerald-500",
@@ -478,7 +478,7 @@ const ReportCover = () => {
               {
                 icon: Droplets,
                 value: "15.337",
-                unit: "ML",
+                unit: "m³",
                 label: "Água Pluvial Captada",
                 color: "text-blue-500",
                 bg: "bg-blue-500/10",

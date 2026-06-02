@@ -405,7 +405,7 @@ const EconomicPage = () => {
                   "Parque Ibirapuera e demais parques vizinhos (SP)",
                   "Parque Nacional do Iguaçu (PR)",
                   "Parque Estadual da Cantareira e o Parque Estadual Alberto Löfgren (Horto Florestal)  (SP)",
-                  "Parques Nacionais Aparados da Serra e Serra Geral (SC/RS)",
+                  "Parques Nacionais Aparados da Serra e Serra Geral – Cânions Verdes (SC/RS)",
                   "Entorno do Mineirão (MG)",
                 ].map((local, i) => (
                   <span key={i} className="text-xs px-3 py-1 rounded-full bg-primary/10 text-primary">

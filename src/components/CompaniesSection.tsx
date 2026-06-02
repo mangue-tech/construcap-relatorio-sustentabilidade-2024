@@ -11,7 +11,7 @@ const companies = [
     sector: "Saúde, Construção Hospitalar",
     highlights: [
       "3 complexos hospitalares",
-      "626 leitos totais",
+      "594 leitos totais",
       "17 anos de gestão contratada",
       "Tecnologia hospitalar de ponta",
     ],

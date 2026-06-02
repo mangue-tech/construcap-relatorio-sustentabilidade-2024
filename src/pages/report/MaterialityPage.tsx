@@ -39,7 +39,7 @@ import materialityHero from "@/assets/report/materiality-hero.jpg";
 const materialTopics = [
   {
     number: 1,
-    title: "Saúde e Segurança do Trabalho",
+    title: "Saúde Ocupacional e Segurança do Trabalho",
     description:
       "Prevenção de acidentes, cultura de segurança, capacitação e gestão de riscos ocupacionais em todas as operações do Grupo.",
     context:
@@ -71,7 +71,7 @@ const materialTopics = [
     title: "Emissões de Gases de Efeito Estufa",
     description:
       "Inventário de emissões (Escopos 1, 2 e 3), metas de redução, estratégias de mitigação e compensação de carbono.",
-    context: "Relevante para obras, parques, arenas e unidades de saúde, orientando metas e inventários de carbono.",
+    context: "Relevante para obras, parques, arenas e hospitais, orientando metas e inventários de carbono.",
     icon: Target,
     color: "bg-blue-500",
   },

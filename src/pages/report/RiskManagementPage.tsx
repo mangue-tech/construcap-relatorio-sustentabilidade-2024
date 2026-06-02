@@ -114,10 +114,10 @@ const riskTypes = [
 
 const businessUnitRisks = [
   {
-    name: "Urbia Parques e Urbia Cânions Verdes",
+    name: "Urbia Gestão de Parques e Urbia Cânions Verdes",
     icon: TreePine,
     description:
-      "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais e protocolos de segurança para visitantes.",
+      "Monitoramento ambiental, manejo de trilhas, gestão de visitação, prevenção de incêndios, fiscalização de áreas naturais, interface com órgãos ambientais e de preservação do patrimônio (tombamento), gestão regulatória, avaliação de impactos na comunidade do entorno e protocolos de segurança para visitantes.",
   },
   {
     name: "Inova Saúde",
@@ -289,8 +289,7 @@ const RiskManagementPage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">5.2 Principais Tipos de Riscos Monitorados</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap mantém matrizes de riscos específicas para cada tipo de operação, além de um mapa consolidado
-            em nível corporativo.
+            A Construcap mantém matrizes de riscos específicas para determinados tipos de operação.
           </p>
         </AnimatedSection>
 

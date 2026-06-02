@@ -41,8 +41,8 @@ import environmentalHero from "@/assets/report/environmental-hero.jpg";
 const emissionsData = {
   scope1: 15116.357,
   scope2: 1617.679,
-  scope3: 12708.196,
-  total: 29442.233,
+  scope3: 16816.781,
+  total: 33550.818,
   biogenic: 3864.367,
 };
 
@@ -50,18 +50,18 @@ const emissionsByScope = [
   {
     name: "Escopo 1",
     value: 15116.357,
-    percentage: 51.3,
+    percentage: 45.1,
     color: "hsl(var(--primary))",
     description: "Emissões diretas",
   },
   {
     name: "Escopo 2",
     value: 1617.679,
-    percentage: 5.5,
+    percentage: 4.8,
     color: "hsl(221, 83%, 53%)",
     description: "Energia elétrica adquirida",
   },
-  { name: "Escopo 3", value: 12708.196, percentage: 43.2, color: "hsl(142, 76%, 36%)", description: "Cadeia de valor" },
+  { name: "Escopo 3", value: 16816.781, percentage: 50.1, color: "hsl(142, 76%, 36%)", description: "Cadeia de valor" },
 ];
 
 // Detalhamento Escopo 1 (dados corretos)
@@ -76,29 +76,29 @@ const scope3Categories = [
   {
     category: "Categoria 1 – Bens e serviços adquiridos",
     value: 9231.82,
-    percentage: 72.6,
+    percentage: 54.9,
     description: "concreto e aço como principais insumos",
   },
   {
     category: "Categoria 6 – Viagens a negócios",
-    value: 1759.957,
-    percentage: 13.9,
+    value: 5868.542,
+    percentage: 34.9,
     description: "viagens aéreas e hospedagens corporativas",
   },
   {
     category: "Categoria 5 – Resíduos gerados na operação",
     value: 1716.419,
-    percentage: 13.5,
+    percentage: 10.2,
     description: "4.051,36 t enviados para aterro, incineração e recicladores",
   },
 ];
 
 // Emissões por unidade de negócio
 const emissionsByUnit = [
-  { unit: "Construcap Construção Civil", value: 23029.79, percentage: 78.22 },
-  { unit: "Inova Saúde", value: 5095.069, percentage: 17.30 },
-  { unit: "Minas Arena", value: 239.444, percentage: 0.81 },
-  { unit: "Urbia/Ambicap e demais", value: 1077.929, percentage: 3.66 },
+  { unit: "Construcap Construção Civil", value: 23029.79, percentage: 68.6 },
+  { unit: "Inova Saúde", value: 9203.174, percentage: 27.4 },
+  { unit: "Minas Arena", value: 239.444, percentage: 0.7 },
+  { unit: "Urbia/Ambicap e demais", value: 1078.41, percentage: 3.3 },
 ];
 
 // GRI 302 - Energia
@@ -110,10 +110,10 @@ const energyData = {
 // Hospitais da Inova Saúde - energia
 const hospitalEnergy = [
   { hospital: "Hospital Centro de Referência da Saúde da Mulher", consumption: 10165190, emissions: 553.621 },
-  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 5770000, emissions: 314.248 },
+  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 5770442.40, emissions: 314.248 },
   {
     hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
-    consumption: 4711108.4,
+    consumption: 5017108.40,
     emissions: 256.579,
   },
 ];
@@ -128,11 +128,11 @@ const minasArenaEnergy = {
 // GRI 303 - Água
 // Inova Saúde - água
 const inovaWater = {
-  total: 119.281, // megalitros
+  total: 119281, // m³
   units: [
-    { hospital: "Hospital Centro de Referência da Saúde da Mulher", consumption: 59.198 },
-    { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 34.04 },
-    { hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'", consumption: 26.043 },
+    { hospital: "Hospital Centro de Referência da Saúde da Mulher", consumption: 59198 },
+    { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 34040 },
+    { hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'", consumption: 26043 },
   ],
 };
 
@@ -167,25 +167,25 @@ const certificationsConstrucap = [
   {
     name: "NBR ISO 9001:2015",
     description: "Sistema de Gestão da Qualidade",
-    scope: "Construcap - primeira certificação em 2000",
+    scope: "Construcap - primeira certificação em 2014",
     validity: "Válida até 17/07/2026",
   },
   {
     name: "NBR ISO 14001:2015",
     description: "Sistema de Gestão Ambiental",
-    scope: "Construcap - certificada desde 2006",
+    scope: "Construcap - certificada desde 2014",
     validity: "Válida até 16/07/2026",
   },
   {
     name: "ISO 45001:2018",
     description: "Saúde e Segurança Ocupacional",
-    scope: "Construcap - certificada desde 2021, (anteriormente certificada na OHSAS 18001, desde 2001)",
+    scope: "Construcap - obtida em 2023",
     validity: "Válida até 16/07/2026",
   },
   {
     name: "SIAC 2021 – Nível A",
     description: "Sistema de Avaliação da Conformidade de Empresas de Serviços e Obras da Construção Civil",
-    scope: "Edificações, infraestrutura viária, saneamento e obras de arte especiais – certificada desde 2007.",
+    scope: "Edificações, infraestrutura viária e saneamento",
     validity: "Válida até 17/07/2026",
   },
   {
@@ -201,25 +201,25 @@ const certificationsMinas = [
   {
     name: "LEED Platinum",
     description: "Primeiro estádio do mundo a obter esta certificação (2014)",
-    scope: "Minas Arena - Mineirão",
-    validity: "Certificado desde 2014",
+    scope: "Minas Arena (Mineirão)",
+    validity: "Certificação obtida em 2014, no contexto da obra (não vigente atualmente).",
   },
   {
     name: "Pacto Global",
     description: "Rede Brasil da ONU",
-    scope: "Minas Arena",
+    scope: "Minas Arena (Mineirão)",
     validity: "Membro desde 2016",
   },
   {
     name: "Selo BH Sustentável",
     description: "Categoria Ouro - Prefeitura de Belo Horizonte",
-    scope: "Minas Arena",
-    validity: "Vigente",
+    scope: "Minas Arena (Mineirão)",
+    validity: "Certificação válida no período de 05/06/2014 a 03/06/2016, conforme certificado.",
   },
   {
     name: "SISBRACE Cinco Bolas",
     description: "Classificação máxima no Sistema Brasileiro de Classificação de Estádios",
-    scope: "Minas Arena",
+    scope: "Minas Arena (Mineirão)",
     validity: "Vigente",
   },
 ];
@@ -229,7 +229,7 @@ const certificationsUrbia = [
   {
     name: "Pacto Global da ONU",
     description: "Compromisso com o desenvolvimento sustentável",
-    scope: "Urbia Parques",
+    scope: "Urbia Gestão de Parques",
     validity: "Adesão em 17/11/2022",
   },
 ];
@@ -410,7 +410,7 @@ const EnvironmentalPage = () => {
                     <div className="flex items-center gap-4">
                       {hospital.consumption && (
                         <span className="text-sm text-muted-foreground">
-                          {hospital.consumption.toLocaleString("pt-BR")} kWh
+                          {Number.isInteger(hospital.consumption) ? hospital.consumption.toLocaleString("pt-BR") : hospital.consumption.toLocaleString("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 })} kWh
                         </span>
                       )}
                       <span className="text-yellow-500 font-bold">
@@ -437,10 +437,10 @@ const EnvironmentalPage = () => {
           <div className="bg-card rounded-2xl border border-border p-6 mb-6">
             <div className="flex items-center gap-3 mb-4">
               <Sun className="w-6 h-6 text-orange-500" />
-              <h3 className="font-bold text-lg">Minas Arena</h3>
+              <h3 className="font-bold text-lg">Minas Arena (Mineirão)</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              Na Minas Arena, o desempenho energético é igualmente relevante. Em 2024, o estádio operou uma usina
+              No Mineirão, o desempenho energético é igualmente relevante. Em 2024, o estádio operou uma usina
               fotovoltaica com resultados expressivos:
             </p>
             <div className="grid sm:grid-cols-3 gap-4">
@@ -500,7 +500,7 @@ const EnvironmentalPage = () => {
             <p className="text-muted-foreground mb-4">
               Em 2024, a Inova Saúde monitorou o consumo de água em suas unidades, totalizando{" "}
               <strong className="text-foreground">
-                {inovaWater.total.toLocaleString("pt-BR", { minimumFractionDigits: 3 })} megalitros (ML)
+                {inovaWater.total.toLocaleString("pt-BR")} m³
               </strong>
               . As fontes são predominantemente de abastecimento público, com o HSJC incorporando também água de
               captação de chuva.
@@ -509,9 +509,9 @@ const EnvironmentalPage = () => {
               {inovaWater.units.map((unit) => (
                 <div key={unit.hospital} className="p-4 rounded-xl bg-blue-500/10 text-center">
                   <p className="text-2xl font-bold text-blue-500">
-                    {unit.consumption.toLocaleString("pt-BR", { minimumFractionDigits: 3 })}
+                    {unit.consumption.toLocaleString("pt-BR")}
                   </p>
-                  <p className="text-xs text-muted-foreground">megalitros</p>
+                  <p className="text-xs text-muted-foreground">m³</p>
                   <p className="text-sm font-medium mt-1">{unit.hospital}</p>
                 </div>
               ))}
@@ -532,10 +532,10 @@ const EnvironmentalPage = () => {
           <div className="bg-card rounded-2xl border border-border p-6 mb-6">
             <div className="flex items-center gap-3 mb-4">
               <Droplets className="w-6 h-6 text-cyan-500" />
-              <h3 className="font-bold text-lg">Minas Arena</h3>
+              <h3 className="font-bold text-lg">Minas Arena (Mineirão)</h3>
             </div>
             <p className="text-muted-foreground mb-4">
-              A Minas Arena apresenta um caso emblemático de gestão hídrica integrada. Em 2024:
+              O Mineirão apresenta um caso emblemático de gestão hídrica integrada. Em 2024:
             </p>
             <div className="grid sm:grid-cols-3 gap-4 mb-4">
               <div className="p-4 rounded-xl bg-cyan-500/10 text-center">
@@ -555,7 +555,7 @@ const EnvironmentalPage = () => {
               </div>
             </div>
             <p className="text-sm text-muted-foreground">
-              A água de reúso é utilizada em sanitários e irrigação do gramado. Essa estratégia diminui a pressão sobre
+              A água de reuso é utilizada em sanitários e irrigação do gramado. Essa estratégia diminui a pressão sobre
               a rede pública, reduz custos operacionais e fortalece a resiliência hídrica do estádio frente a cenários
               de escassez.
             </p>
@@ -599,9 +599,9 @@ const EnvironmentalPage = () => {
               relevância ambiental, com papel estratégico na proteção da biodiversidade, no manejo responsável dos
               recursos naturais, na organização da visitação e na proteção dos ecossistemas. Entre os territórios nos
               quais o Grupo desenvolve atividades de gestão e operação destacam-se o Parque Nacional do Iguaçu (PR), o
-              complexo de Cânions Verdes (RS/SC), o Parque Estadual da Cantareira (SP) e o Parque Estadual Alberto
-              Löfgren – Horto Florestal (SP), além de parques urbanos de grande relevância ambiental, como o Parque
-              Ibirapuera (SP) e outros parques municipais na cidade de São Paulo.
+              complexo de Cânions Verdes (RS/SC) e o Parque Estadual da Cantareira (SP), além de parques urbanos de
+              grande relevância ambiental, como o Parque Ibirapuera (SP), o Parque Estadual Alberto Löfgren – Horto
+              Florestal (SP) e outros parques municipais na cidade de São Paulo.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -773,7 +773,7 @@ const EnvironmentalPage = () => {
             <div className="bg-card rounded-2xl border border-border p-6">
               <h4 className="font-bold mb-4">Escopo 3 – Cadeia de Valor</h4>
               <p className="text-sm text-muted-foreground mb-4">
-                As emissões de Escopo 3 somaram 12.708,196 tCO₂e, distribuídas em:
+                As emissões de Escopo 3 somaram 16.816,781 tCO₂e, distribuídas em:
               </p>
               <div className="space-y-4">
                 {scope3Categories.map((item) => (

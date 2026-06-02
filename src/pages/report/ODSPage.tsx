@@ -8,7 +8,7 @@ const odsData = [
     color: "#4C9F38",
     items: [
       "Operação de três unidades hospitalares públicas pela Inova Saúde, Hospital Centro de Referência da Saúde da Mulher, Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene' e Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
-      "Consumo total de água das unidades hospitalares em 2024 de 119,281 ML",
+      "Consumo total de água das unidades hospitalares em 2024 de 119.281 m3",
       "Quadro funcional total do Grupo de 4.345 colaboradores, com cobertura por políticas estruturadas de saúde e segurança do trabalho",
     ],
   },
@@ -26,9 +26,9 @@ const odsData = [
     name: "Água Potável e Saneamento",
     color: "#26BDE2",
     items: [
-      "Consumo total de água da Inova Saúde em 2024 de 119,281 ML",
-      "Captação e reutilização de 15.337 ML de água de chuva na Minas Arena",
-      "Redução de 51% no consumo de água potável no Mineirão, com consumo de 10.557 ML da rede pública",
+      "Consumo total de água da Inova Saúde em 2024 de 119.281 m3",
+      "Captação e reutilização de 15.337 m3 de água de chuva no Mineirão",
+      "Redução de 51% no consumo de água potável no Mineirão, com consumo de 10.557 m3 da rede pública",
     ],
   },
   {
@@ -37,7 +37,7 @@ const odsData = [
     color: "#FCC30B",
     items: [
       "Consumo total de eletricidade do Grupo em 2024 de 32.777.724,33 kWh",
-      "Geração de energia fotovoltaica na Minas Arena de 1.317.600 kWh",
+      "Geração de energia fotovoltaica no Mineirão de 1.317.600 kWh",
       "Energia solar representando 23,7% do consumo total do estádio, de 5.564.830 kWh",
     ],
   },
@@ -98,10 +98,10 @@ const odsData = [
     name: "Ação Contra a Mudança do Clima",
     color: "#3F7E44",
     items: [
-      "Emissões totais de gases de efeito estufa de 29.442,232 tCO₂e",
+      "Emissões totais de gases de efeito estufa de 33.550,818 tCO₂e",
       "Emissões de Escopo 1 de 15.116,357 tCO₂e",
       "Emissões de Escopo 2 de 1.617,679 tCO₂e",
-      "Emissões de Escopo 3 de 12.708,196 tCO₂e",
+      "Emissões de Escopo 3 de 16.816,781 tCO₂e",
       "Emissões biogênicas de 3.864,367 tCO₂",
     ],
   },

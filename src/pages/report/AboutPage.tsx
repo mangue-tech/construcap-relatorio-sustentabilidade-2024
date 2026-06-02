@@ -29,13 +29,13 @@ const businessUnits = [
     name: "Construção e Engenharia de Alta Complexidade",
     icon: Building2,
     description:
-      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital Centro de Referência da Saúde da Mulher (SP), que integra a operação da Inova Saúde.",
+      "Realizamos obras combinando rigor técnico, inovação, eficiência operacional e soluções de engenharia aplicadas. Atuamos em projetos de infraestrutura urbana, industrial, hospitalar, energética e corporativa, incluindo a construção de unidades hospitalares completas, como o Hospital Centro de Referência da Saúde da Mulher (SP), Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene' e Hospital Regional de São José dos Campos 'Dr. Rubens Savastano' que integra a operação da Inova Saúde.",
   },
   {
     name: "Gestão Hospitalar - Inova Saúde",
     icon: Stethoscope,
     description:
-      "Por meio da Inova Saúde, operamos unidades hospitalares de alta complexidade em São Paulo/ Capital, São José dos Campos e Sorocaba, assegurando qualidade assistencial, governança clínica, eficiência operacional e oferta contínua de serviços essenciais à população. A atuação envolve desde gestão de centros cirúrgicos e UTIs até manutenção predial, tecnologia, hotelaria hospitalar e suporte diagnóstico.",
+      "Por meio da Inova Saúde, operamos unidades hospitalares de alta complexidade em São Paulo/ Capital, São José dos Campos e Sorocaba, assegurando qualidade assistencial, governança clínica, eficiência operacional e oferta contínua de serviços essenciais à população. A atuação abrange um conjunto integrado de serviços de apoio e operação, incluindo manutenção predial e conservação de jardins, engenharia clínica, gestão e manutenção de tecnologia da informação, limpeza e higienização, logística hospitalar e destinação de resíduos, nutrição, recepção e portaria, lavanderia e rouparia, segurança patrimonial e vigilância, telefonia e transporte. Contempla, ainda, logística de medicamentos, gestão de próteses e órteses, bem como o processamento e a esterilização de instrumentais.",
   },
   {
     name: "Arenas Esportivas - Minas Arena",
@@ -47,7 +47,7 @@ const businessUnits = [
     name: "Parques Naturais e Urbanos - Urbia",
     icon: TreePine,
     description:
-      "Por meio da Urbia, administramos parques urbanos e naturais de internacional, promovendo conservação ambiental, manejo responsável, visitação ordenada e oferta de serviços de esporte, lazer e turismo sustentável. Essa atuação fortalece o turismo sustentável, estimula as economias locais, amplia o acesso a áreas de lazer e contribui para a preservação de patrimônios naturais.",
+      "Por meio da Urbia, administramos parques urbanos e naturais de relevância nacional e internacional, promovendo conservação ambiental, manejo responsável, visitação ordenada e oferta de serviços de esporte, lazer e turismo sustentável. Essa atuação fortalece o turismo sustentável, estimula as economias locais, amplia o acesso a áreas de lazer e contribui para a preservação de patrimônios naturais.",
   },
   {
     name: "Soluções de Engenharia Aplicada",
@@ -91,14 +91,14 @@ const values = [
 ];
 
 const controlledCompanies = [
-  { name: "Ambicap Ltda.", description: "Soluções ambientais e gestão de resíduos" },
-  { name: "Inova Saúde São Paulo SPE S.A.", description: "Gestão hospitalar em São Paulo" },
-  { name: "Inova Saúde Sorocaba SPE S.A.", description: "Gestão hospitalar em Sorocaba" },
-  { name: "Urbia Águas Claras S.A.", description: "Gestão do Núcleo das Águas Claras" },
-  { name: "Urbia Cânions Verdes S.A.", description: "Gestão dos parques que compõe os Cânions Verdes" },
   { name: "Urbia Gestão de Parques S.P.E. S.A.", description: "Gestão integrada de parques urbanos" },
-  { name: "Urbia Cataratas S.A.", description: "Gestão das Cataratas do Iguaçu e Jericoacoara" },
-  { name: "Minas Arena - Gestão de Instalações Esportivas", description: "Gestão do Estádio Mineirão" },
+  { name: "Urbia Águas Claras S.A.", description: "Gestão do Parque Estadual da Cantareira e do Parque Estadual Alberto Löfgren (Horto Florestal)" },
+  { name: "Urbia Cânions Verdes S.A.", description: "Gestão dos parques que Aparados da Serra e Serra Geral" },
+  { name: "Urbia Cataratas S.A.", description: "Gestão das Cataratas do Iguaçu e Jericoacoara (em fase inicial de implantação)" },
+  { name: "Minas Arena - Gestão de Instalações Esportivas S.A. (Mineirão)", description: "Gestão do Estádio Mineirão em Belo Horizonte - MG" },
+  { name: "Inova Saúde São Paulo SPE S.A.", description: "Gestão hospitalar em São Paulo e São José dos Campos" },
+  { name: "Inova Saúde Sorocaba SPE S.A.", description: "Gestão hospitalar em Sorocaba" },
+  { name: "Ambicap Ltda.", description: "Soluções ambientais e gestão de resíduos" },
 ];
 
 const supplyChainItems = [
@@ -111,7 +111,7 @@ const supplyChainItems = [
   {
     icon: Stethoscope,
     title: "Insumos Hospitalares",
-    description: "Materiais médicos e equipamentos para unidades de saúde",
+    description: "Equipamentos para hospitais, instrumentais e mobiliários.",
   },
   { icon: Wrench, title: "Serviços Técnicos", description: "Empresas especializadas em engenharia e manutenção" },
   {
@@ -210,7 +210,7 @@ const AboutPage = () => {
               </p>
               <p>
                 Ao longo de sua história, a companhia consolidou valores institucionais que orientam sua trajetória:
-                excelência operacional, segurança como valor inegociável, integridade, inovação, sustentabilidade e
+                excelência operacional, segurança e integridade como princípios inegociáveis, inovação, sustentabilidade e
                 rigor técnico. Esses fundamentos sustentam nossa reputação como parceiro confiável na construção e
                 operação de ativos essenciais para o país.
               </p>
@@ -289,8 +289,8 @@ const AboutPage = () => {
         <AnimatedSection>
           <h2 className="text-2xl font-bold mb-4">Modelo de Negócios e Atuação (GRI 2-6)</h2>
           <p className="text-muted-foreground mb-8 max-w-4xl">
-            A Construcap atua em diferentes cadeias de valor estratégicas para o Brasil, integrando construção civil,
-            gestão de ativos públicos, soluções de engenharia e operações complexas. Essa diversidade confere
+            A Construcap atua em diferentes cadeias de valor estratégicas para o Brasil, integrando construção e engenharia de alta complexidade,
+            gestão de ativos públicos, operações e serviços. Essa diversidade confere
             resiliência, capacidade de inovação e forte presença em setores essenciais.
           </p>
         </AnimatedSection>

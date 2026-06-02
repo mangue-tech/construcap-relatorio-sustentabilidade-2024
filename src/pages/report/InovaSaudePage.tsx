@@ -68,7 +68,7 @@ const InovaSaudePage = () => {
                 <div className="space-y-4 text-muted-foreground text-sm leading-relaxed">
                   <p>
                     Inaugurado em 2018, com investimento de R$ 239 milhões, o Hospital Regional de São José dos Campos
-                    'Dr. Rubens Savastano' oferece 180 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de
+                    'Dr. Rubens Savastano' oferece 162 leitos, sendo 40 deles de UTI e 8 salas cirúrgicas, além de
                     serviço de apoio diagnóstico por imagem, endoscopia e terapia. A estrutura possui 33 mil metros
                     quadrados de área construída, alto nível de resolução e grande capacidade de atenção às urgências.
                   </p>
@@ -156,7 +156,7 @@ const InovaSaudePage = () => {
                     entregue seguindo o modelo de Parceria Público-Privada (PPP) da Saúde.
                   </p>
                   <p>
-                    Inaugurado em 2022, oferece 162 leitos, dos quais 152 são de internação e 10 de UTI, além de 10
+                    Inaugurado em 2022, oferece 172 leitos, dos quais 152 são de internação e 10 de UTI, além de 10
                     leitos dedicados à realização de cirurgia ambulatorial (hospital-dia), distribuídos em cerca de 44
                     mil metros quadrados de área construída.
                   </p>
@@ -186,20 +186,27 @@ const InovaSaudePage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                A Inova Saúde oferece infraestrutura hospitalar moderna e serviços não assistenciais essenciais à
-                qualidade do atendimento SUS:
+                Principais serviços administrados pela Inova Saúde em nossos Hospitais:
               </p>
               <div className="grid md:grid-cols-3 gap-3">
                 {[
-                  "Gestão de instalações",
-                  "Manutenção predial",
-                  "Apoio logístico",
-                  "Hotelaria hospitalar",
+                  "Conservação de Jardins",
+                  "Engenharia Clínica",
+                  "Gestão e Manutenção da Tecnologia da Informação",
+                  "Lavanderia",
+                  "Limpeza e Higienização",
+                  "Logística e Destinação de Resíduos",
+                  "Logística Hospitalar",
+                  "Manutenção Predial",
                   "Nutrição",
-                  "Limpeza especializada",
-                  "Segurança patrimonial",
-                  "Tecnologia da informação",
-                  "Engenharia clínica",
+                  "Planejamento e Gestão de Medicamentos e Materiais Especiais",
+                  "Planejamento e Gestão de Próteses e Órteses",
+                  "Processamento e Esterilização de Instrumentais",
+                  "Recepção e Portaria",
+                  "Rouparia",
+                  "Segurança e Vigilância",
+                  "Telefonia",
+                  "Transportes (ambulância e veículos)",
                 ].map((servico, index) => (
                   <div key={index} className="flex items-center gap-2 p-3 bg-muted/50 rounded-lg">
                     <span className="w-2 h-2 bg-blue-500 rounded-full" />

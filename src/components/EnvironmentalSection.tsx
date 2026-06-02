@@ -3,7 +3,7 @@ import { Leaf, Zap, Droplets, Recycle, Factory, Sun } from "lucide-react";
 const metrics = [
   {
     icon: Factory,
-    value: "29.442",
+    value: "33.551",
     unit: "tCO₂e",
     label: "Emissões Totais GEE",
     description: "Primeiro inventário consolidado de emissões",
@@ -19,8 +19,8 @@ const metrics = [
   },
   {
     icon: Droplets,
-    value: "119,3",
-    unit: "megalitros",
+    value: "119.281",
+    unit: "m³",
     label: "Gestão Hídrica",
     description: "Consumo monitorado nas unidades hospitalares",
     color: "blue",
@@ -52,9 +52,9 @@ const metrics = [
 ];
 
 const emissionsBreakdown = [
-  { scope: "Escopo 1", value: "15.116 tCO₂e", percentage: 51, description: "Emissões diretas" },
-  { scope: "Escopo 2", value: "1.618 tCO₂e", percentage: 6, description: "Energia elétrica adquirida" },
-  { scope: "Escopo 3", value: "12.708 tCO₂e", percentage: 43, description: "Cadeia de valor" },
+  { scope: "Escopo 1", value: "15.116 tCO₂e", percentage: 45, description: "Emissões diretas" },
+  { scope: "Escopo 2", value: "1.618 tCO₂e", percentage: 5, description: "Energia elétrica adquirida" },
+  { scope: "Escopo 3", value: "16.817 tCO₂e", percentage: 50, description: "Cadeia de valor" },
 ];
 
 const EnvironmentalSection = () => {

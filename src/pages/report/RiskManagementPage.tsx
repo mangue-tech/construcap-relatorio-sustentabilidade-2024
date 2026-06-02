@@ -48,7 +48,7 @@ const riskTypes = [
       "Acidentes, incidentes graves",
       "Exposição a agentes perigosos",
       "Falhas em equipamentos críticos",
-      "Protocolos específicos em obras, hospitais e parques (especialmente trilhas em Jericoacoara e Cânions Verdes)",
+      "Protocolos específicos em obras, hospitais e parques (especialmente trilhas)",
     ],
   },
   {

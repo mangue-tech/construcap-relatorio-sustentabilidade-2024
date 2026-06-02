@@ -264,8 +264,7 @@ const SocialPage = () => {
               A Construcap evolui na consolidação de práticas de diversidade e inclusão, especialmente considerando o
               contexto de um setor que historicamente apresenta baixa representatividade feminina e de PCDs. O registro
               de <strong>7 colaboradores com deficiência</strong> (5 homens e 2 mulheres) aponta para um ponto de
-              atenção e aprimoramento contínuo, especialmente no que diz respeito a programas de acessibilidade em obras
-              e estaleiros.
+              atenção e aprimoramento contínuo, especialmente no que diz respeito a programas de acessibilidade em obras.
             </p>
           </div>
         </AnimatedSection>

@@ -56,7 +56,7 @@ const compliancePolicies = [
     description: "Fluxos de aprovação e verificação",
   },
   {
-    title: "Regras de integridade em compras e suprimentos",
+    title: "Regras de integridade em compras e suprimentos e contratação de terceiros",
     icon: Search,
     description: "Diretrizes para aquisições éticas",
   },
@@ -146,7 +146,7 @@ const CompliancePage = () => {
                 <span>•</span>
                 <span>GRI 2-14, 2-15, 2-16, 2-23, 2-24</span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">Integridade e Compliance</h1>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">Integridade e Conformidade</h1>
               <p className="text-xl text-muted-foreground max-w-3xl">
                 A integridade é base do posicionamento institucional da Construcap. O Programa de Integridade garante
                 que todas as atividades sejam conduzidas com disciplina, legalidade e transparência.
@@ -160,7 +160,7 @@ const CompliancePage = () => {
       <section className="py-12">
         <AnimatedSection>
           <div className="bg-card rounded-2xl border border-border p-8">
-            <h2 className="text-xl font-bold mb-4">4.1 Sistema de Integridade e Compliance</h2>
+            <h2 className="text-xl font-bold mb-4">4.1 Sistema de Integridade e Conformidade</h2>
             <p className="text-muted-foreground leading-relaxed">
               A Construcap adota um sistema de integridade estruturado para prevenir, detectar e responder a desvios
               éticos, ilícitos e inconformidades operacionais. O Programa de Integridade combina{" "}

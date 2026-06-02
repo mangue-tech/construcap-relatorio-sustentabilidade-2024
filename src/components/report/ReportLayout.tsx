@@ -41,7 +41,7 @@ const menuItems = [
     icon: Shield,
     children: [
       { path: "/governanca", label: "Estratégia e Governança" },
-      { path: "/compliance", label: "Integridade e Compliance" },
+      { path: "/compliance", label: "Integridade e Conformidade" },
       { path: "/gestao-riscos", label: "Gestão de Riscos" },
     ],
   },

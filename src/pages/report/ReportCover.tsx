@@ -337,8 +337,10 @@ const ReportCover = () => {
                 Destaques 2024
               </a>
               <a
-                href="/relatorio-sustentabilidade-2024.pdf"
-                download
+                href={relatorioPdf.url}
+                download="Relatorio_Sustentabilidade_2024_Construcap.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-500 text-white rounded-xl font-semibold hover:bg-emerald-600 transition-all hover:scale-105"
               >
                 <Download className="w-5 h-5" />

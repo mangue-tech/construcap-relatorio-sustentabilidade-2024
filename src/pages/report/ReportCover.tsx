@@ -128,7 +128,7 @@ const esgHighlights = [
         detail: "Horas de capacitação",
       },
       {
-        label: "Turnover",
+        label: "Rotatividade",
         value: "12%",
         detail: "Abaixo da média do setor",
       },

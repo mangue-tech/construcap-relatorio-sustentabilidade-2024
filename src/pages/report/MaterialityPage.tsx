@@ -244,7 +244,7 @@ const methodologySteps = [
     details: [
       "Análise de GRI Standards aplicáveis",
       "Revisão de requisitos regulatórios",
-      "Benchmarking com peers do setor",
+      "Benchmarking com pares do setor",
       "Consulta a análises de risco corporativo",
     ],
     icon: FileSearch,

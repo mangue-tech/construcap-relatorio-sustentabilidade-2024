@@ -34,6 +34,7 @@ import ReportNavbar from "@/components/report/ReportNavbar";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import ScrollToTop from "@/components/report/ScrollToTop";
 import MangueBadge from "@/components/report/MangueBadge";
+import relatorioPdf from "@/assets/relatorio-sustentabilidade-2024.pdf.asset.json";
 
 const sections = [
   {

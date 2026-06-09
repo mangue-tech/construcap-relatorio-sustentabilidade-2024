@@ -306,8 +306,6 @@ const InovaSaudePage = () => {
               </p>
               <div className="grid md:grid-cols-2 gap-3">
                 {[
-                  "Segurança do paciente",
-                  "Prevenção de infecções",
                   "Uso seguro de equipamentos",
                   "Gestão de resíduos de serviços de saúde",
                   "Atendimento humanizado",

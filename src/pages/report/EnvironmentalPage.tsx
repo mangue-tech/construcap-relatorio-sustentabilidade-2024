@@ -41,8 +41,8 @@ import environmentalHero from "@/assets/report/environmental-hero.jpg";
 const emissionsData = {
   scope1: 15116.357,
   scope2: 1617.679,
-  scope3: 16816.781,
-  total: 33550.818,
+  scope3: 12708.196,
+  total: 29442.233,
   biogenic: 3864.367,
 };
 
@@ -61,7 +61,7 @@ const emissionsByScope = [
     color: "hsl(221, 83%, 53%)",
     description: "Energia elétrica adquirida",
   },
-  { name: "Escopo 3", value: 16816.781, percentage: 50.1, color: "hsl(142, 76%, 36%)", description: "Cadeia de valor" },
+  { name: "Escopo 3", value: 12708.196, percentage: 50.1, color: "hsl(142, 76%, 36%)", description: "Cadeia de valor" },
 ];
 
 // Detalhamento Escopo 1 (dados corretos)
@@ -81,7 +81,7 @@ const scope3Categories = [
   },
   {
     category: "Categoria 6 – Viagens a negócios",
-    value: 5868.542,
+    value: 1759.957,
     percentage: 34.9,
     description: "viagens aéreas e hospedagens corporativas",
   },
@@ -95,10 +95,10 @@ const scope3Categories = [
 
 // Emissões por unidade de negócio
 const emissionsByUnit = [
-  { unit: "Construcap Construção Civil", value: 23029.79, percentage: 68.6 },
-  { unit: "Inova Saúde", value: 9203.174, percentage: 27.4 },
-  { unit: "Minas Arena", value: 239.444, percentage: 0.7 },
-  { unit: "Urbia/Ambicap e demais", value: 1078.41, percentage: 3.3 },
+  { unit: "Construcap Construção Civil", value: 23029.79, percentage: 78.22 },
+  { unit: "Inova Saúde", value: 5095.069, percentage: 17.30 },
+  { unit: "Minas Arena", value: 239.444, percentage: 0.81 },
+  { unit: "Urbia/Ambicap e demais", value: 1077.929, percentage: 3.66 },
 ];
 
 // GRI 302 - Energia
@@ -110,10 +110,10 @@ const energyData = {
 // Hospitais da Inova Saúde - energia
 const hospitalEnergy = [
   { hospital: "Hospital Centro de Referência da Saúde da Mulher", consumption: 10165190, emissions: 553.621 },
-  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 5770442.40, emissions: 314.248 },
+  { hospital: "Hospital Regional de Sorocaba 'Dr. Adib Domingos Jatene'", consumption: 5770000, emissions: 314.248 },
   {
     hospital: "Hospital Regional de São José dos Campos 'Dr. Rubens Savastano'",
-    consumption: 5017108.40,
+    consumption: 4711108.4,
     emissions: 256.579,
   },
 ];
@@ -167,25 +167,25 @@ const certificationsConstrucap = [
   {
     name: "NBR ISO 9001:2015",
     description: "Sistema de Gestão da Qualidade",
-    scope: "Construcap - primeira certificação em 2014",
+    scope: "Construcap - primeira certificação em 2000",
     validity: "Válida até 17/07/2026",
   },
   {
     name: "NBR ISO 14001:2015",
     description: "Sistema de Gestão Ambiental",
-    scope: "Construcap - certificada desde 2014",
+    scope: "Construcap - certificada desde 2006",
     validity: "Válida até 16/07/2026",
   },
   {
     name: "ISO 45001:2018",
     description: "Saúde e Segurança Ocupacional",
-    scope: "Construcap - obtida em 2023",
+    scope: "Construcap - certificada desde 2021, (anteriormente certificada na OHSAS 18001, desde 2001)",
     validity: "Válida até 16/07/2026",
   },
   {
     name: "SIAC 2021 – Nível A",
     description: "Sistema de Avaliação da Conformidade de Empresas de Serviços e Obras da Construção Civil",
-    scope: "Edificações, infraestrutura viária e saneamento",
+    scope: "Edificações, infraestrutura viária, saneamento e obras de arte especiais – certificada desde 2007.",
     validity: "Válida até 17/07/2026",
   },
   {
@@ -773,7 +773,7 @@ const EnvironmentalPage = () => {
             <div className="bg-card rounded-2xl border border-border p-6">
               <h4 className="font-bold mb-4">Escopo 3 – Cadeia de Valor</h4>
               <p className="text-sm text-muted-foreground mb-4">
-                As emissões de Escopo 3 somaram 16.816,781 tCO₂e, distribuídas em:
+                As emissões de Escopo 3 somaram 12.708,196 tCO₂e, distribuídas em:
               </p>
               <div className="space-y-4">
                 {scope3Categories.map((item) => (

@@ -3,7 +3,7 @@ import { Leaf, Zap, Droplets, Recycle, Factory, Sun } from "lucide-react";
 const metrics = [
   {
     icon: Factory,
-    value: "33.551",
+    value: "29.442",
     unit: "tCO₂e",
     label: "Emissões Totais GEE",
     description: "Primeiro inventário consolidado de emissões",
@@ -54,7 +54,7 @@ const metrics = [
 const emissionsBreakdown = [
   { scope: "Escopo 1", value: "15.116 tCO₂e", percentage: 45, description: "Emissões diretas" },
   { scope: "Escopo 2", value: "1.618 tCO₂e", percentage: 5, description: "Energia elétrica adquirida" },
-  { scope: "Escopo 3", value: "16.817 tCO₂e", percentage: 50, description: "Cadeia de valor" },
+  { scope: "Escopo 3", value: "12.708 tCO₂e", percentage: 50, description: "Cadeia de valor" },
 ];
 
 const EnvironmentalSection = () => {
@@ -138,7 +138,7 @@ const EnvironmentalSection = () => {
 
           <div className="mt-8 p-4 rounded-xl bg-accent/50 border border-primary/20">
             <p className="text-sm text-muted-foreground">
-              <strong className="text-foreground">Total de emissões:</strong> 33.550,818 tCO₂e + 3.864,367 tCO₂ de emissões biogênicas. 
+              <strong className="text-foreground">Total de emissões:</strong> 29.442,233 tCO₂e + 3.864,367 tCO₂ de emissões biogênicas. 
               Inventário elaborado conforme Programa Brasileiro GHG Protocol e ABNT NBR ISO 14064-1.
             </p>
           </div>
@@ -149,10 +149,10 @@ const EnvironmentalSection = () => {
           <h3 className="text-lg font-bold mb-4 text-center">Certificações Construcap</h3>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {[
-              { cert: "NBR ISO 9001:2015", label: "Qualidade", detail: "Desde 2014 • Válida até 17/07/2026" },
-              { cert: "NBR ISO 14001:2015", label: "Gestão Ambiental", detail: "Desde 2014 • Válida até 16/07/2026" },
-              { cert: "ISO 45001:2018", label: "Saúde e Segurança", detail: "Desde 2023 • Válida até 16/07/2026" },
-              { cert: "SIAC 2021 – Nível A", label: "Conformidade", detail: "Edificações, infraestrutura viária e saneamento • Válida até 17/07/2026" },
+              { cert: "NBR ISO 9001:2015", label: "Qualidade", detail: "Desde 2000 • Válida até 17/07/2026" },
+              { cert: "NBR ISO 14001:2015", label: "Gestão Ambiental", detail: "Desde 2006 • Válida até 16/07/2026" },
+              { cert: "ISO 45001:2018", label: "Saúde e Segurança", detail: "Certificada desde 2021 (anteriormente OHSAS 18001, desde 2001) • Válida até 16/07/2026" },
+              { cert: "SIAC 2021 – Nível A", label: "Conformidade", detail: "Edificações, infraestrutura viária, saneamento e obras de arte especiais – certificada desde 2007 • Válida até 17/07/2026" },
               { cert: "Certificado de Recurso Florestal", label: "Regularidade Ambiental", detail: "Ano-base 2024" },
             ].map((item) => (
               <div key={item.cert} className="text-center p-5 rounded-xl bg-green-100/50 border border-green-500/20">

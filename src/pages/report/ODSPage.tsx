@@ -98,10 +98,10 @@ const odsData = [
     name: "Ação Contra a Mudança do Clima",
     color: "#3F7E44",
     items: [
-      "Emissões totais de gases de efeito estufa de 33.550,818 tCO₂e",
+      "Emissões totais de gases de efeito estufa de 29.442,233 tCO₂e",
       "Emissões de Escopo 1 de 15.116,357 tCO₂e",
       "Emissões de Escopo 2 de 1.617,679 tCO₂e",
-      "Emissões de Escopo 3 de 16.816,781 tCO₂e",
+      "Emissões de Escopo 3 de 12.708,196 tCO₂e",
       "Emissões biogênicas de 3.864,367 tCO₂",
     ],
   },

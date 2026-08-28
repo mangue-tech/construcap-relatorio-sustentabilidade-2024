@@ -89,6 +89,12 @@ const CEOLetterPage = () => {
                   </strong>
                 </p>
               </div>
+
+              <div className="mt-10 pt-8 border-t border-border text-right">
+                <p className="font-serif text-2xl italic text-foreground">Roberto Ribeiro Capobianco</p>
+                <p className="text-sm text-muted-foreground mt-1">Presidente do Conselho de Administração — Grupo Construcap</p>
+                <p className="text-sm text-muted-foreground mt-1">São Paulo, 2025</p>
+              </div>
             </div>
           </div>
         </AnimatedSection>

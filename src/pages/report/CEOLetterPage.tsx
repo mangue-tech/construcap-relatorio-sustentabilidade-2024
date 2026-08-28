@@ -30,7 +30,7 @@ const CEOLetterPage = () => {
           <div className="flex flex-col lg:flex-row gap-8 lg:gap-12">
             {/* CEO Photo */}
             <div className="lg:w-80 flex-shrink-0">
-              <div className="sticky top-24">
+              <div className="lg:sticky lg:top-24">
                 <div className="relative overflow-hidden rounded-2xl shadow-2xl ring-4 ring-primary/20 mx-auto lg:mx-0 max-w-xs lg:max-w-none">
                   <div className="overflow-hidden bg-gradient-to-b from-muted/30 to-muted/10">
                     <img
@@ -49,11 +49,11 @@ const CEOLetterPage = () => {
             </div>
 
             {/* Letter Content */}
-            <div className="flex-1 bg-card rounded-2xl border border-border p-8 lg:p-12">
-              <Quote className="w-12 h-12 text-primary/30 mb-6" />
+            <div className="flex-1 bg-card rounded-2xl border border-border p-6 sm:p-8 lg:p-12">
+              <Quote className="w-10 h-10 lg:w-12 lg:h-12 text-primary/30 mb-6" />
 
-              <div className="prose prose-lg max-w-none text-foreground">
-                <p className="text-lg leading-relaxed mb-6 first-letter:text-4xl first-letter:font-bold first-letter:text-primary first-letter:mr-1 first-letter:float-left">
+              <div className="max-w-none text-foreground text-[15px] sm:text-base lg:text-lg leading-[1.8] [&_p]:mb-6 last:[&_p]:mb-0 text-pretty">
+                <p className="first-letter:text-5xl sm:first-letter:text-6xl first-letter:font-bold first-letter:font-serif first-letter:text-primary first-letter:mr-2 first-letter:mt-1 first-letter:float-left first-letter:leading-[0.8]">
                   É com responsabilidade, transparência e convicção no papel transformador da infraestrutura que apresentamos o Relatório de Sustentabilidade do Grupo Construcap referente ao ano de 2024.
                 </p>
 

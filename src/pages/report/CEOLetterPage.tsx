@@ -57,31 +57,31 @@ const CEOLetterPage = () => {
                   É com responsabilidade, transparência e convicção no papel transformador da infraestrutura que apresentamos o Relatório de Sustentabilidade do Grupo Construcap referente ao ano de 2024.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Este documento consolida nossa visão estratégica, nossa forma de atuar e os resultados alcançados em um período marcado por desafios relevantes, mas também por realizações significativas em nossos negócios de construção, concessionárias nos segmentos de parques naturais e urbanos, saúde, arenas esportivas, rodovias e demais serviços.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Ao longo de oito décadas, construímos uma trajetória baseada em excelência operacional, disciplina técnica e permanente compromisso com o desenvolvimento econômico e social do Brasil. Reafirmamos esses pilares ao intensificar nossos investimentos em segurança do trabalho, integridade corporativa, governança robusta e práticas de gestão orientadas à eficiência e à inovação. A segurança e integridade, em especial, permanecem como princípios inegociáveis. Todas as nossas decisões operacionais são orientadas pela preservação da vida, pela prevenção de riscos e pela qualificação contínua das equipes que atuam nos nossos canteiros e operações, bem como continuamos aprimorando nosso Programa de Integridade, reforçando políticas, processos e mecanismos de prevenção e combate a irregularidades, sempre alinhados à legislação vigente e às melhores práticas de mercado.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Nossa atuação em sustentabilidade avança com solidez. Ampliamos processos estruturados de gestão ambiental, concluímos o inventário corporativo de emissões de gases de efeito estufa e fortalecemos práticas de controle de resíduos, consumo de água e eficiência energética.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Em 2024, também consolidamos entregas importantes para as comunidades e territórios onde estamos presentes. No segmento de concessões de parques, por meio da Urbia, fortalecemos a gestão sustentável dos espaços naturais, urbanos e turísticos sob nossa responsabilidade, ampliando a oferta de infraestrutura, serviços, acessibilidade e experiências de qualidade para milhões de visitantes. Em saúde, com as unidades da Inova, seguimos operando estruturas hospitalares complexas com foco em eficiência, melhorando o desempenho assistencial e gerando impacto social positivo. No Mineirão, reforçamos o compromisso com a gestão responsável de um dos principais equipamentos esportivos do país, que recebe eventos de grande exposição pública e relevância econômica.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Reconhecemos que nossa atuação só é possível graças ao empenho de um time altamente qualificado, que reúne milhares de profissionais em diferentes regiões do Brasil. Nosso foco permanece em promover ambientes seguros, inclusivos, éticos e orientados ao desenvolvimento humano, reforçando programas de capacitação, diversidade e valorização de talentos.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Infraestrutura, econômica e social, é motor de desenvolvimento nacional, e acreditamos no papel do Grupo Construcap como agente de geração de valor compartilhado. Continuaremos investindo em governança, inovação, eficiência e sustentabilidade, alinhados às expectativas de nossos clientes, parceiros, colaboradores e sociedade.
                 </p>
 
-                <p className="leading-relaxed mb-6">
+                <p className="">
                   Agradeço a todos que contribuíram para nossos resultados em 2024 e reafirmo nossa determinação em continuar avançando de forma consistente, responsável e segura. Este relatório reflete quem somos:
                   <strong className="text-primary">
                     {" "}

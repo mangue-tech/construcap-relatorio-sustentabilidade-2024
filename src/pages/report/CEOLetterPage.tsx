@@ -19,7 +19,6 @@ const CEOLetterPage = () => {
                 <span>Carta do Presidente</span>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold mb-4">Carta do Presidente</h1>
-              <p className="text-xl text-muted-foreground max-w-3xl"></p>
             </AnimatedSection>
           </div>
         </div>
